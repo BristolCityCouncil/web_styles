@@ -1,0 +1,143 @@
+// PROPORTIONAL GRIDS
+// Based on http://builtbyboon.com/posed/Proportional-Grids/
+
+// SETTINGS
+// Can be overridden by project-specific settings
+
+// this is the fixed gutter between columns
+$grid-gutter: 20px !default;
+$oldie-grid-gutter: 2% !default;
+
+// this sets your class names
+$namespace: "grid" !default;
+$grid-wrap-class: "-wrap";
+$grid-col-class: "-col";
+
+// Columns
+// See _settings.scss for the full grid config - this file only ships with halves
+$grid-columns: full-width 1, one-half 1/2!default;
+
+$old-ie: null !default;
+
+//-------------------------------------------------------
+// GRID MIXINS
+//-------------------------------------------------------
+@mixin set-gutter($gutter) {
+
+  margin-left: -$gutter;
+
+  > .#{$namespace}#{$grid-col-class} {
+    padding-left: $gutter;
+  }
+}
+
+@mixin grid-config($namespace) {
+
+  .#{$namespace}#{$grid-wrap-class} {
+    margin-left: -$grid-gutter; // the same as your gutter
+    @include pie-clearfix;
+    clear: both;
+
+    .lt-ie8 & {
+      margin-left: 0;
+    }
+  }
+
+  .#{$namespace}#{$grid-col-class} {
+    float: left;
+    clear: none;
+    padding-left: $grid-gutter; // the gutter between columns
+    width: 100%;
+    @include box-sizing(border-box);
+    position: relative; // for push/pull
+
+    .lt-ie8 & {
+      padding-left: $oldie-grid-gutter;
+    }
+  }
+
+  .large-gutter {
+    @include set-gutter($grid-gutter * 2);
+  }
+
+  .half-gutter {
+    @include set-gutter($grid-gutter / 2);
+  }
+
+  .no-gutter {
+    @include set-gutter(0);
+  }
+
+  .reset-gutter {
+    @include set-gutter($grid-gutter);
+  }
+
+  // reset for list grids
+  ul.#{$namespace}#{$grid-wrap-class},
+  ol.#{$namespace}#{$grid-wrap-class} {
+    padding-left: 0;
+    list-style: none;
+  }
+
+  li.#{$namespace}#{$grid-col-class} {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+}
+
+// create all grid classes for a given proportion
+// $class-name will be the class used in markup, $proportion is the fluid proportion
+@mixin grid-class-setup($class-name, $proportion, $prefix: $namespace) {
+
+  // Column
+  .#{$prefix}-#{$class-name},
+  .#{$prefix}-set-#{$class-name} .#{$prefix}#{$grid-col-class} {
+    width: $proportion;
+
+    .lt-ie8 & {
+      width: floor($proportion) - $oldie-grid-gutter - 0.25%; // Extra 0.25% fudge factor so that it doesn't add up to 100%
+    }
+  }
+
+  // Offset
+  .#{$prefix}-offset-#{$class-name} {
+    margin-left: $proportion;
+
+    .lt-ie8 & {
+      margin-left: floor($proportion);
+    }
+  }
+
+  // Push/pull
+  .#{$prefix}-push-#{$class-name} {
+    left: $proportion;
+
+    .lt-ie8 & {
+      left: floor($proportion);
+    }
+  }
+  .#{$prefix}-pull-#{$class-name} {
+    left: -$proportion;
+
+    .lt-ie8 & {
+      left: -(floor($proportion));
+    }
+  }
+
+}
+
+// set the proportions you want to use
+// $namespace relates to the class prefix e.g. bp2-col to target breakpoint 2
+@mixin grid-setup($namespace) {
+  @each $grid-column in $grid-columns {
+    @include grid-class-setup(nth($grid-column, 1), nth($grid-column, 2) * 100%, $namespace);
+  }
+}
+
+// include grids-init to set up your grids with your base class
+// i.e. @include grids-init("col");
+@mixin grids-init($class) {
+  @include grid-config($class);
+  @include grid-setup($class);
+}

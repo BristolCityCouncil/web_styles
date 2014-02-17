@@ -1,0 +1,86 @@
+// HEADER: NAV MAIN
+// Excluded from Alpha...
+
+.nav-main {
+  background: $bcc-red;
+
+  @media screen and (min-width: 321px) {
+    background: none;
+    padding-top: 2.4em;
+    margin-bottom: 2em;
+    float: right;
+    width: 50%;
+  }
+
+  .nav-title {
+    @extend .visuallyhidden;
+  }
+
+  .lnk-list {
+    @extend .lnk-list;
+
+    li {
+      @include font-size($body-font-size);
+      border-top: 1px solid $white;
+
+      @media screen and (min-width: 321px) {
+        border-top: none;
+        @include font-size($h4-font-size);
+        margin-left: 6%;
+        float: left;
+        width: auto;
+      }
+
+      &:first-child {
+        @media screen and (min-width: 321px) {
+          margin-left: 0;
+        }
+        border-top: 0;
+      }
+
+//   @TODO: depth of applicability too high in places here?
+//   eg. this renders out as
+//   .nav-main .lnk-list li.lnk-my-account { )
+
+      &.lnk-my-account {
+        @media screen and (min-width: 321px) {
+          border-left: 1px solid $grey-light;
+          padding-left: 6%;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        //@include hover-link;
+        @include link-colors($white);
+        padding: 0.6em 3%;
+        display: block;
+
+        @media screen and (min-width: 321px) {
+          display: inline-block;
+          padding: 0;
+          @include link-colors($bcc-grey-dark,$bcc-red,$bcc-red,$bcc-red,$bcc-red); // TODO: Not a great mixin?
+        }
+
+      }
+
+      &.is-selected a { color: $bcc-grey-dark; }
+
+
+    }//li
+
+  }//lnk-list
+
+}//nav-main
+
+@media screen and (min-width: 321px) {
+  .js .nav-collapse {
+    position: relative;
+  }
+  .js .nav-collapse.closed {
+    max-height: none;
+  }
+  .nav-toggle {
+    display: none;
+  }
+}

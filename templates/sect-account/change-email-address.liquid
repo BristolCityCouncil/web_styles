@@ -1,0 +1,80 @@
+{% block page %}
+
+  {% assign page_title = 'Change email address | Account' %}
+  {% assign ribbon = 'ico-user' %}
+
+  {% include 'header' %}
+
+  <div class="page-content">
+
+    <div class="layout layout-constrained">
+
+      <div class="grid-wrap">
+
+        <div class="grid-col desktop-grid-five-sixths desktop-grid-offset-one-sixth">
+
+          <div class="content content-header">
+
+            <h1 class="content-header__title">Change email address</h1>
+
+          </div><!--/content-->
+
+        </div><!--/grid-col-->
+
+      </div><!--/grid-wrap-->
+
+      <div class="grid-wrap">
+
+        <div class="grid-col desktop-grid-five-sixths desktop-grid-offset-one-sixth">
+
+          <div class="content content-main">
+
+            <form method="post" action="#" class="form form--validate" id="form">
+
+              <div class="form__item form__item--string">
+                <dl class="form__item__list">
+                  <dt class="form__label">Current email address</dt>
+                  <dd class="form__item__list__field">
+                    <div class="form__field form__field--string form__field--string--verified">
+                      <span class="form__field--string--verified__value">josephine38932@emailaddress.com</span>
+                      <span class="form__field--string--verified__message">
+                        <span class="ico ico-check"></span>
+                        <span class="form__field--string--verified__message__inner">Verified</span>
+                      </span>
+                    </div>
+                  </dd>
+                </dl>
+              </div><!--/form__item-->
+
+              <div class="form__item form__item--string">
+                <label class="form__label" for="ff-text-email">New email address <span class="form__label__asterix">*</span></label>
+                <input class="form__field form__field--string" type="email" name="" placeholder="e.g. test@test.co.uk" id="ff-text-email" data-error-message="Must be a valid email address" required pattern="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" />
+              </div><!--/form__item-->
+
+              <div class="form__item form__item--string">
+                <label class="form__label" for="uname">Confirm new email address <span class="form__label__asterix">*</span></label>
+                <input class="form__field form__field--string form__field--match" type="text" name="" placeholder="" id="uname" data-match="ff-text-email" data-error-message="This email must match the above email" />
+                <span class="form__note">Must match above email</span>
+              </div><!--/form__item-->
+
+              <div class="form__actions">
+                <button name="" type="submit" class="btn btn--primary">Save changes</button>
+              </div>
+
+            </form>
+
+          </div><!--/content-->
+
+        </div><!--/grid-col-->
+
+
+
+      </div><!--/grid-wrap-->
+
+    </div><!--/layout-->
+
+  </div><!--page-content-->
+
+  {% include 'footer' %}
+
+{% endblock %}

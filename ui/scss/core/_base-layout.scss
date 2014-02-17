@@ -1,0 +1,71 @@
+/* ======================================================
+   LAYOUT
+   ======================================================*/
+
+// LAYOUT
+
+.layout {
+  margin: 0 auto;
+  @extend %cf;
+}
+
+.layout-constrained {
+  max-width: $max-width;
+  padding: 0 10px;
+}
+
+// GRIDS
+
+// Fractions
+$grid-columns:  full-width      1,
+                one-half        1/2,
+                one-third       1/3,
+                two-thirds      2/3,
+                one-quarter     1/4,
+                three-quarters  3/4,
+                one-fifth       1/5,
+                two-fifths      2/5,
+                three-fifths    3/5,
+                four-fifths     4/5,
+                one-sixth       1/6,
+                two-sixths       2/6,
+                five-sixths     5/6,
+                // consider 7ths, 8ths, 9ths, 10ths & 11ths for helping keep nested grids 'on grid', i.e. inline with 12 column grid
+                one-seventh     1/7,
+                two-sevenths     2/7,
+                one-ninth     1/9,
+                three-ninths     3/9,
+                four-ninths     4/9,
+                five-ninths     5/9,
+                one-tenth       1/10,
+                nine-tenths     9/10,
+                one-twelfth     1/12,
+                three-twelfths     3/12,
+                five-twelfths   5/12,
+                seven-twelfths  7/12,
+                eleven-twelfths 11/12,
+                five-eightenths 5/18,
+                five-thirty-sixths 5/36;
+
+@include grids-init("grid");
+
+@include respond-min($bp-tablet-min) {
+  @include grids-init("tablet-grid");
+}
+
+@include respond-min($bp-desktop-min) {
+  @include grids-init("desktop-grid");
+}
+
+// For grid demo
+.grid-col,
+.mobile-grid-col {
+  code {
+    display: block;
+    border: 1px dotted $bcc-grey-dark;
+    margin-bottom: 20px;
+    @include font-size(11);
+    background: #f1f1f1;
+    padding: 10px 0;
+  }
+}

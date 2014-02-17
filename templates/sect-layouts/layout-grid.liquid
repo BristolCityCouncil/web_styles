@@ -1,0 +1,167 @@
+{% block page %}
+
+  {% assign page_title = 'Grid' %}
+  {% assign theme = false %}
+
+  {% include 'header' %}
+
+  <div class="page-content">
+
+    <div class="layout layout-constrained">
+
+      <div class="content content-header">
+
+        <h1 class="content-header__title">Grid</h1>
+
+      </div><!--/content-->
+
+      <div class="content content-main">
+
+        <p>Responsive, fluid grid system with fixed width gutters - modified from <a href="https://github.com/mattberridge/Proportional-Grids">https://github.com/mattberridge/Proportional-Grids</a>.</p>
+
+        <h2>Responsive grids</h2>
+
+        <p>In this example, various grid layouts kick in based on the custom prefix associated with the active breakpoint.</p>
+
+        <div class="grid-wrap">
+          <div class="grid-col tablet-grid-one-half desktop-grid-one-third desktop-grid-push-two-thirds"><code>Column 1</code></div>
+          <div class="grid-col tablet-grid-one-half desktop-grid-two-thirds desktop-grid-pull-one-third"><code>Column 2</code></div>
+        </div>
+
+        <h2>Main grid</h2>
+
+        <p>Fractional notation (e.g. five-sixths), always expressed in their simplest form (e.g. use two-thirds not four-sixths).</p>
+
+        <div class="grid-wrap">
+          <div class="grid-col grid-one-twelfth"><code>1/12</code></div>
+          <div class="grid-col grid-eleven-twelfths"><code>11/12</code></div>
+        </div>
+        <div class="grid-wrap">
+          <div class="grid-col grid-one-sixth"><code>1/6</code></div>
+          <div class="grid-col grid-five-sixths"><code>5/6</code></div>
+        </div>
+        <div class="grid-wrap">
+          <div class="grid-col grid-one-quarter"><code>1/4</code></div>
+          <div class="grid-col grid-three-quarters"><code>3/4</code></div>
+        </div>
+        <div class="grid-wrap">
+          <div class="grid-col grid-one-third"><code>1/3</code></div>
+          <div class="grid-col grid-two-thirds"><code>2/3</code></div>
+        </div>
+        <div class="grid-wrap">
+          <div class="grid-col grid-five-twelfths"><code>5/12</code></div>
+          <div class="grid-col grid-seven-twelfths"><code>7/12</code></div>
+        </div>
+        <div class="grid-wrap">
+          <div class="grid-col grid-one-half"><code>1/2</code></div>
+          <div class="grid-col grid-one-half"><code>1/2</code></div>
+        </div>
+        <div class="grid-wrap">
+          <div class="grid-col grid-full"><code>1/1</code></div>
+        </div>
+
+        <h2>Offsets</h2>
+
+        <p>Offset classes allow 'faux' columns to create grid-based spacing.</p>
+
+        <div class="grid-wrap">
+          <div class="grid-col grid-eleven-twelfths grid-offset-one-twelfth"><code>11/12, offset 1/12</code></div>
+        </div>
+        <div class="grid-wrap">
+          <div class="grid-col grid-five-sixths grid-offset-one-sixth"><code>5/6, offset 1/6</code></div>
+        </div>
+        <div class="grid-wrap">
+          <div class="grid-col grid-three-quarters grid-offset-one-quarter"><code>3/4, offset 1/4</code></div>
+        </div>
+        <div class="grid-wrap">
+          <div class="grid-col grid-two-thirds grid-offset-one-third"><code>2/3, offset 1/3</code></div>
+        </div>
+        <div class="grid-wrap">
+          <div class="grid-col grid-seven-twelfths grid-offset-five-twelfths"><code>7/12, offset 5/12</code></div>
+        </div>
+        <div class="grid-wrap">
+          <div class="grid-col grid-one-half grid-offset-one-half"><code>1/2, offset 1/2</code></div>
+        </div>
+
+        <h2>Push / pull</h2>
+
+        <p>Push and pull classes allow columns to be repositioned regardless of their order in markup.</p>
+
+        <div class="grid-wrap">
+          <div class="grid-col grid-one-quarter grid-push-three-quarters"><code>1/4, push 3/4</code></div>
+          <div class="grid-col grid-three-quarters grid-pull-one-quarter"><code>3/4, pull 1/4</code>
+          </div>
+        </div>
+
+        <div class="grid-wrap">
+          <div class="grid-col grid-one-sixth grid-push-five-sixths"><code>1/6, push 5/6</code></div>
+          <div class="grid-col grid-one-third grid-pull-one-sixth"><code>1/3, pull 1/6</code></div>
+          <div class="grid-col grid-one-half grid-pull-one-sixth"><code>1/2, pull 1/6</code>
+          </div>
+        </div>
+
+        <h2>Optional: Fifths</h2>
+
+        <p>Includes push, pull and offset.</p>
+
+        <div class="grid-wrap">
+          <div class="grid-col grid-one-fifth"><code>1/5</code></div>
+          <div class="grid-col grid-four-fifths"><code>4/5</code></div>
+        </div>
+        <div class="grid-wrap">
+          <div class="grid-col grid-two-fifths"><code>2/5</code></div>
+          <div class="grid-col grid-three-fifths"><code>3/5</code></div>
+        </div>
+
+        <h2>Nested layouts</h2>
+
+        <p>Use nested proportions to keep layouts 'on grid' without the need for parent classes. Use wisely as things can get complicated quickly!</p>
+
+        <div class="grid-wrap">
+          <div class="grid-col grid-one-half">
+            <code>1/2</code>
+            <div class="grid-wrap">
+              <div class="grid-col grid-one-third"><code>1/3</code></div>
+              <div class="grid-col grid-two-thirds"><code>2/3</code></div>
+            </div>
+          </div>
+          <div class="grid-col grid-one-half">
+            <code>1/2</code>
+            <div class="grid-wrap">
+              <div class="grid-col grid-one-sixth"><code>1/6</code></div>
+              <div class="grid-col grid-two-thirds"><code>1/3</code></div>
+              <div class="grid-col grid-one-sixth"><code>1/6</code></div>
+            </div>
+          </div>
+        </div>
+
+        <p>However, be careful using proportions that take you 'off grid'.</p>
+
+        <div class="grid-wrap">
+          <div class="grid-col grid-one-half">
+            <code>1/2</code>
+            <div class="grid-wrap">
+              <div class="grid-col grid-five-twelfths"><code>5/12</code></div>
+              <div class="grid-col grid-seven-twelfths"><code>7/12</code></div>
+            </div>
+          </div>
+          <div class="grid-col grid-one-half">
+            <code>1/2</code>
+            <div class="grid-wrap">
+              <div class="grid-col grid-one-quarter"><code>1/4</code></div>
+              <div class="grid-col grid-one-quarter"><code>1/4</code></div>
+              <div class="grid-col grid-one-quarter"><code>1/4</code></div>
+              <div class="grid-col grid-one-quarter"><code>1/4</code></div>
+            </div>
+          </div>
+        </div>
+
+      </div><!--/content-->
+
+    </div><!--/layout-->
+
+  </div><!--page-content-->
+
+  {% include 'footer' %}
+
+{% endblock %}

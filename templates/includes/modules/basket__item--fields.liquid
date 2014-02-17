@@ -1,0 +1,125 @@
+{% if basket__item__title == null %}{% assign basket__item__title = 'Black wheelie bin' %}{% endif %}
+{% if basket__item__handle == null %}{% assign basket__item__handle = 'black-wheelie-bin' %}{% endif %}
+{% if basket__item__qty == null %}{% assign basket__item__qty = 2 %}{% endif %}
+
+<fieldset class="basket__item basket__item--fields">
+
+  <legend class="visuallyhidden">{{ basket__item__title }}</legend>
+
+  <div class="grid-wrap">
+
+    <div class="grid-col desktop-grid-three-fifths">
+
+      <div class="basket__item__description">
+
+        <h4 class="basket__item__title">{{ basket__item__title }}</h4>
+
+        <div class="basket__item__image">
+          <img src="/ui/images/waste/{{ basket__item__handle }}.png" alt="{{ basket__item__title }}" />
+        </div><!--/basket__item__image-->
+
+        <div class="basket__item__info">
+          <a href="#" class="link-help">Need help managing rubbish &amp; recycling?</a>
+        </div><!--/basket__item__info-->
+
+      </div><!--/basket__item__description-->
+
+    </div><!--/grid-col-->
+
+    <div class="grid-col desktop-grid-two-fifths">
+
+      <div class="basket__item__details">
+
+        <div class="grid-wrap">
+
+          <div class="grid-col tablet-grid-two-fifths">
+
+            {% if basket__item__handle == 'black-wheelie-bin' %}
+
+              <div class="basket__item__field basket__item__field--hide">
+                <label class="form__label" for="ff-{{ basket__item__handle }}__qty">Qty</label>
+                <select class="form__field form__field--select form__field--select--quantity form__field--select form__field--select--black-wheelie-bin" name="" id="ff-{{ basket__item__handle }}__qty">
+                  <option>0</option>
+                  <option selected="selected">1</option>
+                </select>
+              </div><!--/basket__item__field-->
+
+              <div class="basket__item__field">
+                <label class="form__label" for="ff-{{ basket__item__handle }}__size">Size</label>
+                <select class="form__field form__field--select" name="" id="ff-{{ basket__item__handle }}__size">
+                  <option>140L</option>
+                  <option>180L</option>
+                </select>
+                <span class="form__note"><a href="#overlay-{{ basket__item__handle }}" class="js-overlay-open js-overlay-open-markup">What's this?</a></span>
+              </div><!--/basket__item__field-->
+
+            {% else %}
+
+              <div class="basket__item__field">
+                <label class="form__label" for="ff-{{ basket__item__handle }}__qty">Qty</label>
+                <select class="form__field form__field--select form__field--select--quantity" name="" id="ff-{{ basket__item__handle }}__qty">
+                  <option>0</option>
+                  <option>1</option>
+                  <option>2</option>
+                </select>
+              </div><!--/basket__item__field-->
+
+            {% endif %}
+
+          </div><!--/grid-col-->
+
+          <div class="grid-col tablet-grid-three-fifths">
+
+            <div class="basket__item__field form__item">
+              <label class="form__label" for="ff-{{ basket__item__handle }}__reason">Reason</label>
+              <select class="form__field form__field--select form__field--select--reason form__field--select--validate" data-error-message="Please select a valid option" name="" id="ff-{{ basket__item__handle }}__reason">
+                <option>Please select</option>
+                <option value="lost-stolen">Lost/stolen</option>
+                <option class="js-show-additional" value="damaged">Damaged</option>
+                <option value="new-resident">New resident</option>
+              </select>
+            </div><!--/basket__item__field-->
+            <!-- @TODO Look at refactoring to remove references to “old” box in here for reusability -->
+            <div class="basket__item__field basket__item__field--old">
+              <input class="form__field form__field--boolean form__field--checkbox" type="checkbox" name="" id="ff-{{ basket__item__handle }}__collect-old-box" />
+              <label class="form__label form__label--small form__label--boolean" for="ff-{{ basket__item__handle }}__collect-old-box">Please take my old box</label>
+            </div><!--/basket__item__field-->
+
+          </div><!--/grid-col-->
+
+        </div><!--/grid-wrap-->
+
+        <!-- @OPTIMIZE - conditional output of this overlay code / might need styling - @luket -->
+        {% if basket__item__handle == 'black-wheelie-bin' %}
+          <div id="overlay-{{ basket__item__handle }}" class="overlay overlay--markup mfp-hide">
+            <h5 class="overlay__title">What's this?</h5>
+            <div class="overlay__content">
+
+              <div class="basket__item__description basket__item__description--standalone">
+                <p class="basket__item__title">Standard bin (180L)</p>
+                <p>Information on where to ﬁnd the litre capacity on the bin</p>
+                <div class="basket__item__image">
+                  <img src="/ui/images/waste/{{ basket__item__handle }}.png" alt="{{ basket__item__title }}" />
+                </div><!--/basket__item__image-->
+
+              </div><!--/basket__item__description-->
+
+              <div class="basket__item__description basket__item__description--standalone">
+                <p class="basket__item__title">Standard bin (180L)</p>
+                <p>Information on where to ﬁnd the litre capacity on the bin</p>
+                <div class="basket__item__image">
+                  <img src="/ui/images/waste/{{ basket__item__handle }}.png" alt="{{ basket__item__title }}" />
+                </div><!--/basket__item__image-->
+
+              </div><!--/basket__item__description-->
+
+            </div>
+          </div>
+        {% endif %}
+      </div><!--/basket__item__details-->
+
+    </div><!--/grid-col-->
+
+  </div><!--/grid-wrap-->
+
+</fieldset><!--/basket__item-->

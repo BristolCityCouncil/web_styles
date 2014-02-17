@@ -1,0 +1,25 @@
+{
+  "bitwise": true,
+  "curly": true,
+  "devel": true,
+  "eqeqeq": true,
+  "forin": true,
+  "indent": 2,
+  "latedef": true,
+  "newcap": true,
+  "noarg": true,
+  "noempty": false,
+  "nonew": true,
+  "quotmark": true,
+  "undef": true,
+  "unused": false,
+  "strict": true,
+  "trailing": true,
+  "browser": true,
+  "jquery": true,
+  "globals": {
+    "module": true,
+    "History": true,
+    "ie7": true
+  }
+}

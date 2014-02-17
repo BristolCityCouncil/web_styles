@@ -1,0 +1,86 @@
+{% block page %}
+
+  {% assign page_title = 'Sign in to your account - Bristol City Council' %}
+  {% assign ribbon = 'ico-user' %}
+  {% assign signed_in = false %}
+  {% assign hide_breadcrumbs = true %}
+  {% assign hide_ribbon = true %}
+  {% assign open_am = true %}
+
+  {% include 'header' %}
+
+  <div class="page-content">
+
+    <div class="layout layout-constrained">
+
+      <div class="grid-wrap">
+
+        <div class="grid-col desktop-grid-five-sixths desktop-grid-offset-one-sixth">
+
+          <div class="content content-header">
+
+            <h1 class="content-header__title">Sign in</h1>
+
+          </div><!--/content-->
+
+          <div class="panel panel--alert">
+
+            <div class="ico ico-attention ico--large"></div>
+
+            <h2 class="panel__title">Please try again</h2>
+            <div class="panel__copy">
+              <p>Wrong username/password</p>
+            </div>
+          </div><!--/panel-->
+
+        </div><!--/grid-col-->
+
+      </div><!--/grid-wrap-->
+
+      <div class="grid-wrap">
+
+        <div class="grid-col desktop-grid-one-half desktop-grid-offset-one-sixth">
+
+          <div class="content content-main">
+
+
+            <form id="form-3" class="form form--validate" action="#form-3" method="post">
+
+              <div class="form__section">
+
+                <div class="form__item form__item--string">
+                  <label class="form__label" for="ff-text-username">Username</label>
+                  <input class="form__field form__field--string" type="text" name="" placeholder="" id="ff-text-username" />
+                </div><!--/form__item-->
+
+                <div class="form__item form__item--string">
+                  <label class="form__label" for="ff-text-password">Password</label>
+                  <input class="form__field form__field--string form__field--password-strength" type="password" name="" placeholder="" id="ff-text-password" />
+                  <!--<span class="form__note">8 to 20 characters, including 1 letter and 1 number</span>-->
+                </div><!--/form__item-->
+
+                <div class="form__actions">
+                  <button class="btn btn--primary" type="submit" name="">Login <span class="ico ico-right"></span></button>
+                </div><!--/form__actions-->
+
+                <p><a href="#">Forgotten your password?</a></p>
+
+              </div>
+
+            </form>
+
+          </div><!--/content-->
+
+        </div><!--/grid-col-->
+
+
+
+      </div><!--/grid-wrap-->
+
+    </div><!--/layout-->
+
+  </div><!--page-content-->
+
+  {% include 'footer' %}
+
+{% endblock %}

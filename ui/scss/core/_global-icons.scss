@@ -1,0 +1,39 @@
+// ICONS
+
+.ico {
+  @include font-size($icon-font-size);
+}
+.ico--first {
+  margin-right: 9px;
+}
+.ico--last {
+  margin-left: 9px;
+}
+
+.ico--large {
+  @include font-size($icon-large-font-size);
+}
+
+.ico--disc {
+
+	:before {
+		color: #fff;
+		background-color: $bcc-green;
+		border-radius: 50%;
+	}
+}
+
+.ico-check {
+  color: $bcc-green;
+}
+
+.ico-cog,
+.ico-cancel,
+.ico-right {
+  color: $bcc-red;
+}
+
+.ico--nudge-down {
+  position: relative;
+  bottom: -2px;
+}

@@ -1,0 +1,29 @@
+// CORE: BASE
+
+html {
+  line-height: 1.5; // Unitless line-height - meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/ (8 Feb 2006!!)
+  height: 100%;
+  overflow-y: scroll;
+}
+
+body {
+  background: #fff; // fend off user styles
+  text-rendering: optimizeLegibility; // aestheticallyloyal.com/public/optimize-legibility/
+  height: 100%;
+}
+
+*,
+input[type=search] {
+  word-wrap: break-word;
+  @include box-sizing(border-box); // http://paulirish.com/2012/box-sizing-border-box-ftw/
+}
+
+img {
+  @include inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}

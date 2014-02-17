@@ -1,0 +1,57 @@
+// CORE: MIXINS
+// Library of custom mixins
+
+// REM SIZING
+// Use to apply a rem measurement to a certain css property
+//
+// @param $property
+//   The CSS property to apply the value to.
+//   (E.g. margin-bottom or margin)
+//
+// @param $value
+//   The measurement to apply to the property. This should be a value in pixels, but *without* the unit and can be shorthand.
+//   (E.g. 27 or 10 20)
+//
+// @OPTIMIZE: Explore potential improvements, including how to set SASS vars to null without the use of an 'ambiguous zero'
+
+@mixin rem($property, $size_in_px) {
+  // Init shorthand variables (must use 0 for null...)
+  $shorthand_in_px: 0;
+  $shorthand_in_rem: 0;
+  @each $size in $size_in_px { // Loop through values and concatenate
+    $shorthand_in_px: $shorthand_in_px + ($size) + px + " ";
+    $shorthand_in_rem: $shorthand_in_rem + ($size/16) + rem + " "; // Divided by 16px browser default font-size (100%)
+  }
+  // Output styles
+  #{$property}: $shorthand_in_px;
+  #{$property}: $shorthand_in_rem;
+}
+
+// Shorthand wrapper around the rem helper for font size
+@mixin font-size($size_in_px) {
+  @include rem(font-size, $size_in_px);
+}
+
+// Shorthand wrapper around the rem helper for line height
+@mixin line-height($size_in_px) {
+  @include rem(line-height, $size_in_px);
+}
+
+// FORM PLACEHOLDER
+// A mixin to style placeholders in HTML5 form elements.
+// Includes also a .placeholder class to be used with a polyfill e.g.
+// https://github.com/mathiasbynens/jquery-placeholder
+//
+// input {
+//   @include placeholder {
+//     /* styles for placeholder here */
+//   }
+// }
+
+@mixin placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}

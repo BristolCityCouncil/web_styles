@@ -1,0 +1,19 @@
+// ADDRESS SELECT
+
+.address-select {
+  margin-bottom: 0.8em;
+}
+
+.address-select__context {
+  @include font-size($h4-font-size);
+  margin: 0;
+}
+
+.address-select__address {
+  color: $bcc-red;
+}
+
+.address-select__change-address {
+  @include font-size($small-print-font-size);
+}
+

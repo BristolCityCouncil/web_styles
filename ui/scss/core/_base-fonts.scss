@@ -1,0 +1,56 @@
+/* ======================================================
+   FONTS
+   ======================================================*/
+
+// 'Thesans-Semi-Light'
+@font-face {
+  font-family: 'Thesans-Semi-Light';
+  src: url('../fonts/the-sans/TheSans_B2_4_.eot');
+  src: url('../fonts/the-sans/TheSans_B2_4_.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/the-sans/TheSans_B2_4_.woff') format('woff'),
+       url('../fonts/the-sans/TheSans_B2_4_.svg#TheSans_B2_4_') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'Thesans-Semi-Light';
+    src: font-url('../fonts/the-sans/TheSans_B2_4_.svg#TheSans_B2_4_') format('svg');
+  }
+}
+
+// 'Thesans-Bold'
+@font-face {
+  font-family: 'Thesans-Bold';
+  src: url('../fonts/the-sans/TheSans_B2_7_.eot');
+  src: url('../fonts/the-sans/TheSans_B2_7_.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/the-sans/TheSans_B2_7_.woff') format('woff'),
+       url('../fonts/the-sans/TheSans_B2_7_.svg#TheSans_B2_7_') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'Thesans-Bold';
+    src: font-url('../fonts/the-sans/TheSans_B2_7_.svg#TheSans_B2_7_') format('svg');
+  }
+}
+
+// 'Thesans-Semi-Light-Select'
+@font-face {
+  font-family: 'Thesans-Semi-Light-Select';
+  src: url('../fonts/the-sans/TheSans_B2_4_.eot');
+  src: url('../fonts/the-sans/TheSans_B2_4_.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/the-sans/TheSans_B2_4_.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Fonts
+$font-regular: "Thesans-Semi-Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial, sans-serif;
+//$font-regular: "Thesans-Plain", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial, sans-serif;
+$font-bold: "Thesans-Bold", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial, sans-serif;
+$font-select: "Thesans-Semi-Light-Select", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial, sans-serif;
+

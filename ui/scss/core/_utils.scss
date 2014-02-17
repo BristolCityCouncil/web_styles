@@ -1,0 +1,123 @@
+// CORE: HELPERS
+// Helper classes for common style patterns
+
+// Clearfix (h5bp.com/q)
+@mixin cf {
+  @include pie-clearfix;
+}
+%cf,
+.cf {
+  @include cf;
+}
+
+// Suppress link styles for phone numbers
+.phone-link {
+  text-decoration: none !important;
+  cursor: default;
+
+  &:hover {
+    text-decoration: none !important;
+    color: inherit;
+  }
+
+}
+
+// Accessible skiplinks
+.skiplinks {
+
+  &:focus {
+    display: block;
+    position: absolute !important;
+    text-decoration: none;
+    left: 0;
+    right: 0;
+    top: 0;
+    border: 0;
+    outline: none;
+    z-index: 700;
+
+    span {
+      display: block;
+      margin: 0 auto;
+      width: 30%;
+      padding: 8px 0;
+      text-align: center;
+      background: #333;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      text-decoration: underline;
+    }
+
+  }
+
+}
+
+// Link-list helper
+// Inspired by https://github.com/csswizardry/inuit.css/blob/master/objects/_nav.scss
+
+.linklist,
+%linklist {
+  padding: 0;
+  margin: 0;
+  @extend %cf;
+
+  li {
+    @extend .normal-list-item;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+}
+
+// Hanging indent
+// In situations where you have a floated element followed by an element containing paragraphs of text, you can use this
+// class to trigger a hanging indent so that the text does not wrap around the floated item.
+// info: stubbornella.org/content/2009/07/23/overflow-a-secret-benefit/
+// NOTE: use with caution - comes with risk of hiding overflowed content
+//
+%hanging-indent,
+.hanging-indent {
+  overflow: hidden;
+}
+
+/*
+ * Responsive iframes fix
+ * http://stackoverflow.com/questions/12676725/responsive-iframe-google-maps-and-weird-resizing
+ */
+.iframe-responsive-wrap {
+  position: relative;
+  padding-bottom: 65.25%; // Relates to aspect ratio
+  padding-top: 30px;
+  height: 0;
+  //overflow: hidden;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Horizontal rules, without <hr />
+   (Might be used in conjunction with l.-gutter--top)
+*/
+.rule-above {
+  @extend %cf;
+  @include rem(padding-top, 20);
+  border-top: 1px solid;
+}
+.rule-below {
+  margin-bottom: 10px;
+  @extend %cf;
+  @include rem(padding-bottom, 5);
+  border-bottom: 1px solid;
+}
+
+.media {margin:10px;}
+
+.media, .media__content {overflow:hidden; _overflow:visible; zoom:1;}
+
+.media .img {float:left; margin-right: 10px;}

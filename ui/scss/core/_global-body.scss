@@ -1,0 +1,44 @@
+/* ======================================================
+   BODY
+   ======================================================*/
+
+.page-body {
+  background: $white;
+  @extend %cf;
+}
+
+.page-content {
+  padding-top: 1.85em;
+  margin-bottom: 2.2em;
+}
+
+.content {
+  //margin-bottom: 1.5em;
+}
+
+.content-header {
+
+}
+
+.content-header__title {
+  margin-bottom: 0.4em;
+}
+
+.content-header__title-extra {
+  font-style: normal;
+  color: $bcc-red;
+}
+
+.content-header__byline {
+  color: $grey-9;
+  @include font-size($h3-font-size);
+  margin-top: -1em;
+}
+
+.content-main {
+
+}
+
+.content-sub {
+
+}

@@ -1,0 +1,50 @@
+.overlay {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width: auto;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.overlay--image {
+	padding: 0;
+}
+
+.overlay__title {
+	@include font-size($h3-font-size);
+	margin: 0 0 1em 0;
+	font-family: $font-regular;
+}
+
+.overlay__content {
+	p {
+		margin: 1em 0 0 0;
+		&:first-child {
+			margin: 0;
+		}
+	}
+}
+
+.overlay--dialog--attention {
+	.overlay__title {
+		color: $bcc-red;
+	}
+}
+
+.overlay--dialog--feedback {
+	.overlay__title {
+		color: $bcc-green;
+	}
+}
+
+.overlay--form {
+	.form__field--select {
+		width: 100%;
+		max-width: 100%;
+	}
+}
+
+.overlay .basket__item__description {
+	border: none;
+}

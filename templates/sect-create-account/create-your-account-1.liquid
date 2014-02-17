@@ -1,0 +1,113 @@
+{% block page %}
+
+  {% assign page_title = 'Change home address | Create account' %}
+  {% assign ribbon = 'ico-user' %}
+
+  {% include 'header' %}
+
+  <div class="page-content">
+
+    <div class="layout layout-constrained">
+
+      <div class="grid-wrap">
+
+        <div class="grid-col desktop-grid-five-sixths desktop-grid-offset-one-sixth">
+
+          <div class="content content-header">
+
+            <h1 class="content-header__title">Create your account</h1>
+
+          </div><!--/content-->
+
+        </div><!--/grid-col-->
+
+      </div><!--/grid-wrap-->
+
+
+      <div class="grid-wrap">
+
+        <div class="grid-col desktop-grid-one-half desktop-grid-offset-one-sixth">
+
+          <div class="content content-main">
+
+            <form id="form-2" class="form form--validate" action="#form-2" method="post">
+
+              <!--
+                ATTRIBUTES
+                Use 'id' to couple fields with <label> 'for'
+                Use 'name' as needed by CMS/grouping <radio> fields
+                CSS width instead of 'cols'
+                Use 'rows' over CSS height
+                Use 'size' if useful for validation and/or in <select multiple>
+                Fieldsets are optional - use for grouping sections or related fields (no need to wrap whole form)
+                Legends MUST be used in conjunction with fieldsets
+                Form actions should exist outside fieldset
+              -->
+
+              <div class="form__item form__item--select">
+                <label class="form__label" for="title">Title <span class="form__label__asterix">*</span></label>
+                <select class="form__field form__field--select form__field--select--validate" data-error-message="Please select your title" name="" id="title">
+                  <option>Select option</option>
+                  <option>Mr</option>
+                  <option>Mrs</option>
+                  <option>Dr</option>
+                </select>
+              </div><!--/form__item-->
+
+              <div class="form__item form__item--string">
+                <label class="form__label" for="fname">First name <span class="form__label__asterix">*</span></label>
+                <input class="form__field form__field--string" type="text" name="" placeholder="" id="fname" required data-error-message="Please enter your first name" />
+              </div><!--/form__item-->
+
+              <div class="form__item form__item--string">
+                <label class="form__label" for="lname">Last name <span class="form__label__asterix">*</span></label>
+                <input class="form__field form__field--string" type="text" name="" placeholder="" id="lname" required data-error-message="Please enter your last name" />
+              </div><!--/form__item-->
+
+              <div class="address-lookup js-address-lookup">
+                <div class="form__item form__item--string-action">
+                  <label class="form__label" for="ypcode">Your postcode</label>
+                  <input class="form__field form__field--string" type="text" name="ypcode" id="ypcode" value="BS6 5AA" />
+                  <button class="btn btn--secondary" type="submit">Lookup address</button>
+                </div><!--/form__item-->
+
+                <div class="form__item form__item--select">
+                  <select name="" class="form__field form__field--select form__field--selectsize" size="3">
+                    <option>Please select...</option>
+                    <option>19 Redland Road, Bristol, BS6 5AA</option>
+                    <option>20 Redland Road, Bristol, BS6 5AA</option>
+                  </select>
+                </div>
+              </div>
+
+            </form>
+
+          </div><!--/content-->
+
+        </div><!--/grid-col-->
+
+        <div class="grid-col desktop-grid-three-twelfths desktop-grid-offset-one-twelfth">
+          <div class="panel--bare">
+            <h2 class="panel__title">Why create an account?</h2>
+            <p>Manage and see all your council stuff - like waste collections, council tax and rent - in one place, online. It’s quick, easy to use, safe and secure. Signing up takes just three minutes.</p>
+
+            <h2 class="panel__title">Advantages</h2>
+            <p>24/7 anytime access &mdash; no need to wait on the phone or visit council offices</p>
+            <ul>
+              <li>Quickly manage payments and benefits</li>
+              <li>Track your orders and check all your payments</li>
+              <li>Saves you from entering your address over and over &mdash; and if you change address, you only have to tell us once</li>
+              <li>No more paper bills or letters &mdash; unless you ask for them</li>
+            </ul>
+          </div>
+        </div><!--/grid-col-->
+
+      </div><!--/grid-wrap-->
+
+    </div><!--/layout-->
+
+  </div><!--page-content-->
+
+  {% include 'footer' %}
+
+{% endblock %}

@@ -1,0 +1,10 @@
+<!-- Set defaults -->
+{% if step-header__title %}{% else %}{% assign step-header__title = 'Title' %}{% endif %}
+{% if step-header__title__step %}{% else %}{% assign step-header__title__step = 'Step x of x' %}{% endif %}
+{% if step-header__subtitle %}{% else %}{% assign step-header__subtitle = 'Subtitle' %}{% endif %}
+
+
+<div class="step-header">
+  <h1 class="step-header__title">{{ step-header__title }} <span class="step-header__title__steps"><span class="step-header__title__steps__seperator">:</span> {{ step-header__title__step }}</span></h1>
+  <h2 class="step-header__subtitle">{{ step-header__subtitle }}</h2>
+</div>

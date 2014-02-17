@@ -1,2 +1,22 @@
+# un-needed dot files
 .DS_Store
+boilerplate
 /_site
+
+# compass
+.sass-cache
+
+# node
+node_modules
+ui/css/
+ui/js/output.min.js
+converted-html
+
+#sublime
+BCC.sublime-project
+BCC.sublime-workspace
+
+#output
+ui/js/output.js
+ui/js/output.min.js
+ui/js/output.mix.js
