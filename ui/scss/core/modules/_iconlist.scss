@@ -1,0 +1,29 @@
+// LISTS
+
+.no-generatedcontent .iconlist .visuallyhidden {
+  @include revert-visuallyhidden();
+}
+
+.iconlist__list {
+  margin: 1em 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+    //margin: 0.3em 0;
+
+    padding-left: 32px;
+    @extend .normal-list-item;
+    position: relative;
+    .ico {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    //.icon-check { @include font-size($h4-font-size); }
+    //.icon-cancel { @include font-size($h4-font-size); }
+
+  }
+
+}

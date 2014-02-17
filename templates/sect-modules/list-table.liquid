@@ -1,0 +1,76 @@
+{% block page %}
+
+  {% assign page_title = 'List table' %}
+  {% assign theme = false %}
+
+  {% include 'header' %}
+
+  <div class="page-content">
+
+    <div class="layout layout-constrained">
+
+      <div class="content content-main">
+
+        <h1>List Table</h1>
+
+        <p>Looks similar to a table but as headers will be inconsistent is marked up as an ordered list.  "Columns" are defined by the grid and overriden in mobile view.</p>
+
+        {% include 'modules/list-table' %}
+
+        <br />
+
+        <p>Example with different grid sizing and fewer columns:</p>
+
+        <ol class="list-table">
+
+        	<li class="list-table__row">
+
+  					<div class="grid-wrap">
+
+  						<div class="grid-col desktop-grid-two-sixths">
+  			        <div class="list-table__row__item list-table__row__item--date">
+  			        	<div class="list-table__row__item__inner">
+  				        	<p>
+  					        	<span>6 Dec</span>
+  					        	<span>2013</span>
+  				        	</p>
+  			        	</div>
+  							</div>
+  			      </div>
+
+  			      <div class="grid-col desktop-grid-two-sixths">
+  			        <div class="list-table__row__item list-table__row__item--description">
+  			        	<div class="list-table__row__item__inner">
+  			        		<p>Lore ipsum dilor sit amet.</p>
+  			      		</div>
+  							</div>
+  			      </div>
+
+  						<div class="grid-col desktop-grid-two-sixths">
+  							<div class="list-table__row__item list-table__row__item--last">
+  								<div class="list-table__row__item__inner">
+  					      	<dl class="list-table__row__item__list">
+  					      		<dt>Service</dt>
+  					      		<dd>Waste Management</dd>
+  				      		</dl>
+  			      		</div>
+  							</div>
+  						</div>
+
+  					</div>
+
+  				</li>
+
+      	</ol>
+
+
+
+  	  </div><!--/content-->
+
+    </div>
+
+	</div><!--page-content-->
+
+	{% include 'footer' %}
+
+{% endblock %}

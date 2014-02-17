@@ -1,0 +1,72 @@
+// STEP HEADER
+
+.step-header {
+	margin: 0 0 25px 0;
+	@include respond-min($bp-tablet-min) {
+		margin: 0 0 30px 0;
+	}
+}
+
+.step-header__title {
+	font-family: $font-bold;
+  @include font-size($h1-font-size);
+  margin: 0;
+  padding: 0;
+  @include respond-min($bp-tablet-min) {
+    @include font-size($h4-font-size);
+    border-bottom: 1px solid $grey-boxout;
+    padding: 0 0 10px 0;
+    margin: 0;
+  }
+}
+
+.step-header__title__steps {
+	display: block;
+	font-family: $font-regular;
+	color: $grey-10;
+	@include font-size($small-font-size);
+	@include respond-min($bp-tablet-min) {
+		@include font-size($h4-font-size);
+		display: inline;
+		color: $dark-grey;
+	}
+}
+
+.step-header__title__steps__seperator {
+	display: none;
+	@include respond-min($bp-tablet-min) {
+		display: inline;
+		margin: 0 5px 0 0;
+	}
+}
+
+.step-header__subtitle {
+	display: none;
+	margin: 0;
+	@include font-size($h1-font-size);
+	@include respond-min($bp-tablet-min) {
+		display: block;
+	}
+}
+
+.step-header--alt {
+	.step-header__title {
+		@include font-size(30);
+	}
+	@include respond-min($bp-tablet-min) {
+		.step-header__title {
+			border-bottom: none;
+			padding: 0;
+			@include font-size($h1-font-size);
+		}
+
+		.step-header__title__steps {
+			display: block;
+			color: $grey-10;
+		}
+
+		.step-header__title__steps__seperator {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,115 @@
+// SETTINGS
+
+// Typography
+// TODO: Mobile adjustments
+$body-font-size: 18;
+$h1-font-size: 48;
+$h2-font-size: 32;
+$h3-font-size: 26;
+$h4-font-size: 22;
+$h5-font-size: $body-font-size;
+$h6-font-size: $body-font-size;
+$form-font-size: $body-font-size;
+$small-font-size: 15;
+$small-print-font-size: 13;
+
+$body-line-height: 1.4;
+
+// Icons
+$icon-font-size: 24;
+$icon-large-font-size: 32;
+
+// Grid
+$max-width: 960px;
+$grid-gutter: 20px;
+
+// Breakpoints (px)
+// These are standardised breakpoints for re-use, but feel free to create custom breakpoint widths specific to patterns/modules
+// Repeated use of a custom breakpoint widths could indicate a standardised opportunity
+// Mobile-first should theoretically mean there are more min-width media queries than max/min-max
+// Note: min-widths tend to be +1px more than max-widths
+// Breakpoints based on Dimensions Chrome app: https://chrome.google.com/webstore/detail/dimensions/hdmihohhdcbejdkidbfijmfehjbnmifk?hl=en
+
+// Mobile
+$bp-mobile-max: 320px;
+// Mobile Wide
+$bp-mobile-wide-min: 321px;
+$bp-mobile-wide-max: 480px;
+// Tablet
+$bp-tablet-min: 481px;
+$bp-tablet-max: 768px;
+//Desktop
+$bp-desktop-min: 769px;
+$bp-desktop-max: 1024px;
+
+// Fixed width breakpoint helpers (960px)
+$bp-widescreen-min: 1025px;
+$bp-fixed-min: $max-width;
+$bp-fixed-max: $max-width + 1px;
+
+// COLOURS
+
+// @OPTIMIZE: See PSD colour palette to refactor this more meaningfully
+$bcc-red: #bc0031;
+$bcc-red-dark: #9e0029;
+
+$bcc-blue-dark: #274d8b;
+$bcc-blue-darkest: #15356a;
+$bcc-blue-mid: #5271a2;
+$bcc-blue-light: #7d94b9;
+$bcc-blue-lighter: #dce9ff;
+$bulky-blue-light: #d4dbe8;
+
+$main-green: #188049;
+$bcc-green: #188049;
+$bcc-green-light: #e9f5ef;
+$recyling-green-light: #d1e6db;
+
+$dark-grey: #2e3137;
+$bcc-grey-darkest: #3c4147;
+$grey-9: #51535b;
+$bcc-grey-darker: #63676c;
+$light-copy-on-light-grey: #676973;
+$grey-10: #6b6d73;
+$bcc-grey-dark: #8a8d91;
+$grey: #999999;
+$bcc-grey-light: #b1b3b5;
+$button-shadow: #c0c1c3;
+$grey-lighter: #cccccc;
+$grey-light: #d5d6d7;
+$bcc-grey-lighter: #d8d9da;
+$grey-7: #d8d8d9;
+$another-grey: #dadada;
+$grey-boxout: #eaeaea;
+$bcc-grey-lightest: #ebecec;
+
+$bcc-pink: #ffe5ec;
+
+$alert-yellow: #ffcc00;
+
+$white: #ffffff;
+$black: #000000;
+
+$body-bg: $dark-grey;
+$copy: $bcc-grey-darkest;
+$link: $bcc-blue-dark;
+$link-alt: #90b4ee;
+
+// Form elements
+$input-bg: $grey-boxout;
+$input-shadow: $grey-7;
+$button-bg: $bcc-grey-darker;
+$button-bg-primary: $bcc-red;
+$button-bg-secondary: $bcc-blue-dark;
+
+// WASTE
+$recyling-green: $bcc-green;
+$bulky-waste: #f27120;
+
+$rubbish-grey: $dark-grey;
+$rubbish-grey-light: $grey-boxout;
+
+$bulky-blue: $bcc-blue-dark;
+
+// @TODO - make this clever based on the color of content?  even possible?
+$quiet-body-color: adjust-lightness($bcc-grey-darkest, +20);

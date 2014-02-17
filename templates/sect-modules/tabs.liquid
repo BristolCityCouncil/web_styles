@@ -1,0 +1,28 @@
+{% block page %}
+
+  {% assign page_title = 'Tabs' %}
+  {% assign theme = false %}
+
+  {% include 'header' %}
+
+  <div class="page-content">
+
+    <div class="layout layout-constrained">
+
+      <div class="content content-main">
+
+        <h1>.tabs</h1>
+        <br />
+        <p>Note: Tabs in Alpha only supports 2 small tabs, nothing is changed for mobile and therefore further tabs will break the layout.</p>
+
+        {% include 'modules/tabs' %}
+
+      </div><!--/content-->
+
+    </div>
+
+  </div><!--page-content-->
+
+  {% include 'footer' %}
+
+{% endblock %}

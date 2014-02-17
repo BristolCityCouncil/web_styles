@@ -1,0 +1,26 @@
+/* ======================================================
+   HEADER: SEARCH
+   ======================================================*/
+
+.form-search {
+  display: none;
+  padding-top: 2em;
+  margin-bottom: 2em;
+
+  .field {
+
+  }
+
+  .lbl-search {
+    @extend .visuallyhidden;
+  }
+
+  .f-search {
+    width: 100%;
+  }
+
+  .action {
+    display: none;
+  }
+
+}//form-search

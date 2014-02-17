@@ -1,0 +1,27 @@
+{% block page %}
+
+  {% assign page_title = 'Step Header' %}
+  {% assign theme = false %}
+
+  {% include 'header' %}
+
+  <div class="page-content">
+
+    <div class="layout layout-constrained">
+
+    <div class="content content-main">
+
+        <h1>.step-header</h1><br /><br />
+        {% include 'modules/step-header' %}
+
+        <h1>.step-header--alt</h1><br /><br />
+        {% include 'modules/step-header--alt' %}
+
+      </div><!--/content-->
+    </div>
+
+  </div><!--page-content-->
+
+  {% include 'footer' %}
+
+{% endblock %}

@@ -1,0 +1,46 @@
+// Note: tab support in Alpha is limited to 2 tabs only
+
+.tabs {
+	.tabs__list {
+		list-style: none;
+		@include font-size($body-font-size);
+		border-bottom: 2px solid $grey-boxout;
+		@extend .cf;
+		margin: 0 -10px 40px -10px;
+		padding: 0 10px;
+		@include respond-min($bp-desktop-min) {
+			margin: 0 0 40px 0;
+			padding: 0;
+			@include font-size($h3-font-size);
+		}
+		li {
+			@extend .normal-list-item;
+			float: left;
+			margin: 0;
+			position: relative;
+			bottom: -2px;
+		}
+		a {
+			display: inline-block;
+			line-height: 55px;
+			padding: 0 30px;
+			border-top: 2px solid transparent;
+			border-left: 2px solid transparent;
+			border-right: 2px solid transparent;
+			&:focus {
+				outline: none;
+			}
+		}
+		.ui-tabs-active {
+			a {
+				font-family: $font-bold;
+				text-decoration: none;
+				color: $dark-grey;
+				border-top: 2px solid $grey-boxout;
+				border-left: 2px solid $grey-boxout;
+				border-right: 2px solid $grey-boxout;
+				background: #fff;
+			}
+		}
+	}
+}

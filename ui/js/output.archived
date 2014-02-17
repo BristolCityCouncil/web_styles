@@ -1,0 +1,13 @@
+
+/* Mix */
+// @import "lib/jquery-1.10.2.js";
+// @import "lib/jquery-ui-1.10.3.custom.js";
+// @import "widgets/jquery.bcc.validate.js";
+// @import "lib/jquery.uniform.js";
+// @import "lib/jquery.magnificpopup.js";
+// @import "lib/jquery.placeholder.js";
+// @import "widgets/jquery.bcc.listtable.js";
+// @import "widgets/jquery.bcc.addresslookup.js";
+// @import "widgets/jquery.bcc.binbasket.js";
+// @import "widgets/jquery.bcc.overlays.js";
+// @import "app/app.js";

@@ -1,0 +1,344 @@
+{% block page %}
+
+  {% assign page_title = 'Forms' %}
+  {% assign theme = false %}
+
+  {% include 'header' %}
+
+
+  <div class="page-content">
+
+    <div class="layout layout-constrained">
+
+      <div class="content content-main">
+
+        <h1>Forms</h1>
+
+        <p>These are the available field styles.</p>
+
+        <hr />
+
+        <h2>Form 1</h2>
+
+        <p>Fields marked with an asterix ( <span class="form__label__asterix">*</span> ) are mandatory</p>
+
+        <form id="form-2" class="form form--validate" action="#form-2" method="post">
+
+          <!--
+            ATTRIBUTES
+            Use 'id' to couple fields with <label> 'for'
+            Use 'name' as needed by CMS/grouping <radio> fields
+            CSS width instead of 'cols'
+            Use 'rows' over CSS height
+            Use 'size' if useful for validation and/or in <select multiple>
+            Fieldsets are optional - use for grouping sections or related fields (no need to wrap whole form)
+            Legends MUST be used in conjunction with fieldsets
+            Form actions should exist outside fieldset
+          -->
+          <!-- @OPTIMIZE: Should these be generic panels or are they not inherently linked -->
+          <div class="form__feedback form__feedback--failure">
+
+            <h2 class="form__feedback__title"><span class="ico ico-attention ico--first"></span> There were some problems submitting your form</h2>
+
+            <div class="form__feedback__summary">
+              <ul class="form__feedback__summary__list">
+                <li>Lorem ipsum dolor sit amet <a href="#ff-text-1-container">go to error</a></li>
+                <li>Lorem ipsum dolor sit amet</li>
+              </ul>
+            </div><!--/form__feedback__summary-->
+
+          </div><!--/form__feedback-->
+
+          <div class="form__feedback form__feedback--success">
+
+            <h2 class="form__feedback__title"><span class="ico ico-check"></span> Thank you, your submission was successful</h2>
+
+            <div class="form__feedback__summary">
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            </div><!--/form__feedback__summary-->
+
+          </div><!--/form__feedback-->
+
+          <fieldset class="form__section">
+
+            <legend class="form__section__title">
+              <span class="form__section__title__text">Section title</span>
+            </legend>
+
+            <div class="form__item form__item--string" id="ff-text-1-container">
+              <label class="form__label" for="ff-text-1">Text field label</label>
+              <input class="form__field form__field--string" type="text" name="" placeholder="E.g. example" id="ff-text-1" />
+              <span class="form__note"><a href="#" class="link-edit">Change address</a></span>
+            </div><!--/form__item-->
+
+            <div class="form__item form__item--string">
+              <label class="form__label" for="ff-text-validate-1">Required field <span class="form__label__asterix">*</span></label>
+              <input class="form__field form__field--string" type="text" name="" placeholder="" id="ff-text-validate-1" data-error-message="Required field" required />
+            </div><!--/form__item-->
+
+            <div class="form__item form__item--string">
+              <label class="form__label" for="ff-text-validate-2">Number that is 10 digits <span class="form__label__asterix">*</span></label>
+              <input class="form__field form__field--string" type="text" name="" placeholder="e.g. 1111111111" id="ff-text-validate-2" data-error-message="Must be a 10 digit number" required pattern="\d{10}" />
+            </div><!--/form__item-->
+
+            <div class="form__item form__item--string">
+              <label class="form__label" for="ff-text-validate-3">Email (uses pattern on input) <span class="form__label__asterix">*</span></label>
+              <input class="form__field form__field--string" type="email" name="" placeholder="e.g. test@test.co.uk" id="ff-text-validate-3" data-error-message="Must be a valid email address" required pattern="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" />
+            </div><!--/form__item-->
+
+            <div class="form__item form__item--string">
+              <label class="form__label" for="ff-textarea-2">Textarea field label</label>
+              <textarea class="form__field form__field--string form__field--textarea" name="" rows="5" placeholder="e.g. example" id="ff-textarea-2"></textarea>
+            </div><!--/form__item-->
+
+            <div class="form__item form__item--select">
+              <label class="form__label" for="ff-select-2">Multi-select field label</label>
+              <select multiple class="form__field form__field--select form__field--multiselect" name="" id="ff-select-2">
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+                <option>Option 4</option>
+                <option>Option 5</option>
+                <option>Option 6</option>
+              </select>
+            </div><!--/form__item-->
+
+            <div class="form__item form__item--select">
+              <label class="form__label" for="ff-select-size">Select size</label>
+              <select multiple class="form__field form__field--select form__field--selectsize" size="3" name="" id="ff-select-size">
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+                <option>Option 4</option>
+                <option>Option 5</option>
+                <option>Option 6</option>
+              </select>
+            </div><!--/form__item-->
+
+            <div class="form__actions">
+              <button class="btn" type="submit" name="">Submit <span class="ico ico-right"></span></button>
+            </div><!--/form__actions-->
+
+          </fieldset>
+
+        </form>
+        <hr />
+
+        <h2>Form 2</h2>
+
+        <p>Fields marked with an asterix ( <span class="form__label__asterix">*</span> ) are mandatory</p>
+
+        <form id="form-3" class="form form--validate" action="#form-3" method="post">
+
+          <fieldset class="form__section">
+
+            <legend class="form__section__title">
+              <span class="form__section__title__text">Section title</span>
+            </legend>
+
+            <div class="form__item form__item--string">
+              <label class="form__label" for="ff-text-validate-4">Required field <span class="form__label__asterix">*</span></label>
+              <input class="form__field form__field--string" type="text" name="" placeholder="" id="ff-text-validate-4" data-error-message="Required field" required />
+            </div><!--/form__item-->
+
+            <div class="form__item form__item--string">
+              <label class="form__label" for="ff-text-validate-5">Number that is 10 digits <span class="form__label__asterix">*</span></label>
+              <input class="form__field form__field--string" type="text" name="" placeholder="e.g. 1111111111" id="ff-text-validate-5" data-error-message="Must be a 10 digit number" required pattern="\d{10}" />
+            </div><!--/form__item-->
+
+            <div class="form__item form__item--string">
+              <label class="form__label" for="ff-text-validate-6">Email (uses pattern on input) <span class="form__label__asterix">*</span></label>
+              <input class="form__field form__field--string" type="email" name="" placeholder="e.g. test@test.co.uk" id="ff-text-validate-6" data-error-message="Must be a valid email address" required pattern="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" />
+            </div><!--/form__item-->
+
+            <fieldset class="form__group">
+
+              <legend class="form__group__title">
+                <span class="form__group__title__text">Label for group of radio items</span>
+              </legend>
+
+
+              <em class="form__item__error" style="display: none;"><span class="ico ico-right ico--first"></span>Please choose an option</em>
+
+              <div class="form__item form__item--boolean form__item--group">
+                <input class="form__field form__field--boolean form__field--radio" type="radio" name="radio-group-validate-2" id="ff-radio-validate-4" value="1" required />
+                <label class="form__label form__label--boolean form__label--group" for="ff-radio-validate-4">Option 1</label>
+              </div><!--/form__item-->
+
+              <div class="form__item form__item--boolean form__item--group">
+                <input class="form__field form__field--boolean form__field--radio" type="radio" name="radio-group-validate-2" id="ff-radio-validate-5" value="2" required />
+                <label class="form__label form__label--boolean form__label--group" for="ff-radio-validate-5">Option 2</label>
+              </div><!--/form__item-->
+
+              <div class="form__item form__item--boolean form__item--group">
+                <input class="form__field form__field--boolean form__field--radio" type="radio" name="radio-group-validate-2" id="ff-radio-validate-6" value="3" required />
+                <label class="form__label form__label--boolean form__label--group" for="ff-radio-validate-6">Option 3</label>
+              </div><!--/form__item-->
+
+            </fieldset><!--/form__group-->
+
+            <fieldset class="form__group">
+
+              <legend class="form_group_title">
+                <span class="form__group__title__text">Form group: choose many</span>
+              </legend>
+
+              <div class="form__item form__item--boolean form__item--group">
+                <input class="form__field form__field--boolean form__field--checkbox" type="checkbox" name="" id="ff-checkbox-1" value="1" checked />
+                <label class="form__label form__label--boolean form__label--group" for="ff-checkbox-1">Option 1</label>
+              </div><!--/form__item-->
+
+              <div class="form__item form__item--boolean form__item--group">
+                <input class="form__field form__field--boolean form__field--checkbox" type="checkbox" name="" id="ff-checkbox-2" value="2" />
+                <label class="form__label form__label--boolean form__label--group" for="ff-checkbox-2">Option 2</label>
+              </div><!--/form__item-->
+
+              <div class="form__item form__item--boolean form__item--group">
+                <input class="form__field form__field--boolean form__field--checkbox" type="checkbox" name="" id="ff-checkbox-3" value="3" />
+                <label class="form__label form__label--boolean form__label--group" for="ff-checkbox-3">Option 3</label>
+              </div><!--/form__item-->
+
+            </fieldset><!--/form__group-->
+
+            <div class="form__item form__item--select">
+              <label class="form__label" for="ff-select-validate">Select field validate (first selection invalid) <span class="form__label__asterix">*</span></label>
+              <select class="form__field form__field--select form__field--select--validate" name="" id="ff-select-validate" data-error-message="Please select a valid option">
+                <option>This is a longer option</option>
+                <option>Redland</option>
+                <option>Scarborough</option>
+                <option>Southmead</option>
+                <option>Sunderland</option>
+                <option>Swansea</option>
+                <option>Tiverton</option>
+              </select>
+            </div><!--/form__item-->
+
+            <div class="form__item form__item--boolean">
+              <input class="form__field form__field--boolean form__field--boolean--validate form__field--checkbox" type="checkbox" name="" id="ff-terms-validate" value="Agree" data-error-message="Please agree to the terms and conditions" />
+              <label class="form__label form__label--boolean" for="ff-terms-validate">I agree to the terms and conditions</label>
+            </div><!--/form__item-->
+
+            <div class="form__item form__item--boolean">
+              <input class="form__field form__field--boolean form__field--checkbox form__field--checkbox-large" type="checkbox" name="" id="ff-terms-large" value="Agree" />
+              <label class="form__label form__label--boolean" for="ff-terms-large">Large Checkbox</label>
+            </div><!--/form__item-->
+
+            <div class="form__actions">
+              <button class="btn" type="submit" name="">Submit <span class="ico ico-right"></span></button>
+            </div><!--/form__actions-->
+
+          </fieldset>
+
+        </form>
+        <hr />
+
+        <h2>Password Matching</h2>
+
+        <form id="form-4" class="form form--validate" action="#form-4" method="post">
+
+          <div class="form__item form__item--string">
+            <label class="form__label" for="ff-text-password">Password</label>
+            <input class="form__field form__field--string form__field--password-strength" type="password" name="" placeholder="" id="ff-text-password" data-error-message="Please enter a valid password" />
+            <span class="form__note">8 to 20 characters, including 1 letter and 1 number</span>
+          </div><!--/form__item-->
+
+          <div class="form__item form__item--string">
+            <label class="form__label" for="ff-text-password-confirm">Confirm Password</label>
+            <input class="form__field form__field--string form__field--match" type="password" name="" placeholder="" id="ff-text-password-confirm" data-match="ff-text-password" data-error-message="This password must match the above password" />
+            <span class="form__note">Must match above password</span>
+          </div><!--/form__item-->
+
+        </form>
+
+        <hr />
+
+        <h2>Backend errors</h2>
+
+        <p>Backend errors are shown by adding a class of "form__item--backend-error" to the appropriate "form__item".  After interacting with an element this class is removed and the front end takes over.</p>
+
+        <form id="form-5" class="form form--validate" action="#form-5" method="post">
+
+          <div class="form__item form__item--string form__item--backend-error">
+            <label class="form__label" for="ff-text-backend-error">Backend error</label>
+            <input class="form__field form__field--string" type="text" name="" placeholder="E.g. example" id="ff-text-backend-error" data-error-message="Required field" required />
+          </div><!--/form__item-->
+
+          <div class="form__item form__item--select form__item--backend-error">
+            <label class="form__label" for="ff-select-backend-error">Backend error</label>
+            <select class="form__field form__field--select form__field--select--validate" name="" id="ff-select-backend-error" data-error-message="Please select a valid option">
+              <option>This is a longer option</option>
+              <option>Option 1</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+          </div><!--/form__item-->
+
+          <div class="form__item form__item--boolean form__item--backend-error">
+            <input class="form__field form__field--boolean form__field--boolean--validate form__field--checkbox" type="checkbox" name="" id="ff-terms-backend-error" value="Agree" data-error-message="Please agree to the terms and conditions" />
+            <label class="form__label form__label--boolean" for="ff-terms-backend-error">Backend error</label>
+          </div><!--/form__item-->
+
+        </form>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas sed diam eget risus varius blandit sit amet non magna. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+
+        <hr />
+
+        <h2>Buttons</h2>
+
+        <p>Buttons styles can be applied to both form buttons and links.</p>
+
+        <p>
+          <button type="submit" class="btn">Button</button>
+          <a href="#" class="btn">Link button</a>
+        </p>
+
+        <p>Buttons can be default or 'secondary'.</p>
+
+        <p>
+          <button type="submit" class="btn">Primary</button>
+          <button type="submit" class="btn btn--secondary">Secondary</button>
+        </p>
+
+        <p>Buttons can also have an appended/prepended icon.</p>
+
+        <p>
+          <button type="submit" class="btn">Button <span class="ico ico-right"></span></button>
+          <a href="#" class="btn">Link <span class="ico ico-right"></span></a>
+        </p>
+
+        <p>
+          <button type="submit" class="btn"><span class="ico ico-right ico--first"></span> Button</button>
+          <a href="#" class="btn"><span class="ico ico-right ico--first"></span>Link</a>
+        </p>
+
+        <p>Disabled buttons.</p>
+
+        <p>
+          <button type="submit" class="btn" disabled>Button</button>
+          <a href="#" class="btn btn--disabled">Link button</a>
+        </p>
+
+        <p>
+          <button type="submit" class="btn" disabled>Primary</button>
+          <button type="submit" class="btn btn--secondary" disabled>Secondary</button>
+        </p>
+
+        <hr />
+        <h2>Button with textbox</h2>
+
+        <div class="form__item form__item--string-action">
+          <label class="form__label">Your postcode</label>
+          <input class="form__field form__field--string" type="text" name="" />
+          <button class="btn btn--secondary" type="submit">Lookup address</button>
+        </div><!--/form__item-->
+
+      </div><!--/content-->
+
+    </div>
+
+  </div><!--page-content-->
+
+  {% include 'footer' %}
+
+{% endblock %}

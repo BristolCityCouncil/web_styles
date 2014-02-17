@@ -1,0 +1,85 @@
+
+.lead {
+  color: $bcc-red;
+}
+
+// h1 - h6
+#{headings()} {
+  margin-top: 1em;
+  margin-bottom: 0.2em;
+  color: #2e3137;
+  font-family: $font-bold;
+  font-weight: normal;
+}
+
+// Should we standardize line-heights for each heading element?
+
+// .giga{
+//     font-size:80px;
+//     font-size:5rem;     /* 80px */
+//     line-height:1.2;    /* 96px */
+// }
+// .mega{
+//     font-size:64px;
+//     font-size:4rem;     /* 64px */
+//     line-height:1.125;  /* 72px */
+// }
+// .kilo{
+//     font-size:48px;
+//     font-size:3rem;     /* 48px */
+//     line-height:1;      /* 48px */
+// }
+
+/* Define headings and their associated classes here. */
+h1, .alpha{
+    @include font-size($h1-font-size);
+    //line-height:1.5;    /* 48px */
+}
+h2, .beta{
+    @include font-size($h2-font-size);
+    //line-height:1;      /* 24px */
+}
+h3, .gamma{
+    @include font-size($h3-font-size);
+    //line-height:1.2;    /* 24px */
+}
+h4, .delta{
+    @include font-size($h4-font-size);
+    //line-height:1.333;  /* 24px */
+}
+h5, .epsilon{
+    @include font-size($h5-font-size);
+    //line-height:1.5;    /* 24px */
+}
+h6, .zeta{
+    @include font-size($h6-font-size);
+    //line-height:1.5;    /* 24px */
+}
+
+.natural{
+    @include font-size($body-font-size);
+    //line-height:1.5;    /* 24px */
+}
+
+/* Smaller-than-body-copy sizes here. */
+small, .smallprint {
+    @include font-size($small-print-font-size);
+    //line-height:2;      /* 24px */
+}
+
+.midprint {
+  @include font-size($small-font-size);
+}
+
+// Ditch top margin on headings that are direct first-child of content
+// This *should* then only target content-based headings...
+.content {
+  > {
+    #{headings()} {
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+

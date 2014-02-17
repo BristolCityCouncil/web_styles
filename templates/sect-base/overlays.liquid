@@ -1,0 +1,78 @@
+{% block page %}
+
+  {% assign page_title = 'Overlays' %}
+  {% assign theme = false %}
+
+  {% include 'header' %}
+
+		<div class="page-content">
+
+      <div class="layout layout-constrained">
+
+      	<div class="content content-main">
+
+      		<h1>Overlays</h1>
+    			<p>Overlays are currently utilising <a href="http://dimsemenov.com/plugins/magnific-popup/" target="_blank">magnific popup</a>.</p>
+    			<p>Read the <a href="http://dimsemenov.com/plugins/magnific-popup/documentation.html" target="_blank">documentation</a>.</p>
+
+
+          <p><a href="/ui/images/temp/test-image222.jpg" title="External Image" class="js-overlay-open js-overlay-open-external-image">Broken Image</a></p>
+          <hr />
+          <p><a href="#dialog-window" class="js-overlay-open js-overlay-open-dialog">Dialog</a></p>
+        	<p><a href="#dialog-window-attention" class="js-overlay-open js-overlay-open-dialog">Dialog Attention</a></p>
+        	<p><a href="#dialog-window-feedback" class="js-overlay-open js-overlay-open-dialog">Dialog Feedback</a></p>
+        	<!-- @OPTIMIZE: where should close button be? -->
+          <p><a href="/ui/images/temp/test-image.jpg" title="External Image" class="js-overlay-open js-overlay-open-external-image">External Image</a></p>
+        	<p><a href="/ui/images/temp/test-image.jpg" title="External Image Retina" class="js-overlay-open js-overlay-open-external-image-retina">External Image Retina</a></p>
+        	<p><a href="#inline-image" class="js-overlay-open js-overlay-open-inline-image">Inline Image</a></p>
+        	<p><a href="http://www.youtube.com/watch?v=iRZ2Sh5-XuM" class="js-overlay-open js-overlay-open-iframe">iframe - YouTube</a></p>
+        	<p><a href="https://maps.google.com/maps?q=221B+Baker+Street,+London,+United+Kingdom&amp;hl=en&amp;t=v&amp;hnear=221B+Baker+St,+London+NW1+6XE,+United+Kingdom" class="js-overlay-open js-overlay-open-iframe">iframe - Google Map</a></p>
+
+
+        	<p>Image Gallery:</p>
+        	<ul class="js-overlay-open js-overlay-open-external-images">
+        		<li><a href="/ui/images/temp/test-image@2x.jpg" title="External Image 1">Image 1</a></li>
+        		<li><a href="/ui/images/temp/test-image@2x.jpg" title="External Image 2">Image 2</a></li>
+      		</ul>
+          <p><a href="#markup-window" class="js-overlay-open js-overlay-open-markup">Markup</a></p>
+        </div>
+
+
+      </div>
+
+  	</div>
+
+	<div id="dialog-window" class="overlay overlay--dialog mfp-hide">
+  	<p class="overlay__title">Dialog Title</p>
+  	<div class="overlay__content">
+    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </div>
+  <!-- @OPTIMIZE: Consider whether title should have attention class or container -->
+  <div id="dialog-window-attention" class="overlay overlay--dialog--attention mfp-hide">
+  	<p class="overlay__title"><span class="ico ico-attention ico--first"></span> Dialog Title</p>
+  	<div class="overlay__content">
+    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </div>
+  <!-- @OPTIMIZE: Consider whether title should have attention class or container -->
+  <div id="dialog-window-feedback" class="overlay overlay--dialog--feedback mfp-hide">
+  	<p class="overlay__title"><span class="ico ico-check"></span> Dialog Title</p>
+  	<div class="overlay__content">
+    	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </div>
+  <div id="markup-window" class="overlay overlay--markup mfp-hide">
+    <p class="overlay__title">Title</p>
+    <div class="overlay__content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </div>
+
+  <div id="inline-image" class="overlay overlay--image mfp-hide">
+  	<img src="/ui/images/temp/test-image@2x.jpg" alt="image" />
+  </div>
+
+  {% include 'footer' %}
+
+{% endblock %}

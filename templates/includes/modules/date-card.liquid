@@ -1,0 +1,49 @@
+{% if date-card-type == null %}{% assign date-card-type = '' %}{% endif %}
+
+{% if date-card-element == null %}
+
+	<div class="date-card {{ date-card-type }}">
+	  <time datetime="2013-01-15">
+	    <span class="date-card__weekday">Wednesday</span>
+	    <span class="date-card__day">15</span>
+	    <span class="date-card__month">January</span>
+	  </time>
+	  <span class="date-card__note">
+        {% if date-card-type == '' %}
+        Recycling and rubbish
+        {% endif %}
+        {% if date-card-type == 'date-card--recycling' %}
+        Recycling only
+        {% endif %}
+        {% if date-card-type == 'date-card--bulky' %}
+        <a href="#" title="Bulky Waste">
+          Bulky waste
+        </a>
+        {% endif %}
+    </span>
+	</div>
+
+{% else if date-card-element == 'list item' %}
+
+	<li class="date-card {{ date-card-type }}">
+	  <time datetime="2013-01-15">
+	    <span class="date-card__weekday">Wednesday</span>
+	    <span class="date-card__day">15</span>
+	    <span class="date-card__month">January</span>
+	  </time>
+	  <span class="date-card__note">
+        {% if date-card-type == '' %}
+        Recycling and rubbish
+        {% endif %}
+        {% if date-card-type == 'date-card--recycling' %}
+        Recycling only
+        {% endif %}
+        {% if date-card-type == 'date-card--bulky' %}
+        <a href="#" title="Bulky Waste">
+          Bulky waste
+        </a>
+        {% endif %}
+    </span>
+	</li>
+
+{% endif %}

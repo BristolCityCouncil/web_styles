@@ -1,0 +1,65 @@
+{% block page %}
+
+  {% assign page_title = 'Date Cards' %}
+  {% assign theme = false %}
+
+  {% include 'header' %}
+
+  <div class="page-content">
+
+    <div class="layout layout-constrained">
+
+      <div class="content content-main">
+
+        <h1>Date Cards / Date Card List</h1>
+
+        <!-- @OPTIMIZE: Check w/ Damon that these classes are the most sensible for future use -->
+
+        {% assign date-card-element = null %}
+
+        <h2>.date-card</h2>
+
+        {% include 'modules/date-card' %}
+
+        <br />
+        <h2>.date-card--recycling</h2>
+
+        {% assign date-card-type = 'date-card--recycling' %}
+        {% include 'modules/date-card' %}
+
+        <br />
+        <h2>.date-card--bulky</h2>
+        {% assign date-card-type = 'date-card--bulky' %}
+        {% include 'modules/date-card' %}
+
+        <br />
+        <h2>(ul) .date-card-list</h2>
+        {% assign date-card-element = 'list item' %}
+
+        <ul class="date-card-list">
+          {% assign date-card-type = 'date-card--recycling' %}
+          {% include 'modules/date-card' %}
+
+          {% assign date-card-type = 'date-card--bulky' %}
+          {% include 'modules/date-card' %}
+
+          {% assign date-card-type = '' %}
+          {% include 'modules/date-card' %}
+
+          {% assign date-card-type = 'date-card--recycling' %}
+          {% include 'modules/date-card' %}
+
+          {% assign date-card-type = '' %}
+          {% include 'modules/date-card' %}
+        </ul>
+
+
+      </div><!--/content-->
+
+    </div>
+
+  </div><!--page-content-->
+
+  {% include 'footer' %}
+
+{% endblock %}

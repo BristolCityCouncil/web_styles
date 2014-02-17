@@ -1,0 +1,34 @@
+// @OPTIMIZE: Should we be using has- classes?
+.form__item--error {
+	.form__label {
+		color: $bcc-red;
+	}
+	.form__field--string {
+		outline: 3px solid $bcc-red;
+		color: $bcc-red;
+	}
+	.form__item__error {
+		display: block;
+	}
+	.uniform__select {
+    background-position: -5px -251px !important;
+	}
+	.uniform__select span {
+  	background-position: right -300px !important;
+	}
+}
+
+.form__item__error {
+  color: $bcc-red;
+  font-family: $font-bold;
+  font-style: normal;
+  display: none;
+  clear: both;
+  .ico {
+    position: relative;
+    bottom: -3px;
+  }
+  a {
+  	color: $bcc-red;
+  }
+}

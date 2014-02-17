@@ -1,0 +1,8 @@
+// OLD IE
+// Alternate fixed-width stylesheet for IE8 and below: http://jakearchibald.github.io/sass-ie/
+
+@import "settings";
+
+$fix-mqs: $max-width;
+
+@import 'master';

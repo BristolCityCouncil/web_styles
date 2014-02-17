@@ -1,0 +1,126 @@
+{% if list-table__row--complete == true %}
+
+	<li class="list-table__row list-table__row--complete">
+		
+		<div class="grid-wrap">
+			
+			<div class="grid-col desktop-grid-five-thirty-sixths">
+        <div class="list-table__row__item list-table__row__item--date">
+        	<div class="list-table__row__item__inner">
+	        	<p>
+		        	<span>6 Dec</span>
+		        	<span>2013</span>
+	        	</p>
+        	</div>
+				</div>
+      </div>
+      
+      <div class="grid-col desktop-grid-three-twelfths">
+        <div class="list-table__row__item list-table__row__item--description">
+        	<div class="list-table__row__item__inner">
+        		<p>You ordered a new black recycling bin.</p>
+      		</div>
+				</div>
+      </div>
+
+			<div class="grid-col desktop-grid-one-sixth">
+				<div class="list-table__row__item">
+					<div class="list-table__row__item__inner list-table__row__item__inner--collapse-bottom">
+		      	<dl class="list-table__row__item__list list-table__row__item__list--collapse">
+		      		<dt>Service</dt>
+		      		<dd>Waste Management</dd>
+	      		</dl>
+      		</div>
+				</div>
+			</div>
+
+			<div class="grid-col desktop-grid-one-sixth">
+				<div class="list-table__row__item">
+					<div class="list-table__row__item__inner list-table__row__item__inner--collapse-top">
+		      	<dl class="list-table__row__item__list list-table__row__item__list--collapse">
+		      		<dt>Reference</dt>
+		      		<dd>#1926888</dd>
+	      		</dl>
+      		</div>
+				</div>
+			</div>
+
+			<div class="grid-col desktop-grid-five-eightenths">
+				<div class="list-table__row__item list-table__row__item--last">
+					<div class="list-table__row__item__inner">
+		      	<dl class="list-table__row__item__list">
+		      		<dt>Status</dt>
+		      		<!-- @OPTIMIZE - change icon for circle tick -->
+		      		<dd class="list-table__row__item__list__complete"><span class="ico ico-check icon"></span>Complete</dd>
+	      		</dl>
+      		</div>
+				</div>
+			</div>
+
+		</div>
+	
+	</li>
+
+{% else %}
+
+<li class="list-table__row">
+			
+		<div class="grid-wrap">
+			
+			<div class="grid-col desktop-grid-five-thirty-sixths"><!-- 5/36 -->
+	      <div class="list-table__row__item list-table__row__item--date">
+	      	<div class="list-table__row__item__inner">
+	        	<p>
+		        	<span>6 Dec</span>
+		        	<span>2013</span>
+	        	</p>
+	      	</div>
+				</div>
+	    </div>
+	    
+	    <div class="grid-col desktop-grid-three-twelfths"><!-- 9/36 -->
+	      <div class="list-table__row__item list-table__row__item--description">
+	      	<div class="list-table__row__item__inner">
+	      		<p>You signed up for garden waste bin service for &pound;53 for 1 year</p>
+	    		</div>
+				</div>
+	    </div>
+
+			<div class="grid-col desktop-grid-one-sixth"><!-- 6/36 -->
+				<div class="list-table__row__item">
+					<div class="list-table__row__item__inner list-table__row__item__inner--collapse-bottom">
+		      	<dl class="list-table__row__item__list list-table__row__item__list--collapse">
+		      		<dt>Service</dt>
+		      		<dd>Waste Management</dd>
+	      		</dl>
+	    		</div>
+				</div>
+			</div>
+
+			<div class="grid-col desktop-grid-one-sixth"><!-- 6/36 -->
+				<div class="list-table__row__item">
+					<div class="list-table__row__item__inner list-table__row__item__inner--collapse-top">
+		      	<dl class="list-table__row__item__list list-table__row__item__list--collapse">
+		      		<dt>Reference</dt>
+		      		<dd>#1926888</dd>
+	      		</dl>
+	    		</div>
+				</div>
+			</div>
+
+			<div class="grid-col desktop-grid-five-eightenths"><!-- 10/36 -->
+				<div class="list-table__row__item list-table__row__item--last">
+					<div class="list-table__row__item__inner">
+		      	<dl class="list-table__row__item__list">
+		      		<dt>Status</dt>
+		      		<dd>We are working on it.  Delivery expected 14 Dec 2013.</dd>
+	      		</dl>
+	    		</div>
+				</div>
+			</div>
+
+		</div>
+
+	</li>
+
+{% endif %}

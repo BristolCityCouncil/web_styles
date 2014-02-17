@@ -1,0 +1,196 @@
+.list-table {
+	list-style: none;
+	margin: 0 0 40px 0;
+	padding: 0;
+	border-bottom: 2px solid $grey-lighter;
+	@include font-size($small-font-size);
+}
+
+// force the list-table out of it's container for mobile when it is constrained
+.layout-constrained .list-table {
+	margin-left: -10px;
+	margin-right: -10px;
+	@include respond-min($bp-desktop-min) {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+.list-table__row {
+	border-top: 2px solid $grey-lighter;
+	margin: 0;
+	@include respond-max($bp-tablet-max) {
+		.grid-wrap {
+			position: relative;
+			padding: 0 0 0 25%;
+			.grid-col {
+				width: 100%;
+				&:first-child {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 25%;
+					bottom: 0;
+				}
+			}
+		}
+		// remove JS heights for mob and tablet (crucial!)
+		.grid-col {
+			height: auto !important;
+		}
+	}
+}
+
+.list-table__row__item {
+	padding: 0 55px 0 0;
+	.list-table-advanced & {
+		display: none;
+	}
+	@include respond-min($bp-desktop-min) {
+		padding: 20px 20px 20px 0;
+		.list-table-advanced & {
+			border-right: 2px solid $grey-boxout;
+			height: 100%;
+			display: block;
+		}
+	}
+	p {
+		margin: 0;
+	}
+}
+
+@include respond-max($bp-tablet-max) {
+	.list-table__row__item__inner {
+		border-top: 1px solid $grey-lighter;
+		padding: 15px 0;
+	}
+	.list-table__row__item__inner--collapse-bottom {
+		padding-bottom: 0;
+	}
+	.list-table__row__item__inner--collapse-top {
+		padding-top: 0;
+		border-top: 0;
+	}
+}
+
+.list-table__row__item--date {
+	.list-table__row__item__inner {
+		border-top: 0;
+	}
+	@include respond-max($bp-tablet-max) {
+		padding-right: 0;
+		padding-left: 15px;
+	}
+	.list-table-advanced & {
+		background: $grey-boxout;
+	}
+	@include font-size($small-print-font-size);
+	font-family: $font-bold;
+	@include respond-min($bp-desktop-min) {
+		padding-left: 20px;
+	}
+	text-transform: uppercase;
+	border-right: 0;
+	span {
+		display: block;
+	}
+}
+
+.list-table__row__item--description {
+	.list-table__row__item__inner {
+		border-top: 0;
+	}
+	min-height: 80px;
+	position: relative;
+	.ico {
+		position: absolute;
+		right: 15px;
+		top: 50%;
+		margin-top: -15px;
+		color: $grey-lighter;
+		@include font-size(30);
+		display: none;
+	}
+	@include respond-min($bp-desktop-min) {
+		min-height: 0;
+		position: static;
+		.ico {
+			display: none !important;
+		}
+	}
+}
+
+.list-table__row__item__list,
+.list-table__row__item__list dt,
+.list-table__row__item__list dd {
+	margin: 0;
+	padding: 0;
+}
+
+.list-table__row__item__list dt {
+	margin: 0 0 5px 0;
+	font-family: $font-bold;
+	font-weight: normal;
+}
+
+.list-table__row__item__list--collapse {
+	@include respond-max($bp-tablet-max) {
+		dt, dd {
+			margin: 0;
+			display: inline;
+		}
+	}
+}
+
+.list-table__row--complete {
+	.list-table__row__item--description,
+	.list-table__row__item--date {
+		color: $bcc-green;
+	}
+	.list-table-advanced & {
+		background: $bcc-green-light;
+		@include respond-min($bp-desktop-min) {
+			.list-table__row__item {
+				border-right: 2px solid $recyling-green-light;
+			}
+		}
+		.list-table__row__item--date {
+			background: $recyling-green-light;
+			@include respond-min($bp-desktop-min) {
+				border-right: 2px solid $recyling-green-light;
+			}
+		}
+	}
+}
+
+.list-table__row__item__list .list-table__row__item__list__complete {
+	color: $bcc-green;
+	@include font-size($h4-font-size);
+	font-family: $font-bold;
+	margin-top: -5px;
+}
+
+.list-table-advanced {
+	.ico-right {
+		display: block;
+	}
+	.list-table__row__item--description {
+		display: block;
+	}
+	.list-table__row__item--date {
+		display: block;
+		height: 100%;
+	}
+	.list-table__row__item--last {
+		border-right: 0 !important;
+	}
+	.list-table__row--active .list-table__row__item {
+		display: block;
+		.ico-right {
+			display: none;
+		}
+		.ico-down {
+			display: block;
+		}
+	}
+}

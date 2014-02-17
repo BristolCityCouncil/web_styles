@@ -1,0 +1,134 @@
+/* ======================================================
+   GLOBAL
+   ======================================================*/
+
+body {
+  @include font-size($body-font-size);
+  color: $copy;
+  background: $body-bg;
+  line-height: $body-line-height;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: $font-regular;
+}
+
+select {
+  font-family: $font-select;
+}
+
+a {
+  color: $link;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    font-family: $font-bold !important;
+    text-decoration: none !important;
+  }
+
+}
+
+code {
+  white-space: pre;
+  word-break: normal;
+  word-wrap: normal;
+}
+
+p, dt, dd {
+  margin: 0 0 1em;
+}
+
+strong, b, dt, legend {
+  font-family: $font-bold;
+  font-weight: normal;
+}
+
+li {
+  margin: 0.5em 0;
+}
+
+ul, ol {
+  margin: 1.4em 0;
+  padding-left: 1.2em;
+
+  ul, ol {
+    margin: 0.5em 0 1em;
+  }
+
+}
+
+ul {
+  list-style: none;
+  padding-left: 1.2em;
+  li {
+    position: relative;
+    &:before {
+      content: '\2022  ';
+      font-family: Arial, sans-serif;
+      @include font-size($h3-font-size);
+      position: absolute;
+      left: -20px;
+      top: -7px;
+    }
+  }
+}
+
+
+dl {
+
+
+}
+
+dt, dd {}
+
+table {
+
+}
+
+table td,
+table th {
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.normal-list-item {
+  position: static;
+  &:before {
+    content: '';
+
+  }
+}
+
+.no-generatedcontent ul {
+  list-style: disc;
+  li {
+    position: static;
+  }
+}
+
+
+// Helpers
+
+.quiet {
+  &, #{headings()} {
+    color: $quiet-body-color !important;
+  }
+}
+
+.divider-top {
+  padding-top: 40px !important;
+  border-top: 1px solid $grey-boxout !important;
+}
+
+.divider-bottom {
+  padding-bottom: 25px !important;
+  margin-bottom: 40px;
+  border-bottom: 2px solid $grey-boxout !important;
+}
+

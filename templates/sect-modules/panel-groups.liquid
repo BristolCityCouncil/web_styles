@@ -1,0 +1,80 @@
+{% block page %}
+
+  {% assign page_title = 'Panel Group' %}
+  {% assign theme = false %}
+
+  {% include 'header' %}
+
+  <div class="page-content">
+
+    <div class="layout layout-constrained">
+
+      <div class="content content-main">
+
+        <h1>Panel Groups</h1>
+
+        <h2>.panel-group-cta (taking a ride in the grid system)</h2>
+
+        <div class="grid-wrap panel-group-cta">
+
+          <div class="grid-col desktop-grid-two-fifths">
+            {% include 'modules/panel--create' %}
+          </div>
+
+          <div class="grid-col desktop-grid-one-fifth">
+            <div class="panel panel--or">
+              <div class="panel__inner">
+                <div class="panel__vertical-centre">
+                  or
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-col desktop-grid-two-fifths">
+            {% include 'modules/panel--sign-in' %}
+          </div>
+
+        </div>
+
+        <h2>.panel-group-order</h2>
+
+        <div class="panel-group-order">
+
+          {% include 'modules/panel--order' %}
+
+          <div class="panel panel--affirm">
+            <p class="panel__title--minor">Delivery by:</p>
+            <h2 class="panel__title">Wednesday, 15 January</h2>
+          </div>
+
+          <p>We normally deliver weekdays between <strong>7am and 6pm</strong></p>
+          <p>We have sent a confirmation email to <strong>name@domain.com</strong></p>
+
+        </div>
+
+        <h2>Address panel group</h2>
+
+        <div class="panel-group">
+          <div class="panel panel--bare">
+            <p class="panel__title">Hi Josephine <a class="panel__small-link" href="#">Not Josephine?</a></p>
+          </div>
+          <div class="panel panel--affirm">
+            <div class="panel__copy--large panel__copy--compact panel--address">
+              <p>Mrs Josephine Longnamerson</p>
+              <p>Flat 3, 22 Queen Square, BS1 4ND</p>
+            </div>
+          </div>
+          <p>Your bin will be delivered to the above address</p>
+        </div>
+
+
+      </div><!--/content-->
+
+    </div>
+
+  </div><!--page-content-->
+
+  {% include 'footer' %}
+
+{% endblock %}

@@ -1,0 +1,448 @@
+// FORMS
+
+.form {
+
+}
+
+// Feedback
+
+.form__feedback {
+  position: relative;
+  border: 3px solid;
+  margin: 2em 0;
+  padding: 18px 15px 4px 48px;
+}
+
+.form__feedback__title {
+  @include font-size($h4-font-size);
+  margin-top: 0;
+  .ico {
+    position: absolute;
+    top: 16px;
+    left: 8px;
+    @include font-size(24);
+  }
+
+}
+
+.form__feedback__summary__list {
+  margin: 0 0 1em 0;
+  li {
+    margin: 0;
+  }
+}
+
+.form__feedback--success {
+  border-color: $bcc-green;
+}
+
+.form__feedback--failure {
+  border-color: $bcc-red;
+
+  .form__feedback__title {
+    color: $bcc-red;
+  }
+  a {
+    color: $bcc-red;
+  }
+
+}
+
+// Form items
+
+.form__item {
+  margin-bottom: 0.8em;
+  @extend %cf;
+  clear: both;
+
+  @include respond-min($bp-tablet-min) {
+    margin-bottom: 1.8em;
+  }
+
+}
+
+.form__item--marginless {
+  margin: 0;
+}
+
+.form__item--group {
+  margin: 0.6em 0;
+}
+
+.form__item--compact {
+  margin-bottom: 0;
+}
+
+.form__item--string-action {
+  .form__field--string {
+    margin: 0 0 10px 0;
+  }
+  .form__item__error {
+    padding: 2px 0 0 0;
+  }
+  @include respond-min($bp-desktop-min) {
+    .form__label {
+      display: block;
+    }
+    .form__field--string {
+      width: 160px;
+      float: left;
+      margin: 0 15px 0 0;
+    }
+    .btn {
+      float: left;
+    }
+  }
+}
+
+// Labels
+
+.form__label {
+  cursor: pointer;
+  @include inline-block;
+  margin-bottom: 0.4em;
+  font-family: $font-bold;
+
+  @include respond-min($bp-tablet-min) {
+    @include font-size($form-font-size);
+  }
+
+}
+
+.form__label--boolean {
+  padding-top: 8px;
+  font-family: $font-regular;
+  @include font-size($small-font-size);
+  cursor: pointer;
+  max-width: 80%;
+
+  .form__label--small {
+    padding-top: 2px;
+  }
+
+}
+
+.form__label--group {
+  padding-top: 2px;
+  @include inline-block;
+  cursor: pointer;
+}
+
+.form__label--error {
+  color: $bcc-red;
+}
+
+.form__label__optional {
+  color: $bcc-grey-darker;
+  font-family: $font-regular;
+}
+
+.form__label--small {
+  font-family: $font-regular;
+  @include font-size($small-print-font-size);
+}
+
+// Notes
+
+.form__note {
+  @include inline-block;
+  @include font-size($small-print-font-size);
+
+  @include respond-min($bp-tablet-min) {
+    @include font-size($small-font-size);
+  }
+
+}
+
+// Errors (inline)
+
+.form__item__error {
+  color: $bcc-red;
+  font-family: $font-bold;
+  font-style: normal;
+  display: none;
+  clear: both;
+  .ico {
+    position: relative;
+    bottom: -3px;
+    @include rem(margin-right,5);
+  }
+}
+
+.form__item--backend-error label {
+  color: $bcc-red;
+}
+
+.form__item--backend-error .form__item__error {
+  display: block;
+}
+
+// Fields
+
+.form__field {
+  margin-bottom: 0.3em;
+
+  @include placeholder {
+    color: $light-copy-on-light-grey;
+  }
+
+  @include respond-min($bp-tablet-min) {
+    @include font-size($form-font-size);
+  }
+  //font-family: $font-form;
+}
+
+.form__field--string {
+  display: block;
+  background: $input-bg;
+  border: 0;
+  @include border-radius(3px);
+  padding: 0.6em;
+  @include box-shadow($input-shadow 0 4px 0 -2px inset);
+  width: 100%;
+  max-width: 26.5em;
+  .ie7 & {
+    padding: 0.6em 0;
+  }
+  &:focus {
+    // @TODO: Should focus colour be black? and should focus be displayed differently for different links dotted, solid ?
+    outline: 3px solid #2e3137;
+  }
+
+}
+
+.ie7 .form__field--string {
+  border: 3px solid #cc0000;
+}
+.ie7 #ff-text-validate-1 {
+  border: 3px solid #00cc00;
+}
+.ie7 #ff-text-validate-1:focus {
+  border: 3px solid #0000cc;
+}
+
+
+.form__field--boolean {
+  @include inline-block;
+  margin: 0 5px 0 0;
+  vertical-align: middle;
+}
+
+
+.form__field--select {
+  // Combined field and Uniform styles
+  display: block;
+  max-width: 26.5em;
+  width: 100%;
+  min-width: 60px;
+  @include respond-min($bp-tablet-min) {
+    @include font-size($form-font-size);
+  }
+  font-family: $font-select;
+}
+
+.form__field--select {
+  // Field-only
+  border: 1px solid #ccc;
+}
+
+.form__field--select:focus,
+.form__field--string:focus,
+.form__field--checkbox:focus {
+  /*border: 3px solid #2e3137;*/
+}
+
+.form__field--multiselect,
+.form__field--selectsize {
+  @extend .form__field--string;
+  padding: 0.6em;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.ipad .form__field--multiselect {
+  padding: 10px;
+}
+
+.form__field--error,
+.form__item--backend-error .form__field--string,
+.form__item--backend-error .form__field--select {
+  outline: 3px solid $bcc-red;
+  .ie7 & {
+    border: 3px solid $bcc-red;
+  }
+  @include box-shadow(none);
+  color: $bcc-red;
+}
+
+// Buttons
+
+button,
+.btn {
+  background: $button-bg-primary;
+  color: $white;
+  text-decoration: none;
+  border: 0;
+  padding: 0;
+  margin-right: 6px;
+  @include border-radius(3px);
+  padding: 0.6em 1.4em 0.5em;
+  line-height: 1.2;
+  @include inline-block;
+  @include box-shadow($button-shadow 0 2px 0 0);
+
+  &:hover {
+    background: $bcc-red-dark;
+  }
+
+  &:active {
+    position: relative;
+    top: 1px;
+    @include box-shadow($button-shadow 0 1px 0 0);
+  }
+
+  &:focus {
+    outline: 3px solid #2E3137;
+    box-shadow: none;
+  }
+
+  .ie7 &:focus {
+    border: 3px solid #2E3137;
+  }
+
+  @include respond-min($bp-tablet-min) {
+    @include font-size($form-font-size);
+  }
+
+  .ico {
+    @include inline-block;
+    margin-bottom: -2px;
+    margin-left: 0.2em;
+    margin-right: -0.8em;
+    color: $white;
+
+    &.ico--first {
+      margin-left: -0.8em;
+      margin-right: 0.2em;
+    }
+  }
+
+  .ico-right {
+    @include font-size(20);
+    position: relative;
+    top: -3px;
+  }
+
+  .ico-pdf {
+    position: relative;
+    top: -2px;
+  }
+
+}
+
+.btn--secondary {
+  background: $button-bg-secondary;
+  &:hover {
+    background: $bcc-blue-darkest;
+  }
+}
+
+button[disabled], .btn--disabled {
+  background: $grey-boxout;
+  color: $dark-grey;
+  cursor: default;
+  pointer-events: none;
+  &:hover {
+    background: $grey-boxout;
+    color: $dark-grey;
+  }
+  &:active {
+    top: 0;
+    @include box-shadow($button-shadow 0 2px 0 0);
+  }
+}
+
+// Sections
+
+.form__section {
+  //margin-bottom: 2em;
+  @extend %cf;
+}
+
+.form__section__title__text {
+  display: block;
+  margin-bottom: 1em;
+  @include font-size($h3-font-size);
+}
+
+// Groups
+
+.form__group {
+  @extend .form__item;
+  margin-bottom: 1.4em;
+}
+
+.form__group__title__text {
+  display: block;
+  @extend .form__label;
+}
+
+.form__group__title__text--error {
+  @extend .form__label--error;
+}
+
+// Form actions
+
+.form__actions {
+  padding-top: 0.4em;
+  margin-bottom: 2em;
+}
+
+// Form list
+
+.form__item__list {
+  margin: 0;
+  padding: 0;
+  .form__item__list__field {
+    @extend %cf;
+    margin: 0;
+  }
+  .form__field--string {
+    @include box-shadow(none);
+    @include respond-min($bp-desktop-min) {
+      float: left;
+    }
+  }
+  .form__field--string--verified {
+    background: $recyling-green-light;
+    position: relative;
+  }
+  .form__field--string--verified__value {
+    display: block;
+    padding-right: 85px;
+  }
+  .form__field--string--verified__message {
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    color: $main-green;
+    @include font-size($small-font-size);
+  }
+  .form__field--string--verified__message__inner {
+    position: relative;
+    top: -5px;
+  }
+  .form__field__row {
+    display: block;
+  }
+  .form__item__list__field__action {
+    @include font-size($small-font-size);
+    @include respond-min($bp-desktop-min) {
+      float: left;
+      margin: 0 0 0 20px;
+      position: relative;
+      bottom: -12px;
+    }
+  }
+}

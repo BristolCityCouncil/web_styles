@@ -1,0 +1,135 @@
+<!doctype html>
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8 ie7 front-end" lang="en"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9 ie8 front-end" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js front-end" lang="en"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+
+    <title>{{ page_title }}</title>
+
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--[if IE]><![endif]-->
+    <!-- build:css /ui/css/master-oldie.css-->
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="/ui/css/master-oldie.css" />
+    <![endif]-->
+    <!-- endbuild -->
+
+    <!-- build:css /ui/css/master.css-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="/ui/css/master.css" />
+    <!--<![endif]-->
+    <!-- endbuild -->
+    <script src="/ui/js/vendor/modernizr.js"></script>
+  </head>
+
+  <body>
+
+    <div class="page-container">
+
+    <!-- Liferay -->
+    <!-- <a href="#main-content" id="skip-to-content">#language ("skip-to-content")</a> -->
+
+    <a class="skiplinks visuallyhidden focusable in-page" href="#main" tabindex="1">
+      <span>Skip to main content</span>
+    </a>
+
+      {% if theme != false %}
+
+        <div class="page-header" role="banner">
+
+          <div class="layout layout-constrained">
+
+            <div class="grid-wrap">
+
+              <div class="grid-col desktop-grid-one-sixth">
+
+                <a class="logo" href="{% if open_am == true %}http://beta.bristol.gov.uk/{% else %}/{% endif %}" title="Homepage">
+                  <img src="/ui/images/logo-bcc.png" alt="Bristol City Council logo" />
+                </a>
+
+              </div><!--/grid-col-->
+
+            </div><!--/grid-wrap-->
+
+          </div><!--/layout-->
+
+        </div><!--/page-header-->
+
+
+          <div class="page-banner">
+
+            <div class="layout layout-constrained">
+
+              <div class="grid-wrap">
+
+                {% if hide_ribbon != true %}
+                <div class="grid-col desktop-grid-one-sixth">
+
+                  <div class="ribbon">
+                    <div class="ribbon__hang">
+                      <div class="ribbon__hang__inner">
+                        {% if ribbon != null %}
+                           <span class="ico {{ ribbon }}"></span>
+                        {% endif %}
+                      </div>
+                    </div>
+                  </div><!--/ribbon-->
+
+                </div><!--/grid-col-->
+                {% endif %}
+
+                <div class="grid-col desktop-grid-five-sixths">
+
+                  <div class="breadcrumb-nav">
+
+
+
+                    <ol class="linklist">
+                      <!-- Temporarily hidden breadcrumb in Alpha -->
+                      <li>{% if hide_breadcrumbs != true %}<a href="#">Home</a>{% endif %} <!--<span class="ico ico-right"></span>--></li>
+                      <!--<li><a href="#">Level 1 long page title</a> <span class="ico ico-right"></span></li>
+                      <li>Level 2 longer page title</li>-->
+                    </ol>
+
+                  </div><!--/breadcrumb-nav-->
+
+                  <div class="account-nav">
+
+                    {% if signed_in == null %}
+
+                      <ul class="linklist">
+                        <li><a href="#" class="lnk-sign-in">Sign in</a></li>
+                        <li><a href="#">Create an account</a></li>
+                      </ul>
+
+                    {% endif %}
+
+                    {% if signed_in == true %}
+
+                      <ul class="linklist">
+                        <li>Hi, Montgomery <a href="#" class="lnk-sign-out">Sign out</a></li>
+                        <li><a href="#"><span class="ico ico-cog"></span>Your account</a></li>
+                      </ul>
+
+                    {% endif %}
+
+                  </div><!--/account-nav-->
+
+
+
+                </div><!--/grid-col-->
+
+              </div><!--/grid-wrap-->
+
+            </div><!--/layout-->
+
+          </div><!--page-banner-->
+
+        {% endif %}
+
+        <div class="page-body" id="main" role="main">
+
+          <!-- THEME ENDS/CONTENT BEGINS -->

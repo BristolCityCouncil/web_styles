@@ -1,0 +1,211 @@
+/* ======================================================
+   MODULE: PANEL
+   ======================================================*/
+
+.panel {
+  position: relative;
+  background: $grey-boxout;
+  //margin-bottom: 2.5em;
+  @include rem(margin-bottom, 45);
+  @extend %cf;
+  //padding: 20px 20px 5px;
+  @include rem(padding, 20 20 5 20);
+  img {
+    max-width: 75px;
+    @include rem(margin-bottom,12);
+  }
+}
+
+.panel__title { //Styles for panel titles
+  //margin: 0;
+  @include rem(margin, 0);
+  @include font-size($h4-font-size);
+  font-family: $font-bold;
+}
+
+.panel__title--minor { //Styles for minor title (eg subtitle)
+  @include font-size($body-font-size);
+  font-family: $font-bold;
+  //margin: 0;
+  @include rem(margin, 0);
+}
+
+.panel__title--alt { //Style for standard weight title
+  @include rem(margin, 0);
+  @include font-size($h4-font-size);
+}
+
+.panel__sidenote {
+
+}
+
+
+
+.panel__subtitle + .panel__title {
+  @include font-size(30);
+  line-height: 1.1em;
+  //margin: 0 0 10px 0;
+  @include rem(margin, 0 0 10 0);
+  @include respond-min($bp-desktop-min) {
+    @include font-size($h2-font-size);
+  }
+}
+
+.panel__copy {
+
+}
+
+
+.panel__copy--large {
+  @include font-size($h4-font-size);
+}
+
+.panel__copy--small {
+  @include font-size($small-font-size);
+}
+
+.panel__copy--compact {
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.panel__small-link {
+  display: block;
+  @include rem(margin,10 0);
+  font-family: $font-regular;
+  @include font-size($small-font-size);
+  @include respond-min($bp-desktop-min) {
+    position: relative;
+    top: -2px;
+    display: inline;
+  }
+}
+
+.midprint {
+  display: block;
+  @include rem(margin-bottom, 10);
+  @include respond-min($bp-desktop-min) {
+    display: inline;
+    margin: 0;
+  }
+}
+
+.panel__advice {
+  @include respond-min($bp-desktop-min) {
+    position: absolute;
+    right: 0;
+    top: 0;
+    @include font-size($small-font-size);
+  }
+}
+
+//-------PLACEHOLDERS--------
+
+%panel--slim { // Less padding utility placeholder
+  //padding: 15px 20px 12px 20px;
+  @include rem(padding, 15 20 12 20);
+}
+
+%panel--with-ico { // Utility placeholder for a panel with an icon
+  //padding-left: 55px;
+  @include rem(padding-left, 55);
+  position: relative;
+
+  .ico {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+  }
+}
+
+// @OPTIMIZE: Is this necessary and should inner__inner be renamed
+%panel--center { //Utility placeholder to vertically and horizontally center text inside the panel
+  text-align: center;
+  @include respond-min($bp-desktop-min) {
+    .panel__inner {
+      display: table;
+      width: 100%;
+    }
+    .panel__vertical-centre {
+      display: table-cell;
+      vertical-align: middle;
+      height: 100%;
+    }
+  }
+}
+
+//----------MODIFIERS-----------
+
+.panel--tight { //Used to modify bottom margin of panel
+  //margin-bottom: 1em;
+  @include rem(margin-bottom, 18);
+}
+
+.panel--alert { //Modifier to have panel set up as an alert (currently with icon, but may be separated)
+  @extend %panel--with-ico;
+  @extend %panel--slim;
+  background: $alert-yellow;
+  p {
+    //margin-bottom: 0;
+    @include rem(margin-bottom, 0);
+  }
+}
+
+.panel--concise { //Modifier to make a panel more concise with centered text
+  //padding: 15px 15px 0 15px;
+  @include rem(padding, 15 15 0 15);
+  text-align: center;
+  .panel__title {
+    //margin: 0 0 15px 0;
+    @include rem(margin, 0 0 15 0);
+    font-family: $font-regular;
+    @include font-size($body-font-size);
+    @include respond-min($bp-desktop-min) {
+      @include font-size($h3-font-size);
+    }
+  }
+  p {
+    //margin-bottom:12px;
+    @include rem(margin-bottom, 12);
+  }
+}
+
+.panel--affirm { //Modifier to have panel set up as a confirmation panel
+  background: $recyling-green-light;
+  border-left: 6px solid $bcc-green;
+  .panel__title {
+    color: $bcc-green;
+  }
+}
+
+.panel--bare {
+  background: none;
+  padding: 0;
+  .panel__title {
+    @include font-size($h3-font-size);
+    @include rem(margin-bottom, 3);
+  }
+}
+
+.panel--action {
+  border: 1px solid $grey-lighter;
+  @extend %panel--center;
+  .panel__title {
+    @include rem(margin, 0 0 10 0);
+  }
+}
+
+.panel--primary { // @OPTIMIZE: Look at naming on this panel
+  background: $bcc-pink;
+}
+
+.panel--secondary { // @OPTIMIZE: Look at naming on this panel
+  background: $bcc-blue-lighter;
+}
+
+.panel--address {
+  @include rem(padding-bottom,20);
+  color: $bcc-green;
+}
+

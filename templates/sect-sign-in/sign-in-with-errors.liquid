@@ -1,0 +1,87 @@
+{% block page %}
+
+  {% assign page_title = 'Sign in to your account - Bristol City Council' %}
+  {% assign ribbon = 'ico-user' %}
+  {% assign signed_in = false %}
+  {% assign hide_breadcrumbs = true %}
+  {% assign hide_ribbon = true %}
+  {% assign open_am = true %}
+
+  {% include 'header' %}
+
+  <div class="page-content">
+
+    <div class="layout layout-constrained">
+
+      <div class="grid-wrap">
+
+        <div class="grid-col desktop-grid-five-sixths desktop-grid-offset-one-sixth">
+
+          <div class="content content-header">
+
+            <h1 class="content-header__title">Sign in</h1>
+
+          </div><!--/content-->
+
+        </div><!--/grid-col-->
+
+      </div><!--/grid-wrap-->
+
+      <div class="grid-wrap">
+
+        <div class="grid-col desktop-grid-five-sixths desktop-grid-offset-one-sixth">
+
+          <div class="content content-main">
+
+            <!--<h2>Sign in to OpenAM</h2>-->
+
+            <p>All fields are mandatory <!--unless marked with <span class="form__label__optional">(optional)</span>--></p>
+
+            <form id="form-3" class="form form--validate" action="#form-3" method="post">
+
+              <fieldset class="form__section">
+
+                <!-- <legend class="form__section__title">
+                  <span class="form__section__title__text">Section title</span>
+                </legend> -->
+
+                <div class="form__item form__item--string">
+                  <label class="form__label" for="ff-text-username">Username</label>
+                  <input class="form__field form__field--string form__field--error" type="text" name="" placeholder="" id="ff-text-username" />
+                  <em id="ff-text-validate-4-error" class="form__item__error" style="display: inline;"><span class="ico ico-attention"></span>Required field</em>
+                </div><!--/form__item-->
+
+                <div class="form__item form__item--string">
+                  <label class="form__label" for="ff-text-password">Password</label>
+                  <input class="form__field form__field--string form__field--password-strength" type="password" name="" placeholder="" id="ff-text-password" />
+
+                  <!--<span class="form__note">8 to 20 characters, including 1 letter and 1 number</span>-->
+                </div><!--/form__item-->
+
+
+
+                <div class="form__actions">
+                  <button class="btn btn--primary" type="submit" name="">Login <span class="ico ico-right"></span></button>
+                </div><!--/form__actions-->
+
+                <p><a href="#">Forgotten your password?</a></p>
+
+              </fieldset>
+
+            </form>
+
+          </div><!--/content-->
+
+        </div><!--/grid-col-->
+
+
+
+      </div><!--/grid-wrap-->
+
+    </div><!--/layout-->
+
+  </div><!--page-content-->
+
+  {% include 'footer' %}
+
+{% endblock %}

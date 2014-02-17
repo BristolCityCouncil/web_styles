@@ -1,0 +1,147 @@
+{% block page %}
+
+  {% assign page_title = 'Create your account 2b | Create account' %}
+  {% assign ribbon = 'ico-user' %}
+
+  {% include 'header' %}
+
+  <div class="page-content">
+
+    <div class="layout layout-constrained">
+
+      <div class="grid-wrap">
+
+        <div class="grid-col desktop-grid-five-sixths desktop-grid-offset-one-sixth">
+
+          <div class="content content-header">
+
+            <h1 class="content-header__title">Create your account</h1>
+
+          </div><!--/content-->
+
+        </div><!--/grid-col-->
+
+      </div><!--/grid-wrap-->
+
+      <div class="grid-wrap">
+
+        <div class="grid-col desktop-grid-one-half desktop-grid-offset-one-sixth">
+
+          <div class="content content-main">
+
+            <form id="form-2" class="form form--validate" action="#form-2" method="post">
+
+              <!--
+                ATTRIBUTES
+                Use 'id' to couple fields with <label> 'for'
+                Use 'name' as needed by CMS/grouping <radio> fields
+                CSS width instead of 'cols'
+                Use 'rows' over CSS height
+                Use 'size' if useful for validation and/or in <select multiple>
+                Fieldsets are optional - use for grouping sections or related fields (no need to wrap whole form)
+                Legends MUST be used in conjunction with fieldsets
+                Form actions should exist outside fieldset
+              -->
+
+              <div class="form__feedback form__feedback--failure">
+
+                <h2 class="form__feedback__title"><span class="ico ico-attention ico--first"></span> Please check the following</h2>
+
+                <div class="form__feedback__summary">
+                  <ul class="form__feedback__summary__list">
+                    <li>Title</li>
+                    <li>Email address</li>
+                    <li>Password</li>
+                  </ul>
+                </div><!--/form__feedback__summary-->
+
+              </div><!--/form__feedback-->
+
+              <div class="form__item form__item--select form__item--backend-error">
+                <label class="form__label" for="ff-select-backend-error">Title</label>
+                <select class="form__field form__field--select form__field--select--validate" name="" id="ff-select-backend-error" data-error-message="Choose a title">
+                  <option>Select option</option>
+                  <option>Mr</option>
+                  <option>Mrs</option>
+                  <option>Dr</option>
+                </select>
+              </div><!--/form__item-->
+
+              <div class="form__item form__item--string form__item--backend-error">
+                <label class="form__label" for="fname">First name</label>
+                <input class="form__field form__field--string" type="text" name="" placeholder="" id="fname" data-error-message="Enter your first name" />
+              </div><!--/form__item-->
+
+              <div class="form__item form__item--string form__item--backend-error">
+                <label class="form__label" for="lname">Last name</label>
+                <input class="form__field form__field--string" type="text" name="" placeholder="" id="lname"data-error-message="Enter your last name" />
+              </div><!--/form__item-->
+
+
+              <div class="form__item form__item--string-action form__item--backend-error">
+                <label class="form__label">Your postcode</label>
+                <input class="form__field form__field--string" type="text" name="" />
+                <button class="btn btn--secondary" type="submit">Lookup address</button>
+                <em class="form__item__error" id="ff-text-backend-error-error"><span class="ico ico-attention"></span>No results for this postcode / postcode invalid</em>
+              </div><!--/form__item-->
+
+              {% include 'modules/address-lookup' %}
+
+              <div class="form__item form__item--string form__item--backend-error">
+                <label class="form__label" for="email">Email account</label>
+                <input class="form__field form__field--string" type="text" name="" placeholder="E.g. example" id="email" data-error-message="hardcoded" required />
+                <span class="form__note">This will be your username</span>
+                <div class="form__item__error">
+                  <span class="ico ico-attention"></span> This email is already registered. <a href="#" title="Sign in">Sign in</a> now, or <a href="#" title="Reset your password">Reset your password</a> if you have forgotten it.
+                </div>
+              </div><!--/form__item-->
+
+              <div class="form__item form__item--string form__item--backend-error">
+                <label class="form__label" for="ff-text-password">Type a password</label>
+                <input class="form__field form__field--string" type="password" name="" required placeholder="" id="ff-text-password" data-error-message="Please enter a password" />
+              </div><!--/form__item-->
+
+              <div class="form__item form__item--string form__item--backend-error">
+                <label class="form__label" for="ff-text-password-confirm">Type a password again</label>
+                <input class="form__field form__field--string form__field--match" type="password" name="" placeholder="" id="ff-text-password-confirm" data-match="ff-text-password" data-error-message="This password must match the above password" />
+                <span class="form__note">Must match above password</span>
+              </div><!--/form__item-->
+
+              <div class="form__actions">
+                <button type="submit" class="btn">Create account <span class="ico ico-right"></span></button>
+              </div>
+
+
+            </form>
+
+          </div><!--/content-->
+
+        </div><!--/grid-col-->
+
+
+        <div class="grid-col desktop-grid-three-twelfths desktop-grid-offset-one-twelfth">
+          <div class="panel--bare">
+            <h2 class="panel__title">Why create an account?</h2>
+            <p>Manage and see all your council stuff - like waste collections, council tax and rent - in one place, online. It’s quick, easy to use, safe and secure. Signing up takes just three minutes.</p>
+
+            <h2 class="panel__title">Advantages</h2>
+            <p>24/7 anytime access &mdash; no need to wait on the phone or visit council offices</p>
+            <ul>
+              <li>Quickly manage payments and benefits</li>
+              <li>Track your orders and check all your payments</li>
+              <li>Saves you from entering your address over and over &mdash; and if you change address, you only have to tell us once</li>
+              <li>No more paper bills or letters &mdash; unless you ask for them</li>
+            </ul>
+          </div>
+        </div><!--/grid-col-->
+
+
+      </div><!--/grid-wrap-->
+
+    </div><!--/layout-->
+
+  </div><!--page-content-->
+
+  {% include 'footer' %}
+
+{% endblock %}
