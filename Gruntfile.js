@@ -54,6 +54,9 @@ module.exports = function(grunt) {
 
     liquid: {
       pages: {
+        options: {
+          includes: './templates/includes/'
+        },
         files: [
           {
             expand: true,
@@ -275,6 +278,6 @@ module.exports = function(grunt) {
     'rev',
     'usemin',
     'string-replace:prod',
-    'relativeRoot:prod']);
-
+    'relativeRoot:prod'
+  ]);
 };
