@@ -19,20 +19,13 @@
       borderlessClass: 'is-borderless',
       invisibleClass: 'is-invisible',
       visibleClass: 'is-visible',
-      collapseToggle: '.page-contents__title',
-      collapseArea: '.page-contents__list-wrapper',
-      collapseClass: 'js-collapse',
-      collapseToggleClass: 'js-collapse__toggle',
-      collapseAreaClass: 'js-collapse__area',
-      collapseArrow: '<span class="ico ico-down" title="expand"></span>'
-
     },
 
     widgetEventPrefix: 'sticky_',
 
     /**
-    * Constructor
-    */
+     * Constructor
+     */
     _create: function() {
       var self = this;
 
@@ -47,12 +40,15 @@
 
       // Add collapse classes
       // Specific to page contents - useful to be able to reuse elsewhere
-      self._makeCollapsible(self._new);
 
       //Add sticky class to new element
-      self._addStickyClass(self._new);
+      self._new.addClass(self.options.stickyClass);
+
+      self._addGrid(self._new);
 
       self._timeoutId = null;
+
+      this._trigger('cloned', {}, self._new);
 
       self._on(self.window, {
         'resize': self._resizeHandler,
@@ -60,43 +56,30 @@
         'load': self._resizeHandler,
         'scroll': self._checkVisibility
       });
-
-    },
-
-    /**
-     * Function to add sticky class when needed
-     */
-    _addStickyClass: function(elem) {
-      //Look to refactor this to be in create function??
-      var self = this;
-
-      elem.addClass(self.options.stickyClass);
-
-      self._addGrid(elem);
     },
 
     /**
      * Function to add grid so that fixed element has correct width
+     *
+     * @param elem
+     * @private
      */
     _addGrid: function(elem) {
-      var self = this;
-      var htmlArray = [];
-      var htmlTemp = '';
-      var htmlOpening = '';
-      var htmlClosing = '';
-
-      htmlOpening += '<div class="' + self.options.layoutWrapClass + '">';
+      var self = this,
+          htmlArray = [],
+          htmlTemp = '',
+          htmlOpening = '<div class="' + self.options.layoutWrapClass + '">',
+          htmlClosing = '';
 
       self.element.parents('.grid-col').each(function(e){
 
-        var parentClass = $(this).attr('class');
-        var loopHtml = '';
+        var parentClass = $(this).attr('class'),
+            loopHtml = '';
 
         loopHtml += '<div class="' + self.options.gridWrapClass + '">';
         loopHtml += '<div class="' + parentClass + '">';
 
         htmlArray.push(loopHtml);
-
 
         htmlClosing += '</div></div>';
       });
@@ -106,24 +89,14 @@
       htmlClosing += '</div>';
       htmlTemp = htmlOpening + htmlClosing;
 
-
-
       elem.wrapInner(htmlTemp);
     },
 
-    _makeCollapsible: function(elem) {
-      // Specific to page contents (but could be reused elsewhere)
-      var self = this;
 
-      elem.addClass(self.options.collapseClass);
-
-      elem.find(self.options.collapseToggle)
-        .addClass(self.options.collapseToggleClass)
-        .append(self.options.collapseArrow);
-
-      elem.find(self.options.collapseArea).addClass(self.options.collapseAreaClass);
-    },
-
+    /**
+     * @param delay
+     * @private
+     */
     _resizeHandler: function (delay) {
 
       var self = this;
@@ -136,41 +109,46 @@
 
       // running a throttled resize
       self._timeoutId = setTimeout(function () {
-        self._elPos();
+        self._topPosition = self.element.offset().top;
         self._checkVisibility();
-
       }, delay);
 
     },
 
-    _elPos: function() {
-      // Does this need to be a function?
-      var self = this;
-      self._topPosition = self.element.offset().top;
-    },
-
+    /**
+     * Check to see if the top of the page is passes the sticky element's top.
+     * @private
+     * @fires enter
+     * @fires exit
+     */
     _checkVisibility: function() {
       var self = this;
+      
       self._windowTop = $(window).scrollTop();
 
       if (self._windowTop >= self._topPosition) {
         //Specific to page contents
         if(self._new.hasClass(self.options.invisibleClass)) {
-          self._new.collapsible('quickCollapse'); //Could be event listener
+          self._trigger('enter', {}, {
+            elem: self._new
+          });
         }
 
-        //Unspecific
-        self._new.removeClass(self.options.invisibleClass).addClass(self.options.visibleClass);
-
+        self._new
+            .removeClass(self.options.invisibleClass)
+            .addClass(self.options.visibleClass);
 
       } else {
         //Specific to page contents
         if(self._new.hasClass(self.options.visibleClass)) {
-          self._new.collapsible('quickCollapse'); //Could be event listener
+          self._trigger('exit', {}, {
+            elem: self._new
+          });
         }
 
-        //Unspecific
-        self._new.removeClass(self.options.visibleClass).addClass(self.options.invisibleClass);
+        self._new
+            .removeClass(self.options.visibleClass)
+            .addClass(self.options.invisibleClass);
       }
 
       //Specific to page contents
@@ -187,9 +165,7 @@
      * Destroy
      */
     _destroy: function() {
-      var self = this;
-      //Haven't destroyed yet, but doesn't get destroyed in this context (delete cloned element to solve?)
-
+      this._new.remove();
     }
   });
 

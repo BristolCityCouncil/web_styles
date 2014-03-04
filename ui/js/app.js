@@ -79,7 +79,6 @@
   // tabs
   $('.js-tabs').tabs();
 
-
   // bin basket
   if (!ie7) {
     $('.js-basket').binbasket();
@@ -88,20 +87,49 @@
   /*
    * Add parent .basket__item--is-selected class for REAL checkboxes
    */
-
-  // Add class to :checked
   $('.basket__item .form__field--checkbox:checked').parents('.basket__item').addClass('basket__item--is-selected');
   $('.basket__item .form__field--checkbox').change(function(){
     // Add class on change to :checked
     $(this).parents('.basket__item').toggleClass("basket__item--is-selected");
-    console.log("Changes");
-
   });
 
-
-  $('.js-sticky').sticky();
-
   $('.js-collapse').collapsible();
+
+  /**
+   * Apply the sticky plugin
+   */
+  $('.js-sticky').sticky({
+    'cloned': function(e, elem) {
+      /*
+       * When the stick is cloned, apply classes to it so that we can make it collapsible.
+       */
+      elem.addClass('js-collapse');
+
+      elem.find('.page-contents__title')
+          .addClass('js-collapse__toggle')
+          .append('<span class="ico ico-down"></span>');
+
+      elem.find('.page-contents__list-wrapper')
+          .addClass('js-collapse__area');
+    },
+    'enter': function(e, data) {
+      collapseSticky(data.elem);
+    },
+    'exit': function(e, data) {
+      collapseSticky(data.elem);
+    }
+  });
+
+  /*
+   * Collapse a sticky
+   */
+  var collapseSticky = function(elem) {
+    if(!elem.is(':bcc-collapsible')) {
+      elem.collapsible();
+    }
+    elem.collapsible('quickCollapse');
+  };
+
 
   // @TODO: Split in to Separate file
   var smoothScroll = function(elem) {
@@ -112,7 +140,7 @@
     if (target.length) {
       $('html,body').animate({
         scrollTop: scrollToPosition
-      }, 300);
+      }, 400);
       return false;
     }
   }
@@ -129,8 +157,5 @@
     }
 
   });
-
-
-
 
 })(jQuery);

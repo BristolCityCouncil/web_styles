@@ -14,60 +14,113 @@
       collapseToggleClass: '.js-collapse__toggle',
       collapseAreaClass: '.js-collapse__area',
       collapsedClass: 'is-collapsed',
-      expandedClass: 'is-expanded'
+      expandedClass: 'is-expanded',
+      duration: 300
     },
 
     widgetEventPrefix: 'collapsible_',
 
     /**
-    * Constructor
-    */
+     * Constructor
+     */
     _create: function() {
-      var self = this;
+      var self = this,
+          toggleTrigger = self.element.find(self.options.collapseToggleClass);
 
-      self.element.find(self.options.collapseToggleClass).on('click',function(){
-        if(self.element.hasClass(self.options.expandedClass)){
-          self.standardCollapse();
-        } else {
-          self.standardExpand();
+      self._on(toggleTrigger, {
+        'click': function() {
+          if(self.element.hasClass(self.options.expandedClass)) {
+            self.standardCollapse();
+          } else {
+            self.standardExpand();
+          }
         }
-      })
-
-    },
-    standardCollapse: function(callback) {
-      var self = this;
-      self.element.addClass(self.options.collapsedClass).removeClass(self.options.expandedClass);
-      self.element.find(self.options.collapseAreaClass).slideUp(300, function() {
-        if (callback != undefined) {
-          callback();
-        }
-
       });
     },
 
-    quickCollapse: function() {
+    /**
+     * Collapse the element
+     *
+     * @param duration
+     * @param complete
+     * @private
+     */
+    _collapse: function(duration, complete) {
       var self = this;
-      self.element.addClass(self.options.collapsedClass).removeClass(self.options.expandedClass);
-      self.element.find(self.options.collapseAreaClass).slideUp(0);
+      self.element
+          .addClass(self.options.collapsedClass)
+          .removeClass(self.options.expandedClass);
+
+      self.element.find(self.options.collapseAreaClass)
+          .slideUp(duration, function() {
+            if ( typeof complete !== 'undefined' ) {
+              complete();
+            }
+          });
     },
 
-    standardExpand: function() {
+    /**
+     * Expand the element
+     *
+     * @param duration
+     * @param complete
+     * @private
+     */
+    _expand: function(duration, complete) {
       var self = this;
-      self.element.addClass(self.options.expandedClass).removeClass(self.options.collapsedClass);
-      self.element.find(self.options.collapseAreaClass).slideDown(300);
+      self.element
+          .addClass(self.options.expandedClass)
+          .removeClass(self.options.collapsedClass);
+
+      self.element.find(self.options.collapseAreaClass)
+          .slideDown(duration, function() {
+            if ( typeof complete !== 'undefined' ) {
+              complete();
+            }
+          });
     },
 
-    quickExpand: function() {
-      var self = this;
-      self.element.addClass(self.options.expandedClass).removeClass(self.options.collapsedClass);
-      self.element.find(self.options.collapseAreaClass).slideDown(0);
+    /**
+     * Standard collapse with default duration
+     * @param complete
+     */
+    standardCollapse: function(complete) {
+      this._collapse(this.options.duration, complete);
+    },
+
+    /**
+     * Quick collapse with no duration
+     * @param complete
+     */
+    quickCollapse: function(complete) {
+      this._collapse(0, complete);
+    },
+
+    /**
+     * Standard expand with default duration
+     * @param complete
+     */
+    standardExpand: function(complete) {
+      this._expand(this.options.duration, complete);
+    },
+
+    /**
+     * Quick expand with no duration.
+     * @param complete
+     */
+    quickExpand: function(complete) {
+      this._expand(0, complete);
     },
 
     /**
      * Destroy
      */
     _destroy: function() {
+      var self = this;
 
+      self.element
+          .removeClass(self.options.expandedClass)
+          .removeClass(self.options.expandedClass);
     }
   });
 
