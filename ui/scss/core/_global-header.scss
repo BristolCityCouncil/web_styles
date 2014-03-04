@@ -9,10 +9,8 @@
   position: relative;
   z-index: 10;
   @include box-shadow(rgba($black, 0.15) 0 0 0 8px);
-
-  .logo {
-    margin: 1em 0;
-    @include inline-block;
-  }
-
-}//page-header
+}
+.page-header__logo {
+  @include rem(margin, 16 0);
+  @include inline-block;
+}

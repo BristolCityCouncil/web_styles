@@ -1,7 +1,7 @@
 // ADDRESS SELECT
 
 .address-select {
-  margin-bottom: 0.8em;
+  @include rem(margin-bottom,13);
 }
 
 .address-select__context {

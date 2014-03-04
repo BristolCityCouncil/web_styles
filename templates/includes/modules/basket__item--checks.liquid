@@ -1,0 +1,40 @@
+{% if basket__item__title == null %}{% assign basket__item__title = 'Black wheelie bin' %}{% endif %}
+{% if basket__item__handle == null %}{% assign basket__item__handle = 'black-wheelie-bin' %}{% endif %}
+{% if basket__item__qty == null %}{% assign basket__item__qty = 2 %}{% endif %}
+<fieldset class="basket__item {{ basket__item__is-disabled }}">
+
+  <legend class="visuallyhidden">{{ basket__item__title }}</legend>
+
+  <div class="grid-wrap">
+
+    <div class="grid-col grid-col-check desktop-grid-one-ninth">
+
+      <div class="form__item form__item--boolean">
+        <input {{ basket__item__is-checked }} class="form__field form__field--boolean form__field--checkbox form__field--checkbox-large basket__checks" type="checkbox" name="" id="ff-terms-large" value="Agree" />
+        <label class="form__label form__label--boolean visuallyhidden" for="ff-terms-large">Large Checkbox</label>
+      </div><!--/form__item-->
+
+    </div>
+
+    <div class="grid-col desktop-grid-eight-ninths">
+
+      <div class="basket__item__description">
+
+        <h4 class="basket__item__title">{{ basket__item__title }}</h4>
+
+        <div class="basket__item__image">
+          <img src="/ui/images/waste/{{ basket__item__handle }}.png" alt="{{ basket__item__title }}" />
+        </div><!--/basket__item__image-->
+
+        <div class="basket__item__info">
+          {{basket__item__info}}
+        </div><!--/basket__item__info-->
+
+      </div><!--/basket__item__description-->
+
+    </div>
+
+
+  </div><!--/grid-wrap-->
+
+</fieldset><!--/basket__item-->

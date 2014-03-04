@@ -1,6 +1,7 @@
 /* ======================================================
    BODY
    ======================================================*/
+// @TODO: Consider refactoring the file structure so that global/body/layout are normalised
 
 .page-body {
   background: $white;
@@ -8,8 +9,8 @@
 }
 
 .page-content {
-  padding-top: 1.85em;
-  margin-bottom: 2.2em;
+  @include rem(padding-top,30);
+  @include rem(margin-bottom,35);
 }
 
 .content {
@@ -21,7 +22,7 @@
 }
 
 .content-header__title {
-  margin-bottom: 0.4em;
+  @include rem(margin-bottom,6);
 }
 
 .content-header__title-extra {
@@ -32,7 +33,7 @@
 .content-header__byline {
   color: $grey-9;
   @include font-size($h3-font-size);
-  margin-top: -1em;
+  @include rem(margin-top,-16);
 }
 
 .content-main {
@@ -41,4 +42,11 @@
 
 .content-sub {
 
+}
+
+// @OPTIMIZE Is there a better way of achieving this?
+.content--iag {
+  & > h1, & > h2, & > h3, & > h4, & > h5, & > h6, & > p, & > ul {
+    @include rem(max-width,610);
+  }
 }

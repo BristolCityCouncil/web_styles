@@ -1,13 +1,14 @@
 // HEADER: NAV MAIN
-// Excluded from Alpha...
+// Excluded from Alpha..
+// @OPTIMIZE: Look at removing legacy file or unincluding it.
 
 .nav-main {
   background: $bcc-red;
 
   @media screen and (min-width: 321px) {
     background: none;
-    padding-top: 2.4em;
-    margin-bottom: 2em;
+    @include rem(padding-top,36);
+    @include rem(margin-bottom,30);
     float: right;
     width: 50%;
   }

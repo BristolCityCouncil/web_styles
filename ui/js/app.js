@@ -3,29 +3,27 @@
   'use strict';
 
   // user agent matching
-
+  // @TODO: Consider why this is being added and should feature detection, or size detection be used instead
   if (navigator.userAgent.match(/iPad/i) !== null) {
     $('html').addClass('ipad');
   }
 
   // accessibility
-
-  var link = $('.skiplinks');
-
-  link.focus(function () {
+  // @OPTIMIZE: Make a separate function to this one
+  var focusToggle = $('.js-addfocus');
+  focusToggle.focus(function () {
     $(this).addClass('focus');
   });
-
-  link.blur(function () {
+  focusToggle.blur(function () {
     $(this).removeClass('focus');
   });
-
-  link.click(function () {
+  focusToggle.click(function () {
     $('#main').attr('tabindex', -1).focus();
   });
 
-  // overlays
 
+  // overlays
+  // @OPTIMIZE: Look at optimizing how this runs so that it is one function that then detects a data attribute or similar?
   $('.js-overlay-open').overlays();
   $('.js-overlay-open-dialog').overlays('dialog');
   $('.js-overlay-open-external-image').overlays('externalImage');
@@ -36,20 +34,22 @@
   $('.js-overlay-open-markup').overlays('markup');
 
   // Validate
+  // @TODO: Look at refactoring this, as it seems for example pages only?
   // This is used to display errors on the Form Validation page.
   $('#form-validation-new').validate();
-
   $('#form-validation-new-alt').validate({
     'errorMessageTemplate': '<p class="form__item__error">Oops! $message$</p>',
     'keyUpValidation': true
   });
 
-  $('.form--validate').validate({
+
+  $('.js-validation').validate({
     'keyUpValidation': true
+    // @TODO: Check if this is the default validation, and if so why is it not set to true by default
   });
 
   // form styling
-
+  // @TODO: Look at refactoring the if not ie7 check, and also group them
   if (!ie7) {
     $('select, input[type=radio], input[type=checkbox]').uniform({
       wrapperClass: 'uniform',
@@ -58,35 +58,79 @@
       checkboxClass: 'uniform__checkbox'
     });
 
-    // @TODO: Next line needs explaining as to why...
+    // @TODO: Next line needs explaining as to why... and probably needs refactoring as it's brittle
     $('.form__field--checkbox-large').parent().parent().addClass('uniform__checkbox--large');
   }
 
   // form placeholders
-
   $('input, textarea').placeholder();
 
   // list table
-
   if (!ie7) {
-    $('.list-table').listtable();
+    $('.js-list-table').listtable();
     $(window).resize(function () {
-      $('.list-table').listtable('setHeight');
+      $('.js-list-table').listtable('setHeight');
     });
   }
 
   // address lookup
-
   $('.js-address-lookup').addresslookup();
 
   // tabs
-
   $('.js-tabs').tabs();
 
-  // bin basket
 
+  // bin basket
   if (!ie7) {
-    $('.basket--with-checks').binbasket();
+    $('.js-basket').binbasket();
   }
+
+  /*
+   * Add parent .basket__item--is-selected class for REAL checkboxes
+   */
+
+  // Add class to :checked
+  $('.basket__item .form__field--checkbox:checked').parents('.basket__item').addClass('basket__item--is-selected');
+  $('.basket__item .form__field--checkbox').change(function(){
+    // Add class on change to :checked
+    $(this).parents('.basket__item').toggleClass("basket__item--is-selected");
+    console.log("Changes");
+
+  });
+
+
+  $('.js-sticky').sticky();
+
+  $('.js-collapse').collapsible();
+
+  // @TODO: Split in to Separate file
+  var smoothScroll = function(elem) {
+    var target = $(elem.hash);
+    target = target.length ? target : $('[name=' + elem.hash.slice(1) +']');
+    //CRITICAL PART OF THIS CURRENT THING
+    var scrollToPosition = $(target).offset().top - $('.js-sticky.is-clone').height() - 20;
+    if (target.length) {
+      $('html,body').animate({
+        scrollTop: scrollToPosition
+      }, 300);
+      return false;
+    }
+  }
+
+  $('.js-sticky a').on("click", function(e) {
+    var self = this;
+    e.preventDefault();
+    if ($(self).parents('.js-sticky').hasClass('is-clone')) {
+      $(this).parents('.js-collapse').collapsible('standardCollapse',function(){
+        smoothScroll(self);
+      });
+    } else {
+      smoothScroll(self);
+    }
+
+  });
+
+
+
 
 })(jQuery);

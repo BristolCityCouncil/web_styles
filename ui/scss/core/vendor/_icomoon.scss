@@ -24,11 +24,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.ico-right:before {
-  content: "\e605";
-}
+
 .ico-bin:before {
   content: "\e600";
+}
+.ico-attention:before {
+  content: "\e601";
 }
 .ico-cancel:before {
   content: "\e602";
@@ -39,8 +40,11 @@
 .ico-cog:before {
   content: "\e604";
 }
-.ico-attention:before {
-  content: "\e601";
+.ico-right:before {
+  content: "\e605";
+}
+.ico-user:before {
+  content: "\e606";
 }
 .ico-down:before {
   content: "\e607";
@@ -54,6 +58,4 @@
 .ico-pdf:before {
   content: "\e60a";
 }
-.ico-user:before {
-  content: "\e606";
-}
+

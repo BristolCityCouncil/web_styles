@@ -1,0 +1,58 @@
+/* ======================================================
+   BETA HEADER
+   ======================================================*/
+
+.page-header {
+  background: $pale-yellow;
+  border-top: 3px solid $bcc-red;
+  @include font-size($small-font-size);
+  position: relative;
+  z-index: 10;
+  @include box-shadow(rgba($black, 0.15) 0 0 0 8px);
+  @include rem(min-height,94);
+  .layout {
+    position: relative;
+  }
+}
+.page-header__logo {
+  @include rem(max-width,48);
+  @include respond-min($bp-tablet-min) {
+    @include rem(max-width,67);
+  }
+  @include rem(margin, 13 0);
+
+  @include inline-block;
+  position: absolute;
+  top: 0;
+  @include rem(left,10);
+}
+
+.beta-header__content {
+  @include rem(margin-left,15);
+  @include rem(padding,15 0 15 50);
+  @include respond-min($bp-tablet-min) {
+    @include rem(padding,21 0 21 67);
+  }
+}
+
+.beta-header__title {
+  color: $bcc-red;
+  font-family: $font-bold;
+  @include font-size($body-font-size);
+  @include respond-min($bp-tablet-min) {
+    @include font-size($h4-font-size);
+  }
+  margin-bottom: 0;
+  span {
+    text-transform: uppercase;
+    color: $dark-grey;
+  }
+}
+
+.beta-header__copy {
+  @include font-size(16);
+  margin-bottom: 0;
+  a {
+    color: $bcc-blue-dark;
+  }
+}

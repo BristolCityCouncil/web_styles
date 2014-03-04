@@ -1,0 +1,114 @@
+// @OPTIMIZE Refactor this so it isn't service/page specific content.
+// @TODO Look at classes and drupal output to make sure it is suitable
+
+.content--iag {
+  position: relative;
+  h1 {
+    line-height: 1;
+    @include rem(margin-bottom,30);
+  }
+  h2 {
+    @include rem(margin,15 0 10 0);
+  }
+  h2 + h3 {
+    margin-top: 0;
+  }
+  h3 {
+    @include rem(margin-bottom,10);
+  }
+  h4 {
+
+  }
+  ul {
+    margin: 0;
+  }
+  .panel {
+    @include rem(margin-top,30);
+  }
+}
+
+
+.page-contents {
+
+}
+
+.is-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.is-hidden {
+  display: none;
+}
+.is-invisible {
+  visibility: hidden;
+}
+
+.page-contents__inner {
+  background: #fff;
+  border-top: 2px solid $bcc-grey-light;
+  border-bottom: 1px solid $bcc-grey-light;
+  padding: 0;
+  @extend %cf;
+  @include box-shadow(rgba($black, 0.08) 0 4px 0 0px);
+  .is-borderless & {
+    border-bottom: 0;
+    @include box-shadow(rgba($black, 0) 0 0 0 0);
+  }
+}
+
+
+.page-contents__title {
+  @include font-size($h4-font-size);
+  font-family: $font-bold;
+  @include rem(padding,25 0);
+  margin: 0;
+}
+
+.page-contents__list-wrapper {
+  @include rem(margin-bottom,25);
+}
+
+.page-contents__list {
+  li {
+    @include rem(margin-bottom, 15);
+  }
+  a:focus,
+  a:active {
+    font-family: $font-regular !important;
+    font-weight: normal;
+    text-decoration: underline;
+  }
+}
+
+.js-collapse__toggle {
+  position: relative;
+  cursor: pointer;
+  @include rem(padding-right,60);
+  .ico {
+    @include single-transition(all,0.4s);
+    position: absolute;
+    @include rem(right,40);
+    @include rem(top,28);
+    .is-borderless & {
+      display: none;
+    }
+  }
+}
+
+.is-collapsed {
+
+}
+
+.is-expanded {
+  .js-collapse__toggle .ico {
+    @include rotate(-180deg);
+    .no-csstransforms &:before {
+      content:"\e609";
+    }
+  }
+
+}

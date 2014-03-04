@@ -20,7 +20,8 @@
   $shorthand_in_rem: 0;
   @each $size in $size_in_px { // Loop through values and concatenate
     $shorthand_in_px: $shorthand_in_px + ($size) + px + " ";
-    $shorthand_in_rem: $shorthand_in_rem + ($size/16) + rem + " "; // Divided by 16px browser default font-size (100%)
+    $shorthand_in_rem: $shorthand_in_rem + ($size/16) + rem + " ";
+    // Divided by 16px browser default font-size (100%)
   }
   // Output styles
   #{$property}: $shorthand_in_px;

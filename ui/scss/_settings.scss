@@ -1,7 +1,8 @@
 // SETTINGS
 
 // Typography
-// TODO: Mobile adjustments
+// @TODO: Refactor of typography based on Damon's style findings.
+// @TODO: Initial refactor for mobile sizes
 $body-font-size: 18;
 $h1-font-size: 48;
 $h2-font-size: 32;
@@ -82,10 +83,12 @@ $grey-7: #d8d8d9;
 $another-grey: #dadada;
 $grey-boxout: #eaeaea;
 $bcc-grey-lightest: #ebecec;
+$grey-shadow: $grey-lighter;
 
 $bcc-pink: #ffe5ec;
 
 $alert-yellow: #ffcc00;
+$pale-yellow: #fbedb3;
 
 $white: #ffffff;
 $black: #000000;

@@ -3,11 +3,13 @@
 .ico {
   @include font-size($icon-font-size);
 }
+
+// @TODO: Consider whether this margin is safe, or needs some refactoring
 .ico--first {
-  margin-right: 9px;
+  @include rem(margin-right,9);
 }
 .ico--last {
-  margin-left: 9px;
+  @include rem(margin-left,9);
 }
 
 .ico--large {
@@ -15,7 +17,6 @@
 }
 
 .ico--disc {
-
 	:before {
 		color: #fff;
 		background-color: $bcc-green;

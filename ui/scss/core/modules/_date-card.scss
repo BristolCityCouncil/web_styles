@@ -14,24 +14,24 @@
   display: block;
   text-transform: uppercase;
   background: $rubbish-grey;
-  padding: 7px 12px 4px;
+  @include rem(padding, 7 12 4);
 }
 
 .date-card__day {
   display: block;
   @include font-size($h2-font-size);
-  margin-top: 10px;
+  @include rem(margin-top,10);
 }
 
 .date-card__month {
   @include font-size($body-font-size);
   display: block;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  @include rem(margin-bottom,10);
 }
 
 .date-card__note {
-  padding: 8px 12px 7px;
+  @include rem(padding,8 12 7);
   display: block;
   border-top: 2px solid $white;
   @include font-size($small-font-size);

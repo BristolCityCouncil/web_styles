@@ -1,6 +1,6 @@
 .list-table {
 	list-style: none;
-	margin: 0 0 40px 0;
+	@include rem(margin, 0 0 40 0);
 	padding: 0;
 	border-bottom: 2px solid $grey-lighter;
 	@include font-size($small-font-size);
@@ -19,6 +19,7 @@
 .list-table__row {
 	border-top: 2px solid $grey-lighter;
 	margin: 0;
+	// @TODO: Check whether this can be refactored for mobile first
 	@include respond-max($bp-tablet-max) {
 		.grid-wrap {
 			position: relative;
@@ -42,12 +43,12 @@
 }
 
 .list-table__row__item {
-	padding: 0 55px 0 0;
+	@include rem(padding,0 55 0 0);
 	.list-table-advanced & {
 		display: none;
 	}
 	@include respond-min($bp-desktop-min) {
-		padding: 20px 20px 20px 0;
+		@include rem(padding, 20 20 20 0);
 		.list-table-advanced & {
 			border-right: 2px solid $grey-boxout;
 			height: 100%;
@@ -58,11 +59,11 @@
 		margin: 0;
 	}
 }
-
+// @TODO: Check whether this can be refactored for mobile first
 @include respond-max($bp-tablet-max) {
 	.list-table__row__item__inner {
 		border-top: 1px solid $grey-lighter;
-		padding: 15px 0;
+		@include rem(padding, 15 0);
 	}
 	.list-table__row__item__inner--collapse-bottom {
 		padding-bottom: 0;
@@ -77,9 +78,10 @@
 	.list-table__row__item__inner {
 		border-top: 0;
 	}
+	// @TODO: Check whether this can be refactored for mobile first
 	@include respond-max($bp-tablet-max) {
 		padding-right: 0;
-		padding-left: 15px;
+		@include rem(padding-left, 15);
 	}
 	.list-table-advanced & {
 		background: $grey-boxout;
@@ -87,7 +89,7 @@
 	@include font-size($small-print-font-size);
 	font-family: $font-bold;
 	@include respond-min($bp-desktop-min) {
-		padding-left: 20px;
+		@include rem(padding-left,20);
 	}
 	text-transform: uppercase;
 	border-right: 0;
@@ -128,12 +130,13 @@
 }
 
 .list-table__row__item__list dt {
-	margin: 0 0 5px 0;
+	@include rem(margin, 0 0 5 0);
 	font-family: $font-bold;
 	font-weight: normal;
 }
 
 .list-table__row__item__list--collapse {
+	// @TODO: Check whether this can be refactored for mobile first
 	@include respond-max($bp-tablet-max) {
 		dt, dd {
 			margin: 0;

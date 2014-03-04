@@ -1,11 +1,11 @@
 /* ======================================================
    HEADER: SEARCH
    ======================================================*/
-
+// @OPTIMIZE: Legacy code - denote that it's legacy or look into removing it
 .form-search {
   display: none;
-  padding-top: 2em;
-  margin-bottom: 2em;
+  @include rem(padding-top,30);
+  @include rem(margin-bottom,30);
 
   .field {
 

@@ -5,19 +5,22 @@
 .panel {
   position: relative;
   background: $grey-boxout;
-  //margin-bottom: 2.5em;
   @include rem(margin-bottom, 45);
   @extend %cf;
-  //padding: 20px 20px 5px;
   @include rem(padding, 20 20 5 20);
   img {
     max-width: 75px;
     @include rem(margin-bottom,12);
   }
+  ul {
+    @include rem(margin,10 0);
+  }
+  li {
+    @include rem(margin, 0 0 8 0);
+  }
 }
 
 .panel__title { //Styles for panel titles
-  //margin: 0;
   @include rem(margin, 0);
   @include font-size($h4-font-size);
   font-family: $font-bold;
@@ -26,7 +29,6 @@
 .panel__title--minor { //Styles for minor title (eg subtitle)
   @include font-size($body-font-size);
   font-family: $font-bold;
-  //margin: 0;
   @include rem(margin, 0);
 }
 
@@ -41,11 +43,10 @@
 
 
 
-.panel__subtitle + .panel__title {
+.panel__title--minor + .panel__title {
   @include font-size(30);
   line-height: 1.1em;
-  //margin: 0 0 10px 0;
-  @include rem(margin, 0 0 10 0);
+  @include rem(margin, 0 0 16 0);
   @include respond-min($bp-desktop-min) {
     @include font-size($h2-font-size);
   }
@@ -103,12 +104,11 @@
 //-------PLACEHOLDERS--------
 
 %panel--slim { // Less padding utility placeholder
-  //padding: 15px 20px 12px 20px;
   @include rem(padding, 15 20 12 20);
 }
 
 %panel--with-ico { // Utility placeholder for a panel with an icon
-  //padding-left: 55px;
+
   @include rem(padding-left, 55);
   position: relative;
 
@@ -138,7 +138,6 @@
 //----------MODIFIERS-----------
 
 .panel--tight { //Used to modify bottom margin of panel
-  //margin-bottom: 1em;
   @include rem(margin-bottom, 18);
 }
 
@@ -147,17 +146,14 @@
   @extend %panel--slim;
   background: $alert-yellow;
   p {
-    //margin-bottom: 0;
     @include rem(margin-bottom, 0);
   }
 }
 
 .panel--concise { //Modifier to make a panel more concise with centered text
-  //padding: 15px 15px 0 15px;
   @include rem(padding, 15 15 0 15);
   text-align: center;
   .panel__title {
-    //margin: 0 0 15px 0;
     @include rem(margin, 0 0 15 0);
     font-family: $font-regular;
     @include font-size($body-font-size);
@@ -166,7 +162,6 @@
     }
   }
   p {
-    //margin-bottom:12px;
     @include rem(margin-bottom, 12);
   }
 }
@@ -174,8 +169,17 @@
 .panel--affirm { //Modifier to have panel set up as a confirmation panel
   background: $recyling-green-light;
   border-left: 6px solid $bcc-green;
+  padding-bottom: 0;
   .panel__title {
     color: $bcc-green;
+  }
+}
+
+
+.panel--inform {
+  background: $pale-yellow;
+  .panel__title {
+    //color: $bcc-green;
   }
 }
 

@@ -1,9 +1,9 @@
 // STEP HEADER
 
 .step-header {
-	margin: 0 0 25px 0;
+	@include rem(margin, 0 0 25 0);
 	@include respond-min($bp-tablet-min) {
-		margin: 0 0 30px 0;
+		@include rem(margin, 0 0 30 0);
 	}
 }
 
@@ -15,7 +15,7 @@
   @include respond-min($bp-tablet-min) {
     @include font-size($h4-font-size);
     border-bottom: 1px solid $grey-boxout;
-    padding: 0 0 10px 0;
+    @include rem(padding, 0 0 10 0);
     margin: 0;
   }
 }
@@ -36,7 +36,7 @@
 	display: none;
 	@include respond-min($bp-tablet-min) {
 		display: inline;
-		margin: 0 5px 0 0;
+		@include rem(margin, 0 5 0 0);
 	}
 }
 
@@ -49,7 +49,7 @@
 	}
 }
 
-.step-header--alt {
+.step-header--alt { //Alternatve step-header styles
 	.step-header__title {
 		@include font-size(30);
 	}

@@ -4,106 +4,111 @@
 
 .page-footer {
   @include font-size($small-font-size);
-  .layout-constrained {
-    border-top: 8px solid $bcc-red;
-  }
-
   a {
     color: $white;
     @include hover-link;
   }
+}
 
+.page-footer__top-bar {
+  border-top: 8px solid $bcc-red;
 }
 
 .legal-nav {
-  margin: 1em 0;
-  padding-bottom: 0.5em;
+  @include rem(margin,15 0);
+  @include rem(padding-bottom,8);
   border-bottom: 1px solid $grey;
 
   @include respond-min($bp-tablet-min) {
-    //@include font-size($body-font-size);
     padding-bottom: 0;
     border-bottom: none;
   }
 
   @include respond-min($bp-desktop-min) {
-    margin: 3em 0;
+    @include rem(margin,45 0);
   }
 
-  .linklist {
 
-    li {
-      margin: 0.3em 0;
+  li {
+    @include rem(margin, 4 0);
+    @include respond-min($bp-desktop-min) {
+      @include inline-block;
+      margin: 0;
+      line-height: 1.2;
+      @include rem(margin-right,10);
+      border-left: 1px solid $white;
+      @include rem(padding-left,10);
+    }
 
-      @include respond-min($bp-desktop-min) {
-        @include inline-block;
-        margin: 0;
-        line-height: 1.2;
-        margin-right: 10px;
-        border-left: 1px solid $white;
-        padding-left: 10px;
-      }
-
-      &:first-child {
-        border: 0;
-        padding-left: 0;
-      }
-
+    &:first-child {
+      border: 0;
+      padding-left: 0;
     }
 
   }
+
 
 }
 
 // LOGOS
+// @OPTIMIZE: Look at making this more general or optimized
 .logo-nav {
-  margin-bottom: 1em;
+  @include rem(margin-bottom,15);
 
   @include respond-min($bp-tablet-min) {
-    margin-top: 1em;
+    @include rem(margin-top,15);
     text-align: right;
+  }
+
+  ul {
+    @extend %cf;
+    padding: 0;
+    margin: 0;
+    a {
+      @include inline-block;
+    }
+  }
+
+  li {
+    list-style: none;
+    &:before {
+      display: none;
+    }
   }
 
   .linklist {
     @extend %cf;
-
-    li {
-
-      &.logo-gov-uk {
-        margin: 28px 0;
-        float: left;
-
-        @include respond-min($bp-tablet-min) {
-          float: none;
-          margin-top: 0;
-        }
-
-        @include respond-min($bp-desktop-min) {
-          margin-top: 25px;
-          float: left;
-        }
-
-      }
-
-      &.logo-bcc {
-        float: right;
-
-        @include respond-min($bp-tablet-min) {
-          float: none;
-        }
-
-        @include respond-min($bp-desktop-min) {
-          float: right;
-        }
-
-      }
-
-    }
-
     a {
       @include inline-block;
     }
 
   }
 
+}
+
+.logo-bcc {
+  float: right;
+
+  @include respond-min($bp-tablet-min) {
+    float: none;
+  }
+
+  @include respond-min($bp-desktop-min) {
+    float: right;
+  }
+}
+
+.logo-gov-uk {
+  @include rem(margin,28 0);
+  float: left;
+
+  @include respond-min($bp-tablet-min) {
+    float: none;
+    margin-top: 0;
+  }
+
+  @include respond-min($bp-desktop-min) {
+    @include rem(margin-top,25);
+    float: left;
+  }
 }

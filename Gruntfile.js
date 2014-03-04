@@ -54,6 +54,9 @@ module.exports = function(grunt) {
 
     liquid: {
       pages: {
+        options: {
+          includes: './templates/includes/'
+        },
         files: [
           {
             expand: true,
@@ -120,6 +123,12 @@ module.exports = function(grunt) {
     },
 
     copy: {
+      emails: {
+        cwd: 'templates',
+        expand: true,
+        src: './email-templates/*',
+        dest: 'converted-html/'
+      },
       ui: {
         src: 'ui/**/*',
         dest: 'converted-html/'
@@ -275,6 +284,6 @@ module.exports = function(grunt) {
     'rev',
     'usemin',
     'string-replace:prod',
-    'relativeRoot:prod']);
-
+    'relativeRoot:prod'
+  ]);
 };

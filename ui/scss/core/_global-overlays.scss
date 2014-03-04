@@ -1,10 +1,10 @@
 .overlay {
   position: relative;
   background: #FFF;
-  padding: 20px;
+  @include rem(padding,20);
   width: auto;
-  max-width: 500px;
-  margin: 20px auto;
+  @include rem(max-with,500);
+  @include rem(margin, 20 auto);
 }
 
 .overlay--image {
@@ -13,13 +13,13 @@
 
 .overlay__title {
 	@include font-size($h3-font-size);
-	margin: 0 0 1em 0;
+  @include rem(margin, 0 0 16 0);
 	font-family: $font-regular;
 }
 
 .overlay__content {
 	p {
-		margin: 1em 0 0 0;
+    @include rem(margin, 16 0 0 0);
 		&:first-child {
 			margin: 0;
 		}

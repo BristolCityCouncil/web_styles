@@ -16,9 +16,8 @@
     // margin: 0 0 20px 0;
     @include rem(margin, 0 0 20 0);
   }
-  p {
-    margin: 0;
-    @include rem(margin, 0);
+  .panel--bare {
+    @include rem(margin, 0 0 10 0);
   }
 }
 
@@ -28,7 +27,7 @@
     @include rem(margin, 0 0 10 0);
   }
   .panel__title {
-    margin: 0 0 10px 0;
+    @include rem(margin, 0 0 10 0);
     @include font-size($h3-font-size);
   }
   .panel--or {

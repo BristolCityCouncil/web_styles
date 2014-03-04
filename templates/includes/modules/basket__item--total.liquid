@@ -1,0 +1,36 @@
+{% if basket__item__title == null %}{% assign basket__item__title = 'Black wheelie bin' %}{% endif %}
+{% if basket__item__handle == null %}{% assign basket__item__handle = 'black-wheelie-bin' %}{% endif %}
+{% if basket__item__qty == null %}{% assign basket__item__qty = 2 %}{% endif %}
+<div class="basket__item basket__item--total">
+
+  <div class="grid-wrap">
+
+    <div class="grid-col tablet-grid-four-fifths desktop-grid-nine-tenths">
+
+      <div class="basket__item__description">
+
+        <h4 class="basket__item__title">{{ basket__item__title }}</h4>
+
+        <div class="basket__item__image">
+          <img src="/ui/images/waste/{{ basket__item__handle }}.png" alt="{{ basket__item__title }}" />
+        </div><!--/basket__item__image-->
+
+      </div><!--/basket__item__description-->
+
+    </div><!--/grid-col-->
+
+    <div class="grid-col tablet-grid-one-fifth desktop-grid-one-tenth">
+
+      <div class="basket__item__details">
+
+        <p class="basket__item__qty">
+          <strong>{{ basket__item__qty }}</strong>
+        </p><!--/basket__item__qty-->
+
+      </div><!--/basket__item__details-->
+
+    </div><!--/grid-col-->
+
+  </div><!--/grid-wrap-->
+
+</div><!--/basket__item-->

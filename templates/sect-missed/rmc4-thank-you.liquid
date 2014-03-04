@@ -1,0 +1,88 @@
+{% block page %}
+
+  {% assign page_title = 'Step 4 | Report missed collection' %}
+  {% assign ribbon = 'ico-bin' %}
+
+  {% include 'header' %}
+
+  <div class="page-content">
+
+    <div class="layout layout-constrained">
+
+      <div class="grid-wrap">
+
+        <div class="grid-col desktop-grid-five-sixths desktop-grid-offset-one-sixth">
+
+          <div class="content content-header">
+
+            <div class="step-header">
+              <h1 class="step-header__title">Report missed collection <span class="step-header__title__steps"><span class="step-header__title__steps__seperator">:</span> Step 4 of 4</span></h1>
+              <h2 class="step-header__subtitle">Thank you</h2>
+            </div>
+
+            <p class="level">
+              <strong>Your collection references</strong> <small class="smallprint">(Quote these when contacting us)</small>
+
+              <a class="text-right" href="#" title="">Track progress</a>
+            </p>
+            <ul>
+              <li>Brown food waste: <strong>#1926933</strong></li>
+              <li>Black wheelie bin: <strong>#1926934</strong></li>
+            </ul>
+
+            <div class="panel panel--affirm">
+              <p class="panel__title--minor">Re-collection on:</p>
+              <p class="panel__title">Before 5pm on Wednesday, 15 January</p>
+            </div>
+
+            <p>
+              Please leave your bins on the street for our crew to collect.
+            </p>
+
+            <hr />
+
+              <h3 class="shadow">Re-collection Address</h3>
+
+              <p class="shadow">
+                Mrs Josephine Longnamerson
+                <br />
+                Flat 3, 22 Verylongstreetname Terrace, BS21&nbsp;4ND
+              </p>
+
+                <div class="basket">
+
+                  <div class="basket__list">
+
+                    {% assign basket__item__title = 'Black recycling bin' %}
+                    {% assign basket__item__handle = 'black-recycling-bin-retina' %}
+                    {% assign basket__item--shadow = true %}
+                    {% include 'modules/basket__item' %}
+
+                    {% assign basket__item__title = 'Green recycling bin' %}
+                    {% assign basket__item__handle = 'green-recycling-bin-retina' %}
+                    {% assign basket__item--shadow = true %}
+                    {% include 'modules/basket__item' %}
+
+                  </div><!--/basket__list-->
+
+                  <div class="basket__actions">
+                    <!-- @TODO: UX: Is this button text misleading? Still many steps to go through -->
+                    <button class="btn" type="submit">Report these collections <span class="ico ico-right"></span></button>
+                  </div><!--/basket__actions-->
+
+                </div><!--/basket-->
+
+
+          </div><!--/content-->
+
+        </div><!--/grid-col-->
+
+      </div><!--/grid-wrap-->
+
+    </div><!--/layout-->
+
+  </div><!--page-content-->
+
+  {% include 'footer' %}
+
+{% endblock %}

@@ -5,14 +5,14 @@
 }
 
 .iconlist__list {
-  margin: 1em 0;
+  @include rem(margin, 16 0);
   padding: 0;
 
   li {
     list-style: none;
     //margin: 0.3em 0;
 
-    padding-left: 32px;
+    @include rem(padding-left, 32);
     @extend .normal-list-item;
     position: relative;
     .ico {

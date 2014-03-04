@@ -18,7 +18,7 @@
 }
 
 .basket__change {
-  margin: 0.6em 0;
+  @include rem(margin,10 0);
   @include font-size($small-font-size);
   @include respond-min($bp-tablet-min) {
     float: right;
@@ -27,7 +27,7 @@
 }
 
 .basket__list {
-  margin-bottom: 2.5em;
+  @include rem(margin-bottom,40);
 }
 
 .basket__item {
@@ -39,29 +39,35 @@
 }
 
 .basket__item__description {
-  padding: 15px;
+  @include rem(padding, 15);
   //@extend %cf;
 
   @include respond-min($bp-tablet-min) {
-    border-right: 2px solid $grey-boxout;
     position: relative;
-    padding-left: 100px;
-    min-height: 105px;
+    @include rem(padding-left,100);
+    @include rem(min-height,105);
   }
 
-  .basket__item--fields & {
+  .basket__item--fields & {//Modified version of basket__item__description for basket__item--fields
     border-right: 0;
+  }
+  .basket__item--total & { //Modified version of basket__item__description for basket__item--total
+    @include respond-min($bp-tablet-min) {
+      border-right: 2px solid $grey-boxout;
+    }
   }
 
 }
+
+
 
 .basket__item__image {
   text-align: center;
 
   @include respond-min($bp-tablet-min) {
     position: absolute;
-    top: 15px;
-    left: 10px;
+    @include rem(top,15);
+    @include rem(left,10);
   }
 
   img {
@@ -77,12 +83,12 @@
 }
 
 .basket__item__title {
-  margin: 0 0 0.2em;
+  @include rem(margin, 0 0 0 3);
   text-align: center;
 
   @include respond-min($bp-tablet-min) {
     text-align: left;
-    margin-top: 10px;
+    @include rem(margin-top,10);
   }
 
 }
@@ -99,15 +105,15 @@
 }
 
 .basket__item__details {
-  padding: 0 15px 15px;
+  @include rem(padding, 0 15 15);
   @extend %cf;
 
   @include respond-min($bp-desktop-min) {
-    padding: 15px 0;
+    @include rem(padding, 15 0);
     margin-left: -20px; // Shift grid, allow for centering
 
     .basket__item--fields & {
-      padding-right: 20px;
+      @include rem(padding-right, 20);
     }
 
   }
@@ -116,16 +122,16 @@
 
 .basket__item__qty {
   @include font-size($h4-font-size);
-  margin: 10px 0;
+  @include rem(margin, 10 0);
   text-align: center;
 }
 
 .basket__item__field {
-  margin-bottom: 0.5em;
+  @include rem(margin-bottom, 8);
 }
 
 .basket__summary {
-  margin-bottom: 2.5em;
+  @include rem(margin-bottom,40);
 }
 
 .basket__summary__title {
@@ -140,11 +146,25 @@
   @extend .form__actions;
 }
 
+ .grid-col-check {
+    text-align: center;
+    @include rem(padding-top,15);
+  }
+
+.grid-col-check {
+      text-align: center;
+      @include rem(padding-top,25);
+      .uniform__checkbox {
+        position: relative;
+        right: -15px;
+      }
+    }
+
 .basket--advanced {
+
   .desktop-grid-two-fifths {
     display: none;
   }
-
   .basket__item--is-selected {
     background: $grey-boxout;
     .desktop-grid-two-fifths {
@@ -152,15 +172,28 @@
     }
   }
 
-  .grid-col-check {
-    text-align: center;
-    padding-top: 15px;
-  }
+
 
   .basket__item__field--old {
       display: none;
     }
 
+  @include respond-min($bp-desktop-min) {
+
+    .desktop-grid-three-fifths,
+    .desktop-grid-two-fifths {
+      @extend .desktop-grid-four-ninths;
+    }
+
+
+  }
+
+  .basket__item__field--hide {
+    @extend .visuallyhidden;
+  }
+}
+
+.basket--with-checks {
   @include respond-min($bp-desktop-min) {
     .basket__item {
       background: url(../images/waste/1by1-border.png) repeat-y 11.1111% 0;
@@ -170,22 +203,33 @@
       background: $grey-boxout url(../images/waste/1by1-border.png) repeat-y 11.1111% 0;
     }
 
-    .desktop-grid-three-fifths,
-    .desktop-grid-two-fifths {
-      @extend .desktop-grid-four-ninths;
-    }
 
-    .grid-col-check {
-      text-align: center;
-      padding-top: 25px;
-      .uniform__checkbox {
-        position: relative;
-        right: -15px;
-      }
-    }
-  }
-
-  .basket__item__field--hide {
-    @extend .visuallyhidden;
   }
 }
+
+.basket__item__is-disabled {
+  border: 2px solid $bcc-red;
+  margin-top: 0;
+  margin-bottom: 2px;
+  .basket__item__title,
+  .basket__item__info {
+    color: $bcc-red;
+  }
+}
+
+.shadow {
+  color: $grey-shadow;
+}
+.basket__item--shadow {
+  .uniform__checkbox {
+    border-color: #cc0000;
+    outline: #cc0000;
+  }
+  .basket__item__title,
+  .basket__item__info {
+    color: $grey-shadow;
+  }
+
+}
+
+

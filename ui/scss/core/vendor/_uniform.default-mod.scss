@@ -8,10 +8,7 @@
 .uniform__select,
 .uniform__checkbox,
 .uniform__radio {
-  display: -moz-inline-box;
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
+  @include inline-block;
   vertical-align: middle;
 }
 
@@ -54,8 +51,9 @@
 .uniform__select {
   // Uniform-only
   width: 100%; // Override JS-applied fixed widths for true responsiveness
-  @extend .form__field;
-  overflow-x: hidden !important;
+  @extend %form__field;
+  margin-bottom: 0;
+  overflow: hidden !important;
 }
 
 /* Select */
@@ -79,9 +77,6 @@
     display: block;
   }
   select {
-    opacity: 0;
-    filter: alpha(opacity=0);
-    -moz-opacity: 0;
     border: none;
     background: none;
     position: absolute;
@@ -90,6 +85,7 @@
     left: 0;
     width: 100%;
     cursor: pointer;
+    @include opacity(0);
   }
 }
 
@@ -102,9 +98,6 @@ div.uniform__select.error span,
 .form__item--backend-error .uniform__select span {
 	background-position: right -300px;
 }
-
-div.uniform__select.active { }
-  div.uniform__select.active span { }
 
 div.uniform__select.focus {
 	background-position: -5px -153px;
@@ -143,32 +136,22 @@ div.uniform__select.focus.active span {
   position: relative;
   margin-right: 9px;
   span {
-    display: -moz-inline-box;
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
+    @include inline-block;
     text-align: center;
     background-position: -5px -5px;
   }
   input {
-    opacity: 0;
-    filter: alpha(opacity=0);
-    -moz-opacity: 0;
     border: none;
     background: none;
-    display: -moz-inline-box;
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
     cursor: pointer;
+    @include inline-block;
+    @include opacity(0);
   }
 }
 
 .uniform__checkbox span.checked {
   background-position: -55px -5px;
 }
-.uniform__checkbox.active span { }
-.uniform__checkbox.active span.checked { }
 
 .uniform__checkbox.focus span {
 	background-position: -30px -5px;
@@ -185,9 +168,6 @@ div.uniform__select.focus.active span {
 .uniform__checkbox.focus.active span.checked {
 	background-position: -80px -5px;
 }
-
-.uniform__checkbox.disabled, .uniform__checkbox.disabled.active { }
-.uniform__checkbox.disabled span.checked, .uniform__checkbox.disabled.active span.checked { }
 
 .uniform__checkbox--large span {
 	background-position: -106px -5px;
@@ -224,23 +204,15 @@ div.uniform__select.focus.active span {
   position: relative;
   margin-right: 9px;
   span {
-    display: -moz-inline-box;
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
+    @include inline-block;
     text-align: center;
     background-position: -5px -30px;
   }
   input {
-    opacity: 0;
-    filter: alpha(opacity=0);
-    -moz-opacity: 0;
+    @include opacity(0);
     border: none;
     background: none;
-    display: -moz-inline-box;
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
+    @include inline-block;
     text-align: center;
     cursor: pointer;
   }
@@ -249,9 +221,6 @@ div.uniform__select.focus.active span {
 .uniform__radio span.checked {
   background-position: -55px -30px;
 }
-
-.uniform__radio.active span { }
-.uniform__radio.active span.checked { }
 
 .uniform__radio.focus span {
 	background-position: -30px -30px;
@@ -268,10 +237,6 @@ div.uniform__select.focus.active span {
 .uniform__radio.focus.active span.checked {
 	background-position: -80px -30px;
 }
-.uniform__radio.disabled span,
-.uniform__radio.disabled.active span { }
-.uniform__radio.disabled span.checked,
-.uniform__radio.disabled.active span.checked { }
 
 
 

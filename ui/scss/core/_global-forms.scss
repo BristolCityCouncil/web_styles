@@ -4,13 +4,39 @@
 
 }
 
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+// Fix for <select> not honouring max-width
+// http://codepen.io/iamkeir/pen/bsCru
+// http://stackoverflow.com/questions/17408815/fieldset-resizes-wrong-appears-to-have-unremovable-min-width-min-content
+fieldset { min-width: 0; }
+@-moz-document url-prefix() {
+  fieldset {
+    display: table-cell;
+  }
+}
+
+// Fix for legends appearing partially outside fieldset-resizes-wrong-appears-to-have-unremovable-min-width-min-content
+legend {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  float: left;
+  clear: both;
+}
+
+
 // Feedback
 
 .form__feedback {
   position: relative;
   border: 3px solid;
-  margin: 2em 0;
-  padding: 18px 15px 4px 48px;
+  @include rem(margin,32 0);
+  @include rem(padding, 18 15 4 48);
 }
 
 .form__feedback__title {
@@ -26,7 +52,7 @@
 }
 
 .form__feedback__summary__list {
-  margin: 0 0 1em 0;
+  @include rem(margin, 0 0 16 0);
   li {
     margin: 0;
   }
@@ -51,12 +77,12 @@
 // Form items
 
 .form__item {
-  margin-bottom: 0.8em;
+  @include rem(margin-bottom,13);
   @extend %cf;
   clear: both;
 
   @include respond-min($bp-tablet-min) {
-    margin-bottom: 1.8em;
+    @include rem(margin-bottom,29);
   }
 
 }
@@ -66,7 +92,7 @@
 }
 
 .form__item--group {
-  margin: 0.6em 0;
+  @include rem(margin,10 0);
 }
 
 .form__item--compact {
@@ -75,32 +101,37 @@
 
 .form__item--string-action {
   .form__field--string {
-    margin: 0 0 10px 0;
+    @include rem(margin, 0 0 10 0);
   }
   .form__item__error {
-    padding: 2px 0 0 0;
+    @include rem(padding, 2 0 0 0);
   }
   @include respond-min($bp-desktop-min) {
     .form__label {
       display: block;
     }
     .form__field--string {
-      width: 160px;
+      @include rem(width,160);
       float: left;
-      margin: 0 15px 0 0;
+      @include rem(margin, 0 15 0 0);
     }
+    .form__field--string--longer {
+      @include rem(width,360);
+    }
+
     .btn {
       float: left;
     }
   }
 }
 
+
 // Labels
 
 .form__label {
   cursor: pointer;
   @include inline-block;
-  margin-bottom: 0.4em;
+  @include rem(margin-bottom,6);
   font-family: $font-bold;
 
   @include respond-min($bp-tablet-min) {
@@ -110,20 +141,20 @@
 }
 
 .form__label--boolean {
-  padding-top: 8px;
+  @include rem(padding-top,8);
   font-family: $font-regular;
   @include font-size($small-font-size);
   cursor: pointer;
   max-width: 80%;
 
   .form__label--small {
-    padding-top: 2px;
+    @include rem(padding-top,2);
   }
 
 }
 
 .form__label--group {
-  padding-top: 2px;
+  @include rem(padding-top,2);
   @include inline-block;
   cursor: pointer;
 }
@@ -179,9 +210,8 @@
 
 // Fields
 
-.form__field {
-  margin-bottom: 0.3em;
-
+.form__field,
+%form__field {
   @include placeholder {
     color: $light-copy-on-light-grey;
   }
@@ -190,6 +220,10 @@
     @include font-size($form-font-size);
   }
   //font-family: $font-form;
+}
+
+.form__field {
+  @include rem(margin-bottom,5);
 }
 
 .form__field--string {
@@ -287,6 +321,7 @@ button,
   padding: 0;
   margin-right: 6px;
   @include border-radius(3px);
+  margin-bottom: 1em;
   padding: 0.6em 1.4em 0.5em;
   line-height: 1.2;
   @include inline-block;

@@ -2,13 +2,13 @@
 // Excluded from Alpha
 // @TODO: This needs a better class name
 // @TODO: This *could* be separated out into two modules; services and departments
-
+// @TODO: This Looks overly nested, look at refactoring it down
 .site-sections {
   color: $grey;
-  padding-top: 1.5em;
+  @include rem(padding-top,24);
   //border-bottom: 1px solid $grey-darker;
   @extend %cf;
-  margin-bottom: 2em;
+  @include rem(margin-bottom,32);
 
   a {
     color: $white;
@@ -22,18 +22,19 @@
   .nav-title {
     @include font-size($h3-font-size);
     color: $grey;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    @include rem(margin-top,8);
+    @include rem(margin-bottom,8);
+
   }
 
   // @TODO: Refactor as .list-links?
   .lnk-list {
-    margin-bottom: 0.4em;
+    @include rem(margin-bottom,6);
   }
 
   .lnk-list li {
     @include font-size($small-font-size);
-    margin-bottom: 0.5em;
+    @include rem(margin-bottom,8);
   }
 
   @media all and (min-width: 321px) {

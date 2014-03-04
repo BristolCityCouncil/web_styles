@@ -9,7 +9,6 @@
 (function($, window, ie7){
 
   'use strict';
-
   $.widget('bcc.binbasket', {
     // default options
     options: {
@@ -40,10 +39,12 @@
       basketElem.addClass(basket.options.advancedClass);
 
       // add fake checkbox for each basket item
-      basketElem.find('.basket__item').each(function () {
-        $(this).find('.grid-wrap:first').prepend('<div class="grid-col grid-col-check desktop-grid-one-ninth">' + basket.options.checkerMarkup + '</div>');
-        $(this).find('.visuallyhidden').html(basket.options.includeMessage);
-      });
+      if(basketElem.data('basket-checks') == 'yes'){
+        basketElem.find('.basket__item').each(function () {
+          $(this).find('.grid-wrap:first').prepend('<div class="grid-col grid-col-check desktop-grid-one-ninth">' + basket.options.checkerMarkup + '</div>');
+          $(this).find('.visuallyhidden').html(basket.options.includeMessage);
+        });
+      }
 
       // remove hidden quantity for black wheelie bin from tab order
       basketElem.find('.form__field--select--black-wheelie-bin').attr('tabindex', '-1');
@@ -56,6 +57,7 @@
         // toggle checked class on fake checkbox
         span.toggleClass('checked');
 
+        // @TODO: We should de-couple .is-selected checkbox
         // if span is checked style then set dropdowns
         if (span.is('.checked')) {
           item.addClass('basket__item--is-selected');
@@ -162,7 +164,10 @@
       });
 
       // append dynamic basket update
+      // if basket has class .js-basket--with-basket-summary
+      if(basketElem.data('basket-total') == 'yes'){
       basketElem.find('.basket__actions:last').before(basket.options.basketSummaryMarkup);
+      }
 
       // update basket summary
       basket.updateBasketSummary();
@@ -171,6 +176,9 @@
     /**
       * updateBasketSummary - public
      */
+
+     // @TODO: Decouple basket summary total from fake checkboxes.
+
     updateBasketSummary: function () {
       // create items array, defne i and totalItems, cache basketSummaryList and basketCount
       var items = [], i, totalItems = 0, basketSummaryList = $(this.element).find('.' + this.options.basketSummaryListClass), basketCount = $(this.element).find('.basket__count');

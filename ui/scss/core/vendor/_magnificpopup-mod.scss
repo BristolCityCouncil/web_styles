@@ -1,5 +1,5 @@
 /* modded to enable fluid iframe popups - line 660 - 670 */
-
+/* @TODO: Consider whether MFP plugin scss this can be optimized further, or whether this is unnecessary as it works*
 /* Magnific Popup CSS */
 
 @import "settings";
@@ -68,7 +68,7 @@ $caption-title-color:             #F3F3F3 !default;
 $caption-subtitle-color:          #BDBDBD !default;
 
 // A11y
-$use-visuallyhidden:              false !default; // Hide content from browsers, but make it available for screen readers 
+$use-visuallyhidden:              false !default; // Hide content from browsers, but make it available for screen readers
 
 
 
@@ -131,7 +131,7 @@ $use-visuallyhidden:              false !default; // Hide content from browsers,
 
 // Remove vertical centering when popup has class `mfp-align-top`
 .mfp-align-top {
-  .mfp-container { 
+  .mfp-container {
     &:before {
       display: none;
     }
@@ -419,7 +419,7 @@ button.mfp-arrow:focus {
     &:before,
     .mfp-b {
       margin-left: 25px;
-      border-right: 27px solid $controls-border-color; 
+      border-right: 27px solid $controls-border-color;
     }
   }
 

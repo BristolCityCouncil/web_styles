@@ -22,7 +22,7 @@
 
         <p>Fields marked with an asterix ( <span class="form__label__asterix">*</span> ) are mandatory</p>
 
-        <form id="form-2" class="form form--validate" action="#form-2" method="post">
+        <form id="form-2" class="form js-validation" action="#form-2" method="post">
 
           <!--
             ATTRIBUTES
@@ -128,7 +128,7 @@
 
         <p>Fields marked with an asterix ( <span class="form__label__asterix">*</span> ) are mandatory</p>
 
-        <form id="form-3" class="form form--validate" action="#form-3" method="post">
+        <form id="form-3" class="form js-validation" action="#form-3" method="post">
 
           <fieldset class="form__section">
 
@@ -234,7 +234,7 @@
 
         <h2>Password Matching</h2>
 
-        <form id="form-4" class="form form--validate" action="#form-4" method="post">
+        <form id="form-4" class="form js-validation" action="#form-4" method="post">
 
           <div class="form__item form__item--string">
             <label class="form__label" for="ff-text-password">Password</label>
@@ -256,7 +256,7 @@
 
         <p>Backend errors are shown by adding a class of "form__item--backend-error" to the appropriate "form__item".  After interacting with an element this class is removed and the front end takes over.</p>
 
-        <form id="form-5" class="form form--validate" action="#form-5" method="post">
+        <form id="form-5" class="form js-validation" action="#form-5" method="post">
 
           <div class="form__item form__item--string form__item--backend-error">
             <label class="form__label" for="ff-text-backend-error">Backend error</label>
@@ -288,41 +288,41 @@
 
         <p>Buttons styles can be applied to both form buttons and links.</p>
 
-        <p>
+        <div class="form__actions">
           <button type="submit" class="btn">Button</button>
           <a href="#" class="btn">Link button</a>
-        </p>
+        </div>
 
         <p>Buttons can be default or 'secondary'.</p>
 
-        <p>
+        <div class="form__actions">
           <button type="submit" class="btn">Primary</button>
           <button type="submit" class="btn btn--secondary">Secondary</button>
-        </p>
+        </div>
 
         <p>Buttons can also have an appended/prepended icon.</p>
 
-        <p>
+        <div class="form__actions">
           <button type="submit" class="btn">Button <span class="ico ico-right"></span></button>
           <a href="#" class="btn">Link <span class="ico ico-right"></span></a>
-        </p>
+        </div>
 
-        <p>
+        <div class="form__actions">
           <button type="submit" class="btn"><span class="ico ico-right ico--first"></span> Button</button>
           <a href="#" class="btn"><span class="ico ico-right ico--first"></span>Link</a>
-        </p>
+        </div>
 
         <p>Disabled buttons.</p>
 
-        <p>
+        <div class="form__actions">
           <button type="submit" class="btn" disabled>Button</button>
           <a href="#" class="btn btn--disabled">Link button</a>
-        </p>
+        </div>
 
-        <p>
+        <div class="form__actions">
           <button type="submit" class="btn" disabled>Primary</button>
           <button type="submit" class="btn btn--secondary" disabled>Secondary</button>
-        </p>
+        </div>
 
         <hr />
         <h2>Button with textbox</h2>

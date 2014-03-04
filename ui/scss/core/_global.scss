@@ -1,6 +1,7 @@
 /* ======================================================
    GLOBAL
    ======================================================*/
+// @OPTIMIZE: Work out what parts of this should be pulled out in to the normalize
 
 body {
   @include font-size($body-font-size);
@@ -23,7 +24,7 @@ select {
 a {
   color: $link;
 
-  &:hover {
+  .no-touch &:hover {
     text-decoration: none;
   }
 
@@ -41,7 +42,7 @@ code {
 }
 
 p, dt, dd {
-  margin: 0 0 1em;
+  @include rem(margin, 0 0 16);
 }
 
 strong, b, dt, legend {
@@ -50,10 +51,11 @@ strong, b, dt, legend {
 }
 
 li {
-  margin: 0.5em 0;
+  @include rem(margin, 8 0);
 }
 
 ul, ol {
+  // @TODO: refactor this to Rems
   margin: 1.4em 0;
   padding-left: 1.2em;
 
@@ -65,7 +67,7 @@ ul, ol {
 
 ul {
   list-style: none;
-  padding-left: 1.2em;
+  @include rem(padding-left,20);
   li {
     position: relative;
     &:before {
@@ -73,8 +75,8 @@ ul {
       font-family: Arial, sans-serif;
       @include font-size($h3-font-size);
       position: absolute;
-      left: -20px;
-      top: -7px;
+      @include rem(left,-20);
+      @include rem(top,-7);
     }
   }
 }
@@ -93,7 +95,7 @@ table {
 
 table td,
 table th {
-  padding: 10px 20px;
+  @include rem(padding,10 20);
   text-align: center;
 }
 
@@ -122,6 +124,7 @@ table th {
 }
 
 .divider-top {
+  // @TODO: How can rem have importants?
   padding-top: 40px !important;
   border-top: 1px solid $grey-boxout !important;
 }
@@ -130,5 +133,18 @@ table th {
   padding-bottom: 25px !important;
   margin-bottom: 40px;
   border-bottom: 2px solid $grey-boxout !important;
+}
+
+.level {
+  width: 100%;
+}
+
+.level .text-right {
+  text-align: right;
+  float: right;
+}
+.level .text-left {
+  text-align: left;
+  float: left;
 }
 

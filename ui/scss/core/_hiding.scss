@@ -9,8 +9,7 @@
   height: 0;
   margin: 0;
 }
-%hidden,
-.hidden {
+%hidden {
   @include hidden;
 }
 
@@ -50,8 +49,7 @@
 }
 
 // Hide visually and from screenreaders, but maintain layout
-%invisible,
-.invisible {
+%invisible {
   visibility:hidden;
 }
 

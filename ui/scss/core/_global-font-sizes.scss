@@ -1,39 +1,21 @@
 
 .lead {
-  color: $bcc-red;
+
 }
 
 // h1 - h6
+// @TODO: Consider whether these styles always apply and adjust accordingly
 #{headings()} {
-  margin-top: 1em;
-  margin-bottom: 0.2em;
+  @include rem(margin-top,16);
+  @include rem(margin-bottom,3);
   color: #2e3137;
   font-family: $font-bold;
   font-weight: normal;
 }
 
-// Should we standardize line-heights for each heading element?
-
-// .giga{
-//     font-size:80px;
-//     font-size:5rem;     /* 80px */
-//     line-height:1.2;    /* 96px */
-// }
-// .mega{
-//     font-size:64px;
-//     font-size:4rem;     /* 64px */
-//     line-height:1.125;  /* 72px */
-// }
-// .kilo{
-//     font-size:48px;
-//     font-size:3rem;     /* 48px */
-//     line-height:1;      /* 48px */
-// }
-
 /* Define headings and their associated classes here. */
 h1, .alpha{
     @include font-size($h1-font-size);
-    //line-height:1.5;    /* 48px */
 }
 h2, .beta{
     @include font-size($h2-font-size);
@@ -73,6 +55,7 @@ small, .smallprint {
 
 // Ditch top margin on headings that are direct first-child of content
 // This *should* then only target content-based headings...
+// @OPTIMIZE: Consider if there is a more readable way of doing this, such as adding a class that removes the margin
 .content {
   > {
     #{headings()} {
@@ -82,4 +65,3 @@ small, .smallprint {
     }
   }
 }
-

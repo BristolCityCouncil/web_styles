@@ -8,7 +8,12 @@
 
   <div class="grid-wrap">
 
-    <div class="grid-col desktop-grid-three-fifths">
+    {% if basket__has-options == 'true' %}
+      <div class="grid-col desktop-grid-three-fifths">
+    {% else %}
+      <!-- @TODO: Should be five-fifths. Remove JS. -->
+      <div class="grid-col desktop-grid-four-fifths">
+    {% endif %}
 
       <div class="basket__item__description">
 
@@ -19,13 +24,14 @@
         </div><!--/basket__item__image-->
 
         <div class="basket__item__info">
-          <a href="#" class="link-help">Need help managing rubbish &amp; recycling?</a>
+          {{basket__item__info}}
         </div><!--/basket__item__info-->
 
       </div><!--/basket__item__description-->
 
     </div><!--/grid-col-->
 
+    {% if basket__has-options == 'true' %}
     <div class="grid-col desktop-grid-two-fifths">
 
       <div class="basket__item__details">
@@ -119,6 +125,7 @@
       </div><!--/basket__item__details-->
 
     </div><!--/grid-col-->
+    {% endif %}
 
   </div><!--/grid-wrap-->
 
