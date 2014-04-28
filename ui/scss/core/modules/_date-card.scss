@@ -56,9 +56,10 @@
 }
 
 .date-card-list {
+  @include rem(margin-bottom, 40);
   padding: 0;
   @extend %cf;
-  @include respond-min($bp-desktop-min) {
+  @include respond-min(700px) {
     margin-left: -1%;
   }
 
@@ -66,7 +67,7 @@
     list-style: none;
     @extend .normal-list-item;
     width: 100%;
-    @include respond-min($bp-desktop-min) {
+    @include respond-min(700px) {
       width: 19%;
       float: left;
       margin: 0 0 0 1%;

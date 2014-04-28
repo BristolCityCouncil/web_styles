@@ -43,7 +43,7 @@
           <div class="layout layout-constrained">
 
 
-                <a class="page-header__logo" href="{% if open_am == true %}http://beta.bristol.gov.uk/{% else %}/{% endif %}" title="Homepage">
+                <a class="page-header__logo beta-header__logo" href="{% if open_am == true %}http://beta.bristol.gov.uk/{% else %}/{% endif %}" title="Homepage">
                   <img src="/ui/images/logo-bcc.png" alt="Bristol City Council logo" />
                 </a>
                 <div class="beta-header__content">
@@ -59,40 +59,36 @@
 
             <div class="grid-wrap">
 
-              {% if hide_ribbon != true %}
-              <div class="grid-col desktop-grid-one-sixth">
 
-                <div class="ribbon">
-                  <div class="ribbon__hang">
-                    <div class="ribbon__hang__inner">
-                      {% if ribbon != null %}
-                         <span class="ico {{ ribbon }}"></span>
-                      {% endif %}
+
+              <div class="grid-col desktop-grid-full-width">
+                {% if hide_ribbon != true %}
+
+                  <div class="ribbon">
+                    <div class="ribbon__hang">
+                      <div class="ribbon__hang__inner">
+                        {% if ribbon != null %}
+                           <span class="ico {{ ribbon }}"></span>
+                        {% endif %}
+                      </div>
                     </div>
-                  </div>
-                </div><!--/ribbon-->
+                  </div><!--/ribbon-->
 
-              </div><!--/grid-col-->
-              {% endif %}
-
-              <div class="grid-col desktop-grid-five-sixths">
-
+                {% endif %}
                 <div class="breadcrumb-nav">
 
 
 
                   <ol class="linklist">
                     <!-- Temporarily hidden breadcrumb in Alpha -->
-                    <li>{% if hide_breadcrumbs != true %}<a href="#">Home</a>{% endif %} <!--<span class="ico ico-right"></span>--></li>
-                    <!--<li><a href="#">Level 1 long page title</a> <span class="ico ico-right"></span></li>
-                    <li>Level 2 longer page title</li>-->
+                    <li>{% if hide_breadcrumbs != true %}<a href="#">Home</a>{% endif %}</li>
                   </ol>
 
                 </div><!--/breadcrumb-nav-->
 
                 <div class="account-nav">
 
-                  {% if signed_in == null %}
+                  {% if signed_in %}{% else %}
 
                     <ul class="linklist">
                       <li><a href="#" class="lnk-sign-in">Sign in</a></li>
@@ -101,7 +97,7 @@
 
                   {% endif %}
 
-                  {% if signed_in == true %}
+                  {% if signed_in %}
 
                     <ul class="linklist">
                       <li>Hi, Montgomery <a href="#" class="lnk-sign-out">Sign out</a></li>

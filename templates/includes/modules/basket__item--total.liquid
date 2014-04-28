@@ -1,6 +1,6 @@
-{% if basket__item__title == null %}{% assign basket__item__title = 'Black wheelie bin' %}{% endif %}
-{% if basket__item__handle == null %}{% assign basket__item__handle = 'black-wheelie-bin' %}{% endif %}
-{% if basket__item__qty == null %}{% assign basket__item__qty = 2 %}{% endif %}
+{% if basket__item__title %}{% else %}{% assign basket__item__title = 'Black wheelie bin' %}{% endif %}
+{% if basket__item__handle %}{% else %}{% assign basket__item__handle = 'black-wheelie-bin' %}{% endif %}
+{% if basket__item__qty %}{% else %}{% assign basket__item__qty = 2 %}{% endif %}
 <div class="basket__item basket__item--total">
 
   <div class="grid-wrap">

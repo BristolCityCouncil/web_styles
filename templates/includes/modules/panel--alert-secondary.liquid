@@ -1,0 +1,10 @@
+{% if date-card__title %}{% else %}{% assign date-card__title = 'Bad weather delays' %}{% endif %}
+{% if date-card__copy %}{% else %}{% assign date-card__copy = '<p>We are currently two hours behind schedule for our household collection service. Please be patient.</p>' %}{% endif %}
+
+<div class="panel panel--alert-secondary">
+
+  <div class="ico ico-attention ico--large"></div>
+
+  <strong class="panel__copy">This is a warning about some kind of liability on your part or something like that.</strong>
+
+</div><!--/panel-->

@@ -4,13 +4,12 @@
 // @TODO: Consider refactoring the file structure so that global/body/layout are normalised
 
 .page-body {
-  background: $white;
   @extend %cf;
 }
 
 .page-content {
-  @include rem(padding-top,30);
-  @include rem(margin-bottom,35);
+  @include rem(padding-top,60);
+  @include rem(margin-bottom,20);
 }
 
 .content {
@@ -22,7 +21,7 @@
 }
 
 .content-header__title {
-  @include rem(margin-bottom,6);
+  @include rem(margin-bottom,30);
 }
 
 .content-header__title-extra {
@@ -42,11 +41,4 @@
 
 .content-sub {
 
-}
-
-// @OPTIMIZE Is there a better way of achieving this?
-.content--iag {
-  & > h1, & > h2, & > h3, & > h4, & > h5, & > h6, & > p, & > ul {
-    @include rem(max-width,610);
-  }
 }

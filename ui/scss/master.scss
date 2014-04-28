@@ -31,10 +31,13 @@
 @import "core/global-icons";
 @import "core/global-body";
 @import "core/global-forms";
+@import "core/global-buttons";
 @import "core/global-banner";
 @import "core/global-footer";
 @import "core/global-overlays";
 @import "core/global-form-validation";
+@import "core/media";
+@import "core/global-header";
 @import "core/beta-header";
 
 // Project: Modules
@@ -48,6 +51,7 @@
 @import "core/modules/address-lookup";
 @import "core/modules/tabs";
 @import "core/modules/date-card";
+@import "core/modules/shadow";
 
 // Service specific @TODO: Refactor these where possible
 @import "service/waste/iag-content";

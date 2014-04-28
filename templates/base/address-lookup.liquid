@@ -1,0 +1,111 @@
+{% block page %}
+
+  {% assign page_title = 'Address Lookup' %}
+  {% assign theme = false %}
+
+  {% include 'header' %}
+
+  <div class="page-content">
+
+    <div class="layout layout-constrained">
+
+      <div class="content content-main">
+
+        <h1>Address Lookup</h1>
+
+        <p>For Alpha, the postcode lookup will generate a page refresh, although we can handle some interactions in the front-end. Here are some examples:</p>
+
+        <div class="address-lookup js-address-lookup">
+
+          <hr />
+          <h2>Default state</h2>
+
+          <div class="form__item form__item--string-action">
+            <label class="form__label">Your postcode</label>
+            <input class="form__field form__field--string" type="text" name="" />
+            <button class="btn btn--secondary btn--small" type="submit">Lookup address</button>
+          </div><!--/form__item-->
+
+          <hr />
+          <h2>Error or no results</h2>
+          <p>This will happen after a postback for Alpha</p>
+
+          <div class="form__item form__item--string-action form__item--backend-error">
+            <label class="form__label">Your postcode</label>
+            <input class="form__field form__field--string" type="text" name="" />
+            <button class="btn btn--secondary btn--small" type="submit">Lookup address</button>
+            <em class="form__item__error">No results for this postcode / postcode invalid</em>
+          </div><!--/form__item-->
+
+          <p>@OPTIMIZE- do we need a manual way of entering a postcode?</p>
+
+          <hr />
+          <h2>Single address returned</h2>
+
+          <p>Address returned is selected by default.  JavaScript then renders the 'Your selected address panel'.</p>
+
+          <div class="form__item form__item--string-action">
+            <label class="form__label">Your postcode</label>
+            <input class="form__field form__field--string" type="text" name="" value="BS6 5AA" />
+            <button class="btn btn--secondary btn--small" type="submit">Lookup address</button>
+          </div><!--/form__item-->
+
+          <div class="form__item form__item--select">
+            <select name="" class="form__field form__field--select">
+              <option>Please select...</option>
+              <option selected="selected">19 Redland Road, Bristol, BS6 5AA</option>
+            </select>
+          </div>
+
+        </div>
+
+        <div class="address-lookup js-address-lookup">
+          <hr />
+          <h2>Multiple addresses returned</h2>
+          <p>JavaScript renders the 'Your selected address panel' on user selection</p>
+
+          <div class="form__item form__item--string-action">
+            <label class="form__label">Your postcode</label>
+            <input class="form__field form__field--string" type="text" name="" value="BS6 5AA" />
+            <button class="btn btn--secondary btn--small" type="submit">Lookup address</button>
+          </div><!--/form__item-->
+
+          <div class="form__item form__item--select">
+            <select name="" class="form__field form__field--select form__field--selectsize" size="3">
+              <option selected="selected">Please select...</option>
+              <option>19 Redland Road, Bristol, BS6 5AA</option>
+              <option>20 Redland Road, Bristol, BS6 5AA</option>
+              <option>31 Redland Road, Bristol, BS6 5AA</option>
+            </select>
+          </div>
+        </div>
+
+        <hr />
+        <h2>User submits page without selecting address</h2>
+
+        <div class="address-lookup js-address-lookup">
+          <div class="form__item form__item--string-action">
+            <label class="form__label">Your postcode</label>
+            <input class="form__field form__field--string" type="text" name="" value="BS6 5AA" />
+            <button class="btn btn--secondary btn--small" type="submit">Lookup address</button>
+          </div><!--/form__item-->
+
+          <div class="form__item form__item--select form__item--backend-error">
+            <select name="" class="form__field form__field--select form__field--selectsize" size="3">
+              <option selected="selected">Please select...</option>
+              <option>19 Redland Road, Bristol, BS6 5AA</option>
+              <option>20 Redland Road, Bristol, BS6 5AA</option>
+            </select>
+            <em class="form__item__error">Please select an address</em>
+          </div>
+        </div>
+
+  	  </div><!--/content-->
+
+    </div>
+
+	</div><!--page-content-->
+
+	{% include 'footer' %}
+
+{% endblock %}

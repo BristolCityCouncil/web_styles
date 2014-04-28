@@ -131,7 +131,7 @@ legend {
 .form__label {
   cursor: pointer;
   @include inline-block;
-  @include rem(margin-bottom,6);
+  @include rem(margin-bottom,10);
   font-family: $font-bold;
 
   @include respond-min($bp-tablet-min) {
@@ -188,6 +188,7 @@ legend {
 // Errors (inline)
 
 .form__item__error {
+  @include font-size($small-font-size);
   color: $bcc-red;
   font-family: $font-bold;
   font-style: normal;
@@ -234,7 +235,7 @@ legend {
   padding: 0.6em;
   @include box-shadow($input-shadow 0 4px 0 -2px inset);
   width: 100%;
-  max-width: 26.5em;
+  @include rem(max-width,477);
   .ie7 & {
     padding: 0.6em 0;
   }
@@ -266,12 +267,16 @@ legend {
 .form__field--select {
   // Combined field and Uniform styles
   display: block;
-  max-width: 26.5em;
+  @include rem(max-width,477);
   width: 100%;
   min-width: 60px;
   @include respond-min($bp-tablet-min) {
     @include font-size($form-font-size);
   }
+  font-family: $font-select;
+}
+
+.uniform__select span {
   font-family: $font-select;
 }
 
@@ -310,94 +315,6 @@ legend {
   color: $bcc-red;
 }
 
-// Buttons
-
-button,
-.btn {
-  background: $button-bg-primary;
-  color: $white;
-  text-decoration: none;
-  border: 0;
-  padding: 0;
-  margin-right: 6px;
-  @include border-radius(3px);
-  margin-bottom: 1em;
-  padding: 0.6em 1.4em 0.5em;
-  line-height: 1.2;
-  @include inline-block;
-  @include box-shadow($button-shadow 0 2px 0 0);
-
-  &:hover {
-    background: $bcc-red-dark;
-  }
-
-  &:active {
-    position: relative;
-    top: 1px;
-    @include box-shadow($button-shadow 0 1px 0 0);
-  }
-
-  &:focus {
-    outline: 3px solid #2E3137;
-    box-shadow: none;
-  }
-
-  .ie7 &:focus {
-    border: 3px solid #2E3137;
-  }
-
-  @include respond-min($bp-tablet-min) {
-    @include font-size($form-font-size);
-  }
-
-  .ico {
-    @include inline-block;
-    margin-bottom: -2px;
-    margin-left: 0.2em;
-    margin-right: -0.8em;
-    color: $white;
-
-    &.ico--first {
-      margin-left: -0.8em;
-      margin-right: 0.2em;
-    }
-  }
-
-  .ico-right {
-    @include font-size(20);
-    position: relative;
-    top: -3px;
-  }
-
-  .ico-pdf {
-    position: relative;
-    top: -2px;
-  }
-
-}
-
-.btn--secondary {
-  background: $button-bg-secondary;
-  &:hover {
-    background: $bcc-blue-darkest;
-  }
-}
-
-button[disabled], .btn--disabled {
-  background: $grey-boxout;
-  color: $dark-grey;
-  cursor: default;
-  pointer-events: none;
-  &:hover {
-    background: $grey-boxout;
-    color: $dark-grey;
-  }
-  &:active {
-    top: 0;
-    @include box-shadow($button-shadow 0 2px 0 0);
-  }
-}
-
 // Sections
 
 .form__section {
@@ -429,9 +346,13 @@ button[disabled], .btn--disabled {
 
 // Form actions
 
+.form__actions,
+.page__actions {
+  @include rem(padding-bottom,20);
+}
+
 .form__actions {
-  padding-top: 0.4em;
-  margin-bottom: 2em;
+  @include rem(padding-top,8);
 }
 
 // Form list

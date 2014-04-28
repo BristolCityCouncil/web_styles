@@ -5,9 +5,9 @@
 .panel {
   position: relative;
   background: $grey-boxout;
-  @include rem(margin-bottom, 45);
+  @include rem(margin-bottom, 40);
   @extend %cf;
-  @include rem(padding, 20 20 5 20);
+  @include rem(padding, 30);
   img {
     max-width: 75px;
     @include rem(margin-bottom,12);
@@ -18,23 +18,27 @@
   li {
     @include rem(margin, 0 0 8 0);
   }
+  p:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 .panel__title { //Styles for panel titles
-  @include rem(margin, 0);
-  @include font-size($h4-font-size);
+  margin: 0;
+  @include font-size($h3-font-size);
+  line-height: $heading-line-height;
   font-family: $font-bold;
 }
 
 .panel__title--minor { //Styles for minor title (eg subtitle)
   @include font-size($body-font-size);
   font-family: $font-bold;
-  @include rem(margin, 0);
+  @include rem(margin, 0 0 5 0);
 }
 
 .panel__title--alt { //Style for standard weight title
-  @include rem(margin, 0);
-  @include font-size($h4-font-size);
+  margin: 0;
+  @include font-size($h3-font-size);
 }
 
 .panel__sidenote {
@@ -44,18 +48,28 @@
 
 
 .panel__title--minor + .panel__title {
-  @include font-size(30);
-  line-height: 1.1em;
-  @include rem(margin, 0 0 16 0);
-  @include respond-min($bp-desktop-min) {
-    @include font-size($h2-font-size);
-  }
+  @include font-size($h2-font-size);
+  line-height: 1;
+  font-family: $font-regular;
+  @include rem(margin, 3 0 10 0);
 }
 
 .panel__copy {
-
+  @include font-size($body-font-size);
+  line-height: $body-line-height;
+  p + p {
+    @include rem(margin-top,-8);
+  }
+  p:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
+.panel__title + .panel__copy,
+.panel__title + .panel__copy--small,
+.panel__title + .panel__copy--large {
+  @include rem(margin-top,8);
+}
 
 .panel__copy--large {
   @include font-size($h4-font-size);
@@ -104,7 +118,7 @@
 //-------PLACEHOLDERS--------
 
 %panel--slim { // Less padding utility placeholder
-  @include rem(padding, 15 20 12 20);
+  @include rem(padding, 25 30 22 30);
 }
 
 %panel--with-ico { // Utility placeholder for a panel with an icon
@@ -114,7 +128,7 @@
 
   .ico {
     position: absolute;
-    top: 12px;
+    top: 22px;
     left: 10px;
   }
 }
@@ -141,10 +155,66 @@
   @include rem(margin-bottom, 18);
 }
 
-.panel--alert { //Modifier to have panel set up as an alert (currently with icon, but may be separated)
+.panel--related {
+  border-top: 6px solid $bcc-red;
+
+  @extend %panel--slim;
+  background: $white;
+
+  .panel__title {
+    @extend %delta;
+  }
+  .panel__copy {
+  	@include rem(font-size, 16);
+  }
+
+  .side & {
+    @include rem(padding-left, 0);
+    @include rem(padding-right, 0);
+  }
+}
+
+.panel--alert {
+	//Modifier to have panel set up as an alert (currently with icon, but may be separated)
+
   @extend %panel--with-ico;
   @extend %panel--slim;
   background: $alert-yellow;
+  p {
+    @include rem(margin-bottom, 0);
+  }
+  .side & {
+  	border-top: 6px solid $alert-border;
+    @include rem(padding-left, 20);
+    @include rem(padding-right, 20);
+    .ico--large {
+			@include font-size($icon-large-font-size);
+
+    	@include respond-min($bp-desktop-min) {
+				@include rem(font-size, 56);
+    	}
+    }
+    h2 {
+    	@include rem(margin-left, 30);
+    	@include rem(margin-bottom, 10);
+
+    	@include respond-min($bp-desktop-min) {
+				@include rem(margin-left, 56);
+    	}
+    }
+    .panel__copy {
+    	@extend %smallprint;
+    	@include rem(margin-bottom, 20);
+    }
+  }
+}
+
+.panel--alert-secondary {
+  border-top: 2px solid $grey-boxout;
+  border-bottom: 2px solid $grey-boxout;
+  @extend %panel--with-ico;
+  @extend %panel--slim;
+  background: $white;
   p {
     @include rem(margin-bottom, 0);
   }
@@ -169,7 +239,6 @@
 .panel--affirm { //Modifier to have panel set up as a confirmation panel
   background: $recyling-green-light;
   border-left: 6px solid $bcc-green;
-  padding-bottom: 0;
   .panel__title {
     color: $bcc-green;
   }
@@ -211,5 +280,18 @@
 .panel--address {
   @include rem(padding-bottom,20);
   color: $bcc-green;
+}
+
+.panel--minimal {
+  @include rem(padding, 5 0 0 20);
+  background: none;
+  border-left: 10px solid #ccc;
+  p {
+    margin: 0;
+  }
+}
+
+.panel--minimal.panel--affirm {
+  border-left: 10px solid #3BB273;
 }
 

@@ -1,9 +1,12 @@
+{% if date-card__title %}{% else %}{% assign date-card__title = 'Bad weather delays' %}{% endif %}
+{% if date-card__copy %}{% else %}{% assign date-card__copy = '<p>We are currently two hours behind schedule for our household collection service. Please be patient.</p>' %}{% endif %}
+
 <div class="panel panel--alert">
 
   <div class="ico ico-attention ico--large"></div>
 
-  <h2 class="panel__title">Bad weather delays</h2>
+  <h2 class="panel__title">{{ date-card__title }}</h2>
   <div class="panel__copy">
-    <p>We are currently two hours behind schedule for our household collection service. Please be patient.</p>
+    {{ date-card__copy }}
   </div>
 </div><!--/panel-->

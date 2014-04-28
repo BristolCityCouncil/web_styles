@@ -3,6 +3,7 @@
    ======================================================*/
 
 .page-footer {
+  background: $footer-bg;
   @include font-size($small-font-size);
   a {
     color: $white;

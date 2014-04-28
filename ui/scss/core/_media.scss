@@ -1,0 +1,21 @@
+.image-caption {
+	.image-caption__link {
+
+	}
+    .image-caption__image {
+		@include rem(margin-bottom, 10);
+    }
+    .image-caption__text {
+		@extend %midprint;
+		@include rem(margin-bottom, 10);
+		width: 100%;
+
+		@include respond-min($bp-tablet-min) {
+      		width: 50%;
+    	}
+    }
+    .image-caption__text--credit {
+		@include rem(font-size, $smaller-font-size);
+    }
+    margin-bottom: 2em;
+}

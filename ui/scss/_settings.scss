@@ -1,20 +1,29 @@
 // SETTINGS
 
 // Typography
-// @TODO: Refactor of typography based on Damon's style findings.
 // @TODO: Initial refactor for mobile sizes
-$body-font-size: 18;
+$body-font-size: 19;
 $h1-font-size: 48;
-$h2-font-size: 32;
-$h3-font-size: 26;
-$h4-font-size: 22;
-$h5-font-size: $body-font-size;
-$h6-font-size: $body-font-size;
-$form-font-size: $body-font-size;
-$small-font-size: 15;
-$small-print-font-size: 13;
+$h1-mobile-size: 30;
+$h2-font-size: 30;
+$h2-mobile-size: 26;
+$h3-font-size: 24;
+$h4-font-size: 21;
+$h5-font-size: 18;
+$h6-font-size: 18;
+$lead-font-size: 25;
+$lead-mobile-size: 21;
+$form-font-size: 19;
+$primary-btn-font-size: 24;
+$secondary-btn-font-size: 16;
+$small-font-size: 16;
+$small-print-font-size: 15;
+$smaller-font-size: 13;
 
-$body-line-height: 1.4;
+$body-line-height: 1.35;
+$heading-line-height: 1.1;
+$heading-spacious-line-height: 1.3;
+$lead-line-height: 1.2;
 
 // Icons
 $icon-font-size: 24;
@@ -22,7 +31,7 @@ $icon-large-font-size: 32;
 
 // Grid
 $max-width: 960px;
-$grid-gutter: 20px;
+$grid-gutter: 30px;
 
 // Breakpoints (px)
 // These are standardised breakpoints for re-use, but feel free to create custom breakpoint widths specific to patterns/modules
@@ -75,7 +84,6 @@ $grey-10: #6b6d73;
 $bcc-grey-dark: #8a8d91;
 $grey: #999999;
 $bcc-grey-light: #b1b3b5;
-$button-shadow: #c0c1c3;
 $grey-lighter: #cccccc;
 $grey-light: #d5d6d7;
 $bcc-grey-lighter: #d8d9da;
@@ -88,12 +96,13 @@ $grey-shadow: $grey-lighter;
 $bcc-pink: #ffe5ec;
 
 $alert-yellow: #ffcc00;
+$alert-border: #cca300;
 $pale-yellow: #fbedb3;
 
 $white: #ffffff;
 $black: #000000;
 
-$body-bg: $dark-grey;
+$footer-bg: $dark-grey;
 $copy: $bcc-grey-darkest;
 $link: $bcc-blue-dark;
 $link-alt: #90b4ee;
@@ -102,8 +111,13 @@ $link-alt: #90b4ee;
 $input-bg: $grey-boxout;
 $input-shadow: $grey-7;
 $button-bg: $bcc-grey-darker;
-$button-bg-primary: $bcc-red;
+$button-bg-primary: #3771D0;
 $button-bg-secondary: $bcc-blue-dark;
+$button-shadow-primary: $bcc-blue-dark;
+$button-shadow-secondary: #0E1F3B;
+$button-shadow-disabled: #C0C1C3;
+$button-bg-primary-hov: #3c7de6;
+$button-bg-secondary-hov: $bcc-blue-darkest;
 
 // WASTE
 $recyling-green: $bcc-green;

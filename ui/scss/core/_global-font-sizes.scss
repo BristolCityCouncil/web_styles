@@ -1,55 +1,66 @@
 
 .lead {
-
+  @include font-size($lead-mobile-size);
+  @include respond-min($bp-desktop-min) {
+    @include font-size($lead-font-size);
+  }
+  line-height: ($lead-line-height);
 }
 
 // h1 - h6
 // @TODO: Consider whether these styles always apply and adjust accordingly
 #{headings()} {
   @include rem(margin-top,16);
-  @include rem(margin-bottom,3);
+  @include rem(margin-bottom,8);
   color: #2e3137;
   font-family: $font-bold;
   font-weight: normal;
 }
 
 /* Define headings and their associated classes here. */
-h1, .alpha{
-    @include font-size($h1-font-size);
+h1, .alpha, %alpha {
+    @include font-size($h1-mobile-size);
+    @include respond-min($bp-desktop-min) {
+      @include font-size($h1-font-size);
+      line-height: $heading-line-height;
+    }
 }
-h2, .beta{
+h2, .beta, %beta {
+  @include font-size($h2-mobile-size);
+  @include respond-min($bp-desktop-min) {
     @include font-size($h2-font-size);
-    //line-height:1;      /* 24px */
+    line-height: $heading-line-height;
+  }
 }
-h3, .gamma{
+h3, .gamma, %gamma {
     @include font-size($h3-font-size);
-    //line-height:1.2;    /* 24px */
+    line-height: $heading-line-height;
 }
-h4, .delta{
+h4, .delta, %delta {
     @include font-size($h4-font-size);
-    //line-height:1.333;  /* 24px */
+    line-height: $heading-spacious-line-height;
 }
-h5, .epsilon{
+h5, .epsilon, %epsilon {
     @include font-size($h5-font-size);
-    //line-height:1.5;    /* 24px */
+    line-height: $heading-spacious-line-height;
 }
-h6, .zeta{
+h6, .zeta, %zeta {
     @include font-size($h6-font-size);
-    //line-height:1.5;    /* 24px */
+    line-height: $heading-spacious-line-height;
 }
 
-.natural{
+.natural, %natural {
     @include font-size($body-font-size);
-    //line-height:1.5;    /* 24px */
+    line-height: $body-line-height;
 }
 
 /* Smaller-than-body-copy sizes here. */
-small, .smallprint {
+small, .smallprint, %smallprint {
     @include font-size($small-print-font-size);
     //line-height:2;      /* 24px */
 }
 
-.midprint {
+.midprint, %midprint {
   @include font-size($small-font-size);
 }
 

@@ -35,7 +35,7 @@
     background: none;
     @include font-size($h3-font-size);
     font-family: $font-bold;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     // padding: 0;
     @include rem(padding, 0);
   }

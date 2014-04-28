@@ -1,0 +1,82 @@
+{% block page %}
+
+  {% assign page_title = 'Panels' %}
+  {% assign theme = false %}
+
+  {% include 'header' %}
+
+  <div class="page-content">
+
+    <div class="layout layout-constrained">
+
+      <div class="content content-main">
+
+        <h1>Panels</h1>
+
+        <p>Collection of panels used throughout BCC.</p>
+
+        <h2>Basic Panel</h2>
+
+        {% include 'modules/panel' %}
+
+        <h2>Concise Panel</h2>
+
+        {% include 'modules/panel--concise' %}
+
+        <h2>.panel--alert</h2>
+
+        {% include 'modules/panel--alert' %}
+
+        <h2>.panel--alert-secondary</h2>
+
+        {% include 'modules/panel--alert-secondary' %}
+
+        <h2>.panel--alternate</h2>
+
+        {% include 'modules/panel--related' %}
+
+        <h2>…</h2>
+
+        {% include 'modules/panel--create' %}
+
+        <h2>…</h2>
+
+        {% include 'modules/panel--sign-in' %}
+
+        <h2>Affirmation Panel</h2>
+
+        {% include 'modules/panel--affirm' %}
+
+        <h2>Date panel</h2>
+
+        {% include 'modules/panel--title-reverse' %}
+
+        <h2>Date panel with Affirmation</h2>
+
+        <div class="panel panel--affirm panel--title-reverse">
+          <p class="panel__title--minor">Delivery by:</p>
+          <h2 class="panel__title">Wednesday, 15 January</h2>
+        </div>
+
+        <h2>Bare Panel with order content</h2>
+
+        {% include 'modules/panel--order' %}
+
+        <h2>Standard panel with image</h2>
+
+        {% include 'modules/panel--image' %}
+
+        <h2>Bare Panel</h2>
+
+        {% include 'modules/panel--bare' %}
+
+
+      </div><!--/content-->
+
+    </div>
+
+  </div><!--page-content-->
+
+  {% include 'footer' %}
+
+{% endblock %}

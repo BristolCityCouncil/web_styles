@@ -9,21 +9,13 @@
 }
 
 .basket__title {
-  margin-top: 0;
-
-  @include respond-min($bp-tablet-min) {
-    float: left;
-  }
-
+  @include font-size($h2-font-size);
+  margin: 0;
 }
 
 .basket__change {
   @include rem(margin,10 0);
   @include font-size($small-font-size);
-  @include respond-min($bp-tablet-min) {
-    float: right;
-  }
-
 }
 
 .basket__list {
@@ -83,6 +75,7 @@
 }
 
 .basket__item__title {
+  @include font-size($h3-font-size);
   @include rem(margin, 0 0 0 3);
   text-align: center;
 
@@ -121,13 +114,13 @@
 }
 
 .basket__item__qty {
-  @include font-size($h4-font-size);
+  @include font-size($h3-font-size);
   @include rem(margin, 10 0);
   text-align: center;
 }
 
 .basket__item__field {
-  @include rem(margin-bottom, 8);
+  @include rem(margin, 11 0 8 0);
 }
 
 .basket__summary {
@@ -143,7 +136,8 @@
 }
 
 .basket__actions {
-  @extend .form__actions;
+  @include rem(padding-bottom,20);
+  @include rem(padding-top,8);
 }
 
  .grid-col-check {
@@ -209,27 +203,13 @@
 
 .basket__item__is-disabled {
   border: 2px solid $bcc-red;
-  margin-top: 0;
-  margin-bottom: 2px;
+
   .basket__item__title,
   .basket__item__info {
     color: $bcc-red;
   }
 }
 
-.shadow {
-  color: $grey-shadow;
-}
-.basket__item--shadow {
-  .uniform__checkbox {
-    border-color: #cc0000;
-    outline: #cc0000;
-  }
-  .basket__item__title,
-  .basket__item__info {
-    color: $grey-shadow;
-  }
 
-}
 
 

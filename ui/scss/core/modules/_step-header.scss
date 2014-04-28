@@ -9,14 +9,13 @@
 
 .step-header__title {
 	font-family: $font-bold;
-  @include font-size($h1-font-size);
+	@include font-size($body-font-size);
   margin: 0;
   padding: 0;
   @include respond-min($bp-tablet-min) {
-    @include font-size($h4-font-size);
-    border-bottom: 1px solid $grey-boxout;
+    border-bottom: 2px solid $grey-boxout;
     @include rem(padding, 0 0 10 0);
-    margin: 0;
+    @include rem(margin, 0 0 10 0);
   }
 }
 
@@ -24,9 +23,8 @@
 	display: block;
 	font-family: $font-regular;
 	color: $grey-10;
-	@include font-size($small-font-size);
+	@include font-size($body-font-size);
 	@include respond-min($bp-tablet-min) {
-		@include font-size($h4-font-size);
 		display: inline;
 		color: $dark-grey;
 	}

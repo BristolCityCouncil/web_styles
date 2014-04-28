@@ -11,7 +11,7 @@
     // default options
     options: {
       // template used for errors
-      errorMessageTemplate: '<div class="form__item__error"><span class="ico ico-attention"></span>$message$</div>',
+      errorMessageTemplate: '<div class="form__item__error">$message$</div>',
       // use aria for accessibility
       useAria: true,
       // error message element

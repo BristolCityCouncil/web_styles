@@ -1,0 +1,21 @@
+.shadow {
+  color: $grey-shadow;
+}
+.basket__item--shadow {
+  .uniform__checkbox {
+    border-color: #cc0000;
+    outline: #cc0000;
+  }
+  .basket__item__title,
+  .basket__item__info {
+    color: $grey-shadow;
+  }
+
+}
+.date-card--shadow {
+  color: #c0c0c0;
+  background-color: #f0f0f0;
+  .date-card__weekday {
+    background-color: #e0e0e0;
+  }
+}

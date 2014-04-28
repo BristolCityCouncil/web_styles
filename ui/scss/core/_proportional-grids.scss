@@ -5,7 +5,7 @@
 // Can be overridden by project-specific settings
 
 // this is the fixed gutter between columns
-$grid-gutter: 20px !default;
+$grid-gutter: 30px !default;
 $oldie-grid-gutter: 2% !default;
 
 // this sets your class names
@@ -70,6 +70,14 @@ $old-ie: null !default;
 
   .reset-gutter {
     @include set-gutter($grid-gutter);
+  }
+
+  .#{$namespace}-pad-right {
+    padding-right: $grid-gutter;
+  }
+
+  .#{$namespace}-content-right {
+    text-align: right;
   }
 
   // reset for list grids

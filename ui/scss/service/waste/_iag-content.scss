@@ -4,17 +4,19 @@
 .content--iag {
   position: relative;
   h1 {
-    line-height: 1;
-    @include rem(margin-bottom,30);
+    @include rem(margin-bottom, 15);
+    @include respond-min($bp-desktop-min) {
+      @include rem(margin-bottom, 30);
+    }
   }
   h2 {
-    @include rem(margin,15 0 10 0);
-  }
-  h2 + h3 {
-    margin-top: 0;
+    @include rem(margin, 20 0 10 0);
   }
   h3 {
-    @include rem(margin-bottom,10);
+    @include rem(margin, 20 0 10 0);
+  }
+  h2 + h3 {
+    @include rem(margin-top, 15);
   }
   h4 {
 
@@ -23,16 +25,24 @@
     margin: 0;
   }
   .panel {
-    @include rem(margin-top,30);
+    @include rem(margin-top, 30);
+  }
+  .btn {
+    @include rem(margin-top,20);
   }
 }
 
 
 .page-contents {
+  @include rem(margin,24 0 44 0);
+}
 
+.lead + .page-contents {
+  @include rem(margin-top,34);
 }
 
 .is-sticky {
+  margin: 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -69,7 +79,7 @@
 }
 
 .page-contents__list-wrapper {
-  @include rem(margin-bottom,25);
+  @include rem(margin-bottom,10);
 }
 
 .page-contents__list {

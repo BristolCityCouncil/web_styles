@@ -3,6 +3,8 @@
  *
  * https://github.com/BristolCityCouncil/web_styles/blob/master/LICENSE
  */
+var fs = require('fs.extra');
+
 module.exports = function(grunt) {
 
   'use strict';
@@ -260,6 +262,15 @@ module.exports = function(grunt) {
         assetsDirs: ['converted-html-prod']
       }
     }
+  });
+
+  /* point .git/hooks to repo .githooks. */
+  grunt.registerTask("init", "Run project initialisation functions.", function() {
+    if ( fs.existsSync(".git/hooks") ) {
+      fs.removeSync(".git/hooks/");
+      
+    }
+    fs.symlinkSync("../.githooks", ".git/hooks");
   });
 
   grunt.registerTask('default', ['watch']);

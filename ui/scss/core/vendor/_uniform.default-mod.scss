@@ -40,7 +40,7 @@
 .uniform__select {
   // Combined field and Uniform styles
   display: block;
-  max-width: 26.5em;
+  @include rem(max-width,477);
   width: 100% !important;
   min-width: 60px;
   @include respond-min($bp-tablet-min) {
@@ -154,43 +154,54 @@ div.uniform__select.focus.active span {
 }
 
 .uniform__checkbox.focus span {
-	background-position: -30px -5px;
+  background-position: -30px -5px;
 }
 
 .uniform__checkbox.focus span.checked {
-	background-position: -80px -5px;
+  background-position: -80px -5px;
 }
 
 .uniform__checkbox.focus.active span {
-	background-position: -55px -5px;
+  background-position: -55px -5px;
 }
 
 .uniform__checkbox.focus.active span.checked {
-	background-position: -80px -5px;
+  background-position: -80px -5px;
 }
 
 .uniform__checkbox--large span {
-	background-position: -106px -5px;
+  background-position: -106px -5px;
 }
 .uniform__checkbox--large span.checked {
-	background-position: -178px -5px;
+  background-position: -178px -5px;
 }
 
 .uniform__checkbox--large.focus span {
-	background-position: -142px -5px;
+  background-position: -142px -5px;
 }
 
 .uniform__checkbox--large.focus span.checked {
-	background-position: -214px -5px;
+  background-position: -214px -5px;
 }
 
 .uniform__checkbox--large.focus.active span {
-	background-position: -178px -5px;
+  background-position: -178px -5px;
 }
 
 .uniform__checkbox.focus.active span.checked {
-	background-position: -142px -5px;
+  background-position: -142px -5px;
 }
+
+
+// :disabled
+.uniform__checkbox.disabled span {
+  background-position: -248px -5px;
+}
+
+.uniform__checkbox--large.disabled span {
+  background-position: -278px -5px;
+}
+
 
 /* Radio */
 

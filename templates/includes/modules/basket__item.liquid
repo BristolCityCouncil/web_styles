@@ -1,13 +1,13 @@
-{% if basket__item__title == null %}
+{% if basket__item__title %}{% else %}
   {% assign basket__item__title   = 'Lorem ipsum' %}
 {% endif %}
-{% if basket__item__handle == null %}
+{% if basket__item__handle %}{% else %}
   {% assign basket__item__handle  = 'black-wheelie-bin' %}
 {% endif %}
-{% if basket__item__title == null %}
+{% if basket__item__title %}{% else %}
   {% assign basket__item__info    = 'Lorem ipsum dolor set elit nullum.' %}
 {% endif %}
-{% if basket__item--shadow == true %}
+{% if basket__item--shadow %}
   {% assign basket__item--shadow  = 'basket__item--shadow' %}
 {% endif %}
 

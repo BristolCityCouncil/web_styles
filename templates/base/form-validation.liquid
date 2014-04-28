@@ -1,0 +1,153 @@
+{% block page %}
+
+  {% assign page_title = 'Form Validation' %}
+  {% assign theme = false %}
+
+  {% include 'header' %}
+
+  <div class="page-content">
+
+    <div class="layout layout-constrained">
+
+      <div class="content content-main">
+
+        <h1>Form Validation</h1>
+
+        <h2>Initialising</h2>
+  <code>
+  $('#myform').validate();
+  </code>
+
+        <form id="form-validation-new" action="#form" method="post">
+
+          <h2>Required Field</h2>
+          <ul>
+            <li>The below input has an attribute <code>data-error-message</code> which the widget uses to generate it's error message</li>
+            <li>It has the attribute <code>required</code> to indicate it is required</li>
+          </ul>
+          <div class="form__item form__item--string">
+            <label class="form__label" for="ff-text-required">First name <span class="form__label__asterix">*</span></label>
+            <input class="form__field form__field--string" type="text" name="" placeholder="" id="ff-text-required" data-error-message="Required field" required />
+          </div><!--/form__item-->
+
+          <h2>Pattern matching</h2>
+          <ul>
+            <li>The below inputs have an attribute <code>data-error-message</code> which the widget uses to generate there error messages</li>
+            <li>They have <code>pattern</code> attributes which are used to determine whether there values are valid or not</li>
+          </ul>
+
+          <div class="form__item form__item--string">
+            <label class="form__label" for="ff-text-number">10 digit number <span class="form__label__asterix">*</span></label>
+            <input class="form__field form__field--string" type="text" id="ff-text-number" data-error-message="Must be a 10 digit number" pattern="\d{10}" />
+          </div><!--/form__item-->
+
+          <div class="form__item form__item--string">
+            <label class="form__label" for="ff-text-email">Email address<span class="form__label__asterix">*</span></label>
+            <input class="form__field form__field--string" type="email" id="ff-text-email" data-error-message="Must be a valid email address" required pattern="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" />
+          </div><!--/form__item-->
+
+          <h2>Select validation</h2>
+          <ul>
+            <li>The below select has an attribute <code>data-error-message</code> which the widget uses to generate it's error message</li>
+            <li>This same attribute indicates that the select should be validated and that the first option present (e.g. 'Please select...') is invalid</li>
+          </ul>
+
+          <div class="form__item form__item--select">
+            <label class="form__label" for="ff-select-validate">Your favourite colour <span class="form__label__asterix">*</span></label>
+            <select class="form__field form__field--select" name="" id="ff-select-validate" data-error-message="Please select a valid option">
+              <option>Please select...</option>
+              <option>Red</option>
+              <option>Blue</option>
+              <option>Other</option>
+            </select>
+          </div><!--/form__item-->
+
+          <h2>Checkbox validation</h2>
+          <ul>
+            <li>The below checkbox has an attribute <code>data-error-message</code> which the widget uses to generate it's error message</li>
+            <li>This same attribute indicates that the checkbox should be validated and that it is mandatory</li>
+          </ul>
+
+          <div class="form__item form__item--boolean">
+            <input class="form__field form__field--boolean" type="checkbox" name="" id="ff-checkbox-validate" value="Agree" data-error-message="Please agree to the terms and conditions" />
+            <label class="form__label form__label--boolean" for="ff-checkbox-validate">I agree to the terms and conditions</label>
+          </div><!--/form__item-->
+
+          <h2>Field Matching</h2>
+          <ul>
+            <li>The 'Confirm Password' field has an attribute <code>data-error-message</code> which the widget uses to generate it's error message</li>
+            <li>It has a <code>data-match</code> attribute that triggers matching with a defined element (e.g. <code>data-match="ff-text-password"</code></li>
+          </ul>
+
+          <div class="form__item form__item--string">
+            <label class="form__label" for="ff-text-password">Password <span class="form__label__asterix">*</span></label>
+            <input class="form__field form__field--string" type="password" name="" placeholder="" id="ff-text-password" />
+          </div><!--/form__item-->
+
+          <div class="form__item form__item--string">
+            <label class="form__label" for="ff-text-password-confirm">Confirm Password <span class="form__label__asterix">*</span></label>
+            <input class="form__field form__field--string form__field--match" type="password" name="" placeholder="" id="ff-text-password-confirm" data-match="ff-text-password" data-error-message="This password must match the above password" />
+            <span class="form__note">Must match above password</span>
+          </div><!--/form__item-->
+
+          <h2>Using a hard coded error</h2>
+
+          <p>It is possible to use a hard coded error message for fields on an individual basis.  This is particularly useful if an error message must contain additional markup.</p>
+
+          <p>In this situation the attribute 'data-error-message' should contain 'hardcoded':<br /><code>data-error-message="hardcoded"</code>.</p>
+
+          <p>A manual error should be coded underneath the form item with a parent element that uses the same class defined in <code>errorMessageTemplate</code> that identifies it as an error.</p>
+
+          <div class="form__item form__item--string">
+            <label class="form__label" for="ff-text-required-hard">First name <span class="form__label__asterix">*</span></label>
+            <input class="form__field form__field--string" type="text" name="" placeholder="" id="ff-text-required-hard" data-error-message="hardcoded" required />
+            <div class="form__item__error">
+              This is a custom error that can contain additional markup such as <a href="#">links</a>.
+            </div>
+          </div><!--/form__item-->
+
+        </form>
+
+        <h2>Advanced Options</h2>
+        <ul>
+          <li><code>errorMessageTemplate: string</code> (template used for errors)<br /><strong>Note:</strong> '$message$' in template will be replaced with custom error message</li>
+          <li><code>useAria: bool</code> (whether or not to use aria for accessibility) - default TRUE</li>
+          <li><code>errorAttribute: string</code> (attribute containing error text)</li>
+          <li><code>matchAttribute: string</code> (attribute for match validation)</li>
+          <li><code>errorElement: string</code> (element to add error class too)<br /><strong>Note:</strong> Usually the immediate parent. Uses .closest()</li>
+          <li><code>errorClass: string</code> (error class to add to above element)</li>
+          <li><code>blurIndicatorClass: string</code> (class added to define elements that have blurred)</li>
+          <li><code>hardcodedFlag: string</code> (attribute value that identifies element as having a hardcoded error)</li>
+          <li><code>keyUpValidation: bool</code> (whether or not to validate on keyup) - default FALSE<br /><strong>Note:</strong> keyup validation only occurs after an element has already been blurred</li>
+        </ul>
+
+        <p>The example form below validates on key up and has a custom error message template:</p>
+  <code>
+  $('#myform').validate({
+    'errorMessageTemplate': '&lt;p class=&quot;form__item__error&quot;&gt;Oops! $message$&lt;/p&gt;',
+    'keyUpValidation': true
+  });
+  </code>
+
+        <form id="form-validation-new-alt" action="#form" method="post">
+          <div class="form__item form__item--string">
+            <label class="form__label" for="ff-text-required-alt">First name <span class="form__label__asterix">*</span></label>
+            <input class="form__field form__field--string" type="text" name="" placeholder="" id="ff-text-required-alt" data-error-message="Required field" required />
+          </div><!--/form__item-->
+
+          <div class="form__item form__item--string">
+            <label class="form__label" for="ff-text-email-alt">Email address<span class="form__label__asterix">*</span></label>
+            <input class="form__field form__field--string" type="email" id="ff-text-email-alt" data-error-message="Must be a valid email address" required pattern="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" />
+          </div><!--/form__item-->
+        </form>
+
+
+      </div><!--/content-->
+
+    </div>
+
+  </div><!--page-content-->
+
+  {% include 'footer' %}
+
+{% endblock %}

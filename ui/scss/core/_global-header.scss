@@ -9,8 +9,17 @@
   position: relative;
   z-index: 10;
   @include box-shadow(rgba($black, 0.15) 0 0 0 8px);
+  @include rem(min-height,94);
 }
 .page-header__logo {
-  @include rem(margin, 16 0);
+  @include rem(max-width,48);
+  @include rem(margin, 19 0);
   @include inline-block;
+  position: absolute;
+  top: 0;
+  @include rem(left,10);
+
+  @include respond-min($bp-tablet-min) {
+    @include rem(max-width,80);
+  }
 }

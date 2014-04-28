@@ -1,6 +1,4 @@
-.address-lookup {
-	.address-lookup__selected-address {
-    @include rem(margin-top,29);
-		margin-bottom: 0;
-	}
+.address-lookup__selected-address {
+  @include rem(margin-top,29);
+  @include rem(margin-bottom,7);
 }

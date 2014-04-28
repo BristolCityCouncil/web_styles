@@ -7,7 +7,6 @@
 
 .page-banner {
   background: $dark-grey;
-  @include box-shadow(rgba($bcc-grey-dark, 0.15) 0 0 0 8px);
   color: $grey-lighter;
   @include font-size($small-font-size);
 }
@@ -16,30 +15,32 @@
   display: none;
 }
 
-@include respond-min($bp-desktop-min) {
+@include respond-min($bp-tablet-min) {
 
   .ribbon {
     display: block;
     position: relative;
-    max-width: 78px;
+    max-width: 80px;
     min-height: 1px; // Force div to take up space of column
   }
 
   .ribbon__hang {
     width: 100%;
-    height: 155px;
+    height: 0;
+    padding-top: 100%;
     background: $bcc-red;
     position: absolute;
     top: 0;
     left: 0;
     .ico {
       color: #fff;
-      @include font-size(64);
+      @include font-size(48);
+      margin: 0;
+      @include rem(margin-left,-24); //Half of font size to centre
       display: block;
       position: absolute;
-      left: 12%;
-      bottom: 20px;
-      margin: 0;
+      left: 50%;
+      bottom: 15px;
     }
   }
   .ribbon__hang__inner {
@@ -51,7 +52,7 @@
 }
 
 %page-banner__nav {
-  @include rem(padding,10 0);
+  @include rem(padding,20 0);
   color: $grey-lighter;
 
   li {
@@ -76,9 +77,16 @@
   @extend %page-banner__nav;
 
   @include respond-min($bp-tablet-min) {
+
     float: left;
   }
 
+}
+
+.ribbon + .breadcrumb-nav {
+  @include respond-min($bp-tablet-min) {
+    @include rem(margin-left,110);
+  }
 }
 
 // Account

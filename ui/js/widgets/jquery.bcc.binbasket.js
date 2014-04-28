@@ -15,7 +15,7 @@
       advancedClass: 'basket--advanced',
       includeMessage: 'Include this item',
       excludeMessage: 'Don\'t include this item',
-      checkerMarkup: '<a href="#" class="uniform__checkbox checker--fake uniform__checkbox--large basket__check"><span></span><em class="visuallyhidden"></em></a>',
+      checkerMarkup: '<a href="#" class="uniform__checkbox uniform__checkbox--large basket__check"><span></span><em class="visuallyhidden"></em></a>',
       basketSummaryMarkup: '<div class="basket__summary">' +
                              '<h3 class="basket__summary__title">You are ordering:</h3>' +
                              '<ul class="basket__summary__list">' +
@@ -201,13 +201,25 @@
 
       // if nothing is selected add list item stating this, else loop through all items and append
       if (items.length <= 0) {
-        basketSummaryList.append('<li>Nothing selected</li>');
+
+        //
+        $(".btn[type=submit]").attr("disabled", "disabled");
+
+        basketSummaryList.append('<li><strong>Nothing selected</strong>. <strong class="error">You need to select a bin</strong>.</li>');
+
       } else {
+
+        //
+        $(".btn[type=submit]").removeAttr("disabled");
+
         for (i = 0; i < items.length; i++) {
           basketSummaryList.append('<li>' + items[i].itemCount + ' x ' + items[i].itemName + '</li>');
           totalItems = totalItems + parseInt(items[i].itemCount, null);
+
+          var totalItemsEnd;
+          if (totalItems > 1) { totalItemsEnd = 'items'} else { totalItemsEnd = 'item' };
         }
-        basketCount.html(totalItems);
+        basketCount.html(totalItems + '&nbsp;' + totalItemsEnd );
       }
     }
   });
