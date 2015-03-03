@@ -1,0 +1,42 @@
+<!-- START Header -->
+<div class="bcc-header">
+        <div class="bcc-header__primary">
+            <a id="skip-to-content" href="#main-content" tabindex="1"> <span>Skip to Content</span></a>
+            <div class="bcc-header__primary-inner">
+                <div class="bcc-header__brand">
+                    <div class="bcc-header__logo"></div>
+                    <a class="bcc-header__sitename" href="/">Home</a>
+                </div>
+                <div class="bcc-header__search">
+                    <input class="bcc-header__search-box" placeholder="Search Bristol City Council" type="text" />
+                    <button class="bcc-header__search-button" type="submit"><span class="icon--bcc icon--bcc--search"></span></button>
+                </div>
+                <div class="bcc-header__actions">
+                    <ul>
+                        <li><a href="#">Sign In</a></li>
+                        <li><a href="#">Create an account</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bcc-header__secondry">
+            <div class="bcc-header__primary-inner">
+                <div class="bcc-header__mobile-actions">
+                    <a class="bcc-header__mobile-nav bcc-header__mobile-nav--menu" href="#"><span class="icon--bcc icon--bcc--menu"></span> Menu</a>
+                    <a class="bcc-header__mobile-nav bcc-header__mobile-nav--search" href="#"><span class="icon--bcc icon--bcc--search"></span> Search</a>
+                </div>
+                <div class="bcc-header__menu" {{^ menu}} style="display:none" {{/menu}}>
+                    <ul>
+                    {{# menu}}
+                        <li class="bcc-header__menu-item {{# active}}bcc-header__menu-item--active{{/ active}}"><a href="/{{ path }}/{{ name }}">{{ label }}</a></li>
+                    {{/ menu}}
+                    </ul>
+                </div>
+                <div class="bcc-header__search bcc-header__search--mobile">
+                    <input class="bcc-header__search-box" type="text" />
+                    <button class="bcc-header__search-button" type="submit"><span class="icon--bcc icon--bcc--search"></span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- END Header -->

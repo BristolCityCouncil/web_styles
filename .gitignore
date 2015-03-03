@@ -1,22 +1,20 @@
-# un-needed dot files
-.DS_Store
-boilerplate
-/_site
-
-# compass
-.sass-cache
-
-# node
-node_modules
-ui/css/
-ui/js/output.min.js
-converted-html
-
-#sublime
-BCC.sublime-project
-BCC.sublime-workspace
-
-#output
-ui/js/output.js
-ui/js/output.min.js
-ui/js/output.mix.js
+node_modules/
+i/application/cache/
+vendor/
+.sass-cache/
+build/
+*.zip
+composer.phar
+bcc-beta-theme/js/main.pack.js
+bcc-beta-theme/js/main.min.js
+css/custom.css
+css/common.css
+css/custom.min.css
+css/common.min.css
+css/custom.pack.css
+css/common.pack.css
+composer.lock
+vendor/composer/
+vendor/autoload.php
+json/cache/tags.json
+dest

@@ -1,0 +1,276 @@
+//
+// Mixins
+// --------------------------------------------------
+
+@mixin noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+@mixin transparency ($by){
+    /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$by})";
+
+    /* IE 5-7 */
+    filter: alpha(opacity=$by);
+
+    /* Netscape */
+    -moz-opacity: $by/100;
+
+    /* Safari 1.x */
+    -khtml-opacity: $by/100;
+
+    /* The rest of the browsers */
+    opacity: $by/100;
+}
+
+
+// Clearfix
+// --------
+// For clearing floats like a boss h5bp.com/q
+@mixin clearfix {
+    *zoom: 1;
+    
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+        // Fixes Opera/contenteditable bug:
+        // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+        line-height: 0;
+    }
+    
+    &:after {
+        clear: both;
+    }
+}
+
+
+
+// Text overflow
+// -------------------------
+// Requires inline-block or block for proper styling
+@mixin text-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// CSS image replacement
+// -------------------------
+// Source: https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757
+@mixin hide-text {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+
+// FONTS
+// --------------------------------------------------
+
+@mixin font-family-serif {
+    font-family: $serifFontFamily;
+}
+
+@mixin font-family-sans-serif {
+    font-family: $sansFontFamily;
+}
+
+@mixin font-family-monospace {
+    font-family: $monoFontFamily;
+}
+
+@mixin font-shorthand($size: $baseFontSize, $weight: normal, $lineHeight: $baseLineHeight) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $lineHeight;
+}
+
+@mixin font-serif($size: $baseFontSize, $weight: normal, $lineHeight: $baseLineHeight) {
+    @include font-family-serif;
+    @include font-shorthand($size, $weight, $lineHeight);
+}
+
+@mixin font-sans-serif($size: $baseFontSize, $weight: normal, $lineHeight: $baseLineHeight) {
+    @include font-family-sans-serif;
+    @include font-shorthand($size, $weight, $lineHeight);
+}
+
+@mixin font-monospace($size: $baseFontSize, $weight: normal, $lineHeight: $baseLineHeight) {
+    @include font-family-monospace;
+    @include font-shorthand($size, $weight, $lineHeight);
+}
+
+
+// CSS3 PROPERTIES
+// --------------------------------------------------
+
+// Border Radius
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+
+// Drop shadows
+@mixin box-shadow($shadow...) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+// Transitions
+@mixin transition($transition...) {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+
+@mixin transition-delay($transition-delay) {
+    -webkit-transition-delay: $transition-delay;
+    -moz-transition-delay: $transition-delay;
+    -o-transition-delay: $transition-delay;
+    transition-delay: $transition-delay;
+}
+
+@mixin transition-duration($transition-duration) {
+    -webkit-transition-duration: $transition-duration;
+    -moz-transition-duration: $transition-duration;
+    -o-transition-duration: $transition-duration;
+    transition-duration: $transition-duration;
+}
+
+// Transformations
+@mixin rotate($degrees) {
+    -webkit-transform: rotate($degrees);
+    -moz-transform: rotate($degrees);
+    -ms-transform: rotate($degrees);
+    -o-transform: rotate($degrees);
+    transform: rotate($degrees);
+}
+
+@mixin scale($ratio) {
+    -webkit-transform: scale($ratio);
+    -moz-transform: scale($ratio);
+    -ms-transform: scale($ratio);
+    -o-transform: scale($ratio);
+    transform: scale($ratio);
+}
+
+
+// Background sizing
+@mixin background-size($size) {
+    -webkit-background-size: $size;
+    -moz-background-size: $size;
+    -o-background-size: $size;
+    background-size: $size;
+}
+
+// Box sizing
+@mixin box-sizing($boxmodel) {
+    -webkit-box-sizing: $boxmodel;
+    -moz-box-sizing: $boxmodel;
+    box-sizing: $boxmodel;
+}
+
+// User select
+// For selecting text on the page
+@mixin user-select($select) {
+    -webkit-user-select: $select;
+    -moz-user-select: $select;
+    -ms-user-select: $select;
+    -o-user-select: $select;
+    user-select: $select;
+}
+
+
+
+// Optional hyphenation
+@mixin hyphens($mode: auto) {
+    word-wrap: break-word;
+    -webkit-hyphens: $mode;
+    -moz-hyphens: $mode;
+    -ms-hyphens: $mode;
+    -o-hyphens: $mode;
+    hyphens: $mode;
+}
+
+// Opacity
+@mixin opacity($opacity) {
+    opacity: $opacity / 100;
+    filter: alpha(opacity = $opacity);
+}
+
+@mixin gradient-vertical($startColor: #555, $endColor: #333) {
+    background-color: mix($startColor, $endColor, 60%);
+    background-image: -moz-linear-gradient(top, $startColor, $endColor);
+    // FF 3.6+
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from($startColor), to($endColor));
+    // Safari 4+, Chrome 2+
+    background-image: -webkit-linear-gradient(top, $startColor, $endColor);
+    // Safari 5.1+, Chrome 10+
+    background-image: -o-linear-gradient(top, $startColor, $endColor);
+    // Opera 11.10
+    background-image: linear-gradient(to bottom, $startColor, $endColor);
+    // Standard, IE10
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($startColor)}', endColorstr='#{ie-hex-str($endColor)}', GradientType=0);
+    // IE9 and down
+}
+
+// Gradient Bar Colors for buttons and alerts
+@mixin gradientBar($primaryColor, $secondaryColor, $textColor: #fff, $textShadow: 0 -1px 0 rgba(0, 0, 0, .25)) {
+    color: $textColor;
+    text-shadow: $textShadow;
+    @include gradient-vertical($primaryColor, $secondaryColor);
+    //border-color: $secondaryColor $secondaryColor darken($secondaryColor, 15%);
+    border-color: rgba(0, 0, 0, .1) rgba(0, 0, 0, .1) fade-in(rgba(0, 0, 0, .1), .15);
+}
+
+// Reset filters for IE
+@mixin reset-filter {
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+
+
+// Button backgrounds
+// ------------------
+@mixin buttonBackground($startColor, $endColor, $textColor: #fff, $textShadow: 0 -1px 0 rgba(0, 0, 0, .25)) {
+    // gradientBar will set the background to a pleasing blend of these, to support IE<=9
+    @include gradientBar($startColor, $endColor, $textColor, $textShadow);
+    *background-color: $endColor;
+    /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+    @include reset-filter;
+    
+    // in these cases the gradient won't cover the background, so we override
+    &:hover, 
+    &:focus, 
+    &:active, 
+    &.active, 
+    &.disabled, 
+    &[disabled] {
+        color: $textColor;
+        background-color: $endColor;
+        *background-color: darken($endColor, 5%);
+    }
+    
+    // IE 7 + 8 can't handle box-shadow to show active, so we darken a bit ourselves
+    &:active,
+    &.active {
+        background-color: darken($endColor, 10%) \9;
+    }
+}
+
+
+
+
+

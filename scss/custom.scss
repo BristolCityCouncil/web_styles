@@ -1,0 +1,152 @@
+@import "compass";
+@import "mixins";
+
+/* COMMON */
+@import "common/variables";
+@import "common/mixins";
+@import "common/modules";
+@import "common/vendor/amie";
+
+.aui {
+	background-color: $grey-1;
+	
+	@import "common/components/utilities";
+	@import "common/components/reset";
+	@import "common/components/icons";
+	@import "common/components/preview";
+	@import "common/components/step-header";	
+	@import "common/components/tabs";
+	@import "common/components/lists";
+	@import "common/components/forms";
+	@import "common/components/panels";
+	@import "common/components/slabs";
+	@import "common/components/buttons";
+
+	// Beta
+	@import "common/beta/forms.beta";
+    @import "common/beta/openvalidation.beta";
+    @import "common/beta/buttons.beta";
+
+	.layer {
+		@include clearfix;
+		max-width: 960px;
+		margin: 0 auto;
+	}
+	
+	.row-fluid {
+		max-width: 960px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+    .alert {
+	    color: $grey-1;
+	    background-color: $yellow-warning;
+	    border-color: $yellow-warning;
+	    font-family: $sans-bold;
+
+	    .popup-alert-close {
+	        margin-left: 10px;
+	    }
+	}
+
+	.alert-danger,
+	.alert-error {
+		background-color: $pink-error;
+		border-color: $pink-error;
+		color: $error;
+	}
+}
+
+@import "common/components/animations";
+@import "common/beta/panels.beta";
+@import "common/vendor/uniform";
+@import "common/components/print";
+@import "common/js";
+@import "common/browsers";
+
+
+
+/* BRAND */
+@import "brand/fonts";
+
+.aui {
+	@import "brand/inc/header";
+	@import "brand/inc/main";
+	@import "brand/inc/side";
+	@import "brand/inc/footer";
+	
+	// Pattern Library
+	@import "brand/pl/colors";
+	@import "brand/pl/docs";
+	@import "brand/pl/debug";
+	
+	@import "brand/homepage";
+	@import "brand/docupload";
+}
+
+@import "brand/sticky";
+
+/* SERVICES */ 
+.aui {
+	@import "services/tables";
+	@import "services/infostack";
+	@import "services/parking";
+	@import "services/temp";
+}
+
+// Liferay default sizes wrong by 1 pixel
+// https://scm.bristol.gov.uk/jira/browse/CPDP-4396
+// We will be removing nested grids soon.
+@media (min-width: 768px) and (max-width: 768px) {
+	.aui .row-fluid .span4 {
+		width: 100%;
+	}
+}
+
+@import "services/waste";
+@import "services/baskets";
+@import "services/date-cards";
+@import "services/services";
+
+/* Layouts */
+/* CPDP-4985 */
+.bcc_2col1col_alt {
+	.span8 {
+		margin-bottom: 40px;
+		
+		@include respond-to(desktop){
+			margin-bottom: 0;
+		}	
+	}	
+
+	.span4 {
+		margin-bottom: 0;
+		
+		@include respond-to(desktop){
+			margin-bottom: 0;
+		}	
+	}	
+}
+
+.yui3-js-enabled .bcc_2col1col_alt {
+	.span8 {
+		margin-bottom: 0;
+		
+		@include respond-to(desktop){
+			margin-bottom: 0;
+		}	
+	}	
+
+	.span4 {
+		margin-bottom: 40px;
+		
+		@include respond-to(desktop){
+			margin-bottom: 0;
+		}	
+	}	
+}
+
+@import "chrome/main";
+
+

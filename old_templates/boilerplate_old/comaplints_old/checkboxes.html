@@ -1,0 +1,28 @@
+<form action="" class="form">
+<div id="field-emailAddress">EMAIL ADDRESS</div>
+<fieldset id="field-emailCheckbox" class="form__item form__item--group form__item--2of2">
+    <legend class="form__item__label hidden">Email address</legend>
+    <label for="confirm-your-email" class="form__item__label form__item__label--group">
+        <div class="uniform__checkbox uniform" id="uniform-confirm-your-email">
+        	<input type="checkbox" value="true" checked="checked" data-hide="field-emailAddress field-addmyaddressCheckbox" class="form__item__field form__item__field--checkbox " data-show="field-addrintro field-address1 field-address2 field-address3 field-address4 field-postcode field-country field-other" name="dontHaveEmail" id="confirm-your-email">
+        </div>
+        <input type="hidden" value="on" name="_dontHaveEmail">I don't have an email address
+        <div aria-hidden="true" class="form__item__message form__item__message--error"></div>
+    </label>
+</fieldset>
+
+<div id="field-addmyaddressCheckbox" class="form__item" style="display: block;">
+    <label for="myaddresschk" class="form__item__label form__item__label--group">
+        <div class="uniform__checkbox uniform" id="uniform-myaddresschk">
+            <input type="checkbox" value="true" checked="checked" class="form__item__field form__item__field--checkbox " data-show="field-addrintro field-address1 field-address2 field-address3 field-address4 field-postcode field-country field-other" name="addMyAddress" id="myaddresschk">
+        </div>
+        <input type="hidden" value="on" name="_addMyAddress">Add your address</label>
+</div>
+<div id="field-addrintro">address</div>
+<div id="field-address1">address</div>
+<div id="field-address2">address</div>
+<div id="field-address3">address</div>
+<div id="field-address4">address</div>
+<div id="field-postcode">address</div>
+<div id="field-country">address</div>
+<div id="field-other">address</div></form>

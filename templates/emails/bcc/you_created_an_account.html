@@ -1,0 +1,26 @@
+	{{
+		email_title = 'You have created a Bristol Account'
+		email_heading = 'You have created a Bristol Account'
+		email_subheading = '<a href="#">Sign&nbsp;in&nbsp;to&nbsp;your&nbsp;account</a>'
+	}}
+
+	{{> chrome/email-header}}
+
+	Dear Josephine Bloggstone,
+	<br/>
+	<br/>
+	Your account is ready to use. You don't need to do anything else, but you can <a href="#">sign&nbsp;in&nbsp;to&nbsp;your&nbsp;account</a> if you want to.
+
+	<br/>
+	<br/>
+	<strong>Advantages of your account</strong>
+	<br/>
+	<ul>
+		<li>it's quicker to arrange services when you are signed in</li>
+		<li>track your orders and check all your payments</li>
+		<li>manage payments and benefits online</li>
+	</ul>
+
+	{{#with header}}
+		{{> chrome/email-footer}}
+	{{/with}}

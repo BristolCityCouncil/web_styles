@@ -1,0 +1,26 @@
+{% block page %}
+
+  {% assign page_title = 'Address select' %}
+  {% assign theme = false %}
+
+  {% include 'header' %}
+
+  <div class="page-content">
+
+    <div class="layout layout-constrained">
+
+      <div class="content content-main">
+
+        <h1>Form Search - legacy</h1>
+
+        {% include 'modules/legacy--form-search' %}
+
+      </div><!--/content-->
+
+    </div>
+
+  </div><!--page-content-->
+
+  {% include 'footer' %}
+
+{% endblock %}

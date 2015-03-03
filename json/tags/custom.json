@@ -1,0 +1,113 @@
+{
+	"datecard": {
+		"pattern": "Date Card",
+		"datetime": "2013-01-15",
+		"day": "Wednesday",
+		"date": "5 Feb",
+		"message": "Recycling & rubbish",
+		"notes": {
+			"developer": [
+				"This is a developer note"
+			],
+			"usage": [
+				"This is a usage note"
+			]
+		}
+	},
+	"datecard-recycling": {
+		"pattern": "Date Card Recycling",
+		"datetime": "2013-01-15",
+		"day": "Wednesday",
+		"date": "5 Feb",
+		"message": "Recycling only",
+		"notes": {
+			"developer": [
+				"This is a developer note"
+			],
+			"usage": [
+				"This is a usage note"
+			]
+		}
+	},
+	"datecard-bulky": {
+		"pattern": "Date Card Bulky",
+		"datetime": "2013-01-15",
+		"day": "Wednesday",
+		"date": "5 Feb",
+		"message": "Bulky waste",
+		"notes": {
+			"developer": [
+				"This is a developer note"
+			],
+			"usage": [
+				"This is a usage note"
+			]
+		}
+	},
+	"datecard-ghost": {
+		"pattern": "Date Card Ghost",
+		"datetime": "2013-01-15",
+		"day": "Wednesday",
+		"date": "5 Feb",
+		"message": "No scheduled collections",
+		"notes": {
+			"developer": [
+				"This is a developer note"
+			],
+			"usage": [
+				"This is a usage note"
+			]
+		}
+	},
+	"datecard-list": {
+		"pattern": "Date Card List",
+		
+
+
+		"notes": {
+			"developer": [
+				"This is a developer note"
+			],
+			"usage": [
+				"This is a usage note"
+			]
+		}
+	},
+
+	"table": {
+		"pattern": "Table Summary",
+
+		"notes": {
+			"developer": [
+				"This is the standard step header."
+			],
+			"usage": [
+				"Use on summaery pages on transactions that require a purchase. The table allows a break down of item details and price."
+			]
+		}
+	},
+	"builder-permits": {
+		"pattern": "Parking Permit Builder",
+
+		"notes": {
+			"developer": [
+				"This is the standard step header."
+			],
+			"usage": [
+				"This is a general purpose step header."
+			]
+		}
+	},
+	"builder-renewals": {
+		"pattern": "Parking Renewals Builder",
+
+		"notes": {
+			"developer": [
+				"This is the standard step header."
+			],
+			"usage": [
+				"This is a general purpose step header."
+			]
+		}
+	}
+}

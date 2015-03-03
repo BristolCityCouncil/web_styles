@@ -1,0 +1,398 @@
+.cta {
+	@include buttonBackground(#274d8b, #274d8b);
+	@include box-sizing(border-box);
+	@include box-shadow(darken(#3771d0, 50%) 0 3px 0 0);
+	
+	@include transform(translateY(-2px));
+	-ms-transform: translateY(-2px);
+
+	filter: progid:DXImageTransform.Microsoft.dropShadow(OffX='0', OffY='3', Color='#1f4482', Positive='true');
+	display: inline-block;
+	text-decoration: none;
+	border-radius: 3px;
+	border: 0;
+	font-size: 16px;
+	line-height: 23px;
+	margin-bottom: 13px;
+	padding: 10px 20px 7px;
+	text-align: center;
+	width: 100%;
+	position: relative;
+
+	@include respond-to(tablet, desktop) {
+		width: auto;
+		margin-bottom: 0;
+		text-align: left;
+
+		&:active {
+			@include box-shadow(none);
+			filter: none;
+			position: relative;
+			top: 3px;
+		}
+	}
+
+	&:active:focus {
+		outline: none;
+		padding-bottom: 7px;
+	}
+
+	&:before,
+	&:after {
+		color: #85b3ff;
+	}
+
+	&:focus {
+		outline: 3px solid $accessibility;
+		padding-bottom: 10px;
+		//hotfix for button causing layout issue
+		margin-bottom: -3px;
+		text-decoration: none !important;
+		@include box-shadow(none);
+		@include buttonBackground(#3065bc, #3065bc);
+		text-decoration: none;
+	}
+
+	&:hover {
+		background: #3d7fe9;
+		text-decoration: none;
+
+		&:before,
+		&:after {
+			color: $white;
+		}
+	}
+
+	&.disabled,
+	&[disabled] {
+		//@include buttonBackground(#AAC0E3, #AAC0E3);
+		@include buttonBackground(#cecece, $grey-hairline);
+		@include box-shadow(none);
+		box-shadow: none;
+		top: 3px;
+
+		&:hover {
+			cursor: default;
+		}
+
+		&:before,
+		&:after {
+			display: none !important;
+			content: ' ';
+			color: $white;
+		}
+
+		&.cta--next {
+			&:hover:after {
+				right: 20px;
+			}
+		}
+
+		&.cta--prev {
+			&:hover:before {
+				left: 20px;
+			}
+		}
+	}
+
+	small {
+		white-space: nowrap;
+		display: inline-block;
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+
+	&.cta--small {
+		width: 150px;
+		margin-top: 10px !important;
+		text-align: center;
+		margin-bottom: 4px;
+
+		@include respond-to(tablet, desktop) {
+			margin-top: 0 !important;
+		}
+	}
+	
+	&.cta-upload{
+		margin-bottom: 40px;
+	}
+	
+	// Link buttons
+	// --------------------------------------------------
+	// Make a button look and behave like a link
+	&.cta--link,
+	&.cta--link:active,
+	&.cta--link[disabled] {
+		background-color: transparent;
+		background-image: none;
+		@include box-shadow(none);
+		filter: none;
+		text-shadow: none;
+		line-height: inherit;
+		display: inline-block;
+		border-bottom: 1px solid;
+		text-decoration: none;
+
+	}
+
+	&.cta--link {
+		//border-color: transparent;
+		cursor: pointer;
+		color: $blue-3;
+		@include border-radius(0);
+		padding-left: 0;
+		padding-right: 0;
+		font-size: inherit;
+		text-decoration: none;
+		border-bottom: 1px solid;
+		vertical-align: inherit;
+		padding: 0;
+		overflow: visible;
+		line-height: inherit;
+		width: auto;
+		line-height: inherit;
+		margin-bottom: 0;
+		margin-top: 0;
+
+		&:active {
+			//top: 0;
+		}
+	}
+
+	&.cta--link:hover,
+	&.cta--link:focus {
+		color: $link-hover;
+		text-decoration: none;
+		background-color: transparent;
+	}
+
+	&.cta--link[disabled]:hover,
+	&.cta--link[disabled]:focus {
+		color: $grey-1;
+		text-decoration: none;
+	}
+	
+	&.cta--link:active:focus {
+		padding-bottom: 0;
+	}
+}
+
+.cta--primary,
+.cta--secondary {
+	font-family: $sans-bold;
+	font-weight: normal;
+	font-size: 21px;
+	white-space: nowrap;
+	@include box-shadow(darken(#3771d0, 20%) 0 3px 0 0);
+	padding-top: 14px;
+	padding-bottom: 11px;
+
+	@include respond-to(tablet, desktop) {
+		font-size: 24px;
+	}
+}
+
+.cta--primary {
+	background: #3771d0;
+	
+	&:active:focus {
+		padding-bottom: 11px;
+	}
+}
+
+.cta--secondary {
+	background: #274d8b;
+}
+
+.cta--icon {
+	padding-right: 30px;
+	padding-left: 30px;
+
+	@include respond-to(tablet, desktop) {
+		padding-right: 55px;
+	}
+
+	&.cta--primary,
+	&.cta--secondary {
+		&:before,
+		&:after {
+			top: 13px;
+		}
+	}
+
+	&.cta--prev {
+		padding-right: 30px;
+		padding-left: 30px;
+
+		@include respond-to(tablet, desktop) {
+			padding-left: 55px;
+		}
+
+		&:hover:before {
+			left: 15px;
+		}
+	}
+
+	&.cta--next {
+		&:after {
+			top: 17px;
+			font-size: 17px;
+		}
+
+		&:hover:after {
+			right: 15px;
+		}
+	}
+
+	&:before,
+	&:after {
+		display: none;
+		position: absolute;
+		top: 13px;
+		font-family: 'bcc';
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+
+		@include respond-to(tablet, desktop) {
+			display: block;
+		}
+	}
+
+	&:before {
+		left: 20px;
+		text-align: left;
+	}
+
+	&:after {
+		right: 20px;
+		text-align: right;
+	}
+
+	&.cta--prev:before {
+		content: "\e608";
+	}
+
+	&.cta--next:after {
+		content: "\e605";
+	}
+
+	&.cta--download:after {
+		font-size: 24px;
+		top: 12px;
+		content: "\e60f";
+		display: block;
+	}
+}
+
+.cta-group {
+	@include clearfix;
+
+	margin-top: 36px;
+	margin-bottom: 64px;
+
+	.cta-group__firstly,
+	.cta-group__secondly {
+		clear: both;
+		display: inline-block;
+	}
+
+	.cta-group__firstly {
+		margin-top: 0;
+		margin-bottom: 15px;
+	}
+
+	.cta-group__secondly {
+		width: 100%;
+		font-size: 19px;
+		line-height: 19px;
+
+		button {
+			font-size: inherit;
+		}
+
+		a {
+			font-family: $sans-bold;
+		}
+	}
+
+	> *:last-child {
+		margin-bottom: 0;
+	}
+
+	@include respond-to(desktop) {
+		margin-top: 40px;
+		margin-bottom: 60px;
+
+		.cta-group__firstly {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+button + .cta,
+button + button,
+.cta + .cta,
+.cta + button {
+	margin-left: 0;
+
+	@include respond-to(tablet, desktop) {
+		margin-left: 10px;
+	}
+}
+
+.thisorthat {
+	@include gridZero(full, full, full, half);
+	@include clearfix;
+	
+	margin-top: 20px;
+	margin-bottom: 40px;
+	
+	@include respond-to(tablet, desktop) {
+	
+		margin-top: 30px;
+		
+		.cta-group{
+			max-width: 295px;
+		}
+	}
+	
+	& > div{
+		width: 100%;
+		float:left;
+		margin-bottom: 20px;
+		
+		@include respond-to(tablet, desktop) {
+			width: auto;
+			float:left;
+			
+			&:first-child{
+				padding-right: 30px;
+			}
+		}
+	}
+
+	.cta-group{
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	
+
+	.cta { 
+		width: 100%; 
+		text-align: center;
+	}
+
+	.thisorthat__this .cta-group {
+		margin-bottom: 0;
+	}
+	
+	.thisorthat__or {
+		display: none;
+	}
+}

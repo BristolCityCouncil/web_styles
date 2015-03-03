@@ -1,0 +1,495 @@
+<div hidden="true">
+  <p>
+    Logged in - false 
+  </p>
+  <p>
+    Statutory - true 
+  </p>
+  <p>
+    Require advocacy in - false 
+  </p>
+  <p>
+    type in - STATUTORY_COMPLAINT 
+  </p>
+</div>
+<form id="form_pathway" novalidate="novalidate" class="form js--validate js--foi-request" action="http://l-custpdev-app1.bcc.lan:8080/complaints?p_auth=qlKFnKWQ&amp;p_p_id=bcccomplaintsportlet_WAR_bccportalapps101BUILDSNAPSHOT&amp;p_p_lifecycle=1&amp;p_p_state=normal&amp;p_p_mode=view&amp;p_p_col_id=column-1&amp;p_p_col_count=1&amp;_bcccomplaintsportlet_WAR_bccportalapps101BUILDSNAPSHOT_execution=e1s1" method="post">
+  <button id="complaintsMainSubmit" name="_eventId_previewmain" type="submit" class="hidden">
+  </button>
+  <div class="row-fluid">
+    <div class="span8">
+      <h1>
+        Make a complaint
+      </h1>
+      <div class="form__item" id="field-enquiry">
+        <label for="enquiry" class="form__item__label" >
+          Your complaint
+          <div class="form__item__label__instructions">
+            Give us as much detail as you can, include: 
+            <ul>
+              <li>
+                dates, times, places 
+              </li>
+              <li>
+                any reference numbers or letters received 
+              </li>
+            </ul>
+          </div>
+        </label>
+        <textarea id="enquiry" name="enquiry" class="form__item__field form__item__field--string form__item__field--textarea" required="required" rows="10">
+        </textarea>
+        <div class="form__item__message form__item__message--error" aria-hidden="true">
+          Enter your complaint 
+        </div>
+      </div>
+      <div class="form__item" id="field-desiredaction">
+        <label for="desiredAction" class="form__item__label">
+          What would you like us to do about your complaint? 
+          <span class="form__item__label__option">
+            (optional) 
+          </span>
+        </label>
+        <textarea id="desiredAction" name="desiredAction" class="form__item__field form__item__field--string form__item__field--textarea" rows="5">
+        </textarea>
+      </div>
+    </div>
+  </div>
+  <hr>
+</hr>
+<div class="row-fluid" >
+  <div class="span8">
+    <h3>
+      Who's making the complaint? 
+    </h3>
+    Please select who is making the complaint. If youâre making the complaint for someone else, we need both yours and the other persons details in order to process the complaint. 
+    <fieldset class="form__item form__item--group">
+      <legend class="form__item__label hidden">
+        Who's making the complaint? 
+      </legend>
+      <!--
+<label for="pathway2"class="form__item__label form__item__label--group">
+<input id="pathway2" name="actor" class="form__item__field form__item__field--radio" type="radio" value="BEHALF"/>
+Make this complaint for someone else
+</label>
+-->
+  <label for="choice1" class="form__item__label form__item__label--group">
+    <input id="choice1" name="actor" class="form__item__field form__item__field--radio" type="radio" value="SELF"  data-show="path1 path_1_type" data-hide="path_2_type"/>
+    Make this complaint for myself 
+  </label>
+  <label for="choice2" class="form__item__label form__item__label--group">
+    <input id="choice2" name="actor" class="form__item__field form__item__field--radio" type="radio" value="SELF"  data-show="path2"/>
+    Make this complaint for Someone else 
+  </label>
+  <label for="choice3" class="form__item__label form__item__label--group">
+    <input id="choice3" name="actor" class="form__item__field form__item__field--radio" type="radio" value="ANONYMOUS" data-show="path3"/>
+    Make this complaint anonymously 
+    <span class="extra">
+      you won't get a response 
+    </span>
+  </label>
+  </fieldset>
+  <noscript>
+    <div class="form__actions">
+      <button name="_eventId_choose" type="submit" class="cta">
+        Submit 
+      </button>
+    </div>
+    <input id="jsDisabled" name="jsDisabled" value="true" type="hidden" value="false"/>
+  </noscript>
+  </div>
+</div>
+<div class="row-fluid js--show">
+  <div class="span8">
+    <div id="complaintsJSContent">
+      <div id="path2" class="path">
+        <h2>
+          The other persons details 
+        </h2>
+        <p>
+          Please give us all details so we can contact them with a response. 
+        </p>
+        <div class="form__item" id="field-otherstitle">
+          <label class="form__item__label" for="ff-othersTitle">
+            Their title 
+          </label>
+          <select id="ff-othersTitle" name="othersTitle" class="form__item__field form__item__field--select form__item__field--select--inline " required="required">
+            <option value="none">
+              Select option 
+            </option>
+            <option value="Mr">
+              Mr 
+            </option>
+            <option value="Mrs">
+              Mrs 
+            </option>
+            <option value="Miss">
+              Miss 
+            </option>
+            <option value="Ms">
+              Ms 
+            </option>
+          </select>
+          <div class="form__item__message form__item__message--error" aria-hidden="true">
+            Choose a title 
+          </div>
+        </div>
+        <div class="form__item" id="field-othersfirstname">
+          <label class="form__item__label" for="othersFirstName">
+            Their first name 
+          </label>
+          <input id="othersFirstName" name="othersFirstName" class="form__item__field form__item__field--string " required="required" type="text" value="" maxlength="100"/>
+          <div class="form__item__message form__item__message--error" aria-hidden="true">
+            Enter your first name 
+          </div>
+        </div>
+        <div class="form__item" id="field-otherslastname">
+          <label class="form__item__label" for="othersLastName">
+            Their last name 
+          </label>
+          <input id="othersLastName" name="othersLastName" class="form__item__field form__item__field--string " required="required" type="text" value="" maxlength="100"/>
+          <div class="form__item__message form__item__message--error" aria-hidden="true">
+            Enter your last name 
+          </div>
+        </div>
+        <div class="js--controls-group">
+          <div class="form__item form__item--1of2 js--controls--showing" id="field-othersemailaddress">
+            <label class="form__item__label" for="email">
+              Their email 
+              <span class="form__item__label__instructions">
+                We normally send our response by email. 
+              </span>
+            </label>
+            <input id="email" name="othersEmailAddress" pattern="\w+([-+.&#39;]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" class="form__item__field form__item__field--string js--required" type="text" value=""/>
+            <div class="form__item__message form__item__message--error" aria-hidden="true">
+              Please enter a valid email 
+            </div>
+          </div>
+          <fieldset class="form__item form__item--group form__item--2of2" id="field-othersemailCheckbox">
+            <legend class="form__item__label hidden">
+              Email address 
+            </legend>
+            <label class="form__item__label form__item__label--group" for="confirm-behalf-email">
+              <input id="confirm-behalf-email" name="othersDontHaveEmail" class="form__item__field form__item__field--checkbox js--controls--email" type="checkbox" value="true"/>
+              <input type="hidden" name="_othersDontHaveEmail" value="on"/>
+              They don't have an email address 
+              <div class="form__item__message form__item__message--error" aria-hidden="true">
+              </div>
+            </label>
+          </fieldset>
+          <div id="field-othersaddrintro" class="form__item js--controls--hiding">
+            <h3>
+              Their address: 
+            </h3>
+          </div>
+          <div class="form__item js--controls--hiding" id="field-othersaddress1">
+            <label class="form__item__label" for="othersAddress1">
+              Their house name or number 
+            </label>
+            <input id="othersAddress1" name="othersAddress1" class="form__item__field form__item__field--string js--required" type="text" value="" maxlength="100"/>
+            <div class="form__item__message form__item__message--error" aria-hidden="true">
+              Please enter their address 
+            </div>
+          </div>
+          <div class="form__item js--controls--hiding" id="field-othersaddress2">
+            <label class="form__item__label" for="othersAddress2">
+              Their address line 1 
+            </label>
+            <input id="othersAddress2" name="othersAddress2" class="form__item__field form__item__field--string js--required" type="text" value="" maxlength="100"/>
+            <div class="form__item__message form__item__message--error" aria-hidden="true">
+              Please enter their street 
+            </div>
+          </div>
+          <div class="form__item js--controls--hiding" id="field-othersaddress3">
+            <label class="form__item__label" for="othersAddress3">
+              Their address line 2 
+              <span class="form__item__label__option">
+                (optional) 
+              </span>
+            </label>
+            <input id="othersAddress3" name="othersAddress3" class="form__item__field form__item__field--string " type="text" value="" maxlength="100"/>
+            <div class="form__item__message form__item__message--error" aria-hidden="true">
+            </div>
+          </div>
+          <div class="form__item js--controls--hiding" id="field-othersaddress4">
+            <label class="form__item__label" for="othersAddress4">
+              Their postal town / region 
+            </label>
+            <input id="othersAddress4" name="othersAddress4" class="form__item__field form__item__field--string js--required" type="text" value="" maxlength="100"/>
+            <div class="form__item__message form__item__message--error" aria-hidden="true">
+              Please enter their town 
+            </div>
+          </div>
+          <div class="form__item js--controls--hiding" id="field-otherspostcode">
+            <label class="form__item__label" for="othersPostCode">
+              Their postcode, postal code or ZIP 
+            </label>
+            <input id="othersPostCode" name="othersPostCode" class="form__item__field form__item__field--string form__item__field--small js--required" type="text" value=""/>
+            <div class="form__item__message form__item__message--error" aria-hidden="true">
+              Please enter the postcode. 
+            </div>
+          </div>
+          <div class="form__item js--controls--hiding" id="field-otherscountry">
+            <label class="form__item__label" for="ff-othersCountry">
+              Their country 
+            </label>
+            <select id="ff-othersCountry" name="othersCountry" class="form__item__field form__item__field--select form__item__field--select--block js--controls--country">
+              <option value="United Kingdom">
+                United Kingdom 
+              </option>
+              <option value="other">
+                Other 
+              </option>
+            </select>
+            <div class="form__item__message form__item__message--error" aria-hidden="true">
+              Please select a country 
+            </div>
+          </div>
+          <div class="form__item js--controls--other" id="field-othersother">
+            <label class="form__item__label" for="othersOtherCountry">
+              If not in the UK, which country are they in? 
+            </label>
+            <input id="othersOtherCountry" name="othersOtherCountry" class="form__item__field form__item__field--string js--required" type="text" value=""/>
+            <div class="form__item__message form__item__message--error" aria-hidden="true">
+              Please enter a country 
+            </div>
+          </div>
+        </div>
+        <div class="form__item" id="field-othersphone">
+          <label class="form__item__label" for="othersPhone">
+            Their phone 
+            <span class="form__item__label__option">
+              (optional) 
+            </span>
+          </label>
+          <input id="othersPhone" name="othersPhone" class="form__item__field form__item__field--string " type="text" value=""/>
+          <div class="form__item__message form__item__message--error" aria-hidden="true">
+          </div>
+        </div>
+        <div class="form__item" id="field-addmyselfCheckbox">
+          <label class="form__item__label form__item__label--group" for="corr">
+            <input id="corr" name="myDetailsFieldsPopulated" class="form__item__field form__item__field--checkbox " type="checkbox" value="true"/>
+            <input type="hidden" name="_myDetailsFieldsPopulated" value="on" />
+            Send me a copy of the response 
+          </label>
+        </div>
+      </div>
+      <div id="path1" class="path">
+        <hr>
+      </hr>
+      <h3>
+        Do you need help making this complaint? 
+      </h3>
+      <p>
+        An advocate can give you advice and help you make your complaint. 
+      </p>
+      <p>
+        If you're under 18 we can provide an advocate for you. But you will need to submit your complaint first. 
+      </p>
+      <div class="form__item" id="field-advocacyCheckbox">
+        <label class="form__item__label form__item__label--group" for="advocacy">
+          <input id="advocacy" name="requireAdvocate" class="form__item__field form__item__field--checkbox " type="checkbox" value="true" data-show="path_2_type" data-hide="path_1_type"/>
+          <input type="hidden" name="_requireAdvocate" value="on"/>
+          I would like help finding an advocate 
+        </label>
+      </div>
+      <p>
+        If you would like an advocate's help before you submit your complaint, or if you're over 18, you can apply for one through the 
+        <a href="http://www.reconstruct.co.uk/">
+          Reconstruct advocacy service 
+        </a>
+      </p>
+      <hr>
+    </hr>
+    <h2>
+      Your details 
+    </h2>
+    <p id="path_1_type">
+      Please give us all your details so we can contact you with a response. 
+    </p>
+     <p id="path_2_type">
+      Please give us all your details so we can contact you with a response. PAATH 2 only!!! 
+    </p>
+    <div class="form__item" id="field-title">
+      <label class="form__item__label" for="ff-title">
+        Your title 
+      </label>
+      <select id="ff-title" name="title" class="form__item__field form__item__field--select form__item__field--select--inline " required="required">
+        <option value="none">
+          Select option 
+        </option>
+        <option value="Mr">
+          Mr 
+        </option>
+        <option value="Mrs">
+          Mrs 
+        </option>
+        <option value="Miss">
+          Miss 
+        </option>
+        <option value="Ms">
+          Ms 
+        </option>
+      </select>
+      <div class="form__item__message form__item__message--error" aria-hidden="true">
+        Choose a title 
+      </div>
+    </div>
+    <div class="form__item" id="field-firstname">
+      <label class="form__item__label" for="firstname">
+        Your first name 
+      </label>
+      <input id="firstname" name="firstName" class="form__item__field form__item__field--string " required="required" type="text" value="" maxlength="100"/>
+      <div class="form__item__message form__item__message--error" aria-hidden="true">
+        Enter your first name 
+      </div>
+    </div>
+    <div class="form__item" id="field-lastname">
+      <label class="form__item__label" for="lastname">
+        Your last name 
+      </label>
+      <input id="lastname" name="lastName" class="form__item__field form__item__field--string " required="required" type="text" value="" maxlength="100"/>
+      <div class="form__item__message form__item__message--error" aria-hidden="true">
+        Enter your last name 
+      </div>
+    </div>
+    <div class="js--controls-group">
+      <div class="form__item form__item--1of2 " id="field-emailAddress">
+        <label class="form__item__label" for="email">
+          Your email 
+          <span class="form__item__label__instructions">
+            We normally send our response by email. 
+          </span>
+        </label>
+        <input id="email" name="emailAddress" pattern="\w+([-+.&#39;]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" class="form__item__field form__item__field--string js--required" type="text" value=""/>
+        <div class="form__item__message form__item__message--error" aria-hidden="true">
+          Please enter a valid email 
+        </div>
+      </div>
+      <fieldset class="form__item form__item--group form__item--2of2" id="field-emailCheckbox">
+        <legend class="form__item__label hidden">
+          Email address 
+        </legend>
+        <label class="form__item__label form__item__label--group" for="confirm-your-email">
+          <input id="confirm-your-email" name="dontHaveEmail" data-show="field-addrintro field-address1 field-address2 field-address3 field-address4 field-postcode field-country field-other" class="form__item__field form__item__field--checkbox " data-hide="field-emailAddress field-addmyaddressCheckbox" type="checkbox" value="true"/>
+          <input type="hidden" name="_dontHaveEmail" value="on"/>
+          I don't have an email address 
+          <div class="form__item__message form__item__message--error" aria-hidden="true">
+          </div>
+        </label>
+      </fieldset>
+      <div class="form__item" id="field-addmyaddressCheckbox">
+        <label class="form__item__label form__item__label--group" for="myaddresschk">
+          <input id="myaddresschk" name="addMyAddress" data-show="field-addrintro field-address1 field-address2 field-address3 field-address4 field-postcode field-country field-other" class="form__item__field form__item__field--checkbox " type="checkbox" value="true"/>
+          <input type="hidden" name="_addMyAddress" value="on"/>
+          Add your address 
+        </label>
+      </div>
+      <div id="field-addrintro" class="form__item js--controls--hiding">
+        <h3>
+          Your address: 
+        </h3>
+      </div>
+      <div class="form__item js--controls--hiding" id="field-address1">
+        <label class="form__item__label" for="address1">
+          House name or number 
+        </label>
+        <input id="address1" name="address1" class="form__item__field form__item__field--string js--required" type="text" value="" maxlength="100"/>
+        <div class="form__item__message form__item__message--error" aria-hidden="true">
+          Please enter your address 
+        </div>
+      </div>
+      <div class="form__item js--controls--hiding" id="field-address2">
+        <label class="form__item__label" for="address2">
+          Address line 1 
+        </label>
+        <input id="address2" name="address2" class="form__item__field form__item__field--string js--required" type="text" value="" maxlength="100"/>
+        <div class="form__item__message form__item__message--error" aria-hidden="true">
+          Please enter your street 
+        </div>
+      </div>
+      <div class="form__item js--controls--hiding" id="field-address3">
+        <label class="form__item__label" for="address3">
+          Address line 2 
+          <span class="form__item__label__option">
+            (optional) 
+          </span>
+        </label>
+        <input id="address3" name="address3" class="form__item__field form__item__field--string " type="text" value="" maxlength="100"/>
+        <div class="form__item__message form__item__message--error" aria-hidden="true">
+        </div>
+      </div>
+      <div class="form__item js--controls--hiding" id="field-address4">
+        <label class="form__item__label" for="address4">
+          Postal town / region 
+        </label>
+        <input id="address4" name="address4" class="form__item__field form__item__field--string js--required" type="text" value="" maxlength="100"/>
+        <div class="form__item__message form__item__message--error" aria-hidden="true">
+          Please enter your town 
+        </div>
+      </div>
+      <div class="form__item js--controls--hiding" id="field-postcode">
+        <label class="form__item__label" for="postCode">
+          Postcode, postal code or ZIP 
+        </label>
+        <input id="postCode" name="postCode" class="form__item__field form__item__field--string form__item__field--small js--required" type="text" value=""/>
+        <div class="form__item__message form__item__message--error" aria-hidden="true">
+          Please enter the postcode. 
+        </div>
+      </div>
+      <div class="form__item js--controls--hiding" id="field-country">
+        <label class="form__item__label" for="ff-country">
+          Country 
+        </label>
+        <select id="ff-country" name="country" class="form__item__field form__item__field--select form__item__field--select--block js--controls--country">
+          <option value="United Kingdom">
+            United Kingdom 
+          </option>
+          <option value="other">
+            Other 
+          </option>
+        </select>
+        <div class="form__item__message form__item__message--error" aria-hidden="true">
+          Please select a country 
+        </div>
+      </div>
+      <div class="form__item js--controls--other" id="field-other">
+        <label class="form__item__label" for="otherCountry">
+          If not in the UK, which country are you in? 
+        </label>
+        <input id="otherCountry" name="otherCountry" class="form__item__field form__item__field--string js--required" type="text" value=""/>
+        <div class="form__item__message form__item__message--error" aria-hidden="true">
+          Please enter a country 
+        </div>
+      </div>
+    </div>
+    <div class="form__item" id="field-phone">
+      <label class="form__item__label" for="phone">
+        Phone 
+        <span class="form__item__label__option">
+          (optional) 
+        </span>
+      </label>
+      <input id="phone" name="phone" class="form__item__field form__item__field--string " type="text" value=""/>
+      <div class="form__item__message form__item__message--error" aria-hidden="true">
+      </div>
+    </div>
+  </div>
+  <div id="path3" class="path">
+    <div class="panel panel--slim">
+      <div class="panel__copy">
+        If you make an anonymous complaint, we won't be able to contact you if we need more information. 
+      </div>
+    </div>
+  </div>
+  <div class="form__actions" id="field-submitPathway">
+    <button name="_eventId_preview" type="submit" class="cta cta--icon cta--primary cta--next js--prevent-double" data-primary-submit>
+      Preview your complaint 
+    </button>
+  </div>
+</div>
+</div>
+</div>
+</form>
+<!--
+</div>
+/grid-col-->
+</div>

@@ -1,0 +1,90 @@
+<form class="form js--validate">
+    <header class="step-header">
+        <h1 class="step-header__title">
+        Apply for an older persons's buss pass
+        <span class="step-header__title__steps">
+        <span class="step-header__title__steps__seperator">:</span>
+        Step 1 of 3
+        </span>
+        </h1>
+        <h2 class="step-header__subtitle">
+        Your details
+        </h2>
+    </header>
+    <p>Please enter your date of birth to check if you are old enough to apply for a buss pass.</p>
+    <div class="panel panel--affirm panel--date">
+        <span class="panel__title">Date of birth</span>
+        <strong class="panel__copy">4th of February, 1993</strong>
+        <a href="#">Change date of birth</a>
+    </div>
+    <p>You are old enough to apply for a free bus pass, please complete the short form and we will send it out to you.</p>
+    {{> components/addresslookup}}
+
+    <h2>Your name</h2>
+    <p>As it appears on official documents e.h. passport, bills, bank statements</p>
+    <div class="form__item">
+        <label class="form__item__label" for="name_title">
+            Title
+        </label>
+        <select required aria-required="true" name="name_title" id="name_title" class="form__item__field form__item__field--select form__item__field--select--inline">
+            <option value="invalid">Please select...</option>
+            <option>Mr</option>
+            <option>Ms</option>
+            <option>Mrs</option>
+        </select>
+        <div class="form__item__message form__item__message--error" aria-hidden="true">
+            Please choose a title
+        </div>
+    </div>
+    <div class="form__item">
+        <label class="form__item__label" for="name_first">
+            First name
+        </label>
+        <input required aria-required="true" class="form__item__field form__item__field--string" id="name_first" name="name_first" type="text" placeholder="first name" />
+        <div class="form__item__message form__item__message--error" aria-hidden="true">
+            Please enter a first name
+        </div>
+    </div>
+    <div class="form__item">
+        <label class="form__item__label" for="name_last">
+            Last name
+        </label>
+        <input required aria-required="true" class="form__item__field form__item__field--string" id="name_last" name="name_last" type="text" placeholder="last name" />
+        <div class="form__item__message form__item__message--error" aria-hidden="true">
+            Please enter a last name
+        </div>
+    </div>
+    <h2>Your name</h2>
+    <p>As it appears on official documents e.g. passport, bills, bank statements</p>
+    <div class="form__item">
+        <label for="contact_email" class="form__item__label">
+            Your Email 
+            <div class="form__item__label__instructions">
+                We will send you an order confirmation and keep you up to date on your application process
+            </div>
+        </label>
+        <input required aria-required="true" class="form__item__field form__item__field--string" id="contact_email" name="contact_email" type="text" placeholder="your email" />
+        <div class="form__item__message form__item__message--error" aria-hidden="true">
+            Please enter a valid email address
+        </div>
+    </div>
+    <div class="form__item">
+        <label for="contact_number" class="form__item__label">
+            Contact number (optional)
+            <div class="form__item__label__instructions">
+                We will only use this if there is an issue with your application
+            </div>
+        </label>
+        <input required aria-required="true" class="form__item__field form__item__field--string" id="contact_number" name="contact_number" type="text" placeholder="contact number" />
+        <div class="form__item__message form__item__message--error" aria-hidden="true">
+            Please enter a valid UK landline or mobile number
+        </div>
+    </div>
+
+    <h2>Identity check</h2>
+    <p>If you go to the nexxt step you give us permission to check your identity and address details with a company called Experian.</p>
+    <p>THis means you do not have to send us any documents like a passport or driving license, so you get your buss opass sooner.</p>
+    <p><b>this won't affect your credit record,</b> but the check will be recorded. Experian will check your details with other information they hold,. They won't jeep your informatino or give it to ayone else.</p>
+    <p>if you don't want us to check your details with Experian, apply with the paper form. <a href="#"> Download the paper form</a></p>
+    <a href="javascript: void(0)" class="cta cta--icon cta--primary cta--next cta-group__firstly js--prevent-double">Next</a>
+</form>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html class="no-js aui bcc-aui" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Development Environment</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/Uniform.js/2.1.2/jquery.uniform.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+    <link rel="stylesheet" href="/css/common.min.css">
+    <script>ga=function(){};</script>
+</head>
+
+<body>
+
+    <div class="bcc-header">
+        <div class="bcc-header__primary">
+            <a id="skip-to-content" href="#main-content" tabindex="1"> <span>Skip to Content</span></a>
+            <div class="bcc-header__primary-inner">
+                <div class="bcc-header__brand">
+                    <div class="bcc-header__logo"></div>
+                    <a class="bcc-header__sitename" href="/">bristol.gov.uk</a>
+                </div>
+                <div class="bcc-header__search">
+                    <input class="bcc-header__search-box" placeholder="Search Bristol City Council" type="text" />
+                    <button class="bcc-header__search-button" type="submit"><span class="icon--bcc icon--bcc--search"></span></button>
+                </div>
+                <div class="bcc-header__actions">
+                    <ul>
+                        <li><a href="#">Sign In</a></li>
+                        <li><a href="#">Create an account</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bcc-header__secondry">
+            <div class="bcc-header__primary-inner">
+                <div class="bcc-header__mobile-actions">
+                    <a class="bcc-header__mobile-nav bcc-header__mobile-nav--menu" href="#"><span class="icon--bcc icon--bcc--menu"></span> Menu</a>
+                    <a class="bcc-header__mobile-nav bcc-header__mobile-nav--search" href="#"><span class="icon--bcc icon--bcc--search"></span> Search</a>
+                </div>
+                <div class="bcc-header__menu" {{^ menu}} style="display:none" {{/menu}}>
+                    <ul>
+                    {{# menu}}
+                        <li class="bcc-header__menu-item {{# active}}bcc-header__menu-item--active{{/ active}}"><a href="/{{ path }}/{{ name }}">{{ label }}</a></li>
+                    {{/ menu}}
+                    </ul>
+                </div>
+                <div class="bcc-header__search bcc-header__search--mobile">
+                    <input class="bcc-header__search-box" type="text" />
+                    <button class="bcc-header__search-button" type="submit"><span class="icon--bcc icon--bcc--search"></span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 
+    <header role="banner" id="header">
+        <div class="row-fluid">
+            <a id="skip-to-content" href="#main-content" tabindex="1"> <span>Skip to Content</span> 
+            </a>
+        </div>
+        <div id="header__inner" class="row-fluid">
+            <div id="logo">
+                <p> <a href="http://www.bristol.gov.uk" title="Go to Liferay homepage"> Liferay </a> </p> 
+            </div>
+            <div id="nav">
+                <p class=""> <a href="/issues">Issues </a> /  <a href="/boilerplate">Boilerplate </a> 
+                </p>
+            </div>
+            <div class="myaccount">
+                <div class="myaccount_links"> <a id="myaccount__sign-in" data-redirect="true" href="http://localhost:8080/c/portal/login?p_l_id=11318" rel="nofollow">Sign&nbsp;in</a> &nbsp;<span class="pipe"></span>&nbsp; <a id="myaccount__create-an-account" href="/create-account">Create&nbsp;an&nbsp;account</a> 
+                </div>
+            </div>
+        </div>
+    </header>
+    -->
+
+    <main id="main">
+        <div class="page-content" id="content">
+
+            <div class="columns-1" id="main-content" role="main" tabindex="0">
+                <div class="portlet-layout row-fluid">
+                    <div class="portlet-column portlet-column-only span12" id="column-1">
+                        <div class="portlet-dropzone portlet-column-content portlet-column-content-only" id="layout-column_column-1">
+                            <div class="portlet-boundary portlet-boundary_bcccontentportlet_WAR_bccportalapps101BUILDSNAPSHOT_ portlet-static portlet-static-end portlet-borderless " id="p_p_id_bcccontentportlet_WAR_bccportalapps101BUILDSNAPSHOT_"> <span id="p_bcccontentportlet_WAR_bccportalapps101BUILDSNAPSHOT"></span> 
+                                <div class="portlet-borderless-container">

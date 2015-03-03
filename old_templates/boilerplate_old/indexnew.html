@@ -1,0 +1,9 @@
+{{test}}
+
+{{#folders}}
+    <h1>{{name}}</h1>
+    {{#pages}}
+        <li><a href="/{{name}}/{{.}}">{{.}}</a></li>
+    {{/pages}}
+    <br/><br/><br/>
+{{/folders}}

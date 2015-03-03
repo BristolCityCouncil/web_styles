@@ -1,0 +1,84 @@
+{
+	"panels": {
+		"affirm": {
+			"modifiers": "panel--affirm"
+		}
+	},
+	"intro": {
+
+		"nextPage" : {
+			"link": "/pages/parking/step1",
+			"label": "Next step"
+		}
+	},
+	"step1": {
+
+		"header": {
+			"stepheader__current": "1",
+			"stepheader__total": "5",
+			"stepheader__title": "Get residents' or visitors' parking permits",
+			"stepheader__subtitle": "Find your address"
+		},
+
+		"nextPage" : {
+			"link": "/pages/parking/step2",
+			"label": "Next step"
+		}
+	},
+	"step2": {
+
+		"stepheader__current": "2",
+		"stepheader__total": "5",
+		"stepheader__title": "Get residents' or visitors' parking permits",
+		"stepheader__subtitle": "Residents permits: your vehicles",
+
+		"nextPage" : {
+			"link": "/pages/parking/step3",
+			"label": "Next step"
+		}
+	},
+	"step3": {
+
+		"stepheader__current": "3",
+		"stepheader__total": "5",
+		"stepheader__title": "Get residents' or visitors' parking permits",
+		"stepheader__subtitle": "Check permit details",
+
+		"nextPage" : {
+			"link": "/pages/parking/step4",
+			"label": "Next step"
+		}
+	},
+	"step4": {
+
+		"stepheader__current": "4",
+		"stepheader__total": "5",
+		"stepheader__title": "Get residents' or visitors' parking permits",
+		"stepheader__subtitle": "Visitor permits",
+
+		"nextPage" : {
+			"link": "/pages/parking/step5",
+			"label": "Next step"
+		}
+	},
+	"step5": {
+
+		"stepheader__current": "5",
+		"stepheader__total": "5",
+		"stepheader__title": "Get residents' or visitors' parking permits",
+		"stepheader__subtitle": "Check order and give your details",
+
+		"panel__title": "Lorem ipsum dolor",
+		"panel__copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+
+		"nextPage" : {
+			"link": "/pages/parking/thanks",
+			"label": "Next step"
+		}
+	},
+	"thanks": {
+		
+	}
+
+	
+}

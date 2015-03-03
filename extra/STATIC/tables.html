@@ -1,0 +1,230 @@
+<!doctype html>
+<html class="aui no-js bcc-aui" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Development Environment</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/Uniform.js/2.1.2/jquery.uniform.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+    
+    <link rel="stylesheet" href="./assets/css/style.min.css">
+    <script>ga=function(){};</script>
+</head>
+
+<body>
+
+    <div class="bcc-header">
+        <div class="bcc-header__primary">
+            <a id="skip-to-content" href="#main-content" tabindex="1"> <span>Skip to Content</span></a>
+            <div class="bcc-header__primary-inner">
+                <div class="bcc-header__brand">
+                    <div class="bcc-header__logo">[LOGO]</div>
+                    <a class="bcc-header__sitename" href="#">bristol.gov.uk</a>
+                </div>
+                <div class="bcc-header__search">
+                    <input class="bcc-header__search-box" placeholder="Search Bristol City Council" type="text" />
+                    <button class="bcc-header__search-button" type="submit"><span class="icon--bcc icon--bcc--search"></span></button>
+                </div>
+                <div class="bcc-header__actions">
+                    <ul>
+                        <li><a href="#">Sign In</a></li>
+                        <li><a href="#">Create an account</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bcc-header__secondry">
+            <div class="bcc-header__primary-inner">
+                <div class="bcc-header__mobile-actions">
+                    <a class="bcc-header__mobile-nav bcc-header__mobile-nav--menu" href="#"><span class="icon--bcc icon--bcc--menu"></span> Menu</a>
+                    <a class="bcc-header__mobile-nav bcc-header__mobile-nav--search" href="#"><span class="icon--bcc icon--bcc--search"></span> Search</a>
+                </div>
+                <div class="bcc-header__menu">
+                    <ul>
+                        <li class="bcc-header__menu-item"><a href="index.html">Home</a></li>
+                        <li class="bcc-header__menu-item"><a href="typography.html">Typography</a></li>
+                        <li class="bcc-header__menu-item"><a href="forms.html">Forms</a></li>
+                        <li class="bcc-header__menu-item"><a href="buttons.html">Buttons</a></li>
+                        <li class="bcc-header__menu-item"><a href="panels.html">Panels</a></li>
+                        <li class="bcc-header__menu-item"><a href="slabs.html">Slabs</a></li>
+                        <li class="bcc-header__menu-item bcc-header__menu-item--active"><a href="tables.html">Tables</a></li>
+                        <li class="bcc-header__menu-item"><a href="alerts.html">Alerts</a></li>
+                        <!-- mobile only account links -->
+                        <li class="bcc-header__menu-item bcc-header__menu-item--mobile"><a href="alerts.html">Sign In</a></li>
+                        <li class="bcc-header__menu-item bcc-header__menu-item--mobile"><a href="alerts.html">Create account</a></li>
+
+                    </ul>
+                </div>
+                <div class="bcc-header__search bcc-header__search--mobile">
+                    <input class="bcc-header__search-box" type="text" />
+                    <button class="bcc-header__search-button" type="submit"><span class="icon--bcc icon--bcc--search"></span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main id="main">
+        <div class="page-content" id="content">
+
+            <div class="columns-1" id="main-content" role="main" tabindex="0">
+                <div class="row-fluid">
+                    <div class="span12" id="column-1">
+
+
+                    <section class="pl">
+                                            <h1 class="pl__title"><a href="/boilerplate" class="icon icon-bookmark icon--large"></a>Tables</h1>
+                                            <h2>Default <small>.table</small></h2>
+                                            <div class="bs-docs-example">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>#</th>
+                                                            <th>First Name</th>
+                                                            <th>Last Name</th>
+                                                            <th>Username</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>Mark</td>
+                                                            <td>Otto</td>
+                                                            <td>@mdo</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>Jacob</td>
+                                                            <td>Thornton</td>
+                                                            <td>@fat</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3</td>
+                                                            <td>Larry</td>
+                                                            <td>the Bird</td>
+                                                            <td>@twitter</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div><pre class="prettyprint linenums">&lt;table class="<strong>table</strong>"&gt; &lt;thead&gt; &lt;tr&gt; &lt;th&gt;#&lt;/th&gt; &lt;th&gt;First Name&lt;/th&gt; &lt;th&gt;Last Name&lt;/th&gt; &lt;th&gt;Username&lt;/th&gt; &lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt; &lt;tr&gt; &lt;td&gt;1&lt;/td&gt; &lt;td&gt;Mark&lt;/td&gt; &lt;td&gt;Otto&lt;/td&gt; &lt;td&gt;@mdo&lt;/td&gt; &lt;/tr&gt; ... &lt;/tbody&gt;&lt;/table&gt;</pre>
+                                            <h2>Summary <small>table table--collapse js--collapse-table</small></h2>
+                                            <div class="bs-docs-example">
+                                                <table class="table table--collapse js--collapse-table">
+                                                    <tbody>
+                                                        <tr class="table__row--header">
+                                                            <th>Description</th>
+                                                            <th class="table__col--details">Details</th>
+                                                            <th class="table__col--last">Cost</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="table__col--description"><strong>First permit [two cars]</strong>
+                                                            </td>
+                                                            <td class="table__col--details">
+                                                                <div><strong>TR28 DSA</strong>
+                                                                    <br/>Class A</div>
+                                                                <div><strong>TR28 DSA</strong>
+                                                                    <br/>Class A</div>
+                                                            </td>
+                                                            <td class="table__col--last"><strong>FREE</strong>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="table__row--quantities">
+                                                            <td colspan="3"><a href="" title="Change quantities of permits"> Change quantities of items </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><strong>Free visitor permits</strong>
+                                                            </td>
+                                                            <td class="table__col--details"><strong>50</strong>
+                                                            </td>
+                                                            <td class="table__col--last"><strong>FREE</strong>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="table__row--quantities">
+                                                            <td colspan="3"><a href="" title="Change quantities of permits"> Change quantities of items </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="table__row--total table__row--total--affirm">
+                                                            <td colspan="3">Total: <strong>&pound;111.00</strong>
+                                                                <br/><small class="light">The total does not include the extra charge if you paid by credit card</small>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div><pre class="prettyprint linenums">&lt;table class="<strong>table table--collapse js--collapse-table</strong>"&gt; &lt;tbody&gt; &lt;tr class="<strong>table__row--header</strong>"&gt; &lt;th&gt;Description&lt;/th&gt; &lt;th class="<strong>table__col--details</strong>"&gt;Details&lt;/th&gt; &lt;th class="<strong>table__col--last</strong>"&gt;Cost&lt;/th&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td class="<strong>table__col--description</strong>"&gt; &lt;strong>First permit&lt;/strong&gt; &lt;br/&gt; Cost depends on the tax band of your vehicles &lt;/td&gt; &lt;td class="<strong>table__col--details</strong>"&gt; &lt;strong&gt;TR28 DSA&lt;/strong&gt; &lt;br/&gt; Class A &lt;/td&gt; &lt;td class="<strong>table__col--last</strong>"&gt; &lt;strong&gt;FREE&lt;/strong&gt; &lt;/td&gt; &lt;/tr&gt; &lt;tr class="<strong>table__row--quantities</strong>"&gt; &lt;td colspan="3"&gt; &lt;a href="" title="Change quantities of permits"&gt; Change quantities of items &lt;/a&gt; &lt;/td&gt; &lt;/tr&gt; &lt;tr class="<strong>table__row--total{table__row--total--affirm}</strong>"&gt; &lt;td colspan="3"&gt; Total: &lt;strong&gt;&pound;111.00&lt;/strong&gt; &lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt;&lt;/table&gt;</pre>
+                                            <!-- <table class="table table--collapse js--collapse-table"><tbody><tr class="table__row--header"><th>Description</th><th class="table__col--details">Details</th><th class="table__col--last">Cost</th></tr><tr><td class="table__col--description"><strong>First permit</strong><br/>Cost depends on the tax band of your vehicles </td><td class="table__col--details"><strong>TR28 DSA</strong><br/>Class A </td><td class="table__col--last"><strong>FREE</strong></td></tr><tr><td class="table__col--description"><strong>Second permit [two cars]</strong></td><td class="table__col--details"><div><strong>TR28 DSA</strong><br/>Class A</div><div><strong>TR28 DSA</strong><br/>Class A</div></td><td class="table__col--last"><strong>FREE</strong></td></tr><tr class="table__row--quantities"><td colspan="3"><a href="" title="Change quantities of permits"> Change quantities of items </a></td></tr><tr><td><strong>Free visitor permits</strong></td><td class="table__col--details"><strong>50</strong></td><td class="table__col--last"><strong>FREE</strong></td></tr><tr><td><strong>Paid visitor permits</strong></td><td class="table__col--details"><strong>35</strong></td><td class="table__col--last"><strong>£777.77</strong></td></tr><tr class="table__row--quantities"><td colspan="3"><a href="" title="Change quantities of permits"> Change quantities of items </a></td></tr><tr class="table__row--total table__row--total--affirm"><td colspan="3">Total: <strong>&pound;111.00</strong><br/><small class="light">The total does not include the extra charge if you paid by credit card</small></td></tr></tbody></table> -->
+                                            <table class="table table--collapse js--collapse-table">
+                                                <tbody>
+                                                    <tr class="table__row--header">
+                                                        <th>Description</th>
+                                                        <th class="table__col--details">Details</th>
+                                                        <th class="table__col--last">Cost</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="table__col--description"><strong>Permit&nbsp;#37173</strong>
+                                                        </td>
+                                                        <td class="table__col--details">
+                                                            <dl><dt>Vehicle</dt>
+                                                                <dd><strong>AA1AAA</strong> (Tax band A)</dd><dt>Length</dt>
+                                                                <dd><strong>12 months</strong>
+                                                                </dd><dt>Starts</dt>
+                                                                <dd><strong>1st November 2014</strong>
+                                                                </dd><dt>Ends</dt>
+                                                                <dd><strong>1st November 2015</strong>
+                                                                </dd>
+                                                            </dl>
+                                                        </td>
+                                                        <td class="table__col--last"><strong>&pound;96</strong>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table__row--quantities">
+                                                        <td colspan="3"><a href="" title="Change permit duration"> Change permit duration</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="table__row--total table__row--total--affirm">
+                                                        <td colspan="3">Total: <strong>&pound;96</strong>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </section>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="bcc-footer" role="contentinfo">
+        <div class="bcc-footer__inner">
+            <div class="bcc-footer__menu">
+                <ul>
+                    <li>
+                        <a href="https://www.bristol.gov.uk/complaints" title="Complaints and feedback">Complaints and feedback</a>
+                    </li>
+                    <li>
+                        <a href="https://www.bristol.gov.uk/cookies" title="Cookies">Cookies</a>
+                    </li>
+                    <li>
+                        <a href="https://www.bristol.gov.uk/privacy" title="Privacy">Privacy</a>
+                    </li>
+                    <li>
+                        <a href="https://www.bristol.gov.uk/contact" title="Contact">Contact</a>
+                    </li>
+                    <li>
+                        <a href="https://www.bristol.gov.uk/copyright" title="Copyright">Copyright</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/main.pack.js"></script>
+</body>
+
+</html>
+            

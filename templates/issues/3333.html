@@ -1,0 +1,35 @@
+{{> chrome/header}}
+
+    <form action="#" class="form js--validate" method="post">
+        <div class="form__item">
+            <!-- START Match -->
+            <fieldset class="form__set">
+                <label for="spassword" class="form__item__label">
+                    Password
+                    <span class="form__item__label__instructions">
+                        8-20 charachters including at least 1 letter and one number
+                    </span>
+                </label>
+                <input required="" class="form__item__field form__item__field--string form__item--blurred" type="password" id="spassword" pattern="(?=.*\d)(?=.*[A-Z])(?=.*[a-zA-Z]).{8,20}" maxlength="20" placeholder="" name="spassword">
+                
+                <br>
+                <br>
+                <label for="cpassword" class="form__item__label">
+                    Confirm Password 
+                    <span class="form__item__label__instructions">
+                        Must match above password
+                    </span>
+                </label>
+                <input required="" data-match="spassword" pattern="(?=.*\d)(?=.*[A-Z])(?=.*[a-zA-Z]).{8,20}" class="form__item__field form__item__field--string" type="password" maxlength="20" id="cpassword" name="cpassword">
+                <span class="form__item__message form__item__message--error" aria-hidden="true">
+                    Something is wrong
+                </span>
+            </fieldset>
+            <!-- END Match -->
+        </div>
+        <div class="form__actions">
+        	<button type="submit cta cta--primary">Click meh</button>
+        </div>
+    </form>
+
+{{> chrome/footer}}

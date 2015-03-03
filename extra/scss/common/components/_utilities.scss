@@ -1,0 +1,74 @@
+.breakable {
+	// http://kenneth.io/blog/2012/03/04/word-wrapping-hypernation-using-css/
+	-ms-word-break: break-all;
+
+	/* Non standard for webkit */
+	word-break: break-word;
+
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+
+	word-wrap: break-word;
+ }
+
+/* Temporary */
+
+.pic {
+	margin-bottom: 20px;
+	
+	&.pull-right {
+		margin-left: 20px;
+	}
+	
+	&.pull-left {
+		margin-right: 20px;
+	}
+}
+ 
+  
+.nowrap,
+.date {
+	white-space: nowrap;
+}
+ 
+ .visuallyhidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+/*// USAGE:
+	<div class="someblock__someelement vertical">
+		<div class="vertical__inner">
+			... content here will be vertically aligned to parent ...
+		</div>
+	</div>
+
+*/
+
+.vertical {
+	// height: 100%;
+	&:before {
+		content: '';
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+		margin-right: .25em;
+	}
+}
+
+	.vertical__inner {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+.preformatedtext {
+    white-space: pre-wrap;
+}

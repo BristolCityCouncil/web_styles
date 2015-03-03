@@ -1,0 +1,74 @@
+{% block page %}
+
+  {% assign page_title = 'Ordering a new wheelie bin or recycling boxes' %}
+  {% assign signed_in = false %}
+  {% assign ribbon = 'ico-bin' %}
+
+  {% include 'header' %}
+
+  <div class="page-content">
+
+    <div class="layout layout-constrained">
+
+      <div class="grid-wrap">
+
+        <div class="grid-col desktop-grid-full-width">
+
+          <div class="content content-header">
+
+            {% assign step-header__title = 'Ordering a new wheelie bin or recycling boxes' %}
+            {% assign step-header__title__step = '' %}
+            {% include 'modules/step-header--alt' %}
+
+          </div><!--/content-->
+
+
+          <div class="content content-main">
+
+            <div class="panel">
+
+              <h2 class="panel__title">Create an account to track your orders and make it easier and
+quicker to organise council services in future.</h2>
+              <div class="panel__copy">
+                <p>
+                  It takes just two minutes to set up an account &mdash; we only need your name, postcode and email.
+                </p>
+              </div>
+
+            </div><!--/panel-->
+
+            <div class="grid-wrap panel-group-cta panel-group-cta--align-top">
+
+              <div class="grid-col desktop-grid-four-ninths">
+                {% include 'modules/panel--create' %}
+              </div>
+
+              <div class="grid-col desktop-grid-one-ninth">
+                <div class="panel panel--or">
+                  <div class="panel__inner">
+                    <div class="panel__vertical-centre">
+                      or
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid-col desktop-grid-four-ninths">
+                {% include 'modules/panel--sign-in' %}
+              </div>
+
+            </div>
+
+          </div><!--/content-->
+
+        </div><!--/grid-col-->
+
+      </div><!--/grid-wrap-->
+
+    </div><!--/layout-->
+
+  </div><!--page-content-->
+
+  {% include 'footer' %}
+
+{% endblock %}

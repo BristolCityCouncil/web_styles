@@ -1,0 +1,93 @@
+
+.palette {
+	@include clearfix;
+	margin-bottom: 40px;
+}
+
+.swatch {
+	display: block;
+	float: left;
+	width: 300px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	position: relative;
+	padding-left: 90px;
+	min-height: 70px;
+	
+	@include respond-to(tablet) {
+		&:nth-child(2n+1){
+			clear: left;
+		}
+	}
+	
+	@include respond-to(desktop) {
+		&:nth-child(3n+1){
+			clear: left;
+		}
+	}
+
+	&:before {
+		content: " ";
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		float: left;
+		background-color: $grey-6;
+		width: 70px;
+		height: 70px;
+		border-radius: 10px;
+	}
+	
+	.swatch__title {
+		font-size: 19px;
+		line-height: 26px;
+
+		em {
+			font-family: courier;
+			font-style: normal;
+			color: $grey-3;
+		}
+	}
+
+	.swatch__copy {
+		p,
+		ol,
+		ul,
+		li {
+			font-size: 13px;
+			line-height: 18px;
+			margin-bottom: 0;
+		}
+
+		ul {
+			margin-left: 20px;
+		}
+	}
+}
+
+.swatch--bcc-red 		{ &:before { background-color: $bcc-red; } }
+
+.swatch--grey1 			{ &:before { background-color: $grey-1; } }
+.swatch--grey2 			{ &:before { background-color: $grey-2; } }
+.swatch--grey3 			{ &:before { background-color: $grey-3; } }
+.swatch--grey4 			{ &:before { background-color: $grey-4; } }
+.swatch--grey5 			{ &:before { background-color: $grey-5; } }
+.swatch--grey6 			{ &:before { background-color: $grey-6; } }
+.swatch--grey7 			{ &:before { background-color: $grey-7; } }
+
+.swatch--blue1 			{ &:before { background-color: $blue-1; } }
+.swatch--blue2 			{ &:before { background-color: $blue-2; } }
+.swatch--blue3 			{ &:before { background-color: $blue-3; } }
+.swatch--blue4 			{ &:before { background-color: $blue-4; } }
+.swatch--blue5 			{ &:before { background-color: $blue-5; } }
+
+.swatch--green1 		{ &:before { background-color: $green-1; } }
+.swatch--green2 		{ &:before { background-color: $green-2; } }
+.swatch--green3 		{ &:before { background-color: $green-3; } }
+.swatch--green4 		{ &:before { background-color: $green-4; } }
+.swatch--green5 		{ &:before { background-color: $green-5; } }
+
+.swatch--accessibility 	{ &:before { background-color: $accessibility; } }
+.swatch--error 			{ &:before { background-color: $error; } }
+.swatch--warning 		{ &:before { background-color: $warning; } }

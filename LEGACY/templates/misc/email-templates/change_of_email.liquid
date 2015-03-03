@@ -1,0 +1,29 @@
+{% block page %}
+
+	{% assign email_title = 'Change of email for your account' %}
+	{% assign email_heading = 'Change of email address for your Bristol Account' %}
+	{% assign email_subheading = '' %}
+
+	{% include 'tmpl/header' %}
+
+		Dear Josephine Bloggstone,
+		<br/>
+		<br/>
+		You asked us to change the email address used for your Bristol City Council account to <br/><strong>anne.example@bristol.gov.uk</strong>
+		<br />
+		<br />
+		<strong>You won't be able to get into your account until you confirm your new email.
+		And when you sign in next, remember to use your new email, not the old.</strong>
+		<br />
+		<br />
+		<strong>Help with this</strong>
+		<br />
+		<ul>
+			<li>You can't find the email &ndash; check in your spam folder</li>
+			<li>You don't receive an email &ndash; send it again from your account pages on the council website</li>
+			<li>It was not you that asked for the change &ndash; simply ignore this email and we will not make the change</li>
+		</ul>
+
+	{% include 'tmpl/footer' %}
+
+{% endblock %}

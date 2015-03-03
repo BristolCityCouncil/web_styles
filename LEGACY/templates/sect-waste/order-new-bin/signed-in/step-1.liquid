@@ -1,0 +1,143 @@
+{% block page %}
+
+  {% assign page_title = 'Ordering a new wheelie bin or recycling boxes: Choose your bins' %}
+  {% assign signed_in = true %}
+  {% assign ribbon = 'ico-bin' %}
+
+  {% include 'header' %}
+
+  <div class="page-content">
+
+    <div class="layout layout-constrained">
+
+      <div class="grid-wrap">
+
+        <div class="grid-col desktop-grid-full-width">
+
+          <div class="content content-header">
+
+            {% assign step-header__title = 'Ordering a new wheelie bin or recycling boxes' %}
+            {% assign step-header__title__step = 'Step 1 of 3' %}
+            {% assign step-header__subtitle = 'Choose your bins' %}
+            {% include 'modules/step-header' %}
+
+          </div><!--/content-->
+
+          <div class="content content-main">
+
+            <div class="panel-group">
+              <div class="panel panel--bare">
+                <p class="panel__title">Hi Josephine <a class="panel__small-link" href="#">Not Josephine?</a></p>
+              </div>
+              <div class="panel panel--affirm panel--address panel__copy--compact">
+                <div class="panel__copy--large">
+                  <p>Mrs Josephine Longnamerson</p>
+                  <p>Flat 3, 22 Queen Square, BS1 4ND</p>
+                </div>
+              </div>
+              <p>Your bin will be delivered to the above address</p>
+            </div>
+
+            <form class="form js-validation" id="form-order-new-bin" action="#form-order-new-bin" method="post">
+
+              <div data-basket-checks="yes" data-basket-total="yes" class="basket js-basket basket--with-checks">
+
+                <!-- @TODO: Removed from designs? ? Fieldset + legend? This is a useful heading for accessibility... -->
+                <div class="basket__header visuallyhidden">
+
+                  <h3 class="basket__title">What bins do you need?</h3>
+
+                </div><!--/basket__header-->
+
+                <div class="basket__list">
+
+                  {% assign basket__item__title = 'Black wheelie bin' %}
+                  {% assign basket__item__handle = 'black-wheelie-bin' %}
+                  {% assign basket__has-options = 'true' %}
+                  {% assign basket__item__qty = '2' %}
+                  {% assign basket__item__info = '<a href="#" class="link-help">Need help managing rubbish &amp; recycling?</a>' %}
+                  {% include 'modules/basket__item--fields' %}
+
+                  {% assign basket__item__title = 'Black recycling bin' %}
+                  {% assign basket__item__handle = 'black-recycling-bin-retina' %}
+                  {% assign basket__has-options = 'true' %}
+                  {% assign basket__item__qty = '10' %}
+                  {% assign basket__item__info = '<a href="#" class="link-help">Need help managing rubbish &amp; recycling?</a>' %}
+                  {% include 'modules/basket__item--fields' %}
+
+                  {% assign basket__item__title = 'Green recycling bin' %}
+                  {% assign basket__item__handle = 'green-recycling-bin-retina' %}
+                  {% assign basket__has-options = 'true' %}
+                  {% assign basket__item__qty = '7' %}
+                  {% assign basket__item__info = '<a href="#" class="link-help">Need help managing rubbish &amp; recycling?</a>' %}
+                  {% include 'modules/basket__item--fields' %}
+
+                  {% assign basket__item__title = 'Brown food waste bin' %}
+                  {% assign basket__item__handle = 'brown-food-waste-bin-retina' %}
+                  {% assign basket__has-options = 'true' %}
+                  {% assign basket__item__qty = '5' %}
+                  {% assign basket__item__info = '<a href="#" class="link-help">Need help managing rubbish &amp; recycling?</a>' %}
+                  {% include 'modules/basket__item--fields' %}
+
+                  {% assign basket__item__title = 'Black box lid' %}
+                  {% assign basket__item__handle = 'black-box-lid-retina' %}
+                  {% assign basket__has-options = 'true' %}
+                  {% assign basket__item__qty = '17' %}
+                  {% assign basket__item__info = '<a href="#" class="link-help">Need help managing rubbish &amp; recycling?</a>' %}
+                  {% include 'modules/basket__item--fields' %}
+
+                  {% assign basket__item__title = 'Green box net' %}
+                  {% assign basket__item__handle = 'green-box-net-retina' %}
+                  {% assign basket__has-options = 'true' %}
+                  {% assign basket__item__qty = '100' %}
+                  {% assign basket__item__info = '<a href="#" class="link-help">Need help managing rubbish &amp; recycling?</a>' %}
+                  {% include 'modules/basket__item--fields' %}
+
+                  {% assign basket__item__title = 'Brown Caddy' %}
+                  {% assign basket__item__handle = 'brown-caddy-retina' %}
+                  {% assign basket__has-options = 'true' %}
+                  {% assign basket__item__qty = '100' %}
+                  {% assign basket__item__info = '<a href="#" class="link-help">Need help managing rubbish &amp; recycling?</a>' %}
+                  {% include 'modules/basket__item--fields' %}
+
+                </div><!--/basket__list-->
+
+                {% include 'modules/panel--image' %}
+
+                <div class="form__item form__item--string form__item--marginless">
+                  <label class="form__label" for="ff-textarea-2">
+                    Where should we collect the old boxes from? <br>
+                    Where should we leave the new boxes or bins?
+                  </label>
+                  <textarea class="form__field form__field--string form__field--textarea" name="" rows="5" placeholder="e.g. In my front garden." id="ff-textarea-2"></textarea>
+                </div><!--/form__item-->
+
+                <div class="form__item form__item--boolean">
+                  <input class="form__field form__field--boolean form__field--checkbox" type="checkbox" name="" id="ff-confirm-off-street" />
+                  <!-- @TODO: UX: Should there be an explanation/link for 'off street'? -->
+                  <label class="form__label form__label--boolean" for="ff-confirm-off-street">I confirm I have off street storage for the bins</label>
+                </div><!--/form__item-->
+
+                <div class="basket__actions">
+                  <!-- @TODO: UX: Is this button text misleading? Still many steps to go through -->
+
+                  <button class="btn btn--primary" type="submit">Order <span class="basket__count"></span></button>
+                </div><!--/basket__actions-->
+
+              </div><!--/basket-->
+
+            </form>
+
+          </div><!--/content-->
+
+        </div><!--/grid-col-->
+
+      </div><!--/grid-wrap-->
+
+    </div><!--/layout-->
+
+  </div><!--page-content-->
+
+  {% include 'footer' %}
+
+{% endblock %}

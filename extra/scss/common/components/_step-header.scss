@@ -1,0 +1,47 @@
+.step-header {
+    margin: 0 0 25px;
+    
+    @include respond-to(tablet, desktop) {
+        margin: 0 0 40px;
+    }
+
+    .step-header__title {
+        font-family: $sans-bold;
+        padding: 0;
+        margin: 0 0 10px;
+        font-size: 16px;
+        line-height: 26px;
+        border-bottom: 1px solid $grey-6;
+        
+        @include respond-to(tablet, desktop) {
+            border-bottom: 2px solid $grey-6;
+            padding: 0 0 10px;
+            
+            font-size: 19px;
+            line-height: 26px;
+        }
+
+        .step-header__title__seperator {
+            display: inline;
+            margin: 0 5px 0 0;
+        }
+        
+        .step-header__title__steps {
+            display: inline;
+            font-family: $sans;
+            color: $grey-10;
+            white-space: nowrap;
+        }
+    }
+    
+    .step-header__subtitle {
+        margin: 0;
+        font-size: 28px;
+        line-height: 32px;
+        
+        @include respond-to(tablet, desktop) {
+            font-size: 48px;
+            line-height: 53px;
+        }
+    }
+}

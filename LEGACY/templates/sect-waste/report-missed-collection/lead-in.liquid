@@ -1,0 +1,101 @@
+{% block page %}
+
+  {% assign page_title = 'Bin collection information' %}
+  {% assign ribbon = 'ico-bin' %}
+
+  {% include 'header' %}
+
+  <div class="page-content">
+
+    <div class="layout layout-constrained">
+
+
+      <div class="grid-wrap">
+
+        <div class="grid-col desktop-grid-full-width">
+          <div class="grid-wrap">
+            <div class="grid-col desktop-grid-two-thirds desktop-grid-right-pad">
+              <div class="content content-header content--iag">
+                <h1 class="content-header__title">Report missed collection</h1>
+              </div><!--/content-->
+              <div class="content content-main content--iag">
+                <p class="lead">Report that a collection was missed Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae mauris ac sapien lacinia vehicula consectetur sit amet turpis.</p>
+                <a href="#" class="btn btn--primary">Order now</a>
+              </div>
+            </div>
+            <div class="grid-col desktop-grid-one-third">
+              <div class="panel panel--secondary">
+                <h2 class="panel__title">Want to make this process quicker</h2>
+                <div class="panel__copy--small">
+                  <p>If you have a Bristol account, sign in and report a missed collection.</p>
+                  <a href="#" class="btn btn--secondary">Sign in</a>
+                  <p>If you don't have an account, you can <a href="#">create your account here</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page-contents js-sticky" role="navigation">
+            <div class="page-contents__inner">
+              <p class="page-contents__title">Page contents</p>
+              <div class="page-contents__list-wrapper">
+                <div class="grid-wrap">
+                  <div class="grid-col desktop-grid-one-half">
+                    <ul class="linklist page-contents__list">
+                      <li><a href="#section-1">Section 1 testing</a></li>
+                    </ul>
+                  </div>
+                  <div class="grid-col desktop-grid-one-half">
+                    <ul class="linklist page-contents__list">
+                      <li><a href="#section-2">Section 2 testing</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-wrap">
+            <div class="grid-col desktop-grid-two-thirds desktop-grid-pad-right">
+              <div class="panel panel--inform" id="section-1">
+                <p class="panel__title">Something about a checklist</p>
+                <div class="panel__copy">
+                  <ul>
+                    <li>You can’t order bins or boxes if you don’t have somewhere to store them off the street.</li>
+                    <li>If they contained an item we do not collect</li>
+                    <li>If they were not out by 7am</li>
+                    <li>If they were not visible from the road</li>
+                  </ul>
+                </div>
+              </div>
+
+              <h2 id="section-2">Another bit of copy with a h2 heading</h2>
+
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae mauris ac sapien lacinia vehicula consectetur sit amet turpis. Sed accumsan nunc lacinia justo ullamcorper eu hndrerit lacus blandit. Praesent et sagittis ante. Morbi gravida, eros vel varius consequat, mauris odio aliquam nibh, sit amet auctor leo enim quis ante.</p>
+
+              <p>Donec lacinia risus eu enim feugiat rhoncus. Ut sem quam, suscipit vitae pharetra vitae, consequat eget ipsum.</p>
+
+              <div class="panel media">
+                <img class="img" alt="Green wheelie bin" src="/ui/images/waste/green-wheelie-bin.png">
+                <div class="media__content">
+                  <p class="panel__title--minor">Looking for the Green Wheelie Bin?</p>
+                  <div class="panel__copy--small">
+                    <p>Sign up and pay for our <a href="#">garden waste collection</a>.</p>
+                    <p>If your green wheelie bin is damaged you have to order and pay for new one, unless we damaged it.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          </div><!--/content-->
+
+        </div><!--/grid-col-->
+
+      </div><!--/grid-wrap-->
+
+    </div><!--/layout-->
+
+  </div><!--page-content-->
+
+  {% include 'footer' %}
+
+{% endblock %}

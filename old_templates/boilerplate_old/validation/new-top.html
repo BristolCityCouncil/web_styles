@@ -1,0 +1,175 @@
+<h3>New Top Error Validation</h3>
+
+<div class="open-validation">
+	<div class="open-validation__title">There was a problem with the information you entered:</div>
+	<ul class="open-validation__errorlist">
+		<li class="open-validation__error">
+			<a href="#f1">Text Field Delegate</a>
+		</li>
+		<li class="open-validation__error">
+			<a href="#fi2">Text Field Bubble</a>
+		</li>
+
+		<li class="open-validation__error">
+			<a href="#d1">Dropdown Delegate</a>
+		</li>
+		<li class="open-validation__error">
+			<a href="#di2">Dropdown Bubble</a>
+		</li>
+
+		<li class="open-validation__error">
+			<a href="#c1">Checkbox Delegate</a>
+		</li>
+
+		<li class="open-validation__error">
+			<a href="#ci2">Checkbox Bubble</a>
+		</li>
+
+		<li class="open-validation__error">
+			<a href="#r1">Radio Delegate</a>
+		</li>
+
+		<li class="open-validation__error">
+			<a href="#ri2">Radio Bubble</a>
+		</li>
+
+		<li class="open-validation__error">
+			<a href="#t1">Text Area Delegate</a>
+		</li>
+		<li class="open-validation__error">
+			<a href="#ti2">Text Area Bubble</a>
+		</li>
+	</ul>
+</div>
+
+
+<div class="field" id="f1">
+	<label class="field__label field__label--block" for="fi1">Delegate</label>
+	<input class="field__input" id="fi1" type="text">
+</div>
+<div class="field" id="f2">
+	<label class="field__label field__label--block" for="fi1">Bubble</label>
+	<input class="field__input" id="fi2" type="text">
+    <div class="field__message field__message--error">My Message</div>
+</div>
+
+<hr/>
+
+<div class="field" id="d1">
+    <label class="field__label field__label--block" for="di1">Delegate</label>
+    <div class="drop">
+        <select id="di1">
+            <option selected="selected">Please select...</option>
+            <option value="one">one</option>
+            <option value="two">two</option>
+            <option value="three">three</option>
+        </select>
+        <div class="drop__background"></div>
+    </div>
+</div>
+
+<div class="field" id="d2">
+    <label class="field__label field__label--block" for="di2">Bubble</label>
+    <div class="drop">
+        <select id="di2">
+            <option selected="selected">Please select...</option>
+            <option value="one">one</option>
+            <option value="two">two</option>
+            <option value="three">three</option>
+        </select>
+        <div class="drop__background"></div>
+    </div>
+</div>
+
+<hr/>
+
+
+<fieldset class="field field--set" id="c1">
+    <legend class="field__label field__label--block">
+        Delegate
+    </legend>
+    <input class="field__input" type="checkbox" name="testing" id="btestcheck">
+    <label class="field__label field__label--block" for="btestcheck">
+        Apple
+    </label>
+    <input class="field__input" type="checkbox" value="carrot" name="testing" id="btestcheck2">
+    <label class="field__label field__label--block" for="btestcheck2">
+        Carrot
+        <span class="field__instructions">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies venenatis ex, dignissim.
+    </span>
+    </label>
+    <input class="field__input" type="checkbox" name="testing" id="btestcheck3">
+    <label class="field__label field__label--block" for="btestcheck3">
+        Mango
+    </label>
+</fieldset>
+
+<fieldset class="field field--set">
+    <legend class="field__label field__label--block">
+        Bubble
+    </legend>
+    <input class="field__input" type="checkbox" name="btesting" id="testcheck">
+    <label class="field__label field__label--block" for="testcheck">
+        Apple
+    </label>
+    <input class="field__input" type="checkbox" value="carrot" name="btesting" id="testcheck2">
+    <label class="field__label field__label--block" for="testcheck2">
+        Carrot
+        <span class="field__instructions">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies venenatis ex, dignissim.
+    </span>
+    </label>
+    <input class="field__input" type="checkbox" name="btesting" id="ci2">
+    <label class="field__label field__label--block" for="ci2">
+        Mango
+    </label>
+</fieldset>
+
+<hr/>
+
+<fieldset class="field field--set" id="r1">
+    <legend class="field__label">
+        Delegate
+    </legend>
+
+    <input class="field__input" type="radio" value="yes" name="radioOptions" id="firstRadio">
+    <label class="field__label" for="firstRadio">Yes</label>
+
+    <input class="field__input" type="radio" value="no" name="radioOptions" id="secondRadio">
+    <label class="field__label" for="secondRadio">No</label>
+
+    <div class="field__message field__message--error">This is the most generic error</div>
+</fieldset>
+
+<fieldset class="field field--set">
+    <legend class="field__label">
+        Bubble
+    </legend>
+
+    <input class="field__input" type="radio" value="yes" name="radioOptions" id="afirstRadio">
+    <label class="field__label" for="afirstRadio">Yes</label>
+
+    <input class="field__input" type="radio" value="no" name="radioOptions" id="ri2">
+    <label class="field__label" for="ri2">No</label>
+
+    <div class="field__message field__message--error">This is the most generic error</div>
+</fieldset>
+
+<hr/>
+<div class="field" id="t1">
+    <label class="field__label field__label--block" for="ti1">
+        Delegate
+    </span>
+    </label>
+    <textarea class="field__input" name="ti1" rows="5" id="ti1"></textarea>
+    <div class="field__message field__message--error">Some generic</div>
+</div>
+<div class="field" id="t2">
+    <label class="field__label field__label--block" for="ti2">
+        Bubble
+    </span>
+    </label>
+    <textarea class="field__input" name="ti2" rows="5" id="ti2"></textarea>
+    <div class="field__message field__message--error">Some generic</div>
+</div>

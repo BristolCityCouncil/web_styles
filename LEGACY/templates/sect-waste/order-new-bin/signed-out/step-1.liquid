@@ -1,0 +1,65 @@
+{% block page %}
+
+  {% assign page_title = 'Ordering a new wheelie bin or recycling boxes: Choose your bins' %}
+  {% assign signed_in = false %}
+  {% assign ribbon = 'ico-bin' %}
+
+  {% include 'header' %}
+
+  <div class="page-content">
+
+    <div class="layout layout-constrained">
+
+      <div class="grid-wrap">
+
+        <div class="grid-col desktop-grid-full-width">
+
+          <div class="content content-header">
+
+            {% assign step-header__title = 'Ordering a new wheelie bin or recycling boxes' %}
+            {% assign step-header__title__step = 'Step 1 of 4' %}
+            {% assign step-header__subtitle = 'Find your address' %}
+            {% include 'modules/step-header' %}
+
+          </div><!--/content-->
+
+
+          <div class="content content-main">
+
+            <div class="address-lookup js-address-lookup">
+
+              <div class="form__item form__item--string-action">
+                <label class="form__label">Postcode</label>
+                <input class="form__field form__field--string" type="text" name="" value="BS6 5AA" />
+                <button class="btn btn--secondary btn--small" type="submit">Find address</button>
+              </div><!--/form__item-->
+
+              <div class="form__item form__item--select">
+                <select name="" class="form__field form__field--select form__field--selectsize" size="3">
+                  <option selected="selected">Please select...</option>
+                  <option>19 Redland Road, Bristol, BS6 5AA</option>
+                  <option>20 Redland Road, Bristol, BS6 5AA</option>
+                  <option>31 Redland Road, Bristol, BS6 5AA</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="basket__actions">
+              <button class="btn btn--primary" type="submit">Next: Choose your bins</button>
+            </div><!--/basket__actions-->
+
+
+
+          </div><!--/content-->
+
+        </div><!--/grid-col-->
+
+      </div><!--/grid-wrap-->
+
+    </div><!--/layout-->
+
+  </div><!--page-content-->
+
+  {% include 'footer' %}
+
+{% endblock %}

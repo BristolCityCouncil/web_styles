@@ -1,0 +1,828 @@
+div.field,
+fieldset.field {
+
+	/* FIELD STYLES */
+	position: relative;
+	margin: 0;
+
+	@include respond-to(tablet, desktop) {
+		margin: 0;
+		max-width: 480px;
+	}
+
+}
+
+.field {
+	select,
+	textarea,
+	input[type], 
+	.uneditable-input {
+		font-size: 16px;
+	}
+	
+	
+}
+
+
+
+	/***********************************************\
+      SPECIFIC STYLES
+    \***********************************************/
+	.field.field--preview {
+
+		.field__input[type="text"],
+		.field__input[type="password"],
+		.field__input[type="email"],
+		textarea.field__input,
+		div.field__input {
+			@include box-shadow(none);
+            @include clearfix;
+            @include box-sizing(border-box);
+            -webkit-appearance: none;
+            border: 0;
+            border-top: 2px solid $grey-6;
+            border-bottom: 2px solid $grey-6;
+            color: #2e3137;
+            margin-bottom: 0;
+            outline: none;
+            padding: 10px;
+            padding-left: 0;
+            padding-right: 0;
+            position: relative;
+            width: 100%;
+		}
+
+
+	}
+	
+	.field.field--postcode {
+		
+		.field__input[type=text] {
+			width: 160px;
+			float: left;
+			margin-right: 4px;
+			
+			@include respond-to(desktop){
+				margin-right: 10px;
+			}
+		}
+		
+		.cta,
+		.newcta {
+			margin-top: 10px;
+			margin-bottom: 0px;
+			width: auto;
+		}
+		
+	}
+	.field + .panel {
+		margin-top: 20px;
+	}
+	
+	.field.field--title {
+		
+		width: 172px;
+		
+	}
+	
+	.field.field--dob {
+		
+		.drop-controls {
+			@include clearfix;
+			position: relative;
+		}
+		
+		.drop-group {
+			width: 100%;
+			float: left;
+			min-width: 260px;
+			
+			@include respond-to(tablet){
+				width: auto;
+			}
+			
+			@include respond-to(desktop){
+				width: auto;
+			}
+		}
+		
+		.drop {
+			display: block;
+			float: left;
+			width: 80px;
+			margin-top: 10px;
+			margin-right: 4px;
+			
+			
+			@include respond-to(desktop){
+				margin-right: 10px;
+			}
+			
+		}
+		.drop + .drop {
+			width: 80px;
+		}
+		.drop + .drop + .drop {
+			width: 90px;
+			
+			margin-right: 0;
+			
+			@include respond-to(tablet){
+				margin-right: 4px;
+			}
+			
+			@include respond-to(desktop){
+				margin-right: 10px;
+			}
+		}
+		
+		.cta,
+		.newcta {
+			margin-top: 10px;
+			width: auto;
+		}
+		
+		
+		&.field--error {
+			.cta,
+			.newcta {
+				
+				position: absolute;
+				top: 82px;
+				left: 0;
+				
+				@include respond-to(tablet, desktop){
+					position: static;
+					top: auto;
+					left: auto;
+				}
+			}
+			
+			.field__message {
+				margin-bottom: 73px;
+				
+				@include respond-to(tablet, desktop){
+					margin-bottom: 0;
+				}
+			}
+		}
+		
+	}
+
+	/***********************************************\
+      LABEL STYLES
+    \***********************************************/
+
+	fieldset.field--set {
+		
+		// Field instructions
+		label.field__label {
+	        font-family: $sans;
+	        
+			.field__conditional,
+	        .field__instructions {
+		        color: #676973;
+		        font-size: 16px;
+		        display: block;
+		        
+		        @include respond-to(desktop){
+		        	font-size: 19px;
+		        }
+		    }
+	    }
+
+	}
+
+	.field .field__conditional {
+		margin-top: 20px;
+	}
+	
+	.field .field__conditional .field__label {
+		font-family: $sans;
+	}
+
+	.field__label{
+	    font-family: $sans-bold;
+	    font-weight: normal; 
+	    display: inline-block;
+	    overflow: hidden;
+	    min-height: 22px;
+	    line-height: 22px;
+	    border: 0;
+	    font-size: 16px;
+	    padding-left: 0;
+	    margin-bottom: 0;
+	    
+		@include noselect;
+		
+	    @include respond-to(tablet) {
+	        font-size: 19px;
+	    }
+	    
+	    @include respond-to(desktop) {
+	        font-size: 19px;
+	    }
+	        
+	}
+	
+	.field__label--block {
+		display: block;
+		clear: left;
+	}
+
+	// Label options for a field
+	.field .field__option {
+    	font-size: 16px;
+    	font-family: $sans;
+
+    }
+
+    // Label Status for labels
+	.field .field__status {
+		color: $green-1;
+        font-family: $sans;
+        font-size: 12px;
+        font-weight: normal;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        
+        @include respond-to(tablet) {
+            font-size: 13px;
+        }
+        
+        @include respond-to(desktop) {
+            font-size: 13px;
+        }
+
+		// Green BCC icon
+        .icon--bcc--verified {
+            font-family: 'bcc';
+            font-size: 20px;
+            position: relative;
+            top: 3px;
+
+        }
+        
+    }
+    
+    .field--group {
+    	border: 2px solid $grey-6;
+    	padding: 20px 20px 30px;
+    	
+    	&.field--error {
+    		border-color: $error;
+    	}
+    	
+    	@include respond-to(tablet, desktop) {
+    		padding: 30px 30px 40px;
+    	}
+    }
+    
+    // Label instructions for labels (Rich text)
+    .field__instructions,
+    .field__instructions * {
+        font-family: $sans;
+        font-weight: normal;
+        font-size: 14px;
+        padding-right: 0;
+        
+        @include respond-to(tablet, desktop) {
+            font-size: 16px;
+        }
+
+    }
+    
+    .field__instructions p,
+    .field__instructions ul,
+    .field__instructions ul li {
+        margin-bottom: 0;
+    }
+
+    .field__instructions {
+        @extend %light;
+        display: block;
+    }
+    
+    .field__extra {
+    	display: block;
+    	font-size: 13px;
+    }
+	
+	.field__message {
+       
+        font-size: 14px;
+        line-height: 19px;
+        margin-top: 10px;
+        
+        @include respond-to(desktop) {
+            font-size: 16px;
+            margin-top: 15px;
+        }
+    }
+
+
+
+    /***********************************************\
+      RADIOS + CHECKBOXES STYLES
+    \***********************************************/
+	
+	// Reset for browser radios + checks
+	.field__input[type="checkbox"],
+	.field__input[type="radio"]{
+		display: inline;
+		position: absolute;
+		margin: 0;
+		height: 0;
+		width: 0;
+		opacity:0;
+		
+		&:focus{
+			outline: none;
+		    outline-width: 0;
+
+		}
+
+	}
+	
+	// This is the label which must come after
+	.field__input[type="checkbox"] 	+ .field__label,
+	.field__input[type="radio"] 	+ .field__label {
+		padding-left: 30px;
+		padding-right: 30px;
+		position: relative;
+
+	}
+
+	// Fake radio and check is the :before element of the label
+	.field__input[type="checkbox"] 	+ .field__label:before,
+	.field__input[type="radio"] 	+ .field__label:before {
+		content: "";
+		width: 20px;
+		height: 20px;
+		border: 2px solid #96969a;
+		top: 0;
+		left: 0;
+		background: $white;
+		position: absolute;
+		box-shadow: inset 0 2px 0 0 #d5d5d5;
+		-webkit-transition: all .2s;
+			-moz-transition: all .2s;
+			transition: all .2s;
+
+	}
+	
+	// Checked State
+	.field__input:checked  	+ .field__label:before {
+		border-color: #2e3137;
+		box-shadow: inset 0 0 0 0 #FFF;
+
+	}
+
+	// Disabled State
+	.field__input:disabled 	+ .field__label {
+		color: #c9c9ce;
+
+		&:before,
+		&:active:before{
+			border-color: #c9c9ce;
+			box-shadow: none;
+
+		}
+
+	}
+	
+	// Focus State
+	.field__input:focus 				+ .field__label:before,
+	.field__input[data-error]:focus  	+ .field__label:before {
+		border-color: #ff9700;
+		background: #fffbec;
+	}
+
+	
+	/***********************************************\
+      RADIOS SPECIFIC STYLES
+    \***********************************************/
+
+	.field__input[type="radio"]{
+		
+		// :before is the fake radio
+		& + .field__label:before{
+			border-radius: 50%;
+
+		}
+		
+		// :after is the dot
+		// Dot closed
+		& + .field__label:after{
+			-webkit-transition: all .2s;
+			-moz-transition: all .2s;
+			transition: all .2s;
+			content: "";
+			width: 0;
+			height: 0;
+			left: 10px;
+			top: 10px;
+			background: #2e3137;
+			position: absolute;
+			border-radius: 50%;
+			@include rotate(45deg);
+
+		}
+
+		// Dot open
+		&:checked  + .field__label:after{
+			width: 10px;
+			height: 10px;
+			left: 5px;
+			top: 5px;
+			@include rotate(0deg);
+
+		}
+
+	}
+	&.csstransitions {
+		.field__input[type="radio"] 	+ .field__label:after{
+			height: 10px;
+			width: 10px;
+			-webkit-transform: scale(0);
+			-webkit-transform-origin: 0% 0%;
+			-moz-transform: scale(0);
+			-moz-transform-origin: 0% 0%;
+			transform: scale(0);
+			transform-origin: 0% 0%;
+		}
+		.field__input[type="radio"]:checked 	+ .field__label:after{
+			top: 5px;
+			left: 5px;
+			-webkit-transform: scale(1);
+			-moz-transform: scale(1);
+			transform: scale(1);
+		}
+	}
+	
+	/***********************************************\
+      CHECKBOX SPECIFIC STYLES
+    \***********************************************/
+	
+	.field__input[type="checkbox"]{
+
+		& + .field__label:after {
+			@include rotate(-45deg);
+			-webkit-transition: all .2s;
+			-moz-transition: all .2s;
+			transition: all .2s;
+			height: 20px;
+			width: 20px;
+			position:absolute;
+			top: 0;
+			left: 10px;
+			font-family: 'bcc';
+			speak: none;
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 20px;
+			font-size: 0;
+			-webkit-font-smoothing: antialiased;
+			content: "\e603";
+		}
+
+		&:checked + .field__label:after,
+		.field__label--checked:after{
+			@include rotate(0deg);
+			
+			-webkit-transition: all .2s;
+			-moz-transition: all .2s;
+			transition: all .2s;
+			height: 20px;
+			width: 20px;
+			left: 4px;
+			font-size: 12px;
+		}
+	}
+	
+	.field--large .field__input[type="checkbox"]{
+		& + .field__label {
+			height: 30px;
+		}
+		
+		& + .field__label:before {
+			height: 30px;
+			width: 30px;
+		}
+		
+		& + .field__label:after {
+			line-height: 30px;
+		}
+		
+		&:checked + .field__label:after {
+			height: 30px;
+			width: 30px;
+			line-height: 30px;
+			left: 7px;
+			font-size: 18px;
+		}
+	}
+
+	/***********************************************\
+      TEXTBOX SPECIFIC STYLES
+    \***********************************************/
+
+	.field .field__input[type="text"],
+	.field .field__input[type="email"],
+	.field .field__input[type="password"],
+	.field div.field__input,
+	.field textarea.field__input {
+		@include box-shadow(inset $grey-6 0 2px 0 0);
+		@include box-sizing(border-box);
+		
+        -webkit-appearance: none;
+        outline: none;
+        border-radius: 0;
+        height: 43px;
+        padding: 10px;
+        margin-bottom: 0;
+        margin-top: 0;
+        width: 100%;
+        border-width: 2px;
+        border-style: solid;
+        border-color: $grey-hairline;
+        background-color: $white;
+
+        &:focus {
+        	@include box-shadow(inset $white 0 0 0 0);
+            border-color: $accessibility;
+            background: $white;
+        }
+        
+        &:focus:invalid {
+            color: $text;
+
+        }	
+	}
+	
+	.field textarea.field__input,
+	div.field__input {
+		height: 120px;
+		max-height: 320px;
+		overflow: auto;
+		resize: vertical;
+	}
+	
+	.field__input--toupper{
+		text-transform: uppercase;
+	}
+
+	/***********************************************\
+      THE LOBOTOMISED OWL SELECTORS  (* ~ *)
+      ----------------------------------------------
+      AKA - Spacing Rules
+    \***********************************************/
+	
+	/* Field spacing rules
+	 */
+	* ~ div.field,
+	* ~ fieldset.field,
+	.field ~ p {
+		margin-top: 30px;
+		@include respond-to(tablet, desktop) {
+			margin-top: 40px;
+		}
+	}
+
+	/* Nested field spacing
+	 */
+	*.field > * ~ .field {
+		margin-top: 20px;
+		@include respond-to(tablet, desktop) {
+			margin-top: 30px;
+		}
+	}
+
+	/* Spacing between 2 inputs: 20px;
+	 */
+	.field .field__input ~ .field__input,						// Adjacent inputs (password box)
+	.field .field__input[type="text"] 		~ .field__label,
+	.field .field__input[type="email"] 		~ .field__label,	// Text input and ALL other labels (~ will find the label even
+	.field .field__input[type="password"] 	~ .field__label {	// when a checkbox comes before the label)
+		margin-top: 20px;
+	}
+	
+	/* Spacing between any input and its
+	 * corrosponding label: 10px;
+	 */
+	.field .field__label ~ .field__label,						// Radio or check adjacent to another radio or check
+	.field .field__label + .field__input[type="text"], 	
+	.field .field__label + .field__input[type="email"], 		// Space between text input and its label
+	.field .field__label + .field__input[type="password"], 		// Space between password input and its label
+	.field .field__label + .drop,
+	.field .field__label + textarea.field__input {				// Space between textarea and its label
+		margin-top: 10px;
+	}
+
+	/***********************************************\
+      ERROR SPECIFIC STYLES
+    \***********************************************/
+	
+	.field__message--error {
+		display: none;
+	}
+
+	// LABELS
+	.field--error > .field__label{
+		color: $error;
+	}
+
+	// CHECKS AND RADIOS
+	&[data-error] .field__input  + .field__label{
+		 &:before{
+		 	border-color: $error;
+		 	//background: #fff6f6;
+		 	box-shadow: none;
+		 }
+	}
+	
+	// TEXT INPUTS
+	.field--error > .field__input {
+
+		&[type="text"],
+		&[type="email"],
+		&[type="password"]{
+			background-image: url("../images/form__item--string--error.png");
+	        background-position: top right;
+	        background-repeat: no-repeat;
+        }
+        &:focus {
+        	background-image: none;
+        }
+            
+		&[type="text"],
+		&[type="email"],
+		&[type="password"],
+		& + .field__label:before{
+		 	border-color: $error;
+		 	box-shadow: none;
+		}
+	}
+	
+	.field--error > textarea.field__input {
+		border-color: $error;
+	 	box-shadow: none;
+	}
+
+	// DROPDOWN ERROR
+	.field--error .drop {
+		.drop__background:before {
+			border-color: $error;
+		}
+	}
+
+	// ERROR PANELS
+	.field--error > .field__message--error {
+		font-family: $sans-bold;
+		display: block;
+		color: $error;
+	}
+
+	// GROUP ERRORS
+	.field--group.field--error + .field__message--error {
+		font-family: $sans-bold;
+		display: block;
+		color: $error;
+		@include respond-to(tablet, desktop) {
+			max-width: 480px;
+		}
+	}
+   
+
+	/***********************************************\
+      DROPDOWN SPECIFIC STYLES
+    \***********************************************/
+	.drop {
+		position: relative;
+		line-height: 43px;
+		overflow: hidden;
+		
+		select + .drop__background:before {
+			position: absolute;
+			content: '';
+			height: 43px;
+			width: 100%;
+			border: 2px solid #ddd;
+			box-shadow: 0 1px 0 0 #eee;
+			border-radius: 3px;
+			-webkit-transition: all .2s;
+			-moz-transition: all .2s;
+			transition: all .2s;
+			top: 0;
+			background: $white;
+		}
+		
+		select + .drop__background {
+			font-size: 0;
+			height: 0;
+			width: 0;
+		}
+		
+		select {
+			background: none;
+			border: 0;
+			
+			margin-bottom: 0;
+			padding: 2px 10px;
+			-webkit-appearance: none;
+		    -moz-appearance: none;
+		    text-indent: 1px;
+		    text-overflow: '';
+		    appearance: none;
+		    outline: none;
+		    position: relative;
+		    z-index: 100;
+		    height: 40px;
+		    line-height: 30px;
+		    width: 100%;
+		    width: -moz-calc(100% + 20px);
+		    width: calc(100% + 20px);
+		    -moz-appearance:window;
+		    
+		    @media \0screen\,screen\9 {
+		    	line-height: 30px;
+		    	width: 110%;
+		    	margin-top: -10px;
+		    	margin-bottom: 10px;
+		    }
+			
+			&::-ms-expand {
+			    display: none;
+			}
+			
+			
+			&:focus{
+				background: none;
+				outline: none;
+		    	outline-width: 0;
+			}
+			
+			&:focus + .drop__background:before{
+				border-color: #ff9700;
+			}
+			
+			+ .drop__background:after {
+				color: #96969a;
+				height: 20px;
+				width: 20px;
+				position:absolute;
+				top: 12px;
+				right: 12px;
+				text-align: center;
+				font-family: 'bcc';
+				speak: none;
+				font-style: normal;
+				font-weight: normal;
+				font-variant: normal;
+				text-transform: none;
+				line-height: 20px;
+				font-size: 14px;
+				-webkit-transition: all .2s;
+				-moz-transition: all .2s;
+				transition: all .2s;				
+				@include rotate(0deg);
+				filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+				-webkit-font-smoothing: antialiased;
+				content: "\e60c";
+			}
+		}
+	}
+
+	/***********************************************\
+      GUIDANCE STYLES
+    \***********************************************/
+
+	.guidance {
+	    @include clearfix;
+	    font-size: 16px;
+	    line-height: 22px;
+	    margin-top: 10px;
+	    margin-bottom: 15px;
+	    padding: 0 15px;
+	    position: relative;
+	    border-left: 6px solid $grey-6;
+	    
+	    .guidance__status {
+	        margin-left: 5px;
+	        
+	        .guidance__status__icon {
+	            font-size: 16px;
+	        }
+	        
+	        &.guidance__status--affirmed {
+	            color: $green-1;
+	        }
+	        
+	        &.guidance__status--rejected {
+	        	// NEW RED COLOR FOR THIS ONLY
+	            color: #a70909;
+	        }
+	    }
+	}

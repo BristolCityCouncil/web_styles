@@ -1,0 +1,9 @@
+<div class="drop {{#if block}}drop--block{{/if}}">
+    <select id="{{id}}"{{#if required}} required{{/if}}>
+        <option value="def" selected="selected">{{#if placeholder}}{{placeholder}}{{else}}Please select...{{/if}}</option>
+        {{#each options}}
+        	<option value="{{value}}">{{label}}</option>
+        {{/each}}
+    </select>
+    <div class="drop__background"></div>
+</div>

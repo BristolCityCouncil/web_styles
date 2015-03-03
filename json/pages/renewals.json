@@ -1,0 +1,37 @@
+{
+	"panels": {
+		"affirm": {
+			"modifiers": "panel--affirm"
+		}
+	},
+	"intro": {
+
+		
+	},
+	"step1": {
+
+		"stepheader__current": "1",
+		"stepheader__total": "3",
+		"stepheader__title": "Renew your residents' parking permit",
+		"stepheader__subtitle": "Enter your permit details"
+	},
+	"step2": {
+
+		"stepheader__current": "2",
+		"stepheader__total": "3",
+		"stepheader__title": "Renew your residents' parking permit",
+		"stepheader__subtitle": "Update your permits"
+	},
+	"step3": {
+
+		"stepheader__current": "3",
+		"stepheader__total": "3",
+		"stepheader__title": "Renew your residents' parking permit",
+		"stepheader__subtitle": "Check your order"
+	},
+	"thanks": {
+		
+	}
+
+	
+}

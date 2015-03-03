@@ -1,0 +1,50 @@
+{{#with notes}}
+<div class="wr__notes">
+
+ 
+    <div class="wr__notes__inner">
+        <p class="wr__title">
+            Usage notes
+        </p>
+        {{#if usage}}
+            <p>
+                {{ usage }}
+            </p>
+        {{else}}        
+            <p>
+                This is an empty usage note
+            </p>
+       {{/if}}
+    </div>
+     
+
+
+    {{# developer}}
+    <div class="wr__notes__inner">
+        <p class="wr__title">
+            Developer notes
+        </p>
+        
+        <p>
+            {{ . }}
+        </p>
+        
+    </div>
+    {{/ developer}}
+
+   
+
+     {{# content }}
+    <div class="wr__notes__inner">
+        <p class="wr__title">
+            Content notes
+        </p>
+        
+        <p>
+            {{ . }}
+        </p>
+       
+    </div>
+     {{/ content }}
+</div>
+{{/with}}

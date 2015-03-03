@@ -1,0 +1,70 @@
+{
+	"icons": {
+		"pattern": "Icons",
+
+		"notes": {
+			"developer": [
+				"This is a developer note"
+			],
+			"usage": [
+				"This is a usage note"
+			]
+		}
+	},
+	"icons-bcc": {
+		"pattern": "BCC",		
+
+		"notes": {
+			"developer": [
+				"This is a developer note"
+			],
+			"usage": [
+				"This is a usage note"
+			]
+		}
+	},
+	"palette": {
+		"pattern": "Colour Palette",		
+
+		"notes": {
+			"developer": [
+				"This is a developer note"
+			],
+			"usage": [
+				"This is a usage note"
+			]
+		},
+		"palettes": [
+			[
+				{
+					"modifier": "bcc-red",
+					"title": "BCC Red",
+					"color": "#bc0031",
+					"paragraph": "Used minimally for brand elements only. Colour does not signify any category or state."
+				},
+				{
+					"modifier": "accessibility",
+					"title": "Accessibility",
+					"color": "#ff9600",
+					"paragraph": "Focus color"
+				}
+			],
+			[
+				{
+					"modifier": "warning",
+					"title": "Warning",
+					"color": "#ffcc00",
+					"list": [
+						"High priority warning (use&nbsp;sparingly)"
+					]
+				},
+				{
+					"modifier": "error",
+					"title": "Error",
+					"color": "#ea0000",
+					"paragraph": "Error highlight (use&nbsp;sparingly)"
+				}
+			]
+		]
+	}
+}

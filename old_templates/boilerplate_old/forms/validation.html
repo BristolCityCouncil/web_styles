@@ -1,0 +1,18 @@
+<form class="form">
+	<div class="open-validation">
+		<div class="open-validation__title">There was a problem with the information you entered:</div>
+		<ul class="open-validation__errorlist">
+			<li class="open-validation__error" data-ov-target="#goingtoerror" data-ov-individual="true" data-ov-error="This is the custom error">
+				<a href="#goingtoerror">That box is going to show an error</a>
+			</li>
+			<li class="open-validation__error open-validation__error--hidden" data-ov-target="#goingtoerror2" data-ov-individual="true" data-ov-error="This is the hidden custom error">
+				<a href="#goingtoerror2">That box is going to show an error but its hidden!!</a>
+			</li>
+		</ul>
+	</div>
+	<div class="field">
+		<label class="field__label" for="goingtoerror">This is going to error</label>
+		<input class="field__input" name="goingtoerror" id="goingtoerror" type="text" />
+		<input class="field__input" name="goingtoerror2" id="goingtoerror2" type="text" />
+	</div>
+</form>

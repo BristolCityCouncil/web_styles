@@ -1,0 +1,46 @@
+<!-- START -->
+	<h3>Radios</h3>
+	<div class="bs-docs-example">
+		<form class="form js--validate">
+		
+			<fieldset class="form__item form__item--group">
+			   	<legend class="form__item__label">
+			   		Inline group of radio items
+			   	</legend>
+				<label for="radiogroups1" class="form__item__label form__item__label--inline form__item__label--group">
+					<input checked id="radiogroups1" class="form__item__field form__item__field--radio" name="radiogroups2" type="radio" value="One" />Aye
+				</label>
+			  	<label for="radiogroups2" class="form__item__label form__item__label--inline form__item__label--group">
+			  		<input id="radiogroups2" class="form__item__field form__item__field--radio" name="radiogroups2" type="radio" value="Two" />Naw
+			  	</label>
+			</fieldset>
+			
+			
+			   	<legend class="form__item__label">
+			   		Group of radio items 
+			   	</legend>
+			<div class="form__item form__item--error">
+				<label for="radios1" class="form__item__label form__item__label--group">
+					<input id="radios1" class="form__item__field form__item__field--radio" required="required" name="radios" type="radio" value="One" /> radio error
+					<span class="extra">this option has some extra guidance or notes on it</span>
+				</label>
+			</div>
+			<div class="form__item">
+				<label for="radios1a" class="form__item__label form__item__label--group">
+					<input id="radios1a" tabindex="0" class="form__item__field form__item__field--radio" required="required" name="radios" type="radio" value="One" /> radio
+					<span class="extra">this option has some extra guidance or notes on it</span>
+				</label>
+			</div>
+			<div class="form__item">
+				<label for="radios1b" class="form__item__label form__item__label--group">
+					<input id="radios1b" disabled="disbaled" class="form__item__field form__item__field--radio" required="required" name="radios" type="radio" value="One" /> radio disabled
+					<span class="extra">this option has some extra guidance or notes on it</span>
+				</label>
+			</div>
+			</fieldset>
+		</form>
+	</div>
+	<pre class="prettyprint linenums">&lt;div class="tbc"&gt;
+   ...
+&lt;/div&gt;</pre>
+	<!-- END -->

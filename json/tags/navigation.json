@@ -1,0 +1,129 @@
+{
+	"stepheader": {
+		"id": 101,
+		"pattern": "Step header",
+
+		"stepheader__current": "1",
+		"stepheader__total": "5",
+		"stepheader__title": "Report missed collection",
+		"stepheader__subtitle": "Your recent collections",
+
+		
+		"notes": {
+			"usage": [
+				"Use at the top of transaction pages to show the user where they are in the transaction process."
+			]
+		}
+	},
+
+	"list": {
+		"id": 102,
+		"pattern": "List",
+
+		"items": [
+			{
+				"title": "Landlord services", 
+				"copy": "Including repairs, maintenance, tenancy issues, caretaking and neighbours"
+
+			},
+			{
+				"title": "Rehousing", 
+				"copy": "Including repairs, maintenance, tenancy issues, caretaking and neighbours"
+
+			},
+			{
+				"title": "Housing benefits and rent", 
+				"copy": "Including repairs, maintenance, tenancy issues, caretaking and neighbours"
+
+			},
+			{
+				"title": "Accessible homes", 
+				"copy": "Including repairs, maintenance, tenancy issues, caretaking and neighbours"
+
+			},
+			{
+				"title": "Private housing", 
+				"copy": "Including repairs, maintenance, tenancy issues, caretaking and neighbours"
+			}
+		],
+
+		"notes": {
+			"usage": [
+				"Use for in page navigation on deeper pages where the options may need more explanation as at this level you are getting into more finer detail."
+			]
+		}
+	},
+
+	"tiles": {
+		"id": 103,
+		"pattern": "Tiles",
+
+		"items": [
+			{
+				"title": "Housing"
+
+			},
+			{
+				"title": "Bins, recycling and litter"
+
+			},
+			{
+				"title": "Parks, libraries and leisure"
+
+			},
+			{
+				"title": "Council tax"
+
+			},
+			{
+				"title": "Crime and antisocial behaviour"
+			},
+			{
+				"title": "Transport, roads and parking"
+			}
+
+		],
+
+		"notes": {
+			"usage": [
+				"Use for in page navigation on landing pages, or where there are a lot of options that you want to bring into a single page view"
+			]
+		}
+	},
+
+	"backlink": {
+		"id": 104,
+		"pattern": "Backlink",
+
+		"title": "Complaints and feedback",
+
+		"notes": {
+			"usage": [
+				"Use on pages where users have to go a few levels deep to find what they need. This will allow them to get back to higher level pages incase they went into the wrong section."
+			]
+		}
+	},
+
+	"tabs": {
+		"id": 105,
+		"pattern": "Tabs",
+
+		"items": [
+			{
+				"id": 101,
+				"title": "Tab 1", 
+				"copy": "Lorem ipsum [tab-1] dolor sit amet, consectetur adipiscing elit."
+			},
+			{
+				"id": 102,
+				"title": "Tab 2", 
+				"copy": "Lorem ipsum [tab-2] dolor sit amet, consectetur adipiscing elit."
+			}
+		],
+
+		"notes": {
+			
+		}
+	}
+	
+}

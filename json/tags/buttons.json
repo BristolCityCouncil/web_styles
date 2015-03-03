@@ -1,0 +1,121 @@
+{
+	"cta-link": {
+		"id": 101,
+		"pattern": "Standard CTA Link",
+		"label": "Standard button",
+		"notes": {
+			
+		}
+	},
+	"cta-button": {
+		"id": 102,
+		"pattern": "Standard CTA Button",
+		"label": "Standard button",
+		"notes": {
+			
+		}
+	},
+	"cta-link-with-icon": {
+		"id": 103,
+		"pattern": "Standard CTA Link with Icon",
+		"label": "Download Icon",
+		"modifiers": "newcta--icon newcta--download",
+		"notes": {
+			
+		}
+	},
+	"cta-button-with-icon": {
+		"id": 104,
+		"pattern": "Standard CTA Button with Icon",
+		"label": "Download Icon",
+		"modifiers": "newcta--icon newcta--download",
+		"notes": {
+			
+		}
+	},
+	
+
+
+	"ctaprimary-link": {
+		"id": 201,
+		"pattern": "Primary CTA Link",
+		"label": "Primary button",
+		"modifiers": "newcta--icon newcta--primary newcta--next",
+		"notes": {
+			
+			"developer": "Always has an icon. You may modify an icon by replacing cta--next with cta--buspass."
+		}
+	},
+	"ctaprimary-button": {
+		"id": 202,
+		"pattern": "Primary CTA Button",
+		"label": "Primary Button",
+		"modifiers": "newcta--icon newcta--primary newcta--next",
+		"notes": {
+			
+			"developer": "Always has an icon. You may modify an icon by replacing cta--next with cta--buspass."
+		}
+	},
+	"ctaprimary-link-with-icon": {
+		"id": 203,
+		"pattern": "Primary CTA Link with Icon",
+		"label": "Download Calendar",
+		"small": "(PDF 35Mb)",
+		"modifiers": "newcta newcta--icon newcta--primary newcta--download",
+		"notes": {
+			
+		}
+	},
+	"ctaprimary-button-with-icon": {
+		"id": 204,
+		"pattern": "Primary CTA Button with Icon",
+		"label": "Download Calendar",
+		"small": "(PDF 35Mb)",
+		"modifiers": "newcta newcta--icon newcta--primary newcta--download",
+		"notes": {
+			
+		}
+	},
+	
+
+	"cta-group": {
+		"id": 301,
+		"pattern": "CTA Group",
+		"label": "Get parking permits",
+		"second_label": "Just visitors permits",
+		"modifiers": "newcta--icon newcta--primary newcta--next",
+		"notes": {
+			
+		}
+	},
+
+	"ctaprimary-twin": {
+		"id": 401,
+		"pattern": "Primary CTA Twin Buttons",
+		"label1": "Download 1",
+		"label2": "Download 2",
+		"small1": "(PDF 35Mb 1)",
+		"small2": "(PDF 35Mb 2)",
+		"notes": {
+			
+		}
+	},
+
+	"cta-button-disabled": {
+		"id": 501,
+		"pattern": "CTA Button Disabled",
+		"label": "Disabled CTA button",
+		"notes": {
+			
+		}
+	},
+
+	"cta-link-disabled": {
+		"id": 502,
+		"pattern": "CTA Link Disabled",
+		"label": "Disabled CTA link",
+		"notes": {
+			
+		}
+	}
+}

@@ -1,0 +1,452 @@
+{{> chrome/header}}
+<div class="portlet-body">
+
+
+
+	
+		
+			
+			
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+				
+
+				
+					
+					
+						
+
+
+	
+
+		
+
+ 
+ 
+ 
+
+ 
+
+ 
+
+    
+
+
+
+
+
+
+
+
+    
+
+<div class="row-fluid">
+	<div class="span12">
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- forms -->
+
+
+
+
+
+
+<!--  START stepHeader -->
+<header class="step-header">
+	<p class="step-header__title">
+  		Get residents or visitors parking permits<span class="step-header__title__seperator">:</span> 
+  		<span class="step-header__title__steps">
+  			Step 1 of 6
+  		</span>
+  	</p>
+	<h1 class="step-header__subtitle">
+  		Permit details
+	</h1>
+</header>
+<!--  END stepHeader -->
+		
+		<ul>
+			<li>
+				We've put your vehicles on the permits to give the lowest total cost
+			</li>
+			<li>
+				You can change which vehicle goes on which permit but the cost may increase
+			</li>
+			<li>
+				You can have two cars on one permit. This is a flexible option if you don't need to park both on the street at the same time
+			</li>
+			<li>
+				First permit cost depends on the highest vehicle tax band
+			</li>
+			<li>
+				Syecond and third permit costs are fixed
+			</li>
+		</ul>
+		
+		<p>
+			<!-- <span class="icon icon--bcc icon--bcc--left"></span> -->
+			<a href="" title="Change or update vehicles">
+				 Change or update vehicles
+			</a>
+		</p>
+		
+			<form class="form">
+				<div id="parking__permit-details" class="row-fluid">
+					
+					<!-- START .permit -->
+					<div class="permit permit--additional js--equalise-height span4" style="height: 440px;">
+						<div class="permit__meta js--equalise-height" style="height: 62px;">
+							<h2 class="permit__meta__title">
+								First permit
+							</h2>
+							<p class="permit__meta__intro">
+								Someone has already bought this permit for your address.
+							</p>
+						</div>
+					</div>
+					<!-- END .permit -->
+					
+					<!-- START .permit -->
+					<div class="permit js--equalise-height span4" style="height: 440px;">
+						<div class="permit__meta js--equalise-height" style="height: 62px;">
+							<h2 class="permit__meta__title">
+								Second permit
+							</h2>
+							<p class="permit__meta__intro">
+								Cost depends on the tax band of your vehicles
+							</p>					
+						</div>
+						<div class="permit__item permit__item--affirm">
+							<strong>EF03 BYW</strong> 
+							<span>
+								Class C
+							</span> 
+							<button class="cta cta--link" title="remove vehicle $reg from permit $permit">
+								Remove
+							</button>
+						</div>
+						<div class="permit__item">
+							<label class="hidden" for="sav2">
+						    	Title
+						    </label>
+						    <div class="uniform__select--block uniform" id="uniform-sav2" style="width: 249.515625px;"><span style="width: 206px; -webkit-user-select: none;">Select your vehicle</span><select required="" class="form__item__field form__item__field--select form__item__field--select--block" name="sav2" id="sav2">
+						    	<option selected="selected">Select your vehicle</option>
+						    	<option>Mr</option>
+						    	<option>Mrs</option>
+						    	<option>Doctor</option>
+						    </select></div>
+						</div>
+						
+						<!--  -->
+						<fieldset class="form__item form__item--group">
+						   	<legend class="form__item__label">
+						   		Choose permit duration
+						   		<!-- <span class="form__item__label__instructions">
+									Registered keeper name as printed on your V5C
+								</span>-->
+						   	</legend>
+						   	
+							<label for="radios1" class="form__item__label form__item__label--group"><span class="wrap">
+								</span><div class="uniform__radio uniform" id="uniform-radios1"><span class="checked"><input checked="" id="radios1" class="form__item__field form__item__field--radio" name="group0" type="radio" value="FREE"></span></div><span class="wrap">1 year </span><strong>   £1000</strong><span class="wrap">
+							</span></label>
+						
+						  	<label for="radios2" class="form__item__label form__item__label--group"><span class="wrap">
+						  		</span><div class="uniform__radio uniform" id="uniform-radios2"><span><input id="radios2" class="form__item__field form__item__field--radio" name="group0" type="radio" value="200"></span></div><span class="wrap">3 months </span><strong>Free   </strong><span class="wrap">
+						  		
+						  	</span></label>
+						  	
+						  	
+						</fieldset><!--/form__item-->
+						
+						<!-- form__item--disabled 
+						<fieldset class="form__item form__item--group">
+						   	<legend class="form__item__label">
+						   		Choose permit duration
+						   	</legend>
+						   	
+							<label for="radios5" class="form__item__label form__item__label--group">
+								<input id="radios5" class="form__item__field form__item__field--radio" name="group3" type="radio" value="1000" />1 year <strong>&pound;201</strong>
+							</label>
+						
+						  	<label for="radios6" class="form__item__label form__item__label--group">
+						  		<input checked id="radios6" class="form__item__field form__item__field--radio" name="group3" type="radio" value="2000" />3 months <strong>&pound;202</strong>
+						  		
+						  	</label>
+						  	
+						  	
+						</fieldset>-->
+							
+							
+						
+					</div>
+					<!-- END .permit -->
+					
+					
+					<!-- START .permit -->
+					<div class="permit js--equalise-height span4" style="height: 440px;">
+						<div class="permit__meta js--equalise-height" style="height: 62px;">
+							<h2 class="permit__meta__title">
+								Second permit
+							</h2>
+							<p class="permit__meta__intro">
+								Cost depends on the tax band of your vehicles
+							</p>					
+						</div>
+						<div class="permit__item permit__item--affirm">
+							<strong>EF03 BYW</strong> 
+							<span>
+								Class C
+							</span> 
+							<button class="cta cta--link" title="remove vehicle $reg from permit $permit">
+								Remove
+							</button>
+						</div>
+						<div class="permit__item">
+							<label class="hidden" for="sav2">
+						    	Title
+						    </label>
+						    <div class="uniform__select--block uniform" id="uniform-sav2" style="width: 249.515625px;"><span style="width: 206px; -webkit-user-select: none;">Select your vehicle</span><select required="" class="form__item__field form__item__field--select form__item__field--select--block" name="sav2" id="sav2">
+						    	<option selected="selected">Select your vehicle</option>
+						    	<option>Mr</option>
+						    	<option>Mrs</option>
+						    	<option>Doctor</option>
+						    </select></div>
+						</div>
+						
+						<!--  -->
+						<fieldset class="form__item form__item--group">
+						   	<legend class="form__item__label">
+						   		Choose permit duration
+						   		<!-- <span class="form__item__label__instructions">
+									Registered keeper name as printed on your V5C
+								</span>-->
+						   	</legend>
+						   	
+							<label for="radios3" class="form__item__label form__item__label--group"><span class="wrap">
+								</span><div class="uniform__radio uniform" id="uniform-radios3"><span class="checked"><input checked="" id="radios3" class="form__item__field form__item__field--radio" name="group1" type="radio" value="FREE"></span></div><span class="wrap">1 year </span><strong>   £1000</strong><span class="wrap">
+							</span></label>
+						
+						  	<label for="radios4" class="form__item__label form__item__label--group"><span class="wrap">
+						  		</span><div class="uniform__radio uniform" id="uniform-radios4"><span><input id="radios4" class="form__item__field form__item__field--radio" name="group1" type="radio" value="200"></span></div><span class="wrap">3 months </span><strong>Free   </strong><span class="wrap">
+						  		
+						  	</span></label>
+						  	
+						  	
+						</fieldset><!--/form__item-->
+						
+						<!-- form__item--disabled 
+						<fieldset class="form__item form__item--group">
+						   	<legend class="form__item__label">
+						   		Choose permit duration
+						   	</legend>
+						   	
+							<label for="radios5" class="form__item__label form__item__label--group">
+								<input id="radios5" class="form__item__field form__item__field--radio" name="group3" type="radio" value="1000" />1 year <strong>&pound;201</strong>
+							</label>
+						
+						  	<label for="radios6" class="form__item__label form__item__label--group">
+						  		<input checked id="radios6" class="form__item__field form__item__field--radio" name="group3" type="radio" value="2000" />3 months <strong>&pound;202</strong>
+						  		
+						  	</label>
+						  	
+						  	
+						</fieldset>-->
+							
+							
+						
+					</div>
+					<!-- END .permit -->
+				</div><div class="row-fluid">	<div class="span12">		<div class="total">Total: <strong>Free</strong></div>	</div></div>
+				
+				
+				
+				<p>
+					<a href="#" class="cta cta--icon cta--primary cta--next">
+						Finish and pay
+					</a>
+				</p>
+				<p>
+					or 
+					<a href="#">
+						<strong>Just visitors permits</strong>
+					</a>
+				</p>
+	    		
+			</form>			
+		
+	
+
+	</div>
+</div>
+
+	
+	
+
+					
+				
+			
+		
+	
+	
+
+
+
+	</div>
+{{> chrome/footer}}

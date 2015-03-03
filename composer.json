@@ -1,0 +1,7 @@
+{
+    "require": {
+        "mustache/mustache": "~2.5",
+        "zordius/lightncandy": "dev-master",
+        "symfony/class-loader": "2.*"
+    }
+}

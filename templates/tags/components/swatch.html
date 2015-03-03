@@ -1,0 +1,19 @@
+<div class="swatch swatch--{{modifier}}">
+	<div class="swatch__title">
+		<strong>
+			{{title}}
+		</strong>
+		<em>{{color}}</em>
+	</div>
+	<div class="swatch__copy">
+            {{# paragraph}}
+                  <p>{{{ . }}}</p>
+            {{/ paragraph}}
+		<ul>
+                  {{# list}}
+			  <li>{{{ . }}}</li>
+                  {{/ list}}
+		</ul>
+	</div>
+</div>
+

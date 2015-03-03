@@ -1,0 +1,206 @@
+{
+	"panel": {
+		"pattern": "Panel",
+		"panel__title": "Panel",
+		"panel__copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ex veritatis sit eos, id iure, qui.",
+		"notes": {
+			"developer": [
+				"This is a developer note"
+			],
+			"usage": [
+				"This is a usage note"
+			]
+		}
+	},
+	
+	
+	"errors": {
+		"pattern": "Panel Errors",
+		"panel__title": "We have a few errors",
+		"modifiers": "panel--errors",
+		"notes": {
+			"developer": [
+				"This is a developer note"
+			],
+			"usage": [
+				"This is a usage note"
+			]
+		}
+	},
+
+	"affirm": {
+		"pattern": "Panel Affirm",
+		"panel__title": "Whatever updated",
+		"panel__copy": "Lyorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		"modifiers": "panel--affirm",
+		"notes": {
+			"developer": [
+				"This is a developer note"
+			],
+			"usage": [
+				"This is a usage note"
+			]
+		}
+	},
+
+	"reverse": {
+		"pattern": "Panel Affirm Date",
+		"panel__title": "Delivery by",
+		"panel__copy": "Weds, 15th January between 7am and 6pm",
+		"modifiers": "panel--affirm panel--date",
+		"notes": {
+			"developer": [
+				"This is a developer note"
+			],
+			"usage": [
+				"This is a usage note"
+			]
+		}
+	},
+
+	"extra": {
+		"pattern": "Panel Affirm Extra",
+		"panel__title": "Your selected address",
+		"panel__copy": "19 Redland Road, Bristol BS6 5AA",
+		"modifiers": "panel--affirm panel--date",
+		"notes": {
+			"developer": [
+				"This is a developer note"
+			],
+			"usage": [
+				"This is a usage note"
+			]
+		}
+	},
+
+	"feedback": {
+		"pattern": "Panel Feedback",
+		"panel__title": "Is this page helpful and free from errors?",
+		"notes": {
+			"developer": [
+				"This is a developer note"
+			],
+			"usage": [
+				"This is a usage note"
+			]
+		}
+	},
+
+	"warning": {
+		"pattern": "Panel Warning",
+		"panel__title": "This is a warning about some kind of liability on your part or something like that.",
+		"notes": {
+			"developer": [
+				"This is a developer note"
+			],
+			"usage": [
+				"This is a usage note"
+			]
+		}
+	},
+
+	"1of2": {
+		"pattern": "Panel 1of2",
+		"panel__title1": "Email updated",
+		"panel__copy1": "justine.longnamerson@emailaddress.com",
+		"panel__title2": "and",
+		"panel__copy2": "234 Some Street, Somewhere, Some City, G12 2ND",
+		"notes": {
+			"developer": [
+				"This is a developer note"
+			],
+			"usage": [
+				"This is a usage note"
+			]
+		}
+	},
+	"slab": {
+		"pattern": "Slab",
+		"panel__title": "Make your next visit easier & quicker",
+		"panel__copy": "Just fill in 2 more pieces of information about yourself to create an account that will remember all your details next time you come back.",
+		"notes": {
+			"developer": [
+				"This is a developer note"
+			],
+			"usage": [
+				"This is a usage note"
+			]
+		}
+	},
+	"outline": {
+		"pattern": "Slab Outline",
+		"panel__title": "Make your next visit easier & quicker",
+		"panel__copy": "Just fill in 2 more pieces of information about yourself to create an account that will remember all your details next time you come back.",
+		"notes": {
+			"developer": [
+				"This is a developer note"
+			],
+			"usage": [
+				"This is a usage note"
+			]
+		}
+	},
+	"white-outline": {
+		"pattern": "Slab White Outline",
+		"panel__title": "Make your next visit easier & quicker",
+		"panel__copy": "Just fill in 2 more pieces of information about yourself to create an account that will remember all your details next time you come back.",
+		"notes": {
+			"developer": [
+				"This is a developer note"
+			],
+			"usage": [
+				"This is a usage note"
+			]
+		}
+	},
+	"primary": {
+		"pattern": "Slab Primary",
+		"panel__title": "Make your next visit easier & quicker",
+		"panel__copy": "Just fill in 2 more pieces of information about yourself to create an account that will remember all your details next time you come back.",
+		"notes": {
+			"developer": [
+				"This is a developer note"
+			],
+			"usage": [
+				"This is a usage note"
+			]
+		}
+	},
+	"additional": {
+		"pattern": "Slab Additional",
+		"panel__title": "Add another car",
+		"notes": {
+			"developer": [
+				"This is a developer note"
+			],
+			"usage": [
+				"This is a usage note"
+			]
+		}
+	},
+	"alert-warning": {
+		"pattern": "Alert Warning",
+		"panel__title": "bcc-boilerplate is temporarily unavailable.",
+		"notes": {
+			"developer": [
+				"This is a developer note"
+			],
+			"usage": [
+				"This is a usage note"
+			]
+		}
+	},
+	"alert-error": {
+		"pattern": "Alert Error",
+		"panel__title": "bcc-boilerplate is temporarily unavailable.",
+		"notes": {
+			"developer": [
+				"This is a developer note"
+			],
+			"usage": [
+				"This is a usage note"
+			]
+		}
+	}
+}
+

@@ -1,0 +1,139 @@
+<h3>Basic Error Validation</h3>
+
+<div class="field" id="f1" required>
+	<label class="field__label field__label--block" for="fi1">Delegate</label>
+	<input class="field__input" id="fi1" type="text">
+</div>
+<div class="field" id="f1" data-validate-required-message="This is a custom required message">
+	<label class="field__label field__label--block" for="fi1">Bubble</label>
+	<input class="field__input" id="fi1" type="text" required>
+    <div class="field__message field__message--error">My Message</div>
+</div>
+
+<hr/>
+
+<div class="field" required>
+    <label class="field__label field__label--block" for="drop">Delegate</label>
+    <div class="drop">
+        <select id="d1">
+            <option selected="selected">Please select...</option>
+            <option value="one">one</option>
+            <option value="two">two</option>
+            <option value="three">three</option>
+        </select>
+        <div class="drop__background"></div>
+    </div>
+</div>
+
+<div class="field" data-validate-required-message="This is a custom required message">
+    <label class="field__label field__label--block" for="drop">Bubble</label>
+    <div class="drop">
+        <select id="d1" required>
+            <option selected="selected">Please select...</option>
+            <option value="one">one</option>
+            <option value="two">two</option>
+            <option value="three">three</option>
+        </select>
+        <div class="drop__background"></div>
+    </div>
+</div>
+
+<hr/>
+
+
+<fieldset class="field field--set" required>
+    <legend class="field__label field__label--block">
+        Delegate
+    </legend>
+    <input class="field__input" type="checkbox" name="testing" id="btestcheck">
+    <label class="field__label field__label--block" for="btestcheck">
+        Apple
+    </label>
+    <input class="field__input" type="checkbox" value="carrot" name="btesting" id="btestcheck2">
+    <label class="field__label field__label--block" for="btestcheck2">
+        Carrot
+        <span class="field__instructions">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies venenatis ex, dignissim.
+    </span>
+    </label>
+    <input class="field__input" type="checkbox" name="btesting" id="btestcheck3">
+    <label class="field__label field__label--block" for="btestcheck3">
+        Mango
+    </label>
+</fieldset>
+
+<fieldset class="field field--set" data-validate-required-message="This is a custom required message">
+    <legend class="field__label field__label--block">
+        Bubble
+    </legend>
+    <input class="field__input" type="checkbox" name="testing" id="testcheck" required>
+    <label class="field__label field__label--block" for="testcheck">
+        Apple
+    </label>
+    <input class="field__input" type="checkbox" value="carrot" name="testing" id="testcheck2" required>
+    <label class="field__label field__label--block" for="testcheck2">
+        Carrot
+        <span class="field__instructions">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies venenatis ex, dignissim.
+    </span>
+    </label>
+    <input class="field__input" type="checkbox" name="testing" id="testcheck3" required>
+    <label class="field__label field__label--block" for="testcheck3">
+        Mango
+    </label>
+</fieldset>
+
+<hr/>
+
+<fieldset class="field field--set" required>
+    <legend class="field__label">
+        Delegate
+    </legend>
+
+    <input class="field__input" type="radio" value="yes" name="radioOptions" id="firstRadio">
+    <label class="field__label" for="firstRadio">Yes</label>
+
+    <input class="field__input" type="radio" value="no" name="radioOptions" id="secondRadio">
+    <label class="field__label" for="secondRadio">No</label>
+
+    <div class="field__message field__message--error">This is the most generic error</div>
+</fieldset>
+
+<fieldset class="field field--set" data-validate-required-message="This is a custom required message">
+    <legend class="field__label">
+        Bubble
+    </legend>
+
+    <input class="field__input" type="radio" required value="yes" name="radioOptions" id="afirstRadio">
+    <label class="field__label" for="afirstRadio">Yes</label>
+
+    <input class="field__input" type="radio" value="no" name="radioOptions" id="asecondRadio">
+    <label class="field__label" for="asecondRadio">No</label>
+
+    <div class="field__message field__message--error">This is the most generic error</div>
+</fieldset>
+
+<hr/>
+<div class="field" required>
+    <label class="field__label field__label--block" for="tdd">
+        Delegate
+    </span>
+    </label>
+    <textarea class="field__input" name="tdd" rows="5" id="tdd"></textarea>
+    <div class="field__message field__message--error">Some generic</div>
+</div>
+<div class="field" data-validate-required-message="This is a custom required message">
+    <label class="field__label field__label--block" for="tdd2">
+        Bubble
+    </span>
+    </label>
+    <textarea required class="field__input" name="tdd2" rows="5" id="tdd"></textarea>
+    <div class="field__message field__message--error">Some generic</div>
+</div>
+
+<script type="text/javascript">
+    
+    setTimeout(function(){
+        OpenValidation.run();
+    }, 1000);
+</script>

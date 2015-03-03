@@ -1,0 +1,29 @@
+.open-validation{
+	@extend .panel;
+	border-color: $error;
+}
+
+.open-validation * ~ * {
+	margin-top: 10px;
+}
+
+	.open-validation__title {
+		font-size: 24px;
+		line-height: 27px;
+		font-family: "Thesans-Bold","Helvetica Neue",Arial,sans-serif;
+		font-weight: normal;
+		color: $error;
+	}
+	
+	.open-validation__errorlist {
+		margin-bottom: 0;
+	}
+	
+	.open-validation__error {
+		list-style-type: disc;
+		margin-bottom: 0;
+	}
+	
+	.open-validation__error--hidden {
+		display: none;
+	}

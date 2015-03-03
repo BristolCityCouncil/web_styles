@@ -1,0 +1,22 @@
+﻿{% block page %}
+
+	{% assign email_title = 'Confirm your account email' %}
+	{% assign email_heading = 'Confirm email address for your Bristol Account' %}
+	{% assign email_subheading = '<a href="#">Confirm&nbsp;email&nbsp;address</a>' %}
+
+	{% include 'tmpl/header' %}
+
+		Dear Josephine Bloggstone,
+		<br/>
+		<br/>
+		You created an account on the Bristol City Council website and we need to check we have the right email address.
+		<br/>
+		<br/>
+		You won't be able to use your account until you confirm your email.
+		<br/>
+		Follow the link above or enter the code <strong>9d959250-7dbf-4d48-846c-226b73f14304</strong> (you can copy and paste) on this page <a href="#">www.whatisthepage.com</a> to confirm your email.
+
+
+	{% include 'tmpl/footer' %}
+
+{% endblock %}

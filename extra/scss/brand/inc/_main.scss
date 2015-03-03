@@ -1,0 +1,28 @@
+.page-content {
+	background-color: $white;
+	margin-left: 20px;
+	margin-right: 20px;
+	padding: 40px 0 60px;
+
+	@include respond-to(tablet, desktop) {
+		padding: 60px 0 80px;
+	}
+}
+
+#main {
+	background-color: $white;
+}
+
+
+#header,
+#banner,
+#footer {
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+.main {
+	:first-child {
+		margin-top: 0;
+	}
+}

@@ -1,0 +1,354 @@
+.panel {
+    @include clearfix;
+    font-size: 19px;
+    line-height: 22px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px;
+    position: relative;
+    border-left: 6px solid $grey-6;
+    @include respond-to(tablet, desktop) {
+        border-left-width: 10px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding-left: 20px;
+    }
+    
+    .panel__title,
+    .panel__copy {
+    	max-width: 600px;
+    }
+    
+    .panel__title {
+        font-weight: normal;
+        font-family: $sans-bold;
+        display: block;
+        margin: 0 0 10px;
+        line-height: 1.1em;
+        font-weight: normal;
+        
+        @include respond-to(tablet, desktop) {
+            font-size: 30px;
+            line-height: 30px;
+        }
+    }
+    
+    .panel__copy {
+        font-weight: normal;
+        font-family: $sans;
+        font-size: 16px;
+        line-height: 19px;
+        display: block;
+        
+        @include respond-to(tablet, desktop) {
+            font-size: 19px;
+            line-height: 26px;
+        }
+    }
+    
+    &.panel--errors {
+        border-color: $bcc-red-error;
+        ul{
+            margin-bottom: 0;
+        }
+        .panel__title {
+            color: $bcc-red-error;
+            font-size: 19px;
+            line-height: 22px;
+            
+            @include respond-to(tablet, desktop) {
+                font-size: 24px;
+                line-height: 27px;
+            }
+        }
+        
+        .panel__copy {
+            font-size: 14px;
+            line-height: 19px;
+            li {
+                line-height: 20px;
+                margin-bottom: 10px;
+                
+                @include respond-to(tablet, desktop) {
+                    line-height: 26px;
+                }
+            }
+            
+            p a {
+                color: #333;
+            }
+            
+            @include respond-to(tablet, desktop) {
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+        
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+    
+    &.panel--warning {
+        @include clearfix;
+        width: 100%;
+        display: table;
+        padding: 0;
+        border: 0;
+        border-top: 2px solid $grey-hairline;
+        border-bottom: 2px solid $grey-hairline;
+        
+        .panel__icon {
+            @extend .icon--bcc;
+            @extend .icon--bcc--alert;
+            
+            width: 32px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 5px;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: left;
+            font-size: 48px;
+        }
+        
+        .panel__copy {
+            font-size: 16px;
+            line-height: 21px;
+            display: table-cell;
+            vertical-align: middle;
+            padding: 30px 10px;
+            max-width: auto;
+            
+            @include respond-to(tablet, desktop) {
+                font-size: 19px;
+                line-height: 26px;
+            }
+        }
+        
+        p {
+            margin-bottom: 0;
+        }
+    }
+    
+    &.panel--feedback {
+        background: none;
+        border: 2px solid $grey-6;
+        border-radius: 0;
+        margin-top: 40px;
+        margin-bottom: 0;
+        padding: 20px;
+        
+        @include respond-to(desktop) {
+            padding: 30px;
+            margin-top: 60px;
+        }
+    }
+    
+    /*
+    &.panel--alert {
+        background: $alert-yellow;
+        border: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+     
+        .icon--large {
+            font-size: 32px;
+            
+            @include respond-to(desktop) {
+                font-size: 56px;
+            }
+        }
+        
+        .panel__title {
+            margin-bottom: 10px;
+        }
+        
+        .panel__copy {
+            margin-bottom: 20px;
+        }
+    }
+    */
+    
+    &.panel--affirm + p {
+        margin-top: 20px;
+    }
+    
+    &.panel--affirm {
+        border-color: $bcc-green-affirm;
+       
+        .panel__title {
+            color: $green-1;
+            font-family: $sans;
+            font-size: 22px;
+            line-height: 26px;
+            margin: 0;
+            
+            @include respond-to(tablet, desktop) {
+            	font-size: 30px;
+            	line-height: 34px;
+            	margin: 0 0 5px;
+            }
+        }
+        
+        .panel__copy {
+            font-family: $sans-bold;
+            font-size: 16px;
+            line-height: 21px;
+            margin: 0 0 5px;
+            
+            @include respond-to(tablet, desktop) {
+            	font-size: 19px;
+            	line-height: 26px;
+            	
+            }
+        }
+        
+        &.panel--date {
+        	
+            .panel__title {
+                color: $text;
+                font-size: 16px;
+            	line-height: 21px;
+                font-family: $sans-bold;
+                
+                @include respond-to(tablet, desktop) {
+                    font-size: 19px;
+                }
+            }
+            
+            .panel__copy {
+                color: $green-1;
+                font-family: $sans;
+                font-size: 22px;
+            	line-height: 26px;
+                
+                @include respond-to(tablet, desktop) {
+                    font-size: 30px;
+                    line-height: 34px;
+                }
+            }
+        }
+    }
+
+    &.panel--side {
+		margin-top: 0;
+    	
+        .panel__title {
+            font-size: 22px;
+            line-height: 26px;
+            
+            @include respond-to(desktop) {
+                font-size: 24px;
+                line-height: 28px;
+            }
+        }
+        
+        .panel__copy {
+            font-size: 19px;
+            line-height: 26px;
+            
+            p,
+            ol,
+            ul {
+                font-size: inherit;
+                line-height: inherit;
+            }
+        }
+        
+        &.panel--affirm {
+        	
+    		.panel__title {
+                font-size: 22px;
+            	line-height: 26px;
+            	
+            	@include respond-to(desktop) {
+                	font-size: 24px;
+                	line-height: 28px;
+            	}
+            }
+            
+            .panel__copy {
+                font-size: 16px;
+            	line-height: 21px;
+            	
+            	@include respond-to(desktop) {
+                	
+                	font-size: 16px;
+                	line-height: 21px;
+            	}
+            }
+            
+            a {
+                font-size: 16px;
+            }
+            
+            &.panel--date {
+            	margin-bottom: 20px;
+            	
+            	.panel__title {
+	                font-size: 16px;
+	                line-height: 21px;
+	                
+	                @include respond-to(desktop) {
+                		font-size: 16px;
+                		line-height: 21px;
+            		}
+	            }
+	            
+	            .panel__copy {
+	                font-size: 22px;
+	                line-height: 26px;
+	                
+	                @include respond-to(desktop) {	
+                		font-size: 24px;
+                		line-height: 28px;
+            		}
+	            }
+            }
+        }
+    }
+    
+    &.panel--1of2 {
+    	margin-bottom: 0;
+    	padding-bottom: 0;
+    }
+    
+    &.panel--2of2 {
+    	margin-top: 0;
+    	padding-top: 0;
+    }
+}
+
+.panel--tile {
+	border-top: 2px solid $grey-6;
+	border-right: 2px solid $grey-6;
+	border-bottom: 2px solid $grey-6;
+	margin: 0;
+	padding: 0 15px 0 70px;
+	margin-bottom: 20px;
+			
+	@include respond-to(desktop) {
+		margin-bottom: 30px;
+	
+	}
+	
+	.panel__title {
+		margin-top: 30px;
+	}
+	
+	.icon--bcc:before {
+		position: absolute;
+		top: 31px;
+		left: 20px;
+		font-size: 32px;
+	}
+}
+
+.panel .panel__copy > *:last-child,
+.panel .panel__copy > *:last-child > *:last-child,
+.panel .panel__copy > *:last-child > *:last-child > *:last-child {
+    margin-top: 0;
+    margin-bottom: 0;
+}

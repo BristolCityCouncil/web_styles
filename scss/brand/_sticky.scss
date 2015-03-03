@@ -1,0 +1,149 @@
+.iag section p img {
+	@include respond-to(desktop){
+		margin-bottom: 20px;
+		margin-left: 20px;
+	}
+}
+
+.page-contents {
+    margin: 24px 0 44px;
+}
+
+.page-contents__inner {
+    @extend %cf;
+    @include box-shadow(rgba($black, .08) 0 4px 0 0);
+    background: #fff;
+    border-top: 2px solid $grey-6;
+    border-bottom: 1px solid $bcc-grey-light;
+    padding: 0;
+    //width: 960px; //Causing issues!
+    margin: 0 auto;
+    
+    .is-borderless & {
+        @include box-shadow(rgba($black, 0) 0 0 0 0);
+        border-bottom: 0;
+    }
+    
+    .page-contents__title {
+        font-size: 19px;
+        font-family: $sans-bold;
+        padding: 21px 0; // was 25px
+        margin-left: 20px !important;
+        margin-bottom: 0;
+        
+        @include respond-to(desktop) {
+            font-size: 24px;
+            margin-left: 0 !important;
+        }
+
+        @media only screen and (min-width: 768px) and (max-width: 976px) {
+            margin-left: 20px !important;
+        }
+    }
+}
+
+.page-contents__list-wrapper {
+    margin-bottom: 10px;
+
+    /* // new issue fix
+    max-height: 400px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling:touch;
+
+    @include respond-to(desktop) {
+        max-height: 800px;
+        margin-left: 0px !important;
+    }
+    */
+    .page-contents__list {
+        margin-left: 20px !important;
+        
+        @include respond-to(desktop) {
+            margin-left: 0 !important;
+        }
+
+        @media only screen and (min-width: 768px) and (max-width: 976px) {
+            margin-left: 20px !important;
+            margin-bottom: 25px; // 40 (li = 15 + 25)
+        }
+        
+        li {
+            list-style-type: none;
+            margin-bottom: 15px;
+        }
+        
+        a:focus,
+        a:active {
+            font-family: $sans !important;
+            font-weight: normal;
+            text-decoration: underline;
+        }
+    }
+}
+
+.js-collapse__toggle {
+    position: relative;
+    cursor: pointer;
+    padding-right: 60px;
+    margin: 0;
+    
+    .icon--bcc {
+        @include single-transition(all, .4s);
+        position: absolute;
+        right: 40px;
+        top: 19px;
+        
+        @include respond-to(desktop){
+        	top: 22px;
+        }
+        
+        .is-borderless & {
+            display: none;
+        }
+    }
+}
+
+.is-sticky {
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.is-hidden {
+    display: none;
+}
+
+.is-invisible {
+    visibility: hidden;
+}
+
+.is-expanded {
+
+	height: 100%;
+	overflow: scroll;
+	-webkit-overflow-scrolling: touch;
+	
+	@include respond-to(tablet){
+		height: auto;
+		overflow: auto;
+	}
+	
+	@include respond-to(desktop){
+		height: auto;
+		overflow: auto;
+	}
+		
+	.js-collapse__toggle .icon--bcc {
+        @include rotate(-180deg);
+        
+        .no-csstransforms &:before {
+            content: "\e609";
+        }
+    }
+		
+}
+
+

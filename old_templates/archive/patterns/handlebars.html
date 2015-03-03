@@ -1,0 +1,38 @@
+<h2>Handlebars testing</h2>
+
+<a class="button">This is awesome</a>
+
+<div class="dropdown">
+	<select name="changed">
+		<option value="normal">Default</option>
+		<option value="alert">Alert</option>
+	</select>
+	<div class="dropdown__background"></div>
+</div>
+<div class="target"></div>
+<pre class="source-target"></pre>
+
+{{=<% %>=}}
+<script id="entry-template" type="text/x-handlebars-template"><div class="alert {{modifiers}}">{{content}}</div></script>
+<script type="text/javascript">
+	function escapeHTML(text) {
+	    return text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+	}
+	var source   = $("#entry-template").html();
+	var template = Handlebars.compile(source);
+	$(".target").html(template({ content: "this is an error"}));
+	$('.source-target').html( escapeHTML(template({ content: "this is an error"})) );
+
+	var variations = {
+
+		'normal' : { content: 'this is an error' },
+		'alert' : { content: 'this is an alert error', modifiers: 'alert-error'}
+	};
+	$('select').on('change', function(){
+		$(".target").html(template(variations[$(this).val()]));
+		$('.source-target').html( escapeHTML(template(variations[$(this).val()])) );
+	});
+</script>
+<%={{ }}=%>
+
+{{> chrome/footer}}

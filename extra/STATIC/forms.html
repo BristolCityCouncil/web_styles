@@ -1,0 +1,408 @@
+<!doctype html>
+<html class="aui no-js bcc-aui" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Development Environment</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/Uniform.js/2.1.2/jquery.uniform.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+    <link rel="stylesheet" href="./assets/css/style.min.css">
+    <script>ga=function(){};</script>
+</head>
+
+<body>
+
+    <div class="bcc-header">
+        <div class="bcc-header__primary">
+            <a id="skip-to-content" href="#main-content" tabindex="1"> <span>Skip to Content</span></a>
+            <div class="bcc-header__primary-inner">
+                <div class="bcc-header__brand">
+                    <div class="bcc-header__logo">Logo alt text</div>
+                    <a class="bcc-header__sitename" href="#">bristol.gov.uk</a>
+                </div>
+                <div class="bcc-header__search">
+                    <input class="bcc-header__search-box" placeholder="Search Bristol City Council" type="text" />
+                    <button class="bcc-header__search-button" type="submit"><span class="icon--bcc icon--bcc--search"></span></button>
+                </div>
+                <div class="bcc-header__actions">
+                    <ul>
+                        <li><a href="#">Sign In</a></li>
+                        <li><a href="#">Create an account</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bcc-header__secondry">
+            <div class="bcc-header__primary-inner">
+                <div class="bcc-header__mobile-actions">
+                    <a class="bcc-header__mobile-nav bcc-header__mobile-nav--menu" href="#"><span class="icon--bcc icon--bcc--menu"></span> Menu</a>
+                    <a class="bcc-header__mobile-nav bcc-header__mobile-nav--search" href="#"><span class="icon--bcc icon--bcc--search"></span> Search</a>
+                </div>
+                <div class="bcc-header__menu">
+                    <ul>
+                        <li class="bcc-header__menu-item"><a href="index.html">Home</a></li>
+                        <li class="bcc-header__menu-item"><a href="typography.html">Typography</a></li>
+                        <li class="bcc-header__menu-item bcc-header__menu-item--active"><a href="forms.html">Forms</a></li>
+                        <li class="bcc-header__menu-item"><a href="buttons.html">Buttons</a></li>
+                        <li class="bcc-header__menu-item"><a href="panels.html">Panels</a></li>
+                        <li class="bcc-header__menu-item"><a href="slabs.html">Slabs</a></li>
+                        <li class="bcc-header__menu-item"><a href="tables.html">Tables</a></li>
+                        <li class="bcc-header__menu-item"><a href="alerts.html">Alerts</a></li>
+                        <!-- mobile only account links -->
+                        <li class="bcc-header__menu-item bcc-header__menu-item--mobile"><a href="alerts.html">Sign In</a></li>
+                        <li class="bcc-header__menu-item bcc-header__menu-item--mobile"><a href="alerts.html">Create account</a></li>
+
+                    </ul>
+                </div>
+                <div class="bcc-header__search bcc-header__search--mobile">
+                    <input class="bcc-header__search-box" type="text" />
+                    <button class="bcc-header__search-button" type="submit"><span class="icon--bcc icon--bcc--search"></span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main id="main">
+        <div class="page-content" id="content">
+
+            <div class="columns-1" id="main-content" role="main" tabindex="0">
+                <div class="row-fluid">
+                    <div class="span12" id="column-1">
+
+                            <section class="pl">
+                                <h1 class="pl__title">
+                                <a href="/boilerplate" class="icon icon-bookmark icon--large"></a>
+                                Forms
+                            </h1>
+
+                                <!-- START <input> -->
+                                <h3>
+                                Inputs <small>.field input</small>
+                            </h3>
+                                <div class="bs-docs-example">
+
+                                    <!--  -->
+                                    <div class="field">
+                                        <label class="field__label field__label--block" for="textfield">
+                                            What is your first name
+                                            <br>
+                                            <span class="field__instructions">
+                                            We normally send our response by email
+                                        </span>
+                                        </label>
+                                        <input class="field__input" type="text" name="textOptionsName" id="textfield">
+                                        <div class="field__message field__message--error">This is the most generic error</div>
+                                    </div>
+
+                                    <!--  -->
+                                    <div class="field">
+                                        <label class="field__label field__label--block" for="fname">
+                                            Extras
+                                            <span class="field__option">(Optional)</span>
+                                            <strong class="field__status"> 
+                                            <span class="icon icon--bcc icon--bcc--verified"></span> Confirmed 
+                                        </strong>
+                                            <div class="field__instructions">
+                                                <p>
+                                                    Please be specific and include information such as:
+                                                </p>
+                                                <ul>
+                                                    <li>Dates, Times and locations</li>
+                                                    <li>References to specific documents</li>
+                                                    <li>Specific things you are unhappy about</li>
+                                                    <li>Your council tax number</li>
+                                                </ul>
+                                            </div>
+                                        </label>
+                                        <div class="guidance">
+                                            <strong>
+                                            "Total amount spent on road maintenance in 2013" 
+                                            <span class="guidance__status guidance__status--affirmed">
+                                                <span class="icon icon--bcc icon--bcc--tick guidance__status__icon"></span> Good
+                                            </span>
+                                        </strong>
+                                            <br>
+                                            <strong>
+                                            "All information about roads" 
+                                            <span class="guidance__status guidance__status--rejected">
+                                                <span class="icon icon--bcc icon--bcc--cross guidance__status__icon"></span> Too general
+                                            </span>
+                                        </strong>
+                                        </div>
+                                        <input class="field__input" type="text" name="textOptionsName" id="textfield">
+                                        <div class="field__message field__message--error">This is the most generic error</div>
+                                    </div>
+
+                                    <!--  -->
+                                    <div class="field">
+                                        <label class="field__label field__label--block" for="textfield">
+                                            Their email
+                                            <div class="field__instructions">
+                                                We normally send our response by email
+                                            </div>
+                                        </label>
+                                        <input class="field__input" type="email" name="textOptionsName" id="textfield">
+
+                                        <div class="field__conditional" data-validate-expect="on" data-validate-expect-message="Please accept the terms" data-validate-required-message="This is a required field">
+                                            <input class="field__input" type="checkbox" name="" id="check1">
+                                            <label class="field__label" for="check1">I accept the terms</label>
+                                            <div class="field__message field__message--error">This is the most generic error</div>
+                                        </div>
+                                    </div>
+                                    <div class="field" data-validate-postcode>
+                                
+                                        <label class="field__label field__label--block" for="postcode">Enter your postcode</label>
+                                        
+                                        <input class="field__input field__input--toupper" required type="text" name="postcode" id="postcode" />
+                                        <div   class="field__message field__message--error">This is the most generic error</div>
+
+                                    </div>
+                                </div>
+                                <!-- END <input> -->
+
+
+
+                                <!-- START <select> -->
+                                <h3>
+                                Various selects <small>.field select</small>
+                            </h3>
+                                <div class="bs-docs-example">
+
+                                    <!-- !! Erros are the dropdown! -->
+
+                                    <!--  -->
+                                    <div class="field">
+                                        <label class="field__label field__label--block" for="drop">Inline</label>
+                                        <div class="drop">
+                                            <select id="drop">
+                                                <option value="def" selected="selected">Please select...</option>
+                                                <option value="one">one</option>
+                                                <option value="two">two</option>
+                                                <option value="three">three</option>
+                                            </select>
+                                            <div class="drop__background"></div>
+                                        </div>
+                                        <div class="field__message field__message--error">
+                                            This is why this failed. And because its a label its accessible
+                                        </div>
+                                    </div>
+
+                                    <!--  -->
+                                    <div class="field">
+                                        <label class="field__label field__label--block" for="drop">Block</label>
+                                        <div class="drop">
+                                            <select id="drop">
+                                                <option value="def" selected="selected">Please select...</option>
+                                                <option value="mr">Mr</option>
+                                                <option value="mrs">Mrs</option>
+                                                <option value="doc">Doctor</option>
+                                            </select>
+                                            <div class="drop__background"></div>
+                                        </div>
+                                        <div class="field__message field__message--error">
+                                            This is why this failed. And because its a label its accessible
+                                        </div>
+                                    </div>
+
+                                    <!--  -->
+                                    <div class="field js--address-lookup">
+                                        <label class="field__label field__label--block" for="drop">
+                                            Address lookup
+                                            <div class="field__instructions">This is using the updated address lookup widget</div>
+                                        </label>
+                                        <div class="drop">
+
+                                            <select id="drop">
+                                                <option value="" selected="selected">Select your address</option>
+                                                <option value="000000106069">2 Baldwin Street Bristol BS1 1SA</option>
+                                                <option value="000000353708">3 Baldwin Street Bristol BS1 1SA</option>
+                                                <option value="000000299768">4 Baldwin Street Bristol BS1 1SA</option>
+                                                <option value="000000317825">6 Baldwin Street Bristol BS1 1SA</option>
+                                                <option value="000000106070">8-10 Baldwin Street Bristol BS1 1SA</option>
+                                                <option value="000000106067">12 Baldwin Street Bristol BS1 1SA</option>
+                                                <option value="000000346380">Basement Floor Alliance House Baldwin Street Bristol BS1 1SA</option>
+                                                <option value="000000324639">First Floor Alliance House Baldwin Street Bristol BS1 1SA</option>
+                                                <option value="000000324640">Second Floor Alliance House Baldwin Street Bristol BS1 1SA</option>
+                                                <option value="000000324641">Third Floor Alliance House Baldwin Street Bristol BS1 1SA</option>
+                                            </select>
+
+
+
+                                            <div class="drop__background"></div>
+                                        </div>
+                                        <div class="field__message field__message--error">
+                                            This is why this failed. And because its a label its accessible
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- END <select> -->
+
+
+                                <!-- START <textarea> -->
+                                <h3>
+                                Various textareas <small>.field textarea</small>
+                            </h3>
+                                <div class="bs-docs-example">
+
+                                    <div class="field" data-validate-max-characters="10">
+                                        <label class="field__label field__label--block" for="tdd">
+                                            Description
+                                            <span class="field__instructions">
+                                            <span class="js--character-count">10</span> characters remaining.
+                                        </span>
+                                        </label>
+                                        <textarea required class="field__input" name="tdd" rows="5" id="tdd"></textarea>
+                                        <div class="field__message field__message--error">Some generic</div>
+                                    </div>
+
+                                </div>
+                                <!-- END <textarea> -->
+
+                                <!-- START <textarea> -->
+                                <h3>
+                                Various checkboxes <small>.field textarea</small>
+                            </h3>
+                                <div class="bs-docs-example">
+
+                                    <fieldset class="field field--set" sf-check="">
+                                        <legend class="field__label field__label--block">
+                                            Choose One
+                                        </legend>
+                                        <input class="field__input" type="checkbox" name="testing" id="testcheck">
+                                        <label class="field__label field__label--block" for="testcheck">
+                                            Apple
+                                        </label>
+                                        <input class="field__input" type="checkbox" value="carrot" name="testing" id="testcheck2">
+                                        <label class="field__label field__label--block" for="testcheck2">
+                                            Carrot
+                                            <span class="field__instructions">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies venenatis ex, dignissim.
+                                        </span>
+                                        </label>
+                                        <input class="field__input" type="checkbox" name="testing" id="testcheck3">
+                                        <label class="field__label field__label--block" for="testcheck3">
+                                            Mango
+                                        </label>
+                                    </fieldset>
+
+                                </div>
+                                <!-- END <textarea> -->
+
+                                <!-- START <textarea> -->
+                                <h3>
+                                Various radios <small>.field textarea</small>
+                            </h3>
+                                <div class="bs-docs-example">
+
+                                    <fieldset class="field field--set" required="" data-validate-expect="yes" data-validate-expect-message="Please accept the terms">
+                                        <legend class="field__label">
+                                            Do you accept the terms and conditions
+                                            <div class="field__instructions">This will validate when you tab over and do not choose a value, also when you choose the option "no"</div>
+                                        </legend>
+
+                                        <input class="field__input" type="radio" value="yes" name="radioOptions" id="firstRadio">
+                                        <label class="field__label" for="firstRadio">Yes</label>
+
+                                        <input class="field__input" type="radio" value="no" name="radioOptions" id="secondRadio">
+                                        <label class="field__label" for="secondRadio">No</label>
+
+                                        <div    class="field__message field__message--error">This is the most generic error</div>
+                                    </fieldset>
+
+                                    <fieldset class="field field--set">
+                                        <legend class="field__label field__label--block">
+                                            Choose One
+                                        </legend>
+                                        <input class="field__input" name="one" type="radio" id="myCheck" checked="checked">
+                                        <label class="field__label field__label--block" for="myCheck">This is my Radio</label>
+
+                                        <input class="field__input" name="one" type="radio" id="myCheck1">
+                                        <label class="field__label field__label--block" for="myCheck1">
+                                            This is my Radio
+                                            <span class="field__instructions">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies venenatis ex, dignissim.
+                                        </span>
+                                        </label>
+
+                                        <input class="field__input" name="sevn" type="radio" id="myCheck6" data-error="">
+                                        <label class="field__label field__label--block" for="myCheck6">This is my Radio</label>
+
+                                        <input class="field__input" name="sevn" type="radio" id="myCheck9" data-error="" checked="checked">
+                                        <label class="field__label field__label--block" for="myCheck9">This is my Radio</label>
+
+                                        <input class="field__input" name="sevn" type="radio" id="myCheck2" disabled="disabled">
+                                        <label class="field__label field__label--block" for="myCheck2">This is my Radio</label>
+                                    </fieldset>
+
+                                </div>
+                                <!-- END <textarea> -->
+
+
+                                <!-- START Password Combo -->
+                                <h3>
+                                Password combo <small>[combo]</small>
+                            </h3>
+                                <div class="bs-docs-example">
+
+                                    <div class="field field--group" required data-validate-password>
+
+                                        <label class="field__label field__label--block" for="pwdf">
+                                            Please choose a password
+                                            <div class="field__instructions">
+                                                This will validate for an 8 character long password and for matching passwords.
+                                            </div>
+                                        </label>
+
+                                        <input class="field__input" type="password" name="passOptionsName" id="pwdf">
+                                        <input class="field__input" type="password" name="passcrmOptionsName">
+
+                                        <div class="field__message field__message--error alternate">This is the most generic error</div>
+
+                                    </div>
+
+                                </div>
+                                <!-- END Password Combo -->
+
+                            </section>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="bcc-footer" role="contentinfo">
+        <div class="bcc-footer__inner">
+            <div class="bcc-footer__menu">
+                <ul>
+                    <li>
+                        <a href="https://www.bristol.gov.uk/complaints" title="Complaints and feedback">Complaints and feedback</a>
+                    </li>
+                    <li>
+                        <a href="https://www.bristol.gov.uk/cookies" title="Cookies">Cookies</a>
+                    </li>
+                    <li>
+                        <a href="https://www.bristol.gov.uk/privacy" title="Privacy">Privacy</a>
+                    </li>
+                    <li>
+                        <a href="https://www.bristol.gov.uk/contact" title="Contact">Contact</a>
+                    </li>
+                    <li>
+                        <a href="https://www.bristol.gov.uk/copyright" title="Copyright">Copyright</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/main.pack.js"></script>
+</body>
+
+</html>
+            

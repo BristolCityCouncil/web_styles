@@ -1,0 +1,41 @@
+<h3>Basic Error Validation</h3>
+
+<div class="open-validation">
+
+	<div class="open-validation__title">There was a problem with the information you entered:</div>
+	
+	<ul class="open-validation__errorlist">
+		<li class="open-validation__error">
+			<a href="#fi1">That input is going to show an error</a>
+		</li>
+		<li class="open-validation__error" data-ov-error="This is the dropdown error">
+			<a href="#d1">That dropdown will show an error</a>
+		</li>
+	</ul>
+</div>
+
+<div class="field" id="f1">
+	<label class="field__label field__label--block" for="fi1">First name</label>
+	<input class="field__input" id="fi1" type="text">
+</div>
+
+
+<div class="field">
+    <label class="field__label field__label--block" for="drop">Inline</label>
+    <div class="dropdown">
+        <select id="d1">
+            <option value="def" selected="selected">Please select...</option>
+            <option value="one">one</option>
+            <option value="two">two</option>
+            <option value="three">three</option>
+        </select>
+        <div class="dropdown__background"></div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+	
+$('[source]').on('click', function(){var gen = $($(this).attr('source'));gen.after( $("<pre />",{'class':'language-html'}).text($('<div>').append(gen.clone()).html()));$(this).remove()});
+
+</script> 

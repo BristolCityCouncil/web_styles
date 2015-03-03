@@ -1,0 +1,12 @@
+#!/bin/bash
+
+BRANCH=$(git symbolic-ref HEAD 2>/dev/null)
+
+if [ "$BRANCH" == "refs/heads/master" ] || [ "$BRANCH" == "refs/heads/develop" ]
+then
+  echo "== You cannot commit to the master or develop branches direct =="
+  echo "If you are working on a feature, please ensure you branch first."
+  exit 1
+fi
+
+exit 0

@@ -1,0 +1,124 @@
+.date-card {
+    @include inline-block;
+    
+    background: $rubbish-grey-light;
+    text-align: center;
+    line-height: 1.1;
+    
+    .date-card__weekday {
+        color: $white;
+        display: block;
+        //text-transform: uppercase;
+        background: $rubbish-grey;
+        padding: 7px 12px 4px;
+    }
+
+    .date-card__daymonth{
+        padding-top: 10px;
+        display: block;
+        font-size: 30px;
+    }
+
+    .date-card__day {
+        @extend %beta;
+        display: block;
+        margin-top: 10px;
+    }
+    
+    .date-card__month {
+        display: block;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+    
+    .date-card__note {
+        padding: 8px 12px 7px;
+        display: block;
+        //border-top: 2px solid $white;
+        font-size: 16px;
+        padding-bottom: 20px;
+    }
+}
+
+.date-card--shadow2 {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    /* IE 5-7 */
+    filter: alpha(opacity=50);
+    /* Netscape */
+    -moz-opacity: .5;
+    /* Safari 1.x */
+    -khtml-opacity: .5;
+    /* Good browsers */
+    opacity: .5;
+    pointer-events: none;
+}
+
+.date-card--shadow {
+	color: #c0c0c0;
+	background-color: #f0f0f0;
+}
+
+.date-card--shadow .date-card__weekday {
+ 	background-color: #e0e0e0;
+}
+
+.date-card--recycling {
+    //color: $recyling-green;
+    background: $recyling-green-light;
+    
+    .date-card__weekday {
+        background: $recyling-green;
+        
+        &:after {
+            border-left-color: $recyling-green;
+        }
+    }
+}
+
+.date-card--bulky {
+    background: rgba($bulky-waste, .15);
+    
+    .date-card__weekday {
+        background: $bulky-waste;
+        
+        &:after {
+            border-left-color: $bulky-waste;
+        }
+    }
+}
+
+.date-card-list {
+    @include clearfix;
+    @extend %cf;
+
+    margin: 40px 0;
+    padding: 0;
+    
+    @include respond-to(desktop) {
+        margin-left: -1%;
+    }
+
+    .date-card {
+        list-style: none;
+        width: 100%;
+        
+        @include respond-to(desktop) {
+            width: 19%;
+            float: left;
+            margin: 0 0 0 1%;
+        }
+    }
+}
+
+.date-card--ghost{
+    color: #333;
+    background: none;
+    border: 2px solid #333;
+    transform: translateY(-10px);
+    
+    .date-card__weekday{
+        color: #333;
+        background: #fff;
+        border-bottom: 2px solid #333;
+    }
+}

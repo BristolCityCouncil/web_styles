@@ -1,0 +1,123 @@
+                    <div class="portlet-body">
+                        <script>
+                            ga('send', 'pageview', {
+                                'page': '/parking/get-permits/renewals/find-permits',
+                            });
+                        </script>
+                        <header class="step-header">
+                            <p class="step-header__title">Renew your residents' parking permit<span class="step-header__title__seperator">:</span><span class="step-header__title__steps">step 1</span>
+                            </p>
+                            <h1 class="step-header__subtitle">Enter your permit details</h1>
+                        </header>
+                        <form id="parkingOrderModel" class="form js--validate" action="http://l-custpdev-app1.bcc.lan:8080/parking/get-permits?p_auth=bbZQfHGL&amp;p_p_id=bccparkingportlet_WAR_bccportalapps101BUILDSNAPSHOT&amp;p_p_lifecycle=1&amp;p_p_state=normal&amp;p_p_mode=view&amp;p_p_col_id=column-1&amp;p_p_col_count=1&amp;_bccparkingportlet_WAR_bccportalapps101BUILDSNAPSHOT_execution=e1s3" method="post">
+                            <div class="panel panel--errors" id="errors">
+                                <p class="panel__title"><strong>There was a problem with the information you entered:</strong>
+                                </p>
+                                <div class="panel__copy">
+                                    <ul>
+                                        <li><a class="error__item__link" href="#field-permitNumber1">Please check that you are entering the permit number correctly</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p>You can renew your current permit if your details haven't changed.</p>
+                            <p>You'll need to apply for a new permit if you've changed your name, moved, or changed your vehicle.</p>
+                            <fieldset class="form__item form__item--group" id="field-permitNumbers">
+                                <legend class="form__item__label">Permits number (e.g. AB401)
+                                    <div class="form__item__label__instructions">
+                                        <p>You will find this:</p>
+                                        <ul>
+                                            <li>in the reminder notice you received about the renewal</li>
+                                            <li>in the confirmation email you received from noreply@bristol.gov.uk</li>
+                                            <li>on your permit</li>
+                                        </ul>
+                                    </div>
+                                </legend>
+                                <div class="form__item" id="field-permitNumber1">
+                <label class="form__item__label" for="fname">Permit number (e.g. AB401)
+                    <div class="form__item__label__instructions">
+                        <p>You will find this:</p>
+                        <ul>
+                            <li> in the reminder notice you received about the renewal </li>
+                            <li>in the confirmation email you received from noreply@bristol.gov.uk</li>
+                            <li>on your permit</li>
+                        </ul>
+                    </div>
+                </label>
+                <input required class="form__item__field form__item__field--string" id="fname" name="fname" type="text" placeholder="#REF7123891001" />
+                <div class="form__item__message form__item__message--error" aria-hidden="true"> Not empty, valid permit 1 required </div>
+            </div>
+            <div class="form__item" data-permit>
+                <label class="form__item__label hidden" for="fname">Permit 2 number (e.g. AB402)</label>
+                <input class="form__item__field form__item__field--string" id="fname" name="fname" type="text" placeholder="#REF7123891002" />
+                <div class="form__item__message form__item__message--error" aria-hidden="true"> Not empty, valid permit 2 required </div>
+            </div>
+            <div class="form__item" data-permit>
+                <label class="form__item__label hidden" for="fname">Permit 3 number (e.g. AB403)</label>
+                <input class="form__item__field form__item__field--string" id="fname" name="fname" type="text" placeholder="#REF7123891003" />
+                <div class="form__item__message form__item__message--error" aria-hidden="true"> Not empty, valid permit 3 required </div>
+            </div>
+                            </fieldset>
+                            <div class="form__item" id="field-postcode">
+                                <label class="form__item__label" for="pcode">Postcode where you live</label>
+                                <input id="pcode" name="customer.address.postCode" class="form__item__field form__item__field--string form__item__field--small" required="required" type="text" value="BS6 5NJ" />
+                                <button class="cta" type="submit" name="_eventId_lookupAddress" onclick="ga('send', 'pageview',{'page': '/parking/get-permits/find-address-click-lookup'});">Find address</button>
+                                <div class="form__item__message form__item__message--error" aria-hidden="true"> Please enter a postcode</div>
+                            </div>
+                            <div class="form__item js--address-lookup" id="field-address">
+                                <label for="addressUprn" class="form__item__label">Select address</label>
+                                <select id="addressUprn" name="customer.address.addressUprn" onChange="ga(&#39;send&#39;, &#39;pageview&#39;,{&#39;page&#39;: &#39;/parking/get-permits/address-returned&#39;});" class="form__item__field form__item__field--select form__item__field--select--block" required="required">
+                                    <option value="">Select your address</option>
+                                    <option selected="selected" value="000000260440" selected="selected">31-35 Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000077576">37A Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000077575">37B Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000077577">37C Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000077387">41 Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000077344">43 Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000077317">45 Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000077169">49 Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000077132">51 Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000077083">53 Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000077054">55 Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000185142">57 Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000076875">59 Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000076720">65A Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000076722">65B Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000076721">65C Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000268256">Basement And Ground Floor Flat 39 Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000268259">Basement And Ground Floor Flat 47 Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000339468">Basement Flat 57 Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000268269">Basement Flat 61 Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000236796">First And Second Floor Flat 47 Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000268268">First And Second Floor Flat 61 Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000268254">First Floor Flat 39 Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000349724">Flat 1 27 - 29 Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000349725">Flat 2 27 - 29 Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000349726">Flat 3 27 - 29 Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000349727">Flat 4 27 - 29 Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000349728">Flat 5 27 - 29 Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000349729">Flat 6 27 - 29 Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000349730">Flat 7 27 - 29 Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000349731">Flat 8 27 - 29 Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000349732">Flat 9 27 - 29 Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000268272">Flat A 63 Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000268273">Flat B 63 Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000268271">Flat C 63 Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000268270">Ground Floor Flat 61 Ashley Road Bristol BS6 5NJ</option>
+                                    <option value="000000268255">Second Floor Flat 39 Ashley Road Bristol BS6 5NJ</option>
+                                </select>
+                                <div class="form__item__message form__item__message--error" aria-hidden="true">Please select your address</div>
+                            </div>
+                            <div class="cta-group">
+                                <button name="_eventId_checkPermitRenewals" type="submit" class="cta cta--icon cta--next cta--primary js--prevent-double" data-primary-submit>Next</button>
+                            </div>
+                        </form>
+                        <div class="panel panel--feedback">
+                            <h2 class="panel__title">Give feedback on this new service</h2>
+                            <div class="panel__copy">
+                                <p><a href="https://www.bristol.gov.uk/node/24282" target="_blank">Give feedback (opens new window)</a> and help improve this service.
+                                    <br/>It only takes a minute and you won't lose your permit details.</p>
+                            </div>
+                        </div>
+                        <!--</div>/grid-col-->
+                    </div>

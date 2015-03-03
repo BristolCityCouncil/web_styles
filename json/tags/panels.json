@@ -1,0 +1,187 @@
+{
+	"info": {
+		"id": 101,
+		"pattern": "Panel",
+		"info__title": "Lorem ipsum dolor",
+		"info__copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ex veritatis sit eos, id iure, qui.",
+		"notes": {
+			
+			"usage": [
+				"Highlight key information to a user. Can also be used to highlight information that the user entered at a point that rthey can no longer change it. E.G. feedback their email on an order confirmation page."
+			],
+			"developer": [
+				"This is an empty developer note. Typically we do not show these notes unless we have some meaningful copy"
+			],
+			"content": [
+				"This is an empty content note. Typically we do not show these notes unless we have some meaningful copy"
+			]
+		}
+	},
+	"info-affirm": {
+		"id": 102,
+		"pattern": "Panel Affirm",
+		"info__title": "Lorem ipsum dolor",
+		"info__copy": "Lyorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		"modifiers": "panel--affirm",
+		"notes": {
+			
+			"usage": [
+				"Use this to feedback to the user information they entered at a point that they can change it. E.G. When an address is selected."
+			]
+		}
+	},
+	"info-affirm-reverse": {
+		"id": 103,
+		"pattern": "Panel Affirm Reverse",
+		"info__title": "Delivery by",
+		"info__copy": "Weds, 15th January between 7am and 6pm",
+		"modifiers": "panel--affirm panel--date",
+		"notes": {
+		
+		}
+	},
+	"info-affirm-extra": {
+		"id": 104,
+		"pattern": "Panel Affirm Extra",
+		"info__title": "Your selected address",
+		"info__copy": "19 Redland Road, Bristol BS6 5AA",
+		"modifiers": "panel--affirm panel--date",
+		"notes": {
+			
+		}
+	},
+	"info-1of2": {
+		"id": 105,
+		"pattern": "Panel 1of2",
+		"info__title1": "Email updated",
+		"info__copy1": "justine.longnamerson@emailaddress.com",
+		"info__title2": "and",
+		"info__copy2": "234 Some Street, Somewhere, Some City, G12 2ND",
+		"notes": {
+			
+		}
+	},
+	"info-errors": {
+		"id": 106,
+		"pattern": "Panel Errors",
+		"info__title": "We have a few errors",
+		"modifiers": "panel--errors",
+		"notes": {
+			
+			"usage": [
+				"Used at the top of form pages to give the user a break down of any issues with they information they entered. The blue links anchor the page down to the specific input field the error relates to."
+			]
+		}
+	},
+
+
+	"block": {
+		"id": 201,	
+		"pattern": "Block",
+		"icon": "icon--bcc--foi",
+
+		"block__title": "Freedom of information",
+		"block__copy": "Make a request to see any information we hold on paper or as computer files.",
+		"links": [
+			{ "link": "Submit a freedom of information request" },
+			{ "link": "Submit something else" }
+		],
+
+		"notes": {
+			
+			"usage": [
+				"Use at the bottom of all pages to allow the user to provide feedback on the service or p[age they are useing. Always links to the same feedback form."
+			]
+		}
+	},
+
+	
+	"warning": {
+		"id": 301,
+		"pattern": "Warning",
+		"warning__text": "This is a warning about some kind of liability on your part or something like that.",
+		"notes": {
+			
+			"usage": [
+				"These appear in the main page flow of a form. They are used for low priority warnings based on a selection the user has made."
+			]
+		}
+	},
+
+	
+	"slate": {
+		"id": 401,
+		"pattern": "Slab",
+		"slate__title": "Make your next visit easier & quicker",
+		"slate__copy": "Just fill in 2 more pieces of information about yourself to create an account that will remember all your details next time you come back.",
+		"notes": {
+			
+		}
+	},
+	"slate-outline": {
+		"id": 402,
+		"pattern": "Slab Outline",
+		"slate__title": "Make your next visit easier & quicker",
+		"slate__copy": "Just fill in 2 more pieces of information about yourself to create an account that will remember all your details next time you come back.",
+		"notes": {
+		
+		}
+	},
+	"slate-white-outline": {
+		"id": 403,
+		"pattern": "Slab White Outline",
+		"slate__title": "Make your next visit easier & quicker",
+		"slate__copy": "Just fill in 2 more pieces of information about yourself to create an account that will remember all your details next time you come back.",
+		"notes": {
+		
+		}
+	},
+	"slate-layout": {
+		"id": 404,
+		"pattern": "Slab Layout",
+		"slate__title": "Make your next visit easier & quicker",
+		"slate__copy": "Just fill in 2 more pieces of information about yourself to create an account that will remember all your details next time you come back.",
+		"notes": {
+	
+		}
+	},
+	"slate-primary": {
+		"id": 405,
+		"pattern": "Slab Primary",
+		"slate__title": "Make your next visit easier & quicker",
+		"slate__copy": "Just fill in 2 more pieces of information about yourself to create an account that will remember all your details next time you come back.",
+		"notes": {
+	
+		}
+	},
+
+
+	"additional": {
+		"id": 501,
+		"pattern": "Additional",
+		"additional__text": "Add another car",
+		"notes": {
+	
+		}
+	},
+
+
+	"alert-warning": {
+		"id": 601,
+		"pattern": "Alert Warning",
+		"alert__text": "bcc-boilerplate is temporarily unavailable.",
+		"notes": {
+		
+		}
+	},
+	"alert-error": {
+		"id": 602,
+		"pattern": "Alert Error",
+		"alert__text": "bcc-boilerplate is temporarily unavailable.",
+		"notes": {
+	
+		}
+	}
+	
+}
+

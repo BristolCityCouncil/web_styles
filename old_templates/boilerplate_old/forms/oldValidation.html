@@ -1,0 +1,136 @@
+<div data-extend-session="1725"></div>
+<form id="feedback" novalidate="novalidate" class="form js--validate js--foi-request" data-service="feedback" action="http://l-custpdev-app1.bcc.lan:8080/feedback?p_auth=iG81GZ2n&amp;p_p_id=bccfeedbackportlet_WAR_bccportalapps101BUILDSNAPSHOT&amp;p_p_lifecycle=1&amp;p_p_state=normal&amp;p_p_mode=view&amp;p_p_col_id=column-1&amp;p_p_col_count=1&amp;_bccfeedbackportlet_WAR_bccportalapps101BUILDSNAPSHOT_execution=e3s3" method="post" enctype="multipart/form-data">
+    <h1>Rehousing feedback </h1>
+    <div class="panel panel--errors" id="errors">
+        <p class="panel__title"><strong>There was a problem with the information you entered:</strong>
+        </p>
+        <div class="panel__copy">
+            <ul>
+                <li><a class="error__item__link" href="#field-emailCheckbox">Please enter your first name.</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="form__item" id="field-enquiry">
+        <label for="enquiry" class="form__item__label"> Your feedback
+            <div class="form__item__label__instructions">Try to be specific so we can act on your feedback</div>
+        </label>
+        <textarea id="enquiry" name="enquiry" class="form__item__field form__item__field--string form__item__field--textarea" required="required" rows="10">rtye</textarea>
+        <div class="form__item__message form__item__message--error" aria-hidden="true"> Enter your feedback</div>
+    </div>
+    <div class="docupload docupload--enhanced">
+        <div class="hidden" name="uploadType">feedback</div>
+        <div class="hidden" name="tooManyFilesError">You can only upload five files</div>
+        <div class="hidden" name="generalError">An error occurred uploading the file</div>
+        <h4 class="docupload__heading">Upload any related documents</h4><span class="docupload__subheading">Maximum 5MB per file. Supported files: doc, docx, pdf, txt, jpg</span>
+        <div class="docupload__body">
+            <div class="docupload__file">
+                <input type="file" name="file1" />
+            </div>
+            <div class="docupload__file">
+                <input type="file" name="file2" />
+            </div>
+            <div class="docupload__file">
+                <input type="file" name="file3" />
+            </div>
+            <div class="docupload__file">
+                <input type="file" name="file4" />
+            </div>
+            <div class="docupload__file">
+                <input type="file" name="file5" />
+            </div>
+        </div>
+        <div class="docupload__tiptype">Upload selected files to attach them to your message</div>
+        <div class="form__actions">
+            <button name="_eventId_upload" type="submit" class="cta js--prevent-double">Upload all files</button>
+        </div>
+    </div>
+    <h2>Your details (optional)</h2>
+    <p>We don't usually reply to feedback, but it's useful to have your details in case we want to contact you for more information</p>
+    <div class="form__item" id="field-title">
+        <label class="form__item__label" for="ff-title">Title</label>
+        <select id="ff-title" name="title" class="form__item__field form__item__field--select form__item__field--select--inline ">
+            <option value="none">Select option</option>
+            <option value="Mr" selected="selected">Mr</option>
+            <option value="Mrs">Mrs</option>
+            <option value="Miss">Miss</option>
+            <option value="Ms">Ms</option>
+        </select>
+        <div class="form__item__message form__item__message--error" aria-hidden="true"> Choose a title</div>
+    </div>
+    <div class="form__item" id="field-firstname">
+        <label class="form__item__label " for="firstname">First name</label>
+        <input id="firstname" name="firstName" class="form__item__field form__item__field--string " type="text" value="" maxlength="100" />
+        <div class="form__item__message form__item__message--error" aria-hidden="true"> Enter your first name</div>
+    </div>
+    <div class="form__item" id="field-lastname">
+        <label class="form__item__label " for="lastname">Last name</label>
+        <input id="lastname" name="lastName" class="form__item__field form__item__field--string " type="text" value="d" maxlength="100" />
+        <div class="form__item__message form__item__message--error" aria-hidden="true"> Enter your last name</div>
+    </div>
+    <div class="js--controls-group">
+        <div class="form__item form__item--1of2 js--controls--showing" id="field-emailAddress">
+            <label class="form__item__label " for="emailAddress">Email <span class="form__item__label__option">(optional)</span>
+            </label>
+            <input id="emailAddress" name="emailAddress" class="form__item__field form__item__field--string " type="text" value="" /> </div>
+        <fieldset class="form__item form__item--group form__item--2of2" id="field-emailCheckbox">
+            <legend class="form__item__label hidden">Email address</legend>
+            <label class="form__item__label form__item__label--group label--checkbox" for="ff-confirm-have-email">
+                <input id="ff-confirm-have-email" name="dontHaveEmail" data-show="field-addrintro field-address1 field-address2 field-address3 field-address4 field-postcode field-country field-other" class="form__item__field form__item__field--checkbox js--controls--email" data-hide="field-emailAddress" type="checkbox" value="true" />
+                <input type="hidden" name="_dontHaveEmail" value="on" /> I don't have an email address
+                <div class="form__item__message form__item__message--error" aria-hidden="true"></div>
+            </label>
+        </fieldset>
+        <div id="field-addrintro" class="form__item js--controls--hiding">
+            <h3>Your address (optional)</h3>
+        </div>
+        <div class="form__item js--controls--hiding" id="field-address1">
+            <label class="form__item__label " for="address1">House name or number</label>
+            <input id="address1" name="address1" class="form__item__field form__item__field--string " type="text" value="" maxlength="100" />
+            <div class="form__item__message form__item__message--error" aria-hidden="true"> Please enter your address</div>
+        </div>
+        <div class="form__item js--controls--hiding" id="field-address2">
+            <label class="form__item__label " for="address2">Address line 1</label>
+            <input id="address2" name="address2" class="form__item__field form__item__field--string " type="text" value="" maxlength="100" />
+            <div class="form__item__message form__item__message--error" aria-hidden="true"> </div>
+        </div>
+        <div class="form__item js--controls--hiding" id="field-address3">
+            <label class="form__item__label " for="address3">Address line 2 <span class="form__item__label__option">(optional)</span>
+            </label>
+            <input id="address3" name="address3" class="form__item__field form__item__field--string " type="text" value="" maxlength="100" />
+            <div class="form__item__message form__item__message--error" aria-hidden="true"> </div>
+        </div>
+        <div class="form__item js--controls--hiding" id="field-address4">
+            <label class="form__item__label " for="address4">Postal town / region</label>
+            <input id="address4" name="address4" class="form__item__field form__item__field--string " type="text" value="" maxlength="100" />
+            <div class="form__item__message form__item__message--error" aria-hidden="true"> </div>
+        </div>
+        <div class="form__item js--controls--hiding" id="field-postcode">
+            <label class="form__item__label " for="postCode">Postcode, postal code or ZIP</label>
+            <input id="postCode" name="postCode" class="form__item__field form__item__field--string form__item__field--small " type="text" value="" />
+            <div class="form__item__message form__item__message--error" aria-hidden="true"> Please enter the post code.</div>
+        </div>
+        <div class="form__item js--controls--hiding" id="field-country">
+            <label class="form__item__label" for="ff-country">Country</label>
+            <select id="ff-country" name="country" class="form__item__field form__item__field--select form__item__field--select--block js--controls--country">
+                <option value="United Kingdom" selected="selected">United Kingdom</option>
+                <option value="other">Other</option>
+            </select>
+            <div class="form__item__message form__item__message--error" aria-hidden="true"> Please select a country</div>
+        </div>
+        <div class="form__item js--controls--other" id="field-other">
+            <label class="form__item__label " for="otherCountry">Other</label>
+            <input id="otherCountry" name="otherCountry" class="form__item__field form__item__field--string " type="text" value="" />
+            <div class="form__item__message form__item__message--error" aria-hidden="true"> </div>
+        </div>
+    </div>
+    <div class="form__item" id="field-phone">
+        <label class="form__item__label " for="phone">Phone <span class="form__item__label__option">(optional)</span>
+        </label>
+        <input id="phone" name="phone" class="form__item__field form__item__field--string " type="text" value="" />
+        <div class="form__item__message form__item__message--error" aria-hidden="true"> Enter a phone number</div>
+    </div>
+    <div class="form__actions">
+        <button name="_eventId_preview" type="submit" class="cta cta--icon cta--primary cta--next cta-group__firstly js--prevent-double">Preview your feedback</button>
+    </div>
+</form>

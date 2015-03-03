@@ -1,0 +1,44 @@
+
+
+
+    </div>
+
+    <script>
+        var ie7 = false;
+    </script>
+    <!--[if IE 7]> <script>ie7=true;</script> <![endif]-->
+  <!--   <script src="/bcc-beta-theme/dev.js"></script>
+    <script src="/bcc-beta-theme/js/main.js"></script> -->
+   
+    <script src="/bcc-beta-theme/js/main.pack.js"></script>
+    <!-- <script src="/js/vendor/prism.js"></script> -->
+
+    <script>
+
+        // you can register settings like this before require.js is loaded
+
+        $(function() {
+
+            // console.log("load");
+
+            $('.nav-launch').on('click', function() {
+                $('body').toggleClass('visible-header');
+            });
+
+            $('.wr__dropdown select').change(function() {
+
+                //console.log("change: .wr__dropdown <select>");
+
+                var targetVal = $(this).val();
+                var targetPosition = $(targetVal).offset().top;
+                $('html,body').animate({
+                    scrollTop: targetPosition
+                }, 'slow');
+                window.location.hash = targetVal;
+            });
+        });
+
+    </script>
+</body>
+
+</html>

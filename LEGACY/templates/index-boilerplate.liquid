@@ -1,0 +1,172 @@
+{% block page %}
+
+  {% assign page_title = 'BCC component index' %}
+  {% assign theme = false %}
+
+  {% include 'header' %}
+
+  <div class="page-content">
+
+    <div class="layout layout-constrained">
+      <div class="content content-main">
+
+        <h1>BCC static prototype</h1>
+
+        <hr />
+
+        <div class="grid-wrap">
+
+          <div class="grid-col desktop-grid-four-quarters">
+            <h2>Boilerplate</h2>
+            <p>Generic, reusable components and styles identified so far</p>
+
+            <div class="grid-wrap">
+
+              <div class="grid-col desktop-grid-one-third">
+                <ul>
+                  <li><a href="base/grid">Grid</a></li>
+                  <li><a href="base/typography">Typography</a></li>
+                  <li>
+                    <a href="base/forms">Forms</a>
+                    <ul>
+                      <li><a href="base/form-validation">Form validation notes</a></li>
+                    </ul>
+                  </li>
+                </ul>
+
+              </div><!--/grid-col-->
+
+              <div class="grid-col desktop-grid-one-third">
+                <ul>
+                  <li><a href="base/icons">Icons</a></li>
+                  <li><a href="base/panels">Panels</a></li>
+                  <li><a href="base/panel-groups">Panel Groups</a></li>
+                  <li><a href="base/lists">Lists</a></li>
+                  <li><a href="base/step-header">Step Header</a></li>
+                  <li><a href="base/list-table">List Table</a></li>
+                </ul>
+              </div><!--/grid-col-->
+              <div class="grid-col desktop-grid-one-third">
+                <ul>
+                  <li><a href="base/tabs">Tabs</a></li>
+                  <li><a href="base/overlays">Overlays</a></li>
+                  <li><a href="base/address-lookup">Address Lookup</a></li>
+                  <li><a href="base/date-cards">Date Cards / Date Card List</a></li>
+                </ul>
+              </div><!--/grid-col-->
+            </div><!--/grid-wrap-->
+
+          </div><!--/grid-col-->
+
+          <div class="grid-col desktop-grid-one-quarter">
+
+
+
+          </div><!--/grid-col-->
+        </div><!--/grid-wrap-->
+
+
+        <hr />
+
+        <h2>Templates</h2>
+
+        <div class="grid-wrap">
+          <div class="grid-col desktop-grid-one-third">
+
+          </div><!--/grid-col-->
+
+          <div class="grid-col desktop-grid-one-third">
+
+            <h3>Misc</h3>
+
+            <ul>
+              <li>
+                Account nav
+                <ul>
+                  <li><a href="base/signed-out">Signed Out</a></li>
+                  <li><a href="base/signed-in">Signed In</a></li>
+                </ul>
+              </li>
+              <li><a href="base/kitchen">Kitchen sink</a></li>
+            </ul>
+
+          </div>
+        </div>
+        <!--/grid-wrap-->
+
+        <div class="grid-wrap">
+          <div class="grid-col">
+          <h3>Register / account</h3>
+          </div><!--/grid-col-->
+          <div class="grid-col desktop-grid-one-third">
+
+            <h4>Create account</h4>
+
+            <ul>
+              <li><a href="sect-create-account/create-your-account-1">Step 1</a> &mdash; First phase</li>
+              <li><a href="sect-create-account/create-your-account-2a">Step 2a</a> &mdash; Address Lookup</li>
+              <li><a href="sect-create-account/create-your-account-2b">Step 2b</a> &mdash; Address Lookup (with errors)</li>
+              <li><a href="sect-create-account/create-your-account-3">Step 3</a> &mdash; Activate your account</li>
+              <li><a href="sect-create-account/create-your-account-4">Step 4</a> &mdash; Successfully Activated</li>
+            </ul>
+
+          </div><!--/grid-col-->
+          <div class="grid-col desktop-grid-one-third">
+
+            <h4>Sign in</h4>
+
+            <ul>
+              <li><a href="sect-sign-in/sign-in-or-create-an-account">Sign in or create an account</a></li>
+              <li><a href="sect-sign-in/signed-out">Signed out</a></li>
+              <li><a href="sect-sign-in/forgotten-your-password">Forgotten your password</a></li>
+              <li><a href="sect-sign-in/reset-password-instructions">Reset password instructions</a></li>
+              <li><a href="sect-sign-in/reset-your-password">Reset your password</a></li>
+            </ul>
+
+          </div><!--/grid-col-->
+          <div class="grid-col desktop-grid-one-third">
+
+            <h4>Account</h4>
+
+            <ul>
+              <li><a href="sect-account/activity">Activity</a></li>
+              <li><a href="sect-account/activity-populated">Activity (Populated)</a></li>
+              <li><a href="sect-account/profile">Profile</a></li>
+              <li><a href="sect-account/profile-updated">Profile (Updated)</a></li>
+              <li><a href="sect-account/change-password">Change password</a></li>
+              <li><a href="sect-account/change-password-errors">Change password errors</a></li>
+              <li><a href="sect-account/change-email-address">Change email address</a></li>
+              <li><a href="sect-account/change-contact-details">Change contact details</a></li>
+              <li><a href="sect-account/change-home-address">Change home address</a></li>
+            </ul>
+
+          </div><!--/grid-col-->
+        </div>
+        <!--/grid-wrap-->
+
+        <hr />
+
+        <h2>Email templates</h2>
+        <div class="grid-wrap">
+          <div class="grid-col desktop-grid-one-third">
+            <ul>
+              <li><a href="misc/email-templates/email_activation">Email activation</a></li>
+              <li><a href="misc/email-templates/welcome_email">Welcome email</a></li>
+              <li><a href="misc/email-templates/change_of_email">Change of email</a></li>
+              <li><a href="misc/email-templates/forgot_password">Password change request</a></li>
+              <li><a href="misc/email-templates/password_reset">Password reset</a></li>
+              <li><a href="misc/email-templates/order_new_bin">Order new bin</a></li>
+            </ul>
+          </div>
+        </div>
+        <!--/grid-wrap-->
+
+        <hr />
+
+      </div><!--/content-->
+    </div><!--/layout-->
+  </div><!--page-content-->
+
+  {% include 'footer' %}
+
+{% endblock %}

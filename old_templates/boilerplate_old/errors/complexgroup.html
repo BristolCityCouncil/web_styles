@@ -1,0 +1,25 @@
+<h3>Complex Grouped Error Validation</h3>
+
+<div class="open-validation">
+	<div class="open-validation__title">There was a problem with the information you entered:</div>
+	<ul class="open-validation__errorlist">
+		<li class="open-validation__error" data-ov-target="#f3" data-ov-error="This is error covers the whole box but not the inputs">
+			<a href="#f2">That box is going to show an error</a>
+		</li>
+		<li class="open-validation__error open-validation__error--hidden" data-ov-target="#f4" data-ov-error="This is error covers only the first name AND is a hidden error">
+			<a href="#f2">The firstname is an error</a>
+		</li>
+	</ul>
+</div>
+
+<div class="field field--group" id="f3">
+	
+	<div class="field" id="f4">
+		<label class="field__label field__label--block" for="fi4">First name</label>
+		<input class="field__input" id="fi4" type="text">
+	</div>
+	<div class="field" id="f5">
+		<label class="field__label field__label--block" for="fi5">Last name</label>
+		<input class="field__input" id="fi5" type="text">
+	</div>
+</div>

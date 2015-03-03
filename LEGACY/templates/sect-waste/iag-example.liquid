@@ -1,0 +1,115 @@
+{% block page %}
+
+  {% assign page_title = 'Bin collection information' %}
+  {% assign ribbon = 'ico-bin' %}
+
+  {% include 'header' %}
+
+  <div class="page-content">
+
+    <div class="layout layout-constrained">
+      <div class="grid-wrap">
+        <div class="grid-col desktop-grid-two-thirds">
+          <div class="content content-header content--iag">
+
+            <h1 class="content-header__title">Find out what goes in your recycling boxes</h1>
+
+          </div><!--/content-->
+
+          <div class="content content-main content--iag">
+
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae mauris ac sapien lacinia.</p>
+            <div class="page-contents js-sticky" role="navigation">
+              <div class="page-contents__inner">
+                <p class="page-contents__title">Page contents</p>
+                <div class="page-contents__list-wrapper">
+                  <div class="grid-wrap">
+                    <div class="grid-col desktop-grid-one-half">
+                      <ul class="linklist page-contents__list">
+                        <li><a href="#section-1">Section 1 testing</a></li>
+                        <li><a href="#section-with-long-title">Section with very very long title text for testing</a></li>
+                        <li><a href="#section-3">Section 3 testing</a></li>
+
+                      </ul>
+                    </div>
+                    <div class="grid-col desktop-grid-one-half">
+                      <ul class="linklist page-contents__list">
+                        <li><a href="#section-4">Section 4 testing</a></li>
+                        <li><a href="#section-5">Section 5 testing</a></li>
+
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h2 id="section-1">Section 1 title</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae mauris ac sapien lacinia vehicula consectetur sit amet turpis. Sed accumsan nunc lacinia justo ullamcorper eu hendrerit lacus blandit. Praesent et sagittis ante. Morbi gravida, eros vel varius consequat, mauris odio aliquam nibh, sit amet auctor leo enim quis ante.</p>
+
+            <p>Donec lacinia risus eu enim feugiat rhoncus. Ut sem quam, suscipit vitae pharetra vitae, consequat eget ipsum. Sed id risus a libero interdum rhoncus. Curabitur quis risus neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt semper libero.</p>
+
+            <div class="panel panel--inform">
+              <p class="panel__title">Med-high priority info or checklist</p>
+              <div class="panel__copy">
+                <ul>
+                  <li>You can’t order bins or boxes if you don’t have somewhere to store them off the street.</li>
+                  <li>If they contained an item we do not collect</li>
+                  <li>If they were not out by 7am</li>
+                  <li>If they were not visible from the road</li>
+                </ul>
+              </div>
+            </div>
+
+            <h2 id="section-with-long-title">Section with very very long title text for testing</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae mauris ac sapien lacinia vehicula consectetur sit amet turpis. Sed accumsan nunc lacinia justo ullamcorper eu hendrerit lacus blandit. Praesent et sagittis ante. Morbi gravida, eros vel varius consequat, mauris odio aliquam nibh, sit amet auctor leo enim quis ante.</p>
+
+
+            <h2 id="section-3">Section 3 title</h2>
+
+            <h3>This is an h3 heading</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae mauris ac sapien lacinia vehicula consectetur sit amet turpis. Sed accumsan nunc lacinia justo ullamcorper eu hendrerit lacus blandit. Praesent et sagittis ante. Morbi gravida, eros vel varius consequat, mauris odio aliquam nibh, sit amet auctor leo enim quis ante.</p>
+
+            <h3>This is an h3 heading</h3>
+            <p>Donec lacinia risus eu enim feugiat rhoncus. Ut sem quam, suscipit vitae pharetra vitae, consequat eget ipsum.</p>
+            <p>Sed id risus a libero interdum rhoncus. Curabitur quis risus neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae mauris ac sapien lacinia vehicula consectetur sit amet turpis. Sed accumsan nunc lacinia justo ullamcorper eu hendrerit lacus blandit. Praesent et sagittis ante. Morbi gravida, eros vel varius consequat, mauris odio aliquam nibh, sit amet auctor leo enim quis ante. Donec lacinia risus eu enim feugiat rhoncus. Ut sem quam, suscipit vitae pharetra vitae, consequat eget ipsum. Sed id risus a libero interdum rhoncus.</p>
+
+            <h2 id="section-4">Section 4 title</h2>
+            <ul>
+              <li>You can’t order bins or boxes</li>
+              <li>If they contained an item we do not collect</li>
+              <li>If they were not out by 7am</li>
+              <li>If they were not visible from the road</li>
+              <li>You can’t order bins or boxes</li>
+              <li>If they contained an item we do not collect</li>
+              <li>If they were not out by 7am</li>
+              <li>If they were not visible from the road</li>
+            </ul>
+            <div class="panel panel--alert">
+              <div class="ico ico-attention ico--large"></div>
+              <div class="panel__copy">
+                <p>This is a small high priority warning. Eg. it might talk about your legal obligations or that kind of thing.</p>
+              </div>
+            </div>
+            <h2 id="section-5">Section 5</h2>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae mauris ac sapien lacinia vehicula consectetur sit amet turpis. Sed accumsan nunc lacinia justo ullamcorper eu hendrerit lacus blandit. Praesent et sagittis ante. Morbi gravida, eros vel varius consequat, mauris odio aliquam nibh, sit amet auctor leo enim quis ante.</p>
+
+
+
+          </div><!--/content-->
+
+        </div><!--/grid-col-->
+
+      </div><!--/grid-wrap-->
+
+    </div><!--/layout-->
+
+  </div><!--page-content-->
+
+  {% include 'footer' %}
+
+{% endblock %}

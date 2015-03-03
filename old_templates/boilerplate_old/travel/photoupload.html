@@ -1,0 +1,90 @@
+<form class="form js--validate">
+    <header class="step-header">
+        <h1 class="step-header__title">
+        Apply for an older persons's buss pass
+        <span class="step-header__title__steps">
+        <span class="step-header__title__steps__seperator">:</span>
+        Step 2 of 3
+        </span>
+        </h1>
+        <h2 class="step-header__subtitle">
+        Upload a photo
+        </h2>
+    </header>
+    <p>Please Upload a passport style photo to use on your buss pass.</p>
+    <!-- Will need updated with variable type/content for:
+        - Button Text (upload files -> upload photo)
+        - File preview (text -> image)
+     -->
+
+    <!-- Current Markup for successful upload 
+
+        <div class="docupload__file docupload__file--uploaded docupload__file--success">
+            <div class="docupload__filename">00fsaafssfaddfsadsfdfsdafsadfsafdsafsdafdsdfasdafsdfsdfs02.jpg <span>2.3MB</span>
+            </div>
+            <div class="docupload__actions">
+                <div class="docupload__filestatus">Uploaded <span class="icon icon--bcc icon--bcc--tick"></span>
+                </div>
+                <div class="docupload__fileremove"><a href="#">Remove</a></div>
+            </div>
+        </div>
+    -->
+    <!-- New markup only (NO STYLES) for photoupload 
+
+        <div class="docupload__file docupload__photo [ docupload__photo--success docupload__photo--error ]">
+            <div class="docupload__thumbnail">
+                <img src="http://placehold.it/170x220" />
+            </div>
+            <div class="docupload__overview">
+                <p>
+                    Here is your photo. <br/> 
+                    Does is look like the good examples below? <br/>
+                    If not, you can <a href="#" class="docupload__remove">change your photo</a>
+                </p>
+            </div>
+        </div>
+    -->
+
+    {{> components/docupload}}
+
+    
+    <h3>Here are some examples of good photos</h3>
+    <!-- Markup only below, no styles -->
+    <div class="infostack infostack--horizontal">
+        <div class="infostack__photo">
+            <img src="/bcc-beta-theme/images/CT/goodphoto1.jpg"/>
+        </div>
+        <div class="infostack__photo">
+            <img src="/bcc-beta-theme/images/CT/goodphoto2.jpg"/>
+        </div>
+        <div class="infostack__list">
+            <ul>
+                <li>Not too close</li>
+                <li>Face not covered</li>
+                <li>Light background</li>
+                <li>Front facing</li>
+                <li>Portrait shape</li>
+            </ul>
+        </div>
+        <div class="clearfix"></div>
+        <a href="#" class="infostack__expander">View examples of things to avoid</a>
+    </div>
+    <a href="javascript: void(0)" class="cta cta--icon cta--primary cta--next cta-group__firstly js--prevent-double">Next</a>
+    
+
+</form>
+
+<br/><br/><br/><br/><br/><br/>
+
+
+<h3>Here is your photo:</h3>
+<div class="infostack infostack--media">
+    <div class="infostack__photo">
+        <img width="150px" src="https://scm.bristol.gov.uk/jira/secure/attachment/16057/use%20this%20one.jpg"/>
+    </div>
+    <div class="infostack__annotation">
+        <h4>Does it look like the good examples below?</h4>
+        <p>If not, you can <a href="#">change your photo</a></p>
+    </div>
+    <div class="clearfix"></div>
+</div>

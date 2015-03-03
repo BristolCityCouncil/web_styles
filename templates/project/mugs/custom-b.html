@@ -1,0 +1,52 @@
+{{> chrome/header.v1}}
+
+{{# project.mugs.b}}
+
+	<h1>
+		{{title}} 
+	</h1>
+	<p>An example form including <em>error state</em> examples</p>
+	
+{{/ project.mugs.b}}
+
+	<div class="open-validation">
+	    <div class="open-validation__title">There was a problem with the information you entered:</div>
+	    <ul class="open-validation__errorlist">
+	        <li class="open-validation__error">
+	            <a href="#v1">Enter a first name</a>
+	        </li>
+			<li class="open-validation__error">
+	            <a href="#v2">Enter a last name</a>
+	        </li>
+	        <li class="open-validation__error">
+	            <a href="#v3, #c001">Please accept terms</a>
+	        </li>
+	    </ul>
+	</div>
+	{{> tags/forms/field_header id="v1"}}
+        {{> tags/forms/label label="What is your first name" id="i001"}}
+        {{> tags/forms/input id="i001"}}
+    {{> tags/forms/field_footer }}
+
+    {{> tags/forms/field_header  id="v2"}}
+        {{> tags/forms/label label="What is your last name" id="i002"}}
+        {{> tags/forms/input id="i002"}}
+    {{> tags/forms/field_footer }}
+
+    {{> tags/forms/field_header id="v3"}}
+        {{> tags/forms/label 
+            id="i004"
+            label="Your email" 
+            instructions="We normally send our response by email"}}
+        {{> tags/forms/input id="i004"}}
+
+        {{> tags/forms/conditional_top }}
+            {{> tags/forms/checkbox id="c001"}}
+            {{> tags/forms/label label="I accept the terms" id="c001"}}
+        {{> tags/forms/conditional_bottom }}
+    {{> tags/forms/field_footer }}
+	<Br/><Br/>
+
+    {{> tags/buttons/cta_link modifiers="newcta--primary" label="next" link="/example/project/mugs/thanks"}}
+
+{{> chrome/footer.v2}}

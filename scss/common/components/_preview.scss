@@ -1,0 +1,114 @@
+// Has been refactored
+
+.preview {
+    img {
+        width: 150px;
+    }
+    .preview__item {
+        margin-top: 30px;
+            margin-bottom: 30px;
+        word-wrap: break-word;
+        
+        @include respond-to(tablet, desktop) {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .preview__item__label {
+            font-family: $sans-bold;
+            font-weight: normal;
+            overflow: hidden;
+            min-height: 22px;
+            border: 0;
+            font-size: 16px;
+            margin-bottom: 10px;
+            margin-left: 0;
+            
+            @include respond-to(tablet, desktop) {
+                font-size: 19px;
+           }
+           
+           .preview__item__label__status {
+                
+                .icon--bcc--verified {
+                    font-family: 'bcc';
+                    font-size: 20px;
+                    position: relative;
+                    top: 3px;
+					margin-left: 4px; 
+                }
+                
+                color: $green-1;
+                font-family: $sans;
+                font-size: 12px;
+                font-weight: normal;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                
+                @include respond-to(tablet, desktop) {
+                    font-size: 13px;
+                }
+            }
+        }
+        
+        .preview__item__field {
+            margin-left: 0;
+            
+            pre {
+            	font-family: $sans;
+            	font-size: 16px;
+            	line-height: 22px;
+            	margin-bottom: 0;
+            	color: $grey-1;
+            	padding: 0;
+            	border: 0;
+            	background: none;
+            	border-radius: 0;
+            	word-break:normal;
+            }
+            
+            &.preview__item__field--textarea,
+            &.preview__item__field--string {
+                @include box-shadow(none);
+                @include clearfix;
+                @include box-sizing(border-box);
+                -webkit-appearance: none;
+                background-color: $white;
+                border-radius: 0;
+                border: 0;
+                border-top: 2px solid $grey-6;
+                border-bottom: 2px solid $grey-6;
+                color: #2e3137;
+                margin-bottom: 0;
+                outline: none;
+                padding: 10px;
+                padding-left: 0;
+                padding-right: 0;
+                position: relative;
+                width: 100%;
+            }
+        }
+        
+        .preview__item__message {
+            display: none;
+            font-size: 14px;
+            line-height: 14px;
+            margin-top: 10px;
+            
+           
+            
+            @include respond-to(desktop) {
+                font-size: 16px;
+                margin-top: 15px;
+            }
+
+            &.preview__item__message--change {
+                display: block;
+            }
+        }
+    }
+}
+// Helper for BBCT-180
+strong.title {
+    margin-bottom: 20px;
+}

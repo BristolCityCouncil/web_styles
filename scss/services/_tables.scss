@@ -1,0 +1,179 @@
+.table--collapse {
+    width: 100%;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    
+    @include respond-to(tablet, desktop) {
+        margin-top: 0;
+        margin-bottom: 40px;
+        font-size: 19px;
+    }
+
+    .table__row--header {
+        background-color: #fff;
+        border-top: 0;
+        
+        th {
+            font-weight: normal;
+            font-family: $sans-bold;
+            text-align: left;
+            font-size: 14px;
+            padding-left: 20px;
+            padding-right: 20px;
+            
+            @include respond-to(desktop) {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+            &.table__col--last {
+                border-right: 0;
+                text-align: right;
+            }
+        }
+    }
+    
+    %table__row--full,
+    .table__row--full {
+        background-color: #fff;
+        
+        td {
+            border-right: 0;
+        }
+    }
+    
+    .table__row--quantities {
+        @extend %table__row--full;
+        
+        a {
+        	font-size: 16px;
+        	line-height: 21px;
+        }
+        
+        td {
+        	padding-top: 15px;
+        	padding-bottom: 30px;
+        		
+        	@include respond-to(tablet, desktop) {
+	           	padding-left: 0;
+        		padding-right: 0;	
+	        }
+        }
+    }
+    
+    %table__row--total,
+    .table__row--total {
+        @extend %table__row--full;
+        
+        border-top-width: 4px;
+        
+        td {
+        	text-align: right;
+        }
+        
+        strong {
+            margin-left: 20px;
+        }
+    }
+    
+    .table__row--total--affirm {
+        @extend %table__row--total;
+        border-top: 5px solid $bcc-green-affirm;
+        background-color: #deefe7;
+        
+        td {
+        	padding-top: 25px;
+        	padding-bottom: 25px;
+        }
+    }
+    
+    .table__col--description {
+        span {
+            display: block;
+            margin-top: 10px;
+        }
+    }
+    
+    .table__col--details,
+    .table__col--description {
+		dl {
+			margin: 0;
+			width:100%;
+			overflow:hidden;
+		}
+		
+		dt {
+			font-size: 16px;
+		}
+		
+		dd {
+			margin-left: 0;
+            margin-bottom: 10px;
+		}
+		
+        @include respond-to(tablet, desktop) {
+            dt {
+                float: left;
+                width: 25%;
+            }
+            
+            dd {
+                width: 75%;
+                float: left;
+                margin-left: 0;
+                margin-bottom: 0;
+            }
+        } 
+    }
+    
+    tr {
+        background-color: #eee;
+        border-top: 2px solid #bbb;
+      
+        td {
+            vertical-align: top;
+            border-right: 1px solid #bbb;
+            padding: 20px;
+            
+            @include respond-to(desktop) {
+                padding: 30px;
+            }
+            
+            &.table__col--last {
+                border-right: 0;
+                text-align: right;
+            }
+        }
+    }
+}
+
+.wrapper {
+    display: inline-block;
+    width: 100%;
+}
+
+.wrapper--th {
+    display: inline;
+    
+    &:before{
+        content: ' and ';
+    }
+}
+
+td,
+th {
+	border-color: #bbb;
+	
+    &.left{
+        text-align: left;
+    }
+    
+    &.center{
+        text-align: center;
+    }
+    
+    &.right{
+        text-align: right;
+    }
+}

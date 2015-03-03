@@ -1,0 +1,648 @@
+input[type="file"]{
+	line-height: 24px;
+}
+
+.form {
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+	
+	.form__item {
+		position: relative;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		max-width: 480px;
+		word-wrap: break-word;
+
+		&.form__item--permit-group.form__item--error{
+			.form__item__label {
+				color: #333;
+			}
+
+			&.form__item-permit-group--error input + .form__item__message--error{
+				display: none;
+			}
+			
+            &.form__item-permit-group--error input[value=""],
+            &.form__item-permit-group--error input:not([value]){
+                background-image: none;
+                background: $white;
+                border-color: $grey-hairline;
+            }
+            
+            &.form__item-permit-group--error input.form__item--error[value=""],
+            &.form__item-permit-group--error input.form__item--error:not([value]){
+                border-color: $bcc-red-error;
+                background: url("../images/form__item--string--error.png") top right $white no-repeat;
+            }
+		}
+
+		&.form__item--permit-group{
+			.form__item{
+				margin: 0 0 20px;
+			}
+		}
+
+		@include respond-to(tablet, desktop) {
+			margin-top: 40px;
+			margin-bottom: 40px;
+		}
+
+		legend {
+			font-size: 16px;
+			line-height: 24px;
+		}
+
+		legend.form__item__label {
+			margin-bottom: 20px;
+		}
+
+		&.form__item--disabled {
+			.form__item__label {
+				color: $grey-2;
+			}
+		}
+
+		.form__item__label {
+			font-family: $sans-bold;
+			font-weight: normal;
+			overflow: hidden;
+			min-height: 22px;
+			border: 0;
+			font-size: 16px;
+			margin-bottom: 10px;
+
+			@include respond-to(tablet, desktop) {
+				font-size: 19px;
+				margin-bottom: 10px;
+			}
+
+			.form__item__label__option {
+				font-size: 16px;
+				font-family: $sans;
+			}
+
+			.form__item__label__status {
+
+
+				color: $green-1;
+				font-family: $sans;
+				font-size: 12px;
+				font-weight: normal;
+				padding-top: 5px;
+				padding-bottom: 5px;
+
+				@include respond-to(tablet, desktop) {
+					font-size: 13px;
+				}
+
+				.icon--bcc--verified {
+					font-family: 'bcc';
+					font-size: 20px;
+					position: relative;
+					top: 3px;
+				}
+			}
+
+			.form__item__label__instructions,
+			.form__item__label__instructions p,
+			.form__item__label__instructions ul li {
+				font-family: $sans;
+				font-weight: normal;
+				font-size: 14px;
+
+				@include respond-to(tablet, desktop) {
+					font-size: 16px;
+				}
+			}
+
+			.form__item__label__instructions p {
+				margin-bottom: 0;
+			}
+
+			.form__item__label__instructions ul {
+				margin-bottom: 0;
+			}
+
+			.form__item__label__instructions ul li {
+				margin-bottom: 0;
+                //font-family: $sans-bold;
+            }
+            
+            .form__item__label__instructions {
+            	@extend %light;
+            	display: block;
+            }
+            
+            &.form__item__label--group {
+            	font-family: $sans;
+            	line-height: 20px;
+            	overflow: visible;
+            	position: relative;
+            	margin-top: 20px;
+            	margin-bottom: 20px;
+
+            	legend.form__item__label {
+            		padding-left: 0;
+            	}
+
+
+            	.form__item__field--radio,
+            	.form__item__field--checkbox {
+            		margin: 0 10px 0 0;
+            		outline: 0;
+            	}
+
+            	span.extra {
+            		color: #676973;
+            		font-size: 13px;
+            		display: block;
+            		margin-left: 30px;
+            	}
+            }
+            
+            
+        }
+        
+        .form__item__singular {
+
+        	.form__item__field--checkbox {
+        		margin: 0 10px 0 0;
+        	}
+        }
+
+        
+        .form__item__label--inline {
+        	&.form__item__label--group {	
+        		margin-top: 0;
+        		margin-bottom: 0;
+        	}
+        }
+        
+        .form__item__list__field {
+        	margin-left: 0;
+        }
+        
+        .form__item__field {
+        	&.form__item__field--textarea,
+        	&.form__item__field--string {
+        		@include box-shadow(inset $grey-6 0 2px 0 0);
+                //@include clearfix;
+                -webkit-appearance: none;
+                outline: none;
+                border-radius: 0;
+                padding: 10px;
+                
+                &:focus {
+                	border-color: $accessibility;
+                }
+                
+                &:focus:invalid {
+                	color: $text;
+                }
+            }
+            
+            &.form__item__field--string,
+            &.form__item__field--textarea {
+            	@include box-sizing(border-box);
+            	margin-bottom: 0;
+            	width: 100%;
+            }
+            
+            &.form__item__field--select {
+            	height: 43px;
+            	width: 100%;
+
+            }
+            
+            &.form__item__field--select,
+            &.form__item__field--string,
+            &.form__item__field--textarea {
+            	border-width: 2px;
+            	border-style: solid;
+            	border-color: $grey-hairline;
+            	background-color: $white;
+            }
+            
+            &.form__item__field--string[type="number"],
+            &.form__item__field--string[type="text"],
+            &.form__item__field--string[type="password"],
+            &.form__item__field--string[type="email"] {
+            	height: 43px;
+            }
+            
+            &.form__item__field--string[type="number"] {
+            	-moz-appearance:textfield;
+            	
+            }
+            
+			&.form__item__field--string[type=number]::-webkit-outer-spin-button,
+			&.form__item__field--string[type=number]::-webkit-inner-spin-button {
+			    -webkit-appearance: none;
+			    margin: 0;
+			}
+            
+            &.form__item__field--mini {
+            	width: 80px;
+            	margin-right: 10px;
+            }
+            
+            &.form__item__field--small {
+            	width: 150px;
+            	margin-right: 8px;
+
+            	@include respond-to(desktop) {
+            		margin-right: 13px;
+            	}
+            }
+            
+            &.form__item__field--email-verification {
+                //max-width: 320px;
+                margin-right: 10px;
+                margin-bottom: 10px;
+            }
+        }
+        
+        .form__item__message {
+        	display: block;
+        	font-size: 14px;
+        	line-height: 19px;
+        	margin-top: 10px;
+
+        	@include respond-to(desktop) {
+        		font-size: 16px;
+        		margin-top: 15px;
+        	}
+
+        	&.form__item__message--change {
+        		display: block;
+        	}
+        }
+        
+        .form__item__message--error {
+        	display: none;
+        }
+        
+        &.form__item--1of2 {
+        	margin-bottom: 0;
+        }
+
+        &.form__item--2of2 {
+        	padding-top: 20px;
+        	margin-top: 0;
+        }
+    }
+    
+    .form__item__label {
+    	&.form__item__label--inline {
+    		display: inline-block;
+    		margin-top: 0;
+    		margin-right: 15px;
+
+    		@include respond-to(desktop) {
+    			margin-right: 20px;
+    		}
+    	}
+    }
+    
+    // Refactor
+    .form__item--saved {
+    	.form__item__field {
+    		&.form__item__field--string,
+    		&.form__item__field--textarea {
+    			@include box-shadow(none);
+    			color: #2e3137;
+    			background-color: $white;
+    			border: 0;
+    			border-top: 2px solid $grey-6;
+    			border-bottom: 2px solid $grey-6;
+    			padding-left: 0;
+    			padding-right: 0;
+    			border-radius: 0; 
+    			position: relative;
+    		}
+    	}
+    }
+    
+    // Errors
+    .form__item--error {
+    	.form__item__field--string[type="text"],
+    	.form__item__field--string[type="email"],
+    	.form__item__field--string[type="password"] {
+    		background: url("../images/form__item--string--error.png") top right $white no-repeat;
+
+    		&:focus {
+    			background-image: none;
+    		}
+    	}
+
+    	.form__item__label {
+    		color: $bcc-red-error;
+    	}
+
+    	.form__item__message--error {
+    		display: block;
+    		font-family: $sans-bold;
+    		color: $bcc-red-error;
+
+    		a {
+    			color: $bcc-red-error;
+    		}
+    	}
+
+    	.form__item__field {
+    		&.form__item__field--string,
+    		&.form__item__field--select,
+    		&.form__item__field--textarea {
+    			color: #555;
+                // Bug #CPDP-2781
+                border-color: $bcc-red-error;
+            }
+        }
+    }
+    
+    .form__item--group {
+    	.form__item__label--group {
+    		margin-bottom: 0;
+
+    		&.first,
+    		&:nth-child(2) {
+    			margin-top: 0;
+    		}
+
+    		&.last,
+    		&:last-child {
+    			margin-bottom: 0;
+    		}
+    	}
+    }
+    
+    .form__actions {
+    	@extend .form-actions;
+    	background: none;
+    	margin: 30px 0 0;
+    	padding: 0;
+
+    	@include respond-to(tablet, desktop) {
+    		margin: 40px 0 0;
+    	}
+    }
+    
+    .form__item,
+    .form__actions {
+    	.cta {
+    		margin: 0;
+    	}
+    }
+
+    .form__submit_message{
+        // Message under
+        margin: 15px 0;
+        display: block;
+        color: #666;
+    } 
+    
+
+    .btn {
+    	margin-top: 0;
+    }
+    
+    .form__set{
+    	@extend .slab, .slab--outline, .slab--white;
+    	box-sizing: border-box;
+    	max-width: 480px;
+
+    	&.form__set--error{
+    		border-color: $bcc-red-error;
+    		box-shadow: inset 0 0 0 2px $bcc-red-error;
+    	}
+    }
+    
+    @include respond-to(desktop) {
+    	fieldset.form__set{
+    		padding-bottom: 50px;
+
+    		.form__item__message.form__item__message--error {
+    			position: absolute;
+    		}
+
+    		.form__item:first-child {
+    			margin-top: 0;
+    		}
+    	}
+    }
+    
+    div.form__set{
+    	max-width: 542px;
+
+    	.form__item {
+    		&:first-child{
+    			margin-top: 10px;
+    		}
+    	}
+    }
+}
+
+// Extension of bug #CPDP-2781
+select:focus:invalid {
+	color: #555 !important;
+}
+
+h2.invalid {
+	color: $bcc-red-error !important;
+}
+
+// Spacing Modifications
+.address-lookup--isSelected {
+	margin: 30px 0;
+
+	@include respond-to(desktop) {
+		margin: 40px 0;
+	}
+}
+
+.panel.address-lookup--isSelected {
+	margin-top: 20px;
+}
+
+input[type=file] {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 250px;
+}
+
+/* temp */
+.form__item[data-permit] {
+	margin: 20px 0;
+}
+
+/* TODO: Remove */
+#field-permitNumbers {
+	margin-bottom: 0;
+}
+
+#field-addAnotherPermit {
+	margin-top: 0;
+}
+
+.form__item.form__item--dateofbirth {
+    @include clearfix;
+    //max-width: inherit;
+    //width: 100%;
+
+    .uniform span {
+        width: 100% !important;
+    }
+
+    .uniform {
+        width: 32% !important;
+        margin: 0 1% 10px 0;
+        min-width: 0;
+        float: left;
+    }
+    
+    .cta {
+        margin-top: 0;
+        margin-right: 2%;
+        width: 98%;
+        text-align: center;
+        @include transform(translateY(0));
+    }
+
+    @include respond-to(tablet, desktop) {
+        .uniform {
+            width: 24% !important;
+            margin-bottom: 20px;
+        }
+        
+        .cta { 
+            float: left;
+            width: 24%;
+            margin-right: 1%;
+        }
+    }
+    
+    .form__item__message.form__item__message--error {
+        width: 100%;
+        float:right;
+        
+        @include respond-to(tablet, desktop) {
+            margin-top: 0;
+        }
+    }
+    
+    &.form__item--error {
+        .form__item__message--error {
+            position: absolute;
+            top: 76px;
+        }
+        
+        .cta {
+            margin-top: 30px;
+        }
+        
+        @include respond-to(tablet, desktop) {
+            .form__item__message--error {
+                position: initial;
+                top: initial;
+            }
+            .cta {
+                margin-top: 0;
+            }
+        }
+    }
+
+
+    /*
+	max-width: inherit;
+	width: 100%;
+	
+	.uniform span {
+        width: 100% !important;
+    }
+    
+    .uniform {
+    	box-sizing: border-box;
+    	width: 29% !important;
+    	min-width: 0;
+    	margin: 0 3px;
+        //max-width: 0px;
+    }
+    
+    .uniform__select--inline {
+    	margin-bottom: 20px;
+    }
+
+    .cta {
+    	width: 95%;
+        @include respond-to(tablet) {
+            width:91%;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        @include respond-to(desktop) {
+            width:100%;
+        	margin-left: 6px;
+        }
+    }
+
+    @include respond-to(desktop, tablet) {
+    	.uniform, 
+    	.cta {
+    		box-sizing: border-box;
+    		width: 20% !important;
+    		min-width: 0;
+    		max-width: 120px;
+    	}
+    	
+    	// .uniform:nth-child(3) {
+    	// 	max-width: 180px;
+    	// }
+    	
+    	.uniform__select--inline {
+    		margin-bottom: 0;
+    	}
+    }
+
+    .cta {
+    	text-align: center;
+    }
+    */
+}
+
+#field-postcode input[type="text"]{
+	text-transform: uppercase;
+}
+
+.guideline {
+	@include clearfix;
+	font-size: 16px;
+	line-height: 22px;
+	margin-top: 0;
+	margin-bottom: 15px;
+	padding: 0 15px;
+	position: relative;
+	border-left: 6px solid $grey-6;
+
+	.guideline__status {
+		margin-left: 5px;
+		font-family: $sans;
+		color: $grey-2;
+		white-space: nowrap;
+		
+		.guideline__status__icon {
+			font-size: 16px;
+		}
+
+		&.guideline__status--affirmed .guideline__status__icon {
+			color: $green-1;
+		}
+
+		&.guideline__status--rejected .guideline__status__icon {
+            color: #a70909;
+			//color: $bcc-red-error;
+		}
+	}
+}

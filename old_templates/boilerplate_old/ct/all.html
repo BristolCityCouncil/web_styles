@@ -1,0 +1,105 @@
+<div class="portlet-body">
+    <script>
+        ga('send', 'pageview', {
+            'page': '/concessionary-travel/customer-details',
+        });
+    </script>
+    <header class="step-header">
+        <p class="step-header__title">Apply for an older person's bus pass<span class="step-header__title__seperator">:</span><span class="step-header__title__steps">step 1 of 3</span>
+        </p>
+        <h1 class="step-header__subtitle">Your details</h1>
+    </header>
+    <form id="concessionaryTravelOrderModel" class="form js--validate" action="http://l-custpdev-app1.bcc.lan:8080/concessionary-travel?p_auth=ITzE1qEW&amp;p_p_id=bccconcessionarytravelportlet_WAR_bccportalapps101BUILDSNAPSHOT&amp;p_p_lifecycle=1&amp;p_p_state=normal&amp;p_p_mode=view&amp;p_p_col_id=column-1&amp;p_p_col_count=2&amp;_bccconcessionarytravelportlet_WAR_bccportalapps101BUILDSNAPSHOT_execution=e1s4" method="post">
+        <button id="ctMainSubmit" name="_eventId_continueToDocImageUpload2" type="submit" class="visuallyhidden" onclick="ga('send', 'pageview',{'page': '/concessionary-travel/customer-details-submit-next'});"></button>
+        <div class="panel panel--affirm panel--date"><span class="panel__title">Date of birth</span><strong class="panel__copy">03 March 1950 </strong>
+            <button class="cta cta--link" type="submit" name="_eventId_changeDOB" onclick="ga('send', 'pageview',{'page': '/concessionary-travel/customer-details-change-dob'});">Change date of birth</button>
+        </div>
+        <p>You can apply now for an older person's bus pass.</p>
+        <div class="field" id="field-postcode">
+            <label class="field__label" for="pcode">Postcode where you live <span class="field__instructions only-ie8">Please click the submit button to continue</span>
+            </label>
+            <input id="pcode" name="customer.address.postCode" class="field__input field__input--block" required="required" type="text" value="BS1 2AT" />
+            <button class="cta cta--small" type="submit" name="_eventId_lookupAddress" onclick="ga('send', 'pageview',{'page': '/concessionary-travel/customer-details-submit-postcode'});">Find address</button>
+        </div>
+        <div class="field js--address-lookup address-lookup--isActive">
+            <label class="field__label field__label--block" for="drop">Select address</label>
+            <div class="dropdown">
+                <select id="drop">
+                    <option value="" selected="selected">Select your address</option>
+                    <option value="000000106069">2 Baldwin Street Bristol BS1 1SA</option>
+                    <option value="000000353708">3 Baldwin Street Bristol BS1 1SA</option>
+                    <option value="000000299768">4 Baldwin Street Bristol BS1 1SA</option>
+                    <option value="000000317825">6 Baldwin Street Bristol BS1 1SA</option>
+                    <option value="000000106070">8-10 Baldwin Street Bristol BS1 1SA</option>
+                    <option value="000000106067">12 Baldwin Street Bristol BS1 1SA</option>
+                    <option value="000000346380">Basement Floor Alliance House Baldwin Street Bristol BS1 1SA</option>
+                    <option value="000000324639">First Floor Alliance House Baldwin Street Bristol BS1 1SA</option>
+                    <option value="000000324640">Second Floor Alliance House Baldwin Street Bristol BS1 1SA</option>
+                    <option value="000000324641">Third Floor Alliance House Baldwin Street Bristol BS1 1SA</option>
+                </select>
+                <div class="dropdown__background"></div>
+            </div>
+            <div class="field__message"></div>
+        </div>
+
+        <h2>Your name</h2>
+        <p>As it appears on official documents e.g. passport, bills, bank statements</p>
+        <div class="field" id="field-title" required>
+            <label class="field__label field__label--block" for="drop">Title</label>
+            <div class="dropdown dropdown--inline">
+                <select id="drop">
+                    <option value="def" selected="selected">Select option</option>
+                    <option value="mr">Mr</option>
+                    <option value="mrs">Mrs</option>
+                    <option value="miss">Miss</option>
+                    <option value="ms">Ms</option>
+                </select>
+                <div class="dropdown__background"></div>
+            </div>
+            <div class="field__message field__message--error">
+                Choose a title
+            </div>
+        </div>
+
+        <div class="field" id="field-firstname" data-validate-required-message="Enter a first name">
+            <label class="field__label " for="fname">First name</label>
+            <input class="field__input" id="fname" name="customer.firstname" required="required" type="text" value="" />
+        </div>
+        <div class="field" id="field-lastname" data-validate-required-message="Enter a last name">
+            <label class="field__label " for="lname">Last name</label>
+            <input class="field__input" id="lname" name="customer.lastname" required="required" type="text" value="" />
+        </div>
+
+        <h2>Contact details</h2>
+
+        <div class="field" id="field-emailAddress" required data-validate-required-message="Please enter a valid email">
+            <label class="field__label " for="contact_email">
+            	Your email
+				<div class="field__instructions" >
+	            	We will send you an order confirmation. <br/>
+	            	If you don't have an email you will need to apply with the <a href="https://www.bristol.gov.uk/sites/default/files/documents/transport_and_streets/public_transport/concessionary_bus_passes/BD6238_Older_persons_bus_pass_0.pdf" target="_blank">older person's bus pass paper form</a>
+	            </div>
+            </label>
+            <input class="field__input" id="contact_email" name="customer.emailAddress" pattern="\w+([-+.&#39;]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" required="required" type="text" value="" />
+        </div>
+        <div class="field" id="field-phone" data-validate-required-message="Enter a last name">
+            <label class="field__label " for="contact_number">
+            	Last name
+            	<div class="field__instructions">
+            		We will only use this if we need to check something
+            	</div>
+            </label>
+            <input class="field__input" id="contact_number" name="customer.phone" required="required" type="text" value="" />
+        </div>
+        <h2>Identity check</h2>
+        <p>If you go to the next step you give us permission to check your identity and address details with a company called Experian.</p>
+        <p>This means you do not have to send us any documents like a passport or driving license, so you get your bus pass sooner.</p>
+        <p><b>This won't affect your credit record,</b> but the check will be recorded. Experian will check your details with other information they hold. They won't keep your information you entered on this form or give it to anyone else.</p>
+        <p>If you don't want us to check your details with Experian, stop now and do not click next. You must apply with the <a href="https://www.bristol.gov.uk/sites/default/files/documents/transport_and_streets/public_transport/concessionary_bus_passes/BD6238_Older_persons_bus_pass_0.pdf" target="_blank">older person's bus pass paper form</a>
+        </p>
+        <div class="cta-group">
+            <button type="submit" name="_eventId_continueToDocImageUpload" class="cta cta--icon cta--primary cta--next cta-group__firstly js--prevent-double" data-primary-submit="" onclick="ga('send', 'pageview',{'page': '/concessionary-travel/customer-details-submit-next'});">Next</button>
+        </div>
+    </form>
+    <!--</div>/grid-col-->
+</div>

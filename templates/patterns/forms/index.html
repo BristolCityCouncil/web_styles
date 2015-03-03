@@ -1,0 +1,340 @@
+<h1 class="pl__title">
+    Forms
+</h1>
+<hr class="pl__rule" />
+
+
+<div class="pattern">
+    {{> tags/components/title  pattern="Basic Field"}}
+
+
+
+    {{> tags/forms/field_header}}
+        {{> tags/forms/label label="What is your first name" id="i001"}}
+        {{> tags/forms/input id="i001"}}
+    {{> tags/forms/field_footer }}
+    
+    <br/>
+    <br/>
+
+    {{> tags/components/docs basicfield}}
+
+    <div class="wr__code">
+        <pre>
+            
+        </pre>
+    </div>
+
+</div>
+
+
+<div class="pattern">
+    {{> tags/components/title  pattern="Basic Field with comments"}}
+    
+    {{> tags/forms/field_header}}
+        {{> tags/forms/label 
+            id="i002"
+            label="What is your first name" 
+            instructions="We normally send our response by email"}}
+        {{> tags/forms/input id="i002"}}
+    {{> tags/forms/field_footer }}
+    
+    <br/><br/>
+
+    {{> tags/components/docs basicfield}}
+
+    <div class="wr__code">
+        <pre>
+            
+        </pre>
+    </div>
+
+</div>
+
+
+
+
+
+<div class="pattern">
+    
+    {{> tags/components/title  pattern="Basic Field with all available options"}}
+    
+
+    {{> tags/forms/field_header}}
+        {{> tags/forms/label_top id="i003"}}
+            What is your first name
+            {{> tags/forms/status confirmed="true"}}
+            {{> tags/forms/instructions_top}}
+                <p>
+                    Please be specific and include information such as:
+                </p>
+                <ul>
+                    <li>Dates, Times and locations</li>
+                    <li>References to specific documents</li>
+                    <li>Specific things you are unhappy about</li>
+                    <li>Your council tax number</li>
+                </ul>
+            {{> tags/forms/instructions_bottom}}
+
+            {{> tags/forms/guidance_top}}
+                <strong>
+                    "Total amount spent on road maintenance in 2013" 
+                    <span class="guidance__status guidance__status--affirmed">
+                        <span class="icon icon--bcc icon--bcc--tick guidance__status__icon"></span> Good
+                    </span>
+                </strong>
+                <br>
+                <strong>
+                    "All information about roads" 
+                    <span class="guidance__status guidance__status--rejected">
+                        <span class="icon icon--bcc icon--bcc--cross guidance__status__icon"></span> Too general
+                    </span>
+                </strong>
+            {{> tags/forms/guidance_bottom}}
+
+
+        {{> tags/forms/label_bottom }}
+
+        {{> tags/forms/input id="i003" }}
+
+    {{> tags/forms/field_footer }}
+    
+    <br><br>
+
+    {{> tags/components/docs basicfield}}
+
+    <div class="wr__code">
+        <pre>
+            
+        </pre>
+    </div>
+
+</div>
+
+<div class="pattern">
+    
+    {{> tags/components/title  pattern="Basic Field with Checkbox"}}
+    
+    {{> tags/forms/field_header}}
+        {{> tags/forms/label 
+            id="i004"
+            label="Their email" 
+            instructions="We normally send our response by email"}}
+        {{> tags/forms/input id="i004"}}
+
+        {{> tags/forms/conditional_top }}
+            {{> tags/forms/checkbox id="c001"}}
+            {{> tags/forms/label label="I accept the terms" id="c001"}}
+        {{> tags/forms/conditional_bottom }}
+    {{> tags/forms/field_footer }}
+    
+    <br><br>
+
+    {{> tags/components/docs basicfield}}
+
+    <div class="wr__code">
+        <pre>
+            
+        </pre>
+    </div>
+
+</div> 
+
+
+
+<div class="pattern">
+    
+    {{> tags/components/title  pattern="Basic Dropdown (inline)"}}
+    
+    {{> tags/forms/field_header}}
+        {{> tags/forms/label id="d001" label="Inline"}}
+        {{> tags/forms/dropdown patterns.forms.dropdown id="d001"}}
+    {{> tags/forms/field_footer }}
+   
+
+    <br><br>
+
+    {{> tags/components/docs basicfield}}
+
+    <div class="wr__code">
+        <pre>
+            
+        </pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+<div class="pattern">
+    
+    {{> tags/components/title  pattern="Basic dropdown (block)"}}
+
+    {{> tags/forms/field_header}}
+        {{> tags/forms/label id="d002" label="Inline"}}
+        {{> tags/forms/dropdown patterns.forms.dropdown id="d002" block="true"}}
+    {{> tags/forms/field_footer }}
+
+
+    <br><br>
+
+    {{> tags/components/docs basicfield}}
+
+    <div class="wr__code">
+        <pre>
+            
+        </pre>
+    </div>
+
+</div>
+
+
+
+<div class="pattern">
+    
+    {{> tags/components/title  pattern="Address picker"}}
+    
+
+    {{> tags/forms/field_header modifier="js--address-lookup" }}
+        {{> tags/forms/label 
+            id="d003" 
+            label="Address lookup"
+            instructions="This is using the updated address lookup widget"
+        }}
+        {{> tags/forms/dropdown patterns.forms.address id="d003" block="true" placeholder="Select your address"}}
+    {{> tags/forms/field_footer }}
+    
+    <br><br>
+
+    {{> tags/components/docs basicfield}}
+
+    <div class="wr__code">
+        <pre>
+            
+        </pre>
+    </div>
+
+</div>
+
+
+
+<div class="pattern">
+    
+    {{> tags/components/title  pattern="Basic textarea (with character counter)"}}
+
+    <div class="field" data-validate-max-characters="10">
+        <label class="field__label field__label--block" for="tdd">
+            Description
+            <span class="field__instructions">
+            <span class="js--character-count">10</span> characters remaining.
+        </span>
+        </label>
+        <textarea required class="field__input" name="tdd" rows="5" id="tdd"></textarea>
+        <div class="field__message field__message--error">Some generic</div>
+    </div>
+
+
+    <br><br>
+
+    {{> tags/components/docs basicfield}}
+
+    <div class="wr__code">
+        <pre>
+            
+        </pre>
+    </div>
+
+</div>
+
+
+
+
+<div class="pattern">
+    
+    {{> tags/components/title  pattern="Various Checkboxes"}}
+    
+    {{> tags/forms/fieldset_header label="Choose"}}
+        
+        {{> tags/forms/checkbox id="v001" name="v"}}
+        {{> tags/forms/label label="Apple" id="v001"}}
+
+        {{> tags/forms/checkbox id="v002" name="v"}}
+        {{> tags/forms/label
+            id="v002"
+            label="Carrot"
+            extra="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies venenatis ex, dignissim."
+        }}
+    
+        {{> tags/forms/checkbox id="v003" name="v"}}
+        {{> tags/forms/label label="Mango" id="v003"}}
+
+    {{> tags/forms/fieldset_footer}}
+
+
+
+    <br><br>
+
+    {{> tags/components/docs basicfield}}
+
+    <div class="wr__code">
+        <pre>
+            
+        </pre>
+    </div>
+
+</div>
+
+
+<div class="pattern">
+    
+    {{> tags/components/title  pattern="Various Radios"}}
+    
+    {{> tags/forms/fieldset_header 
+        label="Accept terms and conditions"
+        instructions="This will validate when you tab over and do not choose a value, also when you choose the option 'no'"
+    }}
+        {{> tags/forms/radio id="r001" name="r" }}
+        {{> tags/forms/label id="r001" label="yes" inline="true" }}
+
+        {{> tags/forms/radio id="r002" name="r" }}
+        {{> tags/forms/label id="r002" label="no" inline="true" }}
+        
+    {{> tags/forms/fieldset_footer}}
+
+    {{> tags/forms/fieldset_header 
+        label="Choose One"
+    }}
+        {{> tags/forms/radio id="y001" name="y" checked="true"}}
+        {{> tags/forms/label id="y001" label="This is my radio" }}
+
+        {{> tags/forms/radio id="y002" name="y"}}
+        {{> tags/forms/label id="y002" 
+            label="This is my radio" 
+            instructions="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies venenatis ex, dignissim."
+        }}
+
+        {{> tags/forms/radio id="y003" name="ya" }}
+        {{> tags/forms/label id="y003" label="This is my radio" }}
+
+        {{> tags/forms/radio id="y004" name="ya" checked="true"}}
+        {{> tags/forms/label id="y004" label="This is my radio" }}
+
+        {{> tags/forms/radio id="y004" name="ya" disabled="true"}}
+        {{> tags/forms/label id="y004" label="This is my radio" }}
+        
+    {{> tags/forms/fieldset_footer}}
+
+    <br><br>
+
+    {{> tags/components/docs basicfield}}
+
+    <div class="wr__code">
+        <pre>
+            
+        </pre>
+    </div>
+
+</div>

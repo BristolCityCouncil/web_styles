@@ -1,0 +1,352 @@
+<h1 class="pl__title">
+    Validation
+</h1>
+<p>This page shows off the validation for different fields. The two types of validation described are <strong>Bubble</strong> and <strong>Delegate</strong>. <strong>Delegate</strong> works by adding a "required" to a container and validating everything inside. <strong>Bubble</strong> works by adding a required to an element and validting it. The error styles will bubble up to its containers to show the error on the container. Using a combination of these two techniques you can create complex validation patterns.</p>
+<p>If you open your browser console, you can run automated tests by <a href="">clicking here</a>.</p>
+<hr class="pl__rule" />
+
+<div class="pattern">
+    
+    {{> tags/components/title pattern="Basic validation collection"}}
+    
+    {{> tags/forms/field_header}}
+        {{> tags/forms/label label="Delegate" id="fi1"}}
+        {{> tags/forms/input id="fi1"}}
+    {{> tags/forms/field_footer }}
+
+    {{> tags/forms/field_header optional="true"}}
+        {{> tags/forms/label label="Bubble" id="fi2"}}
+        {{> tags/forms/input id="fi2" required="true"}}
+    {{> tags/forms/field_footer }}
+
+<hr/>
+    
+
+    {{> tags/forms/field_header}}
+        {{> tags/forms/label id="d1" label="Delegate"}}
+        {{> tags/forms/dropdown patterns.forms.dropdown id="d1"}}
+    {{> tags/forms/field_footer }}
+
+    {{> tags/forms/field_header optional="true"}}
+        {{> tags/forms/label id="d2" label="Bubble"}}
+        {{> tags/forms/dropdown patterns.forms.dropdown id="d2" required="true"}}
+    {{> tags/forms/field_footer }}
+
+
+<hr/>
+
+
+    {{> tags/forms/fieldset_header 
+        label="Delegate"
+    }}
+        {{> tags/forms/checkbox id="y001" name="y" checked="true"}}
+        {{> tags/forms/label id="y001" label="This is my radio" }}
+
+        {{> tags/forms/checkbox id="y002" name="y"}}
+        {{> tags/forms/label id="y002" 
+            label="This is my radio" 
+            instructions="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies venenatis ex, dignissim."
+        }}
+
+        {{> tags/forms/checkbox id="y003" name="ya" }}
+        {{> tags/forms/label id="y003" label="This is my radio" }}
+
+        {{> tags/forms/checkbox id="y004" name="ya" checked="true"}}
+        {{> tags/forms/label id="y004" label="This is my radio" }}
+
+        {{> tags/forms/checkbox id="y004" name="ya" disabled="true"}}
+        {{> tags/forms/label id="y004" label="This is my radio" }}
+        
+    {{> tags/forms/fieldset_footer}}
+
+    {{> tags/forms/fieldset_header 
+        label="Bubble"
+        optional="true"
+    }}
+        {{> tags/forms/checkbox id="y2001" required="true" name="y2" checked="true"}}
+        {{> tags/forms/label id="y2001" label="This is my radio" }}
+
+        {{> tags/forms/checkbox id="y2002" required="true" name="y2"}}
+        {{> tags/forms/label id="y2002" 
+            label="This is my radio" 
+            instructions="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies venenatis ex, dignissim."
+        }}
+
+        {{> tags/forms/checkbox id="y2003" required="true" name="ya2" }}
+        {{> tags/forms/label id="y2003" label="This is my radio" }}
+
+        {{> tags/forms/checkbox id="y2004" required="true" name="ya2" checked="true"}}
+        {{> tags/forms/label id="y2004" label="This is my radio" }}
+
+        {{> tags/forms/checkbox id="y2004" required="true" name="ya2" disabled="true"}}
+        {{> tags/forms/label id="y2004" label="This is my radio" }}
+        
+    {{> tags/forms/fieldset_footer}}
+
+<hr/>
+
+    {{> tags/forms/fieldset_header 
+        label="Delegate"
+    }}
+        {{> tags/forms/radio id="r001" name="r2" }}
+        {{> tags/forms/label id="r001" label="yes" inline="true" }}
+
+        {{> tags/forms/radio id="r002" name="r2" }}
+        {{> tags/forms/label id="r002" label="no" inline="true" }}
+        
+    {{> tags/forms/fieldset_footer}}
+
+    {{> tags/forms/fieldset_header 
+        label="Bubble"
+        optional="true"
+    }}
+        {{> tags/forms/radio id="r2001" required="true" name="r" }}
+        {{> tags/forms/label id="r2001" label="yes" inline="true" }}
+
+        {{> tags/forms/radio id="r2002" required="true" name="r" }}
+        {{> tags/forms/label id="r2002" label="no" inline="true" }}
+        
+    {{> tags/forms/fieldset_footer}}
+
+<hr/>
+<div class="field" required>
+    <label class="field__label field__label--block" for="tdd">
+        Delegate
+    </span>
+    </label>
+    <textarea class="field__input" name="tdd" rows="5" id="tdd"></textarea>
+    <div class="field__message field__message--error">Some generic</div>
+</div>
+<div class="field" data-validate-required-message="This is a custom required message">
+    <label class="field__label field__label--block" for="tdd2">
+        Bubble
+    </span>
+    </label>
+    <textarea required class="field__input" name="tdd2" rows="5" id="tdd"></textarea>
+    <div class="field__message field__message--error">Some generic</div>
+</div>
+
+</div>
+
+
+
+
+
+<div class="pattern">
+    
+    {{> tags/components/title pattern="New top validation collection"}}
+    <p>Top of the page validation allows the server to display errors at the top of a page and have them connected to the form. Documentation for this validation will be available in the documentation section soon.</p>
+
+<div class="open-validation">
+    <div class="open-validation__title">There was a problem with the information you entered:</div>
+    <ul class="open-validation__errorlist">
+        <li class="open-validation__error">
+            <a href="#gf1">Text Field Delegate</a>
+        </li>
+        <li class="open-validation__error">
+            <a href="#dfi2">Text Field Bubble</a>
+        </li>
+
+        <li class="open-validation__error">
+            <a href="#gd1">Dropdown Delegate</a>
+        </li>
+        <li class="open-validation__error">
+            <a href="#di2">Dropdown Bubble</a>
+        </li>
+
+        <li class="open-validation__error">
+            <a href="#c1">Checkbox Delegate</a>
+        </li>
+
+        <li class="open-validation__error">
+            <a href="#ci2">Checkbox Bubble</a>
+        </li>
+
+        <li class="open-validation__error">
+            <a href="#r1">Radio Delegate</a>
+        </li>
+
+        <li class="open-validation__error">
+            <a href="#dri2">Radio Bubble</a>
+        </li>
+
+        <li class="open-validation__error">
+            <a href="#t1">Text Area Delegate</a>
+        </li>
+        <li class="open-validation__error">
+            <a href="#ti2">Text Area Bubble</a>
+        </li>
+    </ul>
+</div>
+
+
+<div class="field" id="gf1">
+    <label class="field__label field__label--block" for="dfi1">Delegate</label>
+    <input class="field__input" id="dfi1" type="text">
+</div>
+<div class="field" id="f2">
+    <label class="field__label field__label--block" for="dfi2">Bubble</label>
+    <input class="field__input" id="dfi2" type="text">
+    <div class="field__message field__message--error">My Message</div>
+</div>
+
+<hr/>
+
+<div class="field" id="gd1">
+    <label class="field__label field__label--block" for="di1">Delegate</label>
+    <div class="drop">
+        <select id="di1">
+            <option selected="selected">Please select...</option>
+            <option value="one">one</option>
+            <option value="two">two</option>
+            <option value="three">three</option>
+        </select>
+        <div class="drop__background"></div>
+    </div>
+</div>
+
+<div class="field" id="d2">
+    <label class="field__label field__label--block" for="di2">Bubble</label>
+    <div class="drop">
+        <select id="di2">
+            <option selected="selected">Please select...</option>
+            <option value="one">one</option>
+            <option value="two">two</option>
+            <option value="three">three</option>
+        </select>
+        <div class="drop__background"></div>
+    </div>
+</div>
+
+<hr/>
+
+
+<fieldset class="field field--set" id="c1">
+    <legend class="field__label field__label--block">
+        Delegate
+    </legend>
+    <input class="field__input" type="checkbox" name="testing" id="cbtestcheck">
+    <label class="field__label field__label--block" for="cbtestcheck">
+        Apple
+    </label>
+    <input class="field__input" type="checkbox" value="carrot" name="testing" id="cbtestcheck2">
+    <label class="field__label field__label--block" for="cbtestcheck2">
+        Carrot
+        <span class="field__instructions">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies venenatis ex, dignissim.
+    </span>
+    </label>
+    <input class="field__input" type="checkbox" name="testing" id="cbtestcheck3">
+    <label class="field__label field__label--block" for="cbtestcheck3">
+        Mango
+    </label>
+</fieldset>
+
+<fieldset class="field field--set">
+    <legend class="field__label field__label--block">
+        Bubble
+    </legend>
+    <input class="field__input" type="checkbox" name="cbtesting" id="dtestcheck">
+    <label class="field__label field__label--block" for="dtestcheck">
+        Apple
+    </label>
+    <input class="field__input" type="checkbox" value="carrot" name="cbtesting" id="dtestcheck2">
+    <label class="field__label field__label--block" for="dtestcheck2">
+        Carrot
+        <span class="field__instructions">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies venenatis ex, dignissim.
+    </span>
+    </label>
+    <input class="field__input" type="checkbox" name="cbtesting" id="ci2">
+    <label class="field__label field__label--block" for="ci2">
+        Mango
+    </label>
+</fieldset>
+
+<hr/>
+
+<fieldset class="field field--set" id="r1">
+    <legend class="field__label">
+        Delegate
+    </legend>
+
+    <input class="field__input" type="radio" value="yes" name="radioOptions" id="dfirstRadio">
+    <label class="field__label" for="dfirstRadio">Yes</label>
+
+    <input class="field__input" type="radio" value="no" name="radioOptions" id="dsecondRadio">
+    <label class="field__label" for="dsecondRadio">No</label>
+
+    <div class="field__message field__message--error">This is the most generic error</div>
+</fieldset>
+
+<fieldset class="field field--set">
+    <legend class="field__label">
+        Bubble
+    </legend>
+
+    <input class="field__input" type="radio" value="yes" name="dradioOptions" id="dafirstRadio">
+    <label class="field__label" for="dafirstRadio">Yes</label>
+
+    <input class="field__input" type="radio" value="no" name="dradioOptions" id="dri2">
+    <label class="field__label" for="dri2">No</label>
+
+    <div class="field__message field__message--error">This is the most generic error</div>
+</fieldset>
+
+<hr/>
+<div class="field" id="t1">
+    <label class="field__label field__label--block" for="ti1">
+        Delegate
+    </span>
+    </label>
+    <textarea class="field__input" name="ti1" rows="5" id="ti1"></textarea>
+    <div class="field__message field__message--error">Some generic</div>
+</div>
+<div class="field" id="t2">
+    <label class="field__label field__label--block" for="ti2">
+        Bubble
+    </span>
+    </label>
+    <textarea class="field__input" name="ti2" rows="5" id="ti2"></textarea>
+    <div class="field__message field__message--error">Some generic</div>
+</div>
+
+</div>
+
+<div class="pattern">
+    
+    {{> tags/components/title  pattern="Basic Field with Postcode validation (Custom Example)"}}
+
+    <div class="field" data-validate-postcode>
+        
+        <label class="field__label field__label--block" for="postcode">Enter your postcode</label>
+        
+        <input class="field__input field__input--toupper" required type="text" name="postcode" id="postcode" />
+        <div   class="field__message field__message--error">This is the most generic error</div>
+
+    </div>
+
+</div>
+
+<div class="pattern">
+    
+    {{> tags/components/title  pattern="Password box (Custom Example)"}}
+
+    
+    <div class="field field--group" data-validate-password>
+        <label class="field__label field__label--block" for="pwdf">
+            Please choose a password
+            <div class="field__instructions">
+                This will validate for an 8 character long password and for matching passwords.
+            </div>
+        </label>
+
+        <input class="field__input" type="password" name="passOptionsName" id="pwdf">
+        <input class="field__input" type="password" name="passcrmOptionsName">
+
+        <div class="field__message field__message--error alternate">This is the most generic error</div>
+
+    </div>
+
+
+</div>

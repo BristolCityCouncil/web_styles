@@ -1,300 +1,233 @@
-/**
- * Bristol City Council Boilerplate Gruntfile.
- *
- * https://github.com/BristolCityCouncil/web_styles/blob/master/LICENSE
- */
-var fs = require('fs.extra');
-
 module.exports = function(grunt) {
 
-  'use strict';
+	grunt.initConfig({
 
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-compass');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-csslint');
-  grunt.loadNpmTasks('grunt-liquid');
-  grunt.loadNpmTasks('grunt-prettify');
-  grunt.loadNpmTasks('grunt-string-replace');
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-relative-root');
-  grunt.loadNpmTasks('grunt-usemin');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-rev');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
+		pkg: grunt.file.readJSON('package.json'),
 
-  grunt.initConfig({
+		compassMultiple: {
+			dev: {
+				options: {
+					config: 'config.rb',
+					sassDir: 'scss',
+					cssDir: 'css',
+				}
+			}
+		},
 
-    pkg: grunt.file.readJSON('package.json'),
+		concat: {
+			options: {
+				separator: '\n',
+			},
+			js: {
+				src: [
+					'bcc-beta-theme/dev.js', // Liferay dependencies
+					'bcc-beta-theme/js/common/vendor/priority/*.js',
+					'bcc-beta-theme/js/common/vendor/*.js', 
+					'bcc-beta-theme/js/common/widgets/*.js',
+					'bcc-beta-theme/js/common/modules/*.js',
+					'bcc-beta-theme/js/brand/modules/*.js',
+					'bcc-beta-theme/js/services/modules/*.js',
+					'bcc-beta-theme/js/brand/*.js', 
+					'bcc-beta-theme/js/services/*.js',
+					'bcc-beta-theme/js/services/testcases/*.js',
+					'bcc-beta-theme/js/common/config.js',
+					'bcc-beta-theme/js/services/config.js',
+					'bcc-beta-theme/js/common/init.js',
+					'bcc-beta-theme/js/brand/init.js',
+					'bcc-beta-theme/js/services/init.js',
+				],
+				dest: 'bcc-beta-theme/js/main.pack.js', // all of the javascript, not minified.
+			},
+			css: {
+				src: [
+					'bcc-beta-theme/css/base.css',
+					'bcc-beta-theme/css/aui.css',
+					'css/custom.css',
+				],
+				dest: 'css/custom.pack.css', // All of the CSS, not minified.
+			},
+			staticEnv: {
+				src: [
+					'bcc-beta-theme/css/base.css',
+					'bcc-beta-theme/css/aui.slim.css',
+					'css/common.css',
+				],
+				dest: 'extra/STATIC/assets/css/style.pack.css',
+			},
+			staticEnvJS: {
+				src: [
+					'bcc-beta-theme/dev.js', // Liferay dependencies
+					'bcc-beta-theme/js/common/vendor/priority/*.js',
+					'bcc-beta-theme/js/common/vendor/*.js', 
+					'bcc-beta-theme/js/common/widgets/*.js',
+					'bcc-beta-theme/js/common/modules/*.js',
+					'bcc-beta-theme/js/brand/modules/*.js',
+					'bcc-beta-theme/js/services/modules/*.js',
+					'bcc-beta-theme/js/brand/*.js', 
+					'bcc-beta-theme/js/services/*.js',
+					'bcc-beta-theme/js/services/testcases/*.js',
+					'bcc-beta-theme/js/common/config.js',
+					'bcc-beta-theme/js/services/config.js',
+					'bcc-beta-theme/js/common/init.js',
+					'bcc-beta-theme/js/brand/init.js',
+					'bcc-beta-theme/js/services/init.js',
+				],
+				dest: 'extra/STATIC/assets/js/main.pack.js', // all of the javascript, not minified.
+			},
+			common: {
+				src: [
+					'bcc-beta-theme/css/base.css',
+					'bcc-beta-theme/css/aui.slim.css',
+					'css/common.css',
+				],
+				dest: 'css/common.pack.css',
+			},
+			custom: {
+				src: [
+					'bcc-beta-theme/css/base.css',
+					'bcc-beta-theme/css/aui.css',
+					'css/custom.css',
+				],
+				dest: 'css/custom.pack.css',
+			}
+		},
 
-    jshint: {
-      options: {
-        jshintrc: '.jshintrc'
-      },
-      files: [
-        'ui/js/**/*.js',
-        '!ui/js/**/*.min.js',
-        '!ui/js/vendor/**/*.js'
-      ]
-    },
+		uglify: {
+			staticEnvJS: {
+				files: {
+					'extra/STATIC/assets/js/main.min.js': ['extra/STATIC/assets/js/main.pack.js']
+				}
+			},
+			custom: {
+				files: {
+					'bcc-beta-theme/js/main.min.js': ['bcc-beta-theme/js/main.pack.js']
+				}	
+			}
+		},
 
-    compass: {
-      app: {
-        options: {
-          config: 'compass/config.rb'
-        }
-      }
-    },
+		/* CSS OPT */
 
-    clean: [
-      'converted-html',
-      'converted-html-prod'
-    ],
+		cmq: {
+			custom: {
+				files: {
+					'css': ['css/custom.css']
+				}
+			},
+			common: {
+				files: {
+					'css': ['css/common.css']
+				}
+			}
+		},
+		
+		autoprefixer: {
+			custom: {
+				files: {
+					'css/custom.pack.css' : ['css/custom.pack.css'],
+				}
+			},
+			staticEnv: {
+				files: {
+					'extra/STATIC/assets/css/style.pack.css': ['extra/STATIC/assets/css/style.pack.css']
+				}
+			},
+			common: {
+				files: {
+					'css/common.pack.css': ['css/common.pack.css']
+				}
+			}
+		},
 
-    liquid: {
-      pages: {
-        options: {
-          includes: './templates/includes/'
-        },
-        files: [
-          {
-            expand: true,
-            flatten: false,
-            cwd: 'templates',
-            src: [
-              '**/*.liquid',
-              '!includes/**',
-              '!layouts/**'
-            ],
-            dest: 'converted-html',
-            ext: '.html'
-          }
-        ]
-      }
-    },
+		cssmin: {
+			custom: {
+				files: {
+					'css/custom.min.css': ['css/custom.pack.css'] // minified css
+				}
+			},
+			staticEnv: {
+				files: {
+					'extra/STATIC/assets/css/style.min.css': ['extra/STATIC/assets/css/style.pack.css'] // minified css
+				}
+			},
+			common: {
+				files: {
+					'css/common.min.css': ['css/common.pack.css']
+				}
+			}
+		},
 
-    'string-replace': {
-      prod: {
-        files: {
-          './': 'converted-html-prod/**/*.html'
-        },
-        options: {
-          replacements: [{
-            pattern: /master.css"([ ]*)\/>(\n)([ ]+)<!\[endif\]-->/ig,
-            replacement: function (match, p1, offset, string) {
-              return 'master.css" />\n    <!--<![endif]-->';
-            }
-          }, {
-            pattern: /<!--\[if gt IE 8\]>/ig,
-            replacement: '<!--[if gt IE 8]><!-->'
-          }]
-        }
-      },
-      dist: {
-        files: {
-          './': 'converted-html/**/*.html'
-        },
-        options: {
-          replacements: [{
-            pattern: /a href=["|'](?!#)(.*?)["|']/ig,
-            replacement: function (match, p1, offset, string) {
-              var retString = '';
-              if ( p1 === '#' ) {
-                retString = match;
-              }
-              else if ( p1.substr(0, 5) === 'http:') {
-                retString = match;
-              }
-              else if ( p1.substr(p1.length-1) === '/' ) {
-                retString = match;
-              }
-              else if ( p1.match(/\.(.+)$/ig) ) {
-                retString = match;
-              }
-              else {
-                retString = match.replace(p1, p1 + '.html');
-              }
-              return retString;
-            }
-          }]
-        }
-      }
-    },
+		// JSHint
+		jshint: {
+			all: ['Gruntfile.js', 'bcc-beta-theme/js/main.js'], // Only on main.js
+		},
 
-    copy: {
-      emails: {
-        cwd: 'templates',
-        expand: true,
-        src: './email-templates/*',
-        dest: 'converted-html/'
-      },
-      ui: {
-        src: 'ui/**/*',
-        dest: 'converted-html/'
-      },
-      content: {
-        src: 'content/**/*',
-        dest: 'converted-html/'
-      },
-      prod: {
-        files: [{
-          expand: true,
-          dot: true,
-          cwd: 'converted-html',
-          dest: 'converted-html-prod',
-          src: [
-            '**/*'
-          ]
-        }]
-      }
-    },
+		// Watch File Changes
+		watch: {
+			sass: {
+				files: ['scss/**/*.scss'],
+				tasks: ['compassMultiple'],
+			},
+			jsconcat: {
+				files: [
+					'bcc-beta-theme/js/common/**/*.js',
+					'bcc-beta-theme/js/brand/**/*.js',
+					'bcc-beta-theme/js/services/**/*.js',
+					'bcc-beta-theme/js/chrome/**/*.js',
+					'bcc-beta-theme/js/main.js',
+				],
+				tasks: ['concat:js'],
+			},
+			jshint: {
+				files: ['Gruntfile.js', 'bcc-beta-theme/js/main.js'],
+				tasks: ['jshint:all'],
+			},
+			phpfiles: {
+				files: ['templates/**/*.html']
+			},
+			options: {
+				livereload: true,
+			}
+		},
 
-    relativeRoot: {
-      generate: {
-        options: {
-          root: './converted-html'
-        },
-        files: [{
-          expand: true,
-          cwd: './',
-          src: [
-            './converted-html/**/*.html'
-          ],
-          dest: './'
-        }]
-      },
-      prod: {
-        options: {
-          root: './converted-html-prod'
-        },
-        files: [{
-          expand: true,
-          cwd: './',
-          src: [
-            './converted-html-prod/**/*.html'
-          ],
-          dest: './'
-        }]
-      }
-    },
+		// Livereload
+		livereload: {
+			files: ['css/**/*.css', 'js/**/*.js', 'templates/**/*.html'],
+			options: {
+				interval: 800,
+				livereload: true,
+				spawn: false,
+			},
+		},
 
-    prettify: {
-      options: {
-        indent: 2,
-        indent_char: ' ',
-        wrap_line_length: 78,
-        brace_style: 'expand',
-        unformatted: ['a', 'sub', 'sup', 'b', 'i', 'u', 'strong']
-      },
-      files: {
-        expand: true,
-        flatten: false,
-        cwd: 'converted-html',
-        src: [
-          '**/*.html'
-        ],
-        dest: 'converted-html',
-        ext: '.html'
-      }
-    },
+		// PHP Webserver
+		php: {
+			go: {
+				options: {
+					port: 8383,
+					//bin: '/usr/local/php5/bin/php', // run "which php" on commandline if you are having problems.
+					open: true,
+					 hostname: '0.0.0.0',
+					//hostname: '127.0.0.1', // Uncomment line for Windows
+					router: 'index.php',
+				}
+			}
+		},
+		shell: {
+			common: {
+      			command: 'php tusk common',
+      		},
+      		custom: {
+      			command: 'php tusk custom',
+      		}
+		}
+		
+	});
 
-    csslint: {
-      build: {
-        options: {
-          absoluteFilePathsForFormatters: true,
-          force: true,
-          csslintrc: '.csslintrc',
-          formatters: [
-            {id: 'lint-xml', dest: '../logs/build-csslint.xml'}
-          ]
-        },
-        src: ['converted-html/ui/css/**/*.css']
-      },
-      dev: {
-        options: {
-          csslintrc: '.csslintrc'
-        },
-        src: [
-          'ui/css/**/*.css',
-          '!**/*.min.css'
-        ]
-      }
-    },
+	require('load-grunt-tasks')(grunt);
 
-    watch: {
-      js: {
-        files: '<%= jshint.files %>',
-        tasks: ['jshint']
-      },
-
-      compilesass: {
-        files: 'ui/scss/**/*.scss',
-        tasks: ['compass']
-      }
-    },
-
-    rev: {
-      dist: {
-        files: {
-          src: [
-            'converted-html-prod/ui/js/bcc-cpp.js',
-            'converted-html-prod/ui/css/master.css',
-            'converted-html-prod/ui/css/master-oldie.css'
-          ]
-        }
-      }
-    },
-
-    useminPrepare: {
-      options: {
-        dest: 'converted-html-prod'
-      },
-      html: 'converted-html/**/*.html'
-    },
-
-    // Performs rewrites based on rev and the useminPrepare configuration
-    usemin: {
-      html: ['converted-html-prod/**/*.html'],
-      options: {
-        assetsDirs: ['converted-html-prod']
-      }
-    }
-  });
-
-  /* point .git/hooks to repo .githooks. */
-  grunt.registerTask("init", "Run project initialisation functions.", function() {
-    if ( fs.existsSync(".git/hooks") ) {
-      fs.removeSync(".git/hooks/");
-      
-    }
-    fs.symlinkSync("../.githooks", ".git/hooks");
-  });
-
-  grunt.registerTask('default', ['watch']);
-
-  /* The first stage build for integration - no optimisations applied */
-  grunt.registerTask('build', [
-    'clean',
-    'compass',
-    'liquid',
-    'relativeRoot:generate',
-    'string-replace:dist',
-    'prettify',
-    'copy'
-  ]);
-
-  /* The first stage build for staging and for delivery repo which contains production code */
-  grunt.registerTask('build:prod', [
-    'useminPrepare',
-    'concat',
-    'uglify',
-    'cssmin',
-    'rev',
-    'usemin',
-    'string-replace:prod',
-    'relativeRoot:prod'
-  ]);
+	grunt.registerTask('default', ['compassMultiple', 'jshint', 'php:go', 'watch']); // run dev environment
+	grunt.registerTask('withnginx', ['compassMultiple', 'watch']);
+	grunt.registerTask('common', ['cmq:common', 'concat:common', 'autoprefixer:common', 'cssmin:common']);
+	grunt.registerTask('custom', ['cmq:custom', 'concat:custom', 'autoprefixer:custom', 'cssmin:custom']);
+	grunt.registerTask('build', ['custom','common','shell:common']);
 };

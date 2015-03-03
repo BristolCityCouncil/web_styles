@@ -1,0 +1,139 @@
+@font-face {
+
+    // Family Name
+    font-family: 'Thesans-Semi-Light';
+    
+    // IE9 Compatibility Mode
+    src: url('../fonts/the-sans/TheSansLP-SemiLight.eot');
+    
+    // Various Browsers
+    src: url('../fonts/the-sans/TheSansLP-SemiLight.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/the-sans/TheSansLP-SemiLight.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/the-sans/TheSansLP-SemiLight.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/the-sans/TheSansLP-SemiLight.svg#Thesans-Semi-Light') format('svg'); /* Legacy iOS */
+
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
+@font-face {
+
+    // Family Name
+    font-family: 'Thesans-Bold';
+    
+    // IE9 Compatibility Mode
+    src: url('../fonts/the-sans/TheSans_LP_700_Bold.eot');
+    
+    // Various Browsers
+    src: url('../fonts/the-sans/TheSans_LP_700_Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/the-sans/TheSans_LP_700_Bold.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/the-sans/TheSans_LP_700_Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/the-sans/TheSans_LP_700_Bold.svg#Thesans-Bold') format('svg'); /* Legacy iOS */
+
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
+@font-face {
+
+    // Family Name
+    font-family: 'Thesans-Semi-Light-Select';
+    
+    // IE9 Compatibility Mode
+    src: url('../fonts/the-sans/TheSansLP-SemiLight.eot');
+    
+    // Various Browsers
+    src: url('../fonts/the-sans/TheSansLP-SemiLight.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/the-sans/TheSansLP-SemiLight.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/the-sans/TheSansLP-SemiLight.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/the-sans/TheSansLP-SemiLight.svg#Thesans-Semi-Light-Select') format('svg'); /* Legacy iOS */
+
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
+@font-face {
+
+    // Family Name
+    font-family: 'bcc';
+    
+    // IE9 Compatibility Mode
+    src: url('../fonts/icomoon/bcc.eot');
+    
+    // Various Browsers
+    src: url('../fonts/icomoon/bcc.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/icomoon/bcc.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/icomoon/bcc.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/icomoon/bcc.svg#TheSans_LP_400_SemiLight') format('svg'); /* Legacy iOS */
+
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
+
+// @font-face {
+//     font-family: 'bcc';
+//     /*src:url('../fonts/icomoon/bcc.eot?ocupuc');*/
+//     src:url('../fonts/icomoon/bcc.eot?#iefixocupuc') format('embedded-opentype'),
+//         url('../fonts/icomoon/bcc.woff?ocupuc') format('woff'),
+//         url('../fonts/icomoon/bcc.ttf?ocupuc') format('truetype'),
+//         url('../fonts/icomoon/bcc.svg?ocupuc#bcc') format('svg');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+//url('../fonts/the-sans/TheSans_LP_400_SemiLight.svg#TheSans_B2_4_') format('svg');
+
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        font-family: 'Thesans-Semi-Light';
+        src: font-url('../fonts/the-sans/TheSans_LP_400_SemiLight.svg#TheSans_B2_4_') format('svg');
+    }
+}
+*/
+
+// @font-face {
+//     font-family: 'Thesans-Bold';
+//     /*src: url('../fonts/the-sans/TheSans_LP_700_Bold.eot');*/
+//     src: url('../fonts/the-sans/TheSans_LP_700_Bold.eot?#iefix') format('embedded-opentype'), 
+//          url('../fonts/the-sans/TheSans_LP_700_Bold.woff') format('woff'); 
+//     font-weight: normal;
+//     font-style: normal;
+// }
+//url('../fonts/the-sans/TheSans_LP_700_Bold.svg#TheSans_B2_7_') format('svg');
+
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        font-family: 'Thesans-Bold';
+        src: font-url('../fonts/the-sans/TheSans_LP_700_Bold.svg#TheSans_B2_7_') format('svg');
+    }
+}
+*/
+
+// @font-face {
+//     font-family: 'Thesans-Semi-Light-Select';
+//     /*src: url('../fonts/the-sans/TheSans_LP_400_SemiLight.eot');*/
+//     src: url('../fonts/the-sans/TheSans_LP_400_SemiLight.eot?#iefix') format('embedded-opentype'), 
+//          url('../fonts/the-sans/TheSans_LP_400_SemiLight.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+
+/* ------------1.0 Icons ---------------- */
+
+@font-face {
+    font-family: 'bcc';
+    /*src:url('../fonts/icomoon/bcc.eot?ocupuc');*/
+    src:url('../fonts/icomoon/bcc.eot?#iefixocupuc') format('embedded-opentype'),
+        url('../fonts/icomoon/bcc.woff?ocupuc') format('woff'),
+        url('../fonts/icomoon/bcc.ttf?ocupuc') format('truetype'),
+        url('../fonts/icomoon/bcc.svg?ocupuc#bcc') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,9 @@
+// homepage 
+
+.homepage__row {
+	@include gridZero (1, 1, 2);
+}
+
+.homepage__panel {
+	@include columns (12, 12, 6);
+}

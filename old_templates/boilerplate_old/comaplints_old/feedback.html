@@ -1,0 +1,388 @@
+<div class="portlet-body">
+  
+  <!--START Portlet -->
+  
+  <!--START Portlet -->
+  
+  <!--START Portlet -->
+  
+  <form id="feedback" novalidate="novalidate" class="form js--validate js--foi-request" action="http://digiratilocal.bcc.lan:8080/web/guest/feedback?p_auth=QAE0ToAC&amp;p_p_id=bccfeedbackportlet_WAR_bccportalappsportlet&amp;p_p_lifecycle=1&amp;p_p_state=normal&amp;p_p_mode=view&amp;p_p_col_id=column-1&amp;p_p_col_count=1&amp;_bccfeedbackportlet_WAR_bccportalappsportlet_execution=e1s3" method="post">
+    
+    <div class="row-fluid">
+      
+      <div class="span8">
+        
+        <h1>
+          Generic: feedback 
+        </h1>
+        
+        <div class="panel panel--errors" id="errors">
+          
+          <p class="panel__title">
+            <strong>
+              There was a problem with the information you entered:
+            </strong>
+          </p>
+          
+          <div class="panel__copy">
+            
+            <ul>
+              
+              <li >
+                
+                <a class="error__item__link" href="#field-enquiry">
+                  Please enter your feedback. 
+                </a>
+                
+              </li>
+              
+            </ul>
+            
+          </div>
+          
+        </div>
+        
+        <div class="form__item" id="field-enquiry">
+          
+          <label for="enquiry" class="form__item__label" >
+            Your feedback 
+            <div class="form__item__label__instructions">
+              Try to be specific, include information like: 
+              <ul>
+                
+                <li>
+                  Dates, times and places
+                </li>
+                
+                <li>
+                  References to specific documents
+                </li>
+                
+                <li>
+                  Specific issues you are unhappy about
+                </li>
+                
+                <li>
+                  Your council tax number
+                </li>
+                
+              </ul>
+              
+            </div>
+            
+          </label>
+          
+          <textarea id="enquiry" name="enquiry" class="form__item__field form__item__field--string form__item__field--textarea" required="required" rows="10">
+          </textarea>
+          
+          <div class="form__item__message form__item__message--error" aria-hidden="true">
+            Enter your feedback 
+          </div>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+    
+    <div class="row-fluid">
+      
+      <div class="span12">
+        
+        <hr/>
+        
+      </div>
+      
+    </div>
+    
+    <!-- TO DO - add the js--hide class back in when we implement js -->
+    
+    <div class="row-fluid">
+      
+      <div class="span8">
+        
+        <h2>
+          Your details (optional) 
+        </h2>
+        
+        <p>
+          We don't usually reply to feedback, but it's useful to have your details in case we want to contact you for more information 
+        </p>
+        
+        <div class="form__item" id="field-title">
+          
+          <label class="form__item__label" for="ff-title">
+            Title
+          </label>
+          
+          <!--class=form__item__field form__item__field--select form__item__field--select--inline|placeholder=|data-error-message=Choose a title|data-match= -->
+          
+          <select id="ff-title" name="title" class="form__item__field form__item__field--select form__item__field--select--inline ">
+            
+            <option value="none" selected="selected">
+              Select option
+            </option>
+            
+            <option value="Mr">
+              Mr
+            </option>
+            
+            <option value="Mrs">
+              Mrs
+            </option>
+            
+            <option value="Miss">
+              Miss
+            </option>
+            
+            <option value="Ms">
+              Ms
+            </option>
+            
+          </select>
+          
+          <div class="form__item__message form__item__message--error" aria-hidden="true">
+            Choose a title 
+          </div>
+          
+        </div>
+        
+        <div class="form__item" id="field-firstname">
+          
+          <label class="form__item__label" for="firstname">
+            First name 
+          </label>
+          
+          <!--class=form__item__field form__item__field--string|placeholder=Enter your firstname here|data-error-message=Enter your first name|data-match= -->
+          
+          <input id="firstname" name="firstName" class="form__item__field form__item__field--string " type="text" value="" maxlength="100"/>
+          
+          <div class="form__item__message form__item__message--error" aria-hidden="true">
+            Enter your first name 
+          </div>
+          
+        </div>
+        
+        <div class="form__item" id="field-lastname">
+          
+          <label class="form__item__label" for="lastname">
+            Last name 
+          </label>
+          
+          <!--class=form__item__field form__item__field--string|placeholder=Enter your lastname here|data-error-message=Enter your last name|data-match= -->
+          
+          <input id="lastname" name="lastName" class="form__item__field form__item__field--string " type="text" value="" maxlength="100"/>
+          
+          <div class="form__item__message form__item__message--error" aria-hidden="true">
+            Enter your last name 
+          </div>
+          
+        </div>
+        
+        <div class="js--controls-group">
+          
+          <div class="form__item form__item--1of2 js--controls--showing" id="field-emailAddress">
+            
+            <label class="form__item__label" for="emailAddress">
+              Email 
+              <span class="form__item__label__option">
+                (optional)
+              </span>
+              
+            </label>
+            
+            <!--class=form__item__field form__item__field--string|placeholder=|data-error-message=Please enter a valid email|data-match= -->
+            
+            <input id="emailAddress" name="emailAddress" class="form__item__field form__item__field--string " type="text" value=""/>
+            
+          </div>
+          
+          <fieldset class="form__item form__item--group form__item--2of2" id="field-emailCheckbox">
+            
+            <legend class="form__item__label hidden">
+              Email address 
+            </legend>
+            
+            <label class="form__item__label form__item__label--group" for="ff-confirm-have-email">
+              
+              <input id="ff-confirm-have-email" name="dontHaveEmail" data-show="field-addrintro field-address1 field-address2 field-address3 field-address4 field-postcode field-country field-other" class="form__item__field form__item__field--checkbox js--controls--email" data-hide="field-emailAddress" type="checkbox" checked="checked" value="true"/>
+              <input type="hidden" name="_dontHaveEmail" value="on"/>
+              I don't have an email address 
+              <div class="form__item__message form__item__message--error" aria-hidden="true">
+              </div>
+              
+            </label>
+            
+          </fieldset>
+          
+          <div id="field-addrintro" class="form__item js--controls--hiding">
+            
+            <h3>
+              Your address (optional) 
+            </h3>
+            
+          </div>
+          
+          <div class="form__item js--controls--hiding" id="field-address1">
+            
+            <label class="form__item__label" for="address1">
+              House name or number 
+            </label>
+            
+            <!--class=form__item__field form__item__field--string|placeholder=|data-error-message=Please enter your address|data-match= -->
+            
+            <input id="address1" name="address1" class="form__item__field form__item__field--string " type="text" value="" maxlength="100"/>
+            
+            <div class="form__item__message form__item__message--error" aria-hidden="true">
+              Please enter your address 
+            </div>
+            
+          </div>
+          
+          <div class="form__item js--controls--hiding" id="field-address2">
+            
+            <label class="form__item__label" for="address2">
+              Address line 1 
+            </label>
+            
+            <!--class=form__item__field form__item__field--string|placeholder=|data-error-message=|data-match= -->
+            
+            <input id="address2" name="address2" class="form__item__field form__item__field--string " type="text" value="" maxlength="100"/>
+            
+            <div class="form__item__message form__item__message--error" aria-hidden="true">
+              
+            </div>
+            
+          </div>
+          
+          <div class="form__item js--controls--hiding" id="field-address3">
+            
+            <label class="form__item__label" for="address3">
+              Address line 2 
+              <span class="form__item__label__option">
+                (optional)
+              </span>
+              
+            </label>
+            
+            <!--class=form__item__field form__item__field--string|placeholder=|data-error-message=|data-match= -->
+            
+            <input id="address3" name="address3" class="form__item__field form__item__field--string " type="text" value="" maxlength="100"/>
+            
+            <div class="form__item__message form__item__message--error" aria-hidden="true">
+              
+            </div>
+            
+          </div>
+          
+          <div class="form__item js--controls--hiding" id="field-address4">
+            
+            <label class="form__item__label" for="address4">
+              Postal town / region 
+            </label>
+            
+            <!--class=form__item__field form__item__field--string|placeholder=|data-error-message=|data-match= -->
+            
+            <input id="address4" name="address4" class="form__item__field form__item__field--string " type="text" value="" maxlength="100"/>
+            
+            <div class="form__item__message form__item__message--error" aria-hidden="true">
+              
+            </div>
+            
+          </div>
+          
+          <div class="form__item js--controls--hiding" id="field-postcode">
+            
+            <label class="form__item__label" for="postCode">
+              Postcode, postal code or ZIP 
+            </label>
+            
+            <!--class=form__item__field form__item__field--string form__item__field--small|placeholder=|data-error-message=Please enter the post code.|data-match= -->
+            
+            <input id="postCode" name="postCode" class="form__item__field form__item__field--string form__item__field--small " type="text" value=""/>
+            
+            <div class="form__item__message form__item__message--error" aria-hidden="true">
+              Please enter the post code. 
+            </div>
+            
+          </div>
+          
+          <div class="form__item js--controls--hiding" id="field-country">
+            
+            <label class="form__item__label" for="ff-country">
+              Country
+            </label>
+            
+            <!--class=form__item__field form__item__field--select form__item__field--select--block|placeholder=|data-error-message=Please select a country|data-match= -->
+            
+            <select id="ff-country" name="country" class="form__item__field form__item__field--select form__item__field--select--block js--controls--country">
+              
+              <option value="United Kingdom">
+                United Kingdom
+              </option>
+              
+              <option value="other" selected="selected">
+                Other
+              </option>
+              
+            </select>
+            
+            <div class="form__item__message form__item__message--error" aria-hidden="true">
+              Please select a country 
+            </div>
+            
+          </div>
+          
+          <div class="form__item js--controls--other" id="field-other">
+            
+            <label class="form__item__label" for="otherCountry">
+              Other 
+            </label>
+            
+            <!--class=form__item__field form__item__field--string|placeholder=|data-error-message=|data-match= -->
+            
+            <input id="otherCountry" name="otherCountry" class="form__item__field form__item__field--string " type="text" value=""/>
+            
+            <div class="form__item__message form__item__message--error" aria-hidden="true">
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <div class="form__item" id="field-phone">
+          
+          <label class="form__item__label" for="phone">
+            Phone 
+            <span class="form__item__label__option">
+              (optional)
+            </span>
+            
+          </label>
+          
+          <!--class=form__item__field form__item__field--string|placeholder=|data-error-message=|data-match= -->
+          
+          <input id="phone" name="phone" class="form__item__field form__item__field--string " type="text" value=""/>
+          
+          <div class="form__item__message form__item__message--error" aria-hidden="true">
+            
+          </div>
+          
+        </div>
+        
+        <div class="form__actions">
+          
+          <button name="_eventId_preview" type="submit" class="cta cta--icon cta--primary cta--next cta-group__firstly js--prevent-double">
+            Preview your feedback
+          </button>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+    
+  </form>
+  
+</div>

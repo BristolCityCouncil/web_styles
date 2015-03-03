@@ -1,0 +1,94 @@
+<div class="portlet-body">
+    <header class="step-header">
+        <p class="step-header__title">Get residents' or visitors' parking permits<span class="step-header__title__seperator">:</span><span class="step-header__title__steps">step 3 of 5</span>
+        </p>
+        <h1 class="step-header__subtitle">Check permit details</h1>
+    </header>
+    <p>
+        <?xml version="1.0" standalone="yes" ?>
+        <ul>
+            <li>You can choose to pay for your residents’ permit every three months instead of paying the one year cost now.</li>
+            <li>If you choose three months, we will send you a permit that lasts for three months. We will send you an email before the permit is due to expire. When you renew it, we will send you a new permit.</li>
+        </ul>
+    </p>
+    <p>&#60;<a href="http://l-custpdev-app1.bcc.lan:8080/parking/get-permits?p_auth=HNdWw0nP&p_p_id=bccparkingportlet_WAR_bccportalapps101BUILDSNAPSHOT&p_p_lifecycle=1&p_p_state=normal&p_p_mode=view&p_p_col_id=column-1&p_p_col_count=1&_bccparkingportlet_WAR_bccportalapps101BUILDSNAPSHOT_execution=e1s7&amp;_eventId=update&amp;position=1" title="Change or update vehicles">Change or update vehicles</a>
+    </p>
+    <form id="parkingOrderModel" class="form" action="http://l-custpdev-app1.bcc.lan:8080/parking/get-permits?p_auth=HNdWw0nP&amp;p_p_id=bccparkingportlet_WAR_bccportalapps101BUILDSNAPSHOT&amp;p_p_lifecycle=1&amp;p_p_state=normal&amp;p_p_mode=view&amp;p_p_col_id=column-1&amp;p_p_col_count=1&amp;_bccparkingportlet_WAR_bccportalapps101BUILDSNAPSHOT_execution=e1s7" method="post">
+        <div id="parking__permit-details" class="js--permitTotal row-fluid">
+            <div class="permit permit--complete js--matchHeight" id="field-permit1">
+                <div class="permit__inner">
+                    <div class="permit__intro">
+                        <h2 data-mh="level1"> First&nbsp;permit </h2>
+                        <p data-mh="level2"> Someone has already purchased this permit for your address. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="permit js--matchHeight" id="field-permit2">
+                <div class="permit__inner">
+                    <div class="permit__intro">
+                        <h2 data-mh="level1"> Second&nbsp;permit </h2>
+                        <p data-mh="level2"></p>
+                    </div>
+                    <div class="reg veh veh--affirm" data-mh="level3"> <strong> ff555ff </strong> <span> Tax band &#160;C </span>
+                        <button name="_eventId_removeVehicle10" type="submit" class="remove cta cta--link">Remove</button>
+                    </div>
+                    <div class="reg reg--add" data-mh="level4">+
+                        <button name="_eventId_addVehicle11" type="submit" class="cta cta--link">Add vehicle</button>
+                        <p class="reg--add__copy">You can share the permit between two vehicles but only use it for one at a time.</p>
+                    </div>
+                    <fieldset class="form__item form__item--group" data-mh="level5">
+                        <legend class="form__item__label">Permit payment period </legend>
+                        <label for="1yearPermit1" class="form__item__label form__item__label--group label--radio">
+                            <input id="1yearPermit1" name="residentsPermits.permits[1].permitDuration" class="form__item__field form__item__field--radio" type="radio" value="12M" checked="checked" /> 1 year <strong>&pound;96</strong>
+                        </label>
+                        <label for="3monthPermit1" class="form__item__label form__item__label--group label--radio">
+                            <input id="3monthPermit1" name="residentsPermits.permits[1].permitDuration" class="form__item__field form__item__field--radio" type="radio" value="3M" /> 3 month <strong>&pound;24</strong>
+                        </label>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="permit js--matchHeight" id="field-permit3">
+                <div class="permit__inner">
+                    <div class="permit__intro">
+                        <h2 data-mh="level1"> Third&nbsp;permit </h2>
+                        <p data-mh="level2"></p>
+                    </div>
+                    <div class="reg veh veh--affirm" data-mh="level3"> <strong> gg222gg </strong> <span> Tax band &#160;C </span>
+                        <button name="_eventId_removeVehicle20" type="submit" class="remove cta cta--link">Remove</button>
+                    </div>
+                    <div class="reg reg--add" data-mh="level4">+
+                        <button name="_eventId_addVehicle21" type="submit" class="cta cta--link">Add vehicle</button>
+                        <p class="reg--add__copy">You can share the permit between two vehicles but only use it for one at a time.</p>
+                    </div>
+                    <fieldset class="form__item form__item--group" data-mh="level5">
+                        <legend class="form__item__label">Permit payment period </legend>
+                        <label for="1yearPermit2" class="form__item__label form__item__label--group label--radio">
+                            <input id="1yearPermit2" name="residentsPermits.permits[2].permitDuration" class="form__item__field form__item__field--radio" type="radio" value="12M" checked="checked" /> 1 year <strong>&pound;192</strong>
+                        </label>
+                        <label for="3monthPermit2" class="form__item__label form__item__label--group label--radio">
+                            <input id="3monthPermit2" name="residentsPermits.permits[2].permitDuration" class="form__item__field form__item__field--radio" type="radio" value="3M" /> 3 month <strong>&pound;48</strong>
+                        </label>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+        <div class="cta-group">
+            <button name="_eventId_addVisitorPermits" type="submit" class="cta cta--icon cta--primary cta--next cta-group__firstly js--prevent-double">Add visitors' permits</button>
+            <br/><span class="cta-group__secondly">or <button name="_eventId_continue" type="submit" class="cta cta--link"><strong>view order summary</strong></button></span>
+        </div>
+    </form>
+    <!-- This is the version of the page that is displayed when the user is in the process of adding a vehiclefrom a drop down.Corresponds to addVehicleToPermit=trueAt this point the cost of the permits is unknown and the total cost is unknown.-->
+    <div class="panel panel--feedback">
+        <h2 class="panel__title">Give feedback on this new service</h2>
+        <div class="panel__copy">
+            <p><a href="https://www.bristol.gov.uk/node/24282" target="_blank">Give feedback (opens new window)</a> and help improve this service.
+                <br/>It only takes a minute and you won't lose any details.</p>
+        </div>
+    </div>
+    <script>
+        ga('send', 'pageview', {
+            'page': '/parking/get-permits/permit-details',
+        });
+    </script>
+    <!--</div>/grid-col-->
+</div>

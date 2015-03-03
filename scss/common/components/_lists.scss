@@ -1,0 +1,120 @@
+
+.list {
+	margin-left: -20px;
+	margin-right: -20px;
+	margin-bottom: 40px;	
+	border-bottom: 2px solid $grey-6;
+	
+	@include respond-to(desktop) {
+		margin-left: 0;
+		margin-right: 0;
+		display: table;
+	}
+		
+	.list__item {
+		border-top: 2px solid $grey-6;
+		list-style-type: none;
+		margin: 0;
+		padding: 20px;
+		
+		@include respond-to(desktop) {
+			padding: 30px 0;
+		}
+		
+		.list__item__title {
+			font-size: 22px;
+			line-height: 27px;
+			margin: 0;
+			padding: 0;
+		}
+
+		.list__item__copy {
+			margin: 10px 0 0;
+			padding: 0;
+		}
+		
+	}
+	
+}
+
+.tiled {
+	border-top: 2px solid $grey-6;
+	display: block;
+	position: relative;
+	
+	margin-left: -20px;
+	margin-right: -20px;
+	margin-bottom: 40px;
+	
+	&:after {
+		display: block;
+		clear:both;
+		content: "";
+	}
+	
+	@include respond-to(tablet, desktop) {
+		border-top: 0;
+		display: table;
+		margin-left: 0;
+		margin-right: 0;
+	}
+		
+	.tiled__item {
+		@include columnsZero (12, 6, 4);
+		@include nth (1, 2, 3);
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		
+		.tiled__item__title {
+			border-bottom: 2px solid $grey-6;
+			font-size: 22px;
+			line-height: 27px;
+			margin: 0;
+			padding: 20px;
+			display: block; 
+			
+			
+			@include respond-to(tablet, desktop) {
+				border: 2px solid $grey-6;
+				margin-right: 0;
+				margin-bottom: 30px;
+				padding: 30px;
+			}
+		}
+		
+		// Tablet
+		@include respond-to(tablet) {
+			&:nth-child(odd){
+    			.tiled__item__title {
+    				//border-color: #cc0000;
+    				margin-right: 15px;
+    			}
+    		}
+    		
+    		&:nth-child(even){
+    			.tiled__item__title {
+    				//border-color: #00cc00;
+    				margin-left: 15px;
+    			}
+    		}
+		}
+		
+		// Desktop
+		@include respond-to(desktop) {
+			//background-color: whitesmoke;
+			.tiled__item__title {
+				margin-right: 30px;
+				
+				
+			}
+			
+			&:nth-child(3n+3) {
+				.tiled__item__title {
+					margin-right: 0;
+					//border-color: green;
+				}
+			}	
+		}	
+	}	
+}

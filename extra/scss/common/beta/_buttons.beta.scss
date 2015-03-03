@@ -1,0 +1,470 @@
+$cta-prefix: 'new';
+
+/**
+ * Base style for button to keep code DRY
+ */
+%bcc-button-base {
+    display: inline-block;
+    border-radius: 3px;
+    border: 0;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    text-decoration: inherit;
+    color: $white;
+    text-shadow: 0 -1px 0 rgba(0,0,0, .25);
+    width: 100%;
+    
+    @include respond-to(tablet, desktop) {
+        width: auto;
+    }
+    
+    small {
+        white-space: nowrap;
+        display: inline-block;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    /**
+     * Button States
+     */
+    &:hover{
+        text-decoration: inherit;
+        color: $white;
+    }
+    
+    &:active{
+        box-shadow: none;
+        filter: none;
+    }
+
+    /**
+     * Disabled State
+     */
+    &.disabled, &[disabled],
+    &[type].disabled, 
+    &[type][disabled] {
+        background: $grey-hairline !important;
+        box-shadow: none;
+        filter:none;
+        cursor: default;
+        min-height: 44px;
+        min-width: 100px;
+        
+        &:hover,
+        &:active {
+            box-shadow: none;
+            filter:none;
+            background: $grey-hairline;
+        }
+        
+        &:before,
+        &:after {
+            display: none !important;
+            content: ' ';
+            color: $white;
+        }
+    }
+}
+
+/**
+ * Base class for icons, to keep code DRY
+ */
+
+%bcc-icon-base {
+    /**
+     * Icon State
+     */
+    &:before,
+    &:after {
+        position: absolute;
+        font-family: 'bcc';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+/**
+ * Mixin for generating all kinds of buttons.
+ **
+ * Dropshadows works in IE8+
+ * Border radius works in IE9+
+ */
+
+@mixin bcc-button($color, $margin-bottom: 0, $height: 44px, $fsMobile: 16px, $fsDesktop: 16px, $lhMobile: 23px, $lhDesktop: 23px, $shadow-size: 3px, $has-icon: false) {
+    @include noselect;
+    @include box-sizing(border-box);
+    @extend %bcc-button-base;
+
+    -webkit-transition: background .2s;
+    -moz-transition: background .2s;
+    transition: background .2s;
+    
+	box-shadow: 0 $shadow-size 0 0 darken($color, 20%);
+    background-color: $color;
+	filter: progid:DXImageTransform.Microsoft.dropShadow(OffX='0', OffY='3', Color='#{darken($color, 20%)}', Positive='true')\9;
+    font-size: $fsMobile;
+    
+    line-height: $lhMobile;
+    margin-bottom: $margin-bottom + $shadow-size;
+    padding: ( ($height - $lhMobile)/2 ) ($height/2) ( ( ( $height - $lhMobile )/2 ) - $shadow-size);
+	
+	@include respond-to(tablet, desktop) {
+		
+		line-height: $lhDesktop;
+		
+		padding: ( ($height - $lhDesktop)/2 ) ($height/2) ( ( ( $height - $lhDesktop )/2 ) - $shadow-size);
+    
+		font-size: $fsDesktop;
+	}
+	
+    /**
+     * Button States
+     */
+    &:hover, &:focus:hover{
+        background-color: lighten($color, 5%);
+        box-shadow: 0 $shadow-size 0 0 darken($color, 5%);
+        filter: progid:DXImageTransform.Microsoft.dropShadow(OffX='0', OffY='3', Color='#{darken($color, 5%)}', Positive='true')\9;
+
+    }
+    &:active, &:active:hover{
+        top: $shadow-size;
+    }
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px $accessibility;
+        filter: none;
+        
+        color: $white;
+        background-color: lighten($color, 5%);
+        text-decoration: none;
+        
+        
+    }
+    &:active:focus {
+        outline: none;
+        box-shadow: none;
+        filter:none;
+    }
+    /**
+     * Diabled State
+     */
+    &.disabled, &[disabled],
+    &[type].disabled, &[type][disabled] {
+        top: $shadow-size;
+    }
+
+    /**
+     * Icon State
+     */
+    &:before,
+    &:after {
+        @extend %bcc-icon-base;
+        display: none; 
+        color: #85b3ff;
+        right: ($height/2);
+        top: (($height - 24)/2);
+        @include respond-to(tablet, desktop) {
+            display: block;
+        }  
+    }
+    
+    /**
+     * Responsive State
+     */
+    @include respond-to(tablet, desktop) {
+        &.#{$cta-prefix}cta--icon {
+            padding-right: ($height/2) + 35;
+        }
+    }
+    
+}
+
+@mixin bcc-with-icon($name, $code, $size: 24px, $moves: false) {
+    &.#{$cta-prefix}cta--#{$name}:after {
+        font-size: $size;
+        content: $code;
+        padding-top: (12px - ($size/2));
+        -webkit-transition: all .2s;
+        -moz-transition: all .2s;
+        transition: all .2s;
+    }
+    &.#{$cta-prefix}cta--#{$name}:hover:after {
+        @if $moves {
+            right: $size;
+        }
+        color: #FFF;
+    }
+
+}
+
+@mixin as-link() {
+    @extend a;
+    overflow: visible; // Shrinkwrap the text in IE7-
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: #0d45a0; // Match BCC link colour
+    background: transparent; // remove any default backgrounds
+    font: inherit; // Inherit font settings (doesn���t work in IE7-)
+    line-height: inherit; // Override line-height to avoid spacing issues, inherit from type
+    text-decoration: underline; // Make it look linky
+    cursor: pointer; // Buttons don't make the cursor change in all browsers
+    -moz-user-select: text; // Make button text selectable in Gecko
+    vertical-align: baseline; // Overrides AUI default on buttons
+	box-shadow: none;
+    text-shadow: none;
+    
+    /* Remove mystery padding in Gecko browsers.
+     * See https://bugzilla.mozilla.org/show_bug.cgi?id=140562
+     */
+    &::-moz-focus-inner {
+        padding: 0;
+        border: 0;
+    }
+    &:focus {
+    	background-color: $accessibility;
+    	outline: 3px solid $accessibility;
+        border-radius: 0;
+    }
+    &:hover {
+    	background-color: transparent;
+        color: #386ec7;
+        box-shadow: none;
+        top: 0;
+        
+    }
+    &:active:hover {
+    	top: 0;
+    }
+}
+
+
+/**
+ * Button Class Definitions
+ */
+
+/**
+ * Default call to action button.
+ * (Annontation to go here)
+ */
+.#{$cta-prefix}cta, 
+.#{$cta-prefix}cta[type] { /* [type] required for overriding AUI */
+
+    @include bcc-button(
+        $color: #274d8b,
+        $height: 43px
+    );
+    @include bcc-with-icon("download", "\e60f", 18px);
+
+    &.#{$cta-prefix}cta--block {
+        width: 100%;
+    }
+}
+
+/**
+ * Primary call to action button.
+ * (Annontation to go here)
+ */
+.#{$cta-prefix}cta--primary,
+.#{$cta-prefix}cta--primary[type] { /* [type] required for overriding AUI */
+    @include bcc-button(
+        $color: #3771d0,
+        $fsMobile: 21px,
+        $fsDesktop: 24px,
+        $height: 50px
+    );
+    font-family: "Thesans-Bold","Helvetica Neue",Helvetica,sans-serif;
+    @include bcc-with-icon("download" ,"\e60f", 24px);
+    @include bcc-with-icon("next", "\e605", 18px, $moves: true);
+}
+
+/**
+ * Button, Input style reset to work like a link.
+ * (Annontation to go here)
+ */
+ /*
+.#{$cta-prefix}cta--link {
+    @include as-link;
+    width: auto;
+}
+*/
+
+.#{$cta-prefix}cta {
+	&.#{$cta-prefix}cta--link,
+	&.#{$cta-prefix}cta--link[type] {
+    	@include as-link;
+    	font-size: 16px;
+    	width: auto;
+    	
+    	@include respond-to(tablet, desktop){
+    		font-size: 19px;
+    	}
+    }
+    
+}
+
+/**
+ * Button group
+ * (Annontation to go here)
+ */
+.#{$cta-prefix}cta-group__primary {
+    display: block;
+}
+.#{$cta-prefix}cta-group__secondly {
+    display: block;
+    a {
+       font-family: "Thesans-Bold","Helvetica Neue",Helvetica,sans-serif;
+    }
+}
+
+/**
+ * Spacing rules
+ */
+.#{$cta-prefix}cta-group {
+    
+}
+
+/**
+ * Browser Support
+ * This should be moved to browser file once launched.
+ */
+&.ie9 {
+    .#{$cta-prefix}cta, 
+    .#{$cta-prefix}cta[type],
+    .#{$cta-prefix}cta--primary,
+    .#{$cta-prefix}cta--primary[type]{
+        outline: none;
+        filter: none;
+        &:focus:hover{
+            outline: none;
+            filter: none;
+        }
+    }
+}
+
+/**
+ * Tesing code
+ */
+.#{$cta-prefix}cta-box {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 25px;
+    padding: 10px 20px 10px;
+    box-shadow: inset 0 0 0 1px #EEE;
+    width: 100%;
+    display: inline-block;
+    left: 0;
+    -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+    transition: all .6s;
+    position: relative;
+    
+    &:hover {
+        left: calc(50% + 20.42px);
+        left: -moz-calc(50% + 20.42px);
+        width: 150%;
+        outline: 4px;
+        box-shadow: inset 0 0 0 1px #F00;
+    }
+}
+
+.#{$cta-prefix}cta-group{
+	margin-top: 30px;
+	margin-bottom: 50px;
+	
+	@include respond-to(desktop){
+		margin-top: 40px;
+		margin-bottom: 60px;
+	}
+	
+	.#{$cta-prefix}cta-group__firstly {
+		margin-bottom: 15px;
+		
+		@include respond-to(tablet, desktop){
+			margin-bottom: 20px;
+		}
+	}
+	
+	.#{$cta-prefix}cta-group__secondly {
+		text-align: center;
+		
+		@include respond-to(tablet, desktop){
+			text-align: left;
+		}
+	}
+}
+
+
+
+
+
+
+/* Conflicts with buttons.scss version
+// ThisThat
+.thisorthat {
+	@include gridZero(full, full, full, half);
+	@include clearfix;
+	
+	margin-top: 20px;
+	margin-bottom: 40px;
+	
+	& > div{
+		width: 100%;
+		float:left;
+		margin-bottom: 20px;
+		
+		@include respond-to(tablet, desktop) {
+			width: auto;
+			float:left;
+			
+			&:first-child{
+				padding-right: 30px;
+			}
+		}
+	}
+
+	.cta-group{
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	@include respond-to(tablet, desktop) {
+		.cta-group{
+			max-width: 295px;
+		}
+	}
+
+	.cta { 
+		width: 100%; 
+		text-align: center;
+	}
+
+	.thisorthat__this .cta-group {
+		margin-bottom: 0;
+	}
+	
+	.thisorthat__or {
+		display: none;
+	}
+}
+*/
+
+// Additional
+// This should be a button
+.additional {
+    text-align: center;
+    background: none;
+    border: 2px dashed $grey-6;
+    padding: 10px;
+    
+    .btn-link {
+        text-decoration: underline;
+    }
+} 

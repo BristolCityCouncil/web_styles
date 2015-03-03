@@ -1,0 +1,125 @@
+.pl {
+	.pl__title {
+		color: $bcc-red;
+		
+		a {
+			text-decoration:none;
+			color: $grey-4;
+		}
+	}
+	
+	.pl__copy {
+		:last-child {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+
+/* Grid previews
+  -------------------------------------------------- */
+
+// Debugging new grid sytem
+.tests {
+	@include clearfix;
+
+	margin: 20px 0;
+	
+	.test {
+		color: $white;
+		margin:0;
+		text-align: center;
+		padding: 20px;
+	}
+
+}
+
+.test1 {
+	.test {
+		background-color: $bcc-red;
+		@include columns(12, 6, 3);
+	}
+}
+
+.test2 {
+	.testa {
+		background-color: $grey-3;
+		@include columns(12, 8);
+	}
+	
+	.testb {
+		background-color: $grey-2;
+		@include columns(12, 4);
+	}
+}
+
+.test3 {
+	.testa {
+		background-color: $green-2;
+		@include columns(12, 4);
+		@include push(0, 8);
+		
+	}
+	
+	.testb {
+		background-color: $green-4;
+		@include columns(12, 8);
+		
+		@include pull(0, 4);
+	}
+}
+
+.test4 {
+	background-color: $bcc-red;
+	
+	.test {
+		@include respond-to(tablet, desktop) {
+			height: 140px;
+			text-align: left;
+		}
+	}
+	
+	.testa {
+		@include columns(12, 4);
+		@include push(0, 8);
+		
+		background-color: $blue-4;
+	}
+	
+	.testb {
+		@include columns(12, 8);
+		@include pull(0, 4);
+		
+		background-color: $blue-2;
+		
+		@include respond-to(desktop) {
+			padding-right: 120px;
+		}
+	}
+}
+
+.test5 {
+	.test {
+		background-color: $yellow-warning;
+		@include columns(6, 4);
+	}
+}
+
+.test6 {
+	.test {
+		background-color: $bcc-red;
+		@include columns(6);
+	}
+}
+
+.test7 {
+	.test {
+		background-color: $yellow-warning;
+		@include columns(12, 4);
+		//@include push (0, 3, 5);
+	}
+}
+
+
+
+

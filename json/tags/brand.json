@@ -1,0 +1,26 @@
+{
+	"header": {
+		"pattern": "Header",
+		"copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+		"notes": {
+			"developer": [
+				"This is a developer note"
+			],
+			"usage": [
+				"This is a usage note"
+			]
+		}
+	},
+	"header-v1": {
+		"pattern": "Header V1",
+		"copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+		"notes": {
+			"developer": [
+				"This is a developer note"
+			],
+			"usage": [
+				"This is a usage note"
+			]
+		}
+	}
+}

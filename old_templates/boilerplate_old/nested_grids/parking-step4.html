@@ -1,0 +1,67 @@
+<div class="portlet-body">
+    <header class="step-header">
+        <p class="step-header__title">Get residents' or visitors' parking permits<span class="step-header__title__seperator">:</span><span class="step-header__title__steps">step 4 of 5</span>
+        </p>
+        <h1 class="step-header__subtitle">Visitors' permits</h1>
+    </header>
+    <ul>
+        <li>You can apply for up to <strong> 100 </strong>visitors' permits per year.</li>
+        <li>You do not need to own a car to apply for visitors' permits.</li>
+        <li>You do not have to apply for all of your visitors' permits now. You can apply for more permits, at any time during the year.</li>
+        <li>Visitors' permits are printed in books of scratch cards, each permit is valid for one days parking.</li>
+    </ul>
+
+    <hr>
+
+    <form id="parkingOrderModel" novalidate="novalidate" class="form" action="http://l-custpdev-app1.bcc.lan:8080/parking/get-permits?p_auth=HNdWw0nP&amp;p_p_id=bccparkingportlet_WAR_bccportalapps101BUILDSNAPSHOT&amp;p_p_lifecycle=1&amp;p_p_state=normal&amp;p_p_mode=view&amp;p_p_col_id=column-1&amp;p_p_col_count=1&amp;_bccparkingportlet_WAR_bccportalapps101BUILDSNAPSHOT_execution=e1s8" method="post">
+
+        <div class="row-fluid js--matchHeight" id="parking__visitor-permits__choose">
+            <div class="span4">
+                <div class="slab slab--outline slab--white" id="field-freeVisitorPermits">
+                    <div class="wrepper">
+                        <h2 class="slab__title">Free visitor permits</h2>
+                        <p>Your property has <strong>25 permits</strong> left of the free allowance of <strong>50</strong>.</p>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item__label invisible" for="fpermits">Free visitor permits</label>
+                        <input id="fpermits" name="freeVisitorPermits" min="0" max="25" pattern="[0-9]*" class="form__item__field form__item__field--string form__item__field--mini" type="number" value="0" />
+                        <div class="form__item__message form__item__message--error" aria-hidden="true"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="span4">
+                <div class="slab slab--outline slab--white" id="field-paidVisitorPermits">
+                    <div class="wrepper">
+                        <h2 class="slab__title"> Visitor permits at &pound;1 each</h2>
+                        <p>Your property has <strong>50 permits</strong> left of the paid allowance of <strong>50</strong>.</p>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item__label invisible" for="ff-paidPermits">Paid visitor permits</label>
+                        <input id="ff-paidPermits" name="paidVisitorPermits" min="0" max="50" pattern="[0-9]*" class="form__item__field form__item__field--string form__item__field--mini" type="number" value="0" />
+                        <div class="form__item__message form__item__message--error" aria-hidden="true"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panel__copy"> If you just moved in or think you are allowed more permits, email us at: <a href="mailto:parking.permits@bristol.gov.uk">parking.permits@bristol.gov.uk</a>.</div>
+        </div>
+        <!-- CPDP-2566 ensure only shows if there were visitors permits available to buy on the visitors only path, or if they have ordered some residents permits -->
+        <div class="form__actions">
+            <button name="_eventId_continue" type="submit" class="cta cta--icon cta--primary cta--next js--prevent-double">View order summary</button>
+        </div>
+    </form>
+    <div class="panel panel--feedback">
+        <h2 class="panel__title">Give feedback on this new service</h2>
+        <div class="panel__copy">
+            <p><a href="https://www.bristol.gov.uk/node/24282" target="_blank">Give feedback (opens new window)</a> and help improve this service.
+                <br/>It only takes a minute and you won't lose any details.</p>
+        </div>
+    </div>
+    <script>
+        ga('send', 'pageview', {
+            'page': '/parking/get-permits/visitor-permits',
+        });
+    </script>
+    <!--</div>/grid-col-->
+</div>

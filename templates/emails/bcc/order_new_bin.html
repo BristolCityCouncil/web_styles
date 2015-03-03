@@ -1,0 +1,47 @@
+	{{
+		email_title = 'Waste bin or boxes order'
+		email_heading = 'You have ordered waste containers from the council'
+		email_subheading = 'We will deliver by <strong>Wednesday 24 February 2014</strong> between <strong>7am</strong> and <strong>6pm</strong>. We usually deliver on your recycling day. If not, it will be on another weekday.'
+	}}
+
+	{{> chrome/email-header}}
+
+	<br/>
+
+	<!-- {if collect old} -->
+    <div style="padding-left:30px; border-left: 10px solid #cccccc;">
+		<strong>You asked us to collect your old bins or boxes.</strong><br />
+		Please leave them out somewhere they can be seen and where our crew can easily get to them.
+	</div>
+    <!-- {end if collect old} -->
+	<br/>
+	<br/>
+
+	<strong>This is what you ordered</strong>
+	<br/>
+	<ul>
+		<li>1 Black wheelie bin</li>
+		<li>1 Black recycling </li>
+		<li>3 Brown food waste caddy</li>
+	</ul>
+	<br/>
+	<strong>Order number</strong>
+	<br/>
+	Your order number is <strong>12345678</strong>. You'll need this if you contact us.<br/>
+	If this order is correct you don't need to do anything.<br/>
+	If you need to change your order call us on <strong>0117 922 2100</strong>.<br/>
+	You can check progress from your account on the council website.<br/>
+	<a target="_blank" href="#">Check order progress</a>
+
+	<br/>
+	<br/>
+	<strong>Contact details we have for you:</strong>
+	<br/>
+
+	Anne Example
+	<br/>
+	anne.example@bristol.gov.uk
+	
+	{{#with header}}
+		{{> chrome/email-footer}}
+	{{/with}}

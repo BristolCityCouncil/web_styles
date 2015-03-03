@@ -1,0 +1,275 @@
+body {
+	color: $text;
+	font-size: 16px;
+	line-height: 20px;
+	font-family: $sans;
+	font-weight: normal;
+	padding-right: 0;
+	padding-left: 0;
+
+	@include respond-to(tablet, desktop) {
+		font-size: 19px;
+		line-height: 26px;
+	}
+}
+// Reset for Android stock
+input[type="text"] {
+	white-space: nowrap;
+}
+a {
+	color: #0d45a0;
+	text-decoration: underline;
+}
+
+a:focus {
+    color: $black;
+    background-color: $accessibility;
+    outline: 3px solid $accessibility;
+    outline-offset: 0;
+}
+
+a.disabled:focus {
+    outline: none;
+}
+
+address {
+	line-height: 26px;
+}
+
+
+
+form {
+	margin: 0;
+}
+
+
+strong {
+	font-family: $sans-bold;
+	font-weight: normal;
+}
+
+em {
+	@extend .light;
+	font-style: normal;
+}
+
+li {
+	line-height: 25px;
+	margin-bottom: 10px;
+}
+
+hr {
+	margin: 40px 0;
+	border-top: 2px solid $grey-6;
+}
+
+figure {
+	margin: 20px 0;
+
+	&.media {
+
+		img {
+			margin-bottom: 10px;
+			width: 100%;
+		}
+
+		figcaption {
+			font-size: 13px;
+			line-height: 15px;
+
+			strong {
+				font-size: 14px;
+				line-height: 20px;
+			}
+		}
+	}
+}
+
+section {
+	margin-bottom: 40px;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+	small {
+		line-height: 1em;
+		color: $grey-hairline;
+	}
+}
+
+h1 {
+	font-size: 28px;
+	line-height: 30px;
+	margin-top: 0;
+	margin-bottom: 20px;
+
+	@include respond-to(tablet, desktop) {
+		font-size: 48px;
+		line-height: 48px;
+		margin-top: 0;
+		margin-bottom: 40px;
+	}
+
+	small {
+		font-size: 22px;
+	}
+}
+h2 {
+	margin-top: 40px; // This may be correct.
+	margin-bottom: 25px;
+}
+.lead {
+	margin-bottom: 20px;
+	font-size: 20px;
+	line-height: 24px;
+	padding-right: 0;
+	
+	@include respond-to(tablet, desktop) {
+		font-size: 25px;
+		line-height: 30px;
+		margin-bottom: 40px;
+		
+	}
+	
+	@include respond-to(desktop){
+		padding-right: 30px;
+		max-width: 640px;
+	}
+}
+
+h2 {
+	font-size: 22px;
+	line-height: 25px;
+	margin-top: 20px;
+	margin-bottom: 12px;
+
+	@include respond-to(tablet, desktop) {
+		font-size: 30px;
+		line-height: 30px;
+		margin-bottom: 15px;
+	}
+
+	small {
+		font-size: 19px;
+	}
+}
+
+h3 {
+	font-size: 19px;
+	line-height: 1em;
+	margin-top: 20px;
+	margin-bottom: 8px;
+
+	@include respond-to(tablet, desktop) {
+		font-size: 24px;
+		line-height: 27px;
+		margin-bottom: 12px;
+	}
+
+	small {
+		font-size: 16px;
+	}
+}
+
+h4 {
+	font-size: 16px;
+
+	@include respond-to(tablet, desktop) {
+		font-size: 19px;
+		line-height: 26px;
+		margin-bottom: 10px;
+	}
+
+	small {
+		font-size: 14px;
+	}
+}
+
+h5 {
+	font-size: 14px;
+}
+
+h6 {
+	font-size: 12px;
+}
+
+
+
+p {
+	font-size: 16px;
+	line-height: 20px;
+	margin-bottom: 12px;
+
+	@include respond-to(tablet, desktop) {
+		font-size: 19px;
+		line-height: 26px;
+		margin-bottom: 20px;
+	}
+}
+
+dl {
+	margin-bottom: 20px;
+
+	@include respond-to(tablet, desktop) {
+		margin-bottom: 40px;
+	}
+}
+
+ol,
+ul {
+	font-size: 16px;
+	line-height: 20px;
+	margin-top: 0;
+	margin-bottom: 20px;
+
+	@include respond-to(tablet, desktop) {
+		font-size: 19px;
+		line-height: 26px;
+		margin-top: 0;
+		margin-bottom: 40px;
+	}
+}
+
+small {
+	font-size: 14px;
+	line-height: 18px;
+
+	@include respond-to(tablet, desktop) {
+		font-size: 16px;
+		line-height: 22px;
+	}
+
+	&.micro {
+		font-size: 12px;
+		line-height: 17px;
+
+		@include respond-to(tablet, desktop) {
+			font-size: 13px;
+			line-height: 17px;
+		}
+	}
+}
+
+%light,
+.light {
+	color: #676973;
+}
+
+.table {
+	th {
+		font-family: $sans-bold;
+		font-weight: normal;
+	}
+}
+
+.hidden {
+	visibility: visible;
+}
+
+.wrapper {
+	display: inline;
+}

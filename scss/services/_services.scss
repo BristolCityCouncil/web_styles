@@ -1,0 +1,52 @@
+.services {
+	@include clearfix;
+	
+	&.services--info {
+		margin-bottom: 40px;
+		
+		.slab {
+			@include clearfix;
+			margin-top:10px;
+			margin-bottom: 0;
+			
+			.half {
+				margin-bottom: 0;
+			}	
+		}
+	}
+
+	.half {
+		@include columnsZero(12, 12, 6);
+		@include nth(0, 0, 2);	
+		
+		margin-top: 0;
+		margin-bottom: 20px;
+		
+		> .slab {
+			margin-top:0;
+		}
+		
+		> .panel {
+			margin-bottom: 0;
+		}
+		
+		@include respond-to(desktop) {
+			
+			margin-bottom: 30px;
+			
+			> * {
+				height: 100%;
+			}
+			
+			&.divider {
+				border-left: 2px solid $grey-5;
+				padding-left: 30px;
+			}
+		
+			&:nth-child(odd) {
+				padding-right: 30px;
+			}
+		}		
+	}
+}
+	

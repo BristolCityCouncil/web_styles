@@ -1,0 +1,25 @@
+
+<div class="form__item" id="field-postcode">
+	<label class="form__item__label" for="pcode">Postcode where you live</label>
+	<input id="pcode" name="customer.address.postCode" class="form__item__field form__item__field--string form__item__field--small" required="required" type="text" value="bs1 2at" />
+	<button class="cta cta--small" type="submit" name="_eventId_lookupAddress" onclick="ga('send', 'pageview',{'page': '/parking/get-permits/find-address-click-lookup'});">Find address</button>
+	<div class="form__item__message form__item__message--error" aria-hidden="true"> Please enter a postcode</div>
+</div>
+<div class="form__item" id="field-address">
+	<label for="addressUprn" class="form__item__label">Select address</label>
+	<select id="addressUprn" name="customer.address.addressUprn" onChange="ga(&#39;send&#39;, &#39;pageview&#39;,{&#39;page&#39;: &#39;/parking/get-permits/address-returned&#39;});" class="form__item__field form__item__field--select form__item__field--select--block" required="required">
+		<option value="">Select your address</option>
+		<option value="000000257560">39 - 40 High Street City Centre Bristol BS1 2AT</option>
+		<option value="000000257660">41 High Street City Centre Bristol BS1 2AT</option>
+		<option value="000000103889">42 High Street City Centre Bristol BS1 2AT</option>
+		<option value="000000259701">44 High Street City Centre Bristol BS1 2AT</option>
+		<option value="000000324723">44A High Street City Centre Bristol BS1 2AT</option>
+		<option value="000000308462">Flat 1 42 High Street City Centre Bristol BS1 2AT</option>
+		<option value="000000308463">Flat 2 42 High Street City Centre Bristol BS1 2AT</option>
+		<option value="000000308464">Flat 3 42 High Street City Centre Bristol BS1 2AT</option>
+		<option value="000000308465">Flat 4 42 High Street City Centre Bristol BS1 2AT</option>
+		<option value="000000308466">Flat 5 42 High Street City Centre Bristol BS1 2AT</option>
+		<option value="000000351132">Flat 41 High Street City Centre Bristol BS1 2AT</option>
+	</select>
+	<div class="form__item__message form__item__message--error" aria-hidden="true">Please select your address</div>
+</div>

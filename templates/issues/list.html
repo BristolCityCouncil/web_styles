@@ -1,0 +1,11 @@
+{{> chrome/header }}
+
+	<div class="row-fluid">
+		{{#issues}}
+		<div class="span4">
+			<div class="slab slab--outline"><a href="/issues/CPDP-{{.}}" style="text-decoration:none;"><h2 style="color:darkgreen;margin-top:0;">CPDP-{{.}}</h2></a><a class="cta " style="float:right" href="https://scm.bristol.gov.uk/jira/browse/CPDP-{{.}}" target="_blank">Open in Jira</a></div>
+		</div>
+		{{/issues}}
+	</div>
+
+{{> chrome/footer }}

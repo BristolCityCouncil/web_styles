@@ -1,0 +1,90 @@
+$infostack-spacing : 15px;
+$infostack-image-width: 150px;
+$infostack-image-height: 200px;
+
+.infostack {
+	@extend .clearfix;
+	margin-top: 20px;
+	margin-bottom: 34px;
+	margin-left: -$infostack-spacing;
+}
+
+	.infostack--horizontal{
+
+		.infostack__photo,
+		.infostack__list {
+			float:left;
+		}
+	}
+
+	.infostack--media{
+		position: relative;
+		// height: $infostack-image-height;
+		margin-bottom: 40px; // this should be 30px
+		
+		.infostack__photo{
+			img {
+				width: ($infostack-image-width*.6666);
+				max-width: auto;
+			}
+			
+			width: ($infostack-image-width*.6666)+30;
+			overflow: hidden;
+		}
+
+		.infostack__annotation {
+			padding-left: ($infostack-image-width*.6666)+40px;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		@include respond-to(desktop, tablet) {
+
+			.infostack__photo {
+				width: $infostack-image-width + 30px;
+			}
+
+			.infostack__photo img {
+				width: $infostack-image-width;
+				max-height: 250px;
+			}
+
+			.infostack__annotation {
+				padding-left: $infostack-image-width+40px;
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+	}
+
+	.infostack__photo {
+		padding: 0 $infostack-spacing $infostack-spacing;
+		max-width: 50%;
+	}
+
+	.infostack__list {
+		margin: 0 $infostack-spacing;
+		padding-top: 20px;
+		
+		@include respond-to(desktop, tablet) {
+			padding: 0;
+		}
+
+		ul { 
+			border-left-color: rgb(234, 234, 234);
+			border-left-style: solid;
+			border-left-width: 10px;
+			margin: 0;
+			padding-left: 32px;
+		}
+
+		li {
+			max-width: 248px;
+		}
+
+	}
+
+	.infostack__expander{
+		padding-left: $infostack-spacing;
+	}

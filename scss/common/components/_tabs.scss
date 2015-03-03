@@ -1,0 +1,91 @@
+.tabs {
+    margin: 0 -20px;
+    padding: 0 10px;
+    
+    .tabs__list {
+        list-style: none;
+        font-size: 19px;
+        border-bottom: 2px solid #eaeaea;
+        margin: 0 -10px 40px;
+        padding: 0 10px;
+        *zoom: 1;
+        
+        @include respond-to(tablet, desktop) {
+            margin: 0 0 40px;
+            padding: 0;
+            font-size: 24px;
+        }
+
+        &:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        li {
+            float: left;
+            margin: 0;
+            position: relative;
+            bottom: -2px;
+            
+            &:before {
+                content: '';
+            }
+            
+            a {
+                font-family: $sans-bold;
+                display: inline-block;
+                line-height: 55px;
+                padding: 0 30px;
+                border-top: 2px solid transparent;
+                border-left: 2px solid transparent;
+                border-right: 2px solid transparent;
+                //border-bottom: 2px solid #cc0000;
+                
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+        
+        .ui-tabs-active {
+            a {
+                text-decoration: none;
+                color: $grey-1;
+                border-top: 2px solid #eaeaea;
+                border-left: 2px solid #eaeaea;
+                border-right: 2px solid #eaeaea;
+                //border-bottom: 2px solid #cc0000;
+                background-color: $white;
+            }
+            
+            &.ui-state-focus,
+            &.ui-state-hover {
+            	a {
+               		background-color: $white;
+            	}
+        	}
+        }
+        
+        .ui-state-focus {
+            a {
+               color: $accessibility;
+               background-color: transparent;
+            }
+        }
+    }
+}
+
+.tabs li.ui-state-focus {
+    outline: none;
+    
+    a {
+        outline: none;
+        background-color: $white;
+        color: $accessibility;
+    }
+}
+
+.tabs__list li a {
+    outline: none;
+}

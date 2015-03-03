@@ -1,0 +1,113 @@
+<h1>Page 5 - Permit number entry (NEW)</h1>
+<br/><br/><br/>
+
+<div class="open-validation">
+    <div class="open-validation__title">There was a problem with the information you entered:</div>
+    <ul class="open-validation__errorlist">
+        <li class="open-validation__error" data-ov-individual="true" data-ov-error="This is the custom error">
+            <a href="#goingtoerror">That box is going to show an error</a>
+        </li>
+        <li class="open-validation__error open-validation__error--hidden" data-ov-target="#pc1" data-ov-individual="true" data-ov-error="This is the hidden custom error">
+            <a href="#goingtoerror2">That box is going to show an error but its hidden!!</a>
+        </li>
+    </ul>
+</div>
+
+<header class="step-header">
+    <p class="step-header__title"> 
+    	Renew your residents' parking permit<span class="step-header__title__seperator">:</span> 
+    	<span class="step-header__title__steps"> Step 1 of 3 </span>
+    </p>
+    <h1 class="step-header__subtitle">Enter permit details</h1>
+</header>
+<p>You can renew online if there are no changes to your permit details.</p>
+<p>You’ll need to apply for a new permit if you’ve changed your name, moved, or changed your vehicle. </p>
+<p>You can renew multiple permits that were originally applied for at the same time.</p>
+
+<form class="form js--validate js--enterPermitDetails">
+
+    <div class="field field--group" id="goingtoerror">
+
+        <label class="field__label field__label--block" for="pwdf">
+            Permit numbers (e.g. AB401)
+            <div class="field__instructions">
+                <p>You will find this:</p>
+                <ul>
+                    <li>in the reminder notice you received about the renewal</li>
+                    <li>in the confirmation email you received from noreply@bristol.gov.uk</li>
+                    <li>on your permit</li>
+                </ul>
+            </div>
+        </label>
+        <div class="field" id="pc1" data-validate-required-message="lkansdkas dlkam sdklma skldma slkdm l">
+            <label for="cper1" class="field__label field__label--block">Permit 1</label>
+            <input class="field__input" type="text" name="per1" id="cper1">
+        </div>
+        <div class="field" id="pc2">
+            <label for="cper2" class="field__label field__label--block">Permit 2 <span class="field__option">(Optional)</span></label>
+            <input class="field__input" type="text" name="per2" id="cper2">
+        </div>
+        <div class="field">
+            <label for="cper3" class="field__label field__label--block">Permit 3 <span class="field__option">(Optional)</span></label>
+            <input class="field__input" type="text" name="per3" id="cper3">
+        </div>
+
+    </div>
+		
+</form>
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+<h1>Page 5 - Permit number entry (OLD)</h1>
+<br/><br/><br/>
+
+<header class="step-header">
+    <p class="step-header__title"> 
+        Renew your residents' parking permit<span class="step-header__title__seperator">:</span> 
+        <span class="step-header__title__steps"> Step 1 of 3 </span>
+    </p>
+    <h1 class="step-header__subtitle">Enter permit details</h1>
+</header>
+<p>You can renew online if there are no changes to your permit details.</p>
+<p>You’ll need to apply for a new permit if you’ve changed your name, moved, or changed your vehicle. </p>
+<p>You can renew multiple permits that were originally applied for at the same time.</p>
+
+<form class="form js--validate js--enterPermitDetails">
+    <div class="panel panel--errors" id="errors">
+        <p class="panel__title"><strong>There was a problem with the information you entered:</strong>
+        </p>
+        <div class="panel__copy">
+            <ul>
+                <li> <a class="error__item__link" href="#field-permitNumbers"> Please renew the permits separately as the applicant for each is different </a> </li>
+                <li class="visuallyhidden"> <a class="error__item__link" href="#field-permitNumber2"></a> </li>
+                <li> <a class="error__item__link" href="#field-permitNumber1">asdasdasds</a> </li>
+            </ul>
+        </div>
+    </div>
+    <div class="field field--group" required data-error="Please fill this in" id="field-permitNumbers">
+
+        <label class="field__label field__label--block" for="pwdf">
+            Permit numbers (e.g. AB401)
+            <div class="field__instructions">
+                <p>You will find this:</p>
+                <ul>
+                    <li>in the reminder notice you received about the renewal</li>
+                    <li>in the confirmation email you received from noreply@bristol.gov.uk</li>
+                    <li>on your permit</li>
+                </ul>
+            </div>
+        </label>
+        <div class="field" id="field-permitNumber1" required>
+            <label for="per1" class="field__label field__label--block">Permit 1</label>
+            <input class="field__input" type="text" name="per1" id="per1">
+        </div>
+        <div class="field" id="field-permitNumber2">
+            <label for="per2" class="field__label field__label--block">Permit 2 <span class="field__option">(Optional)</span></label>
+            <input class="field__input" type="text" name="per2" id="per2">
+        </div>
+        <div class="field" id="field-permitNumber3">
+            <label for="per3" class="field__label field__label--block">Permit 3 <span class="field__option">(Optional)</span></label>
+            <input class="field__input" type="text" name="per3" id="per3">
+        </div>
+
+    </div>

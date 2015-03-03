@@ -1,0 +1,61 @@
+{
+	"folders":
+	[
+		{
+			"file_exclude_patterns":
+			[
+				".htaccess",
+				"composer.*",
+				"component.json",
+				"config.rb",
+				"package.json"
+			],
+			"folder_exclude_patterns":
+			[
+				".sass-cache",
+				"LEGACY",
+				"vendor",
+				"node_modules",
+				"liferay_modules",
+				"css"
+			],
+			"follow_symlinks": true,
+			"path": "."
+		},
+		{
+			"follow_symlinks": true,
+			"path": "bcc-beta-theme/js"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "scss"
+		},
+		{
+			"follow_symlinks": true,
+			"name": "app",
+			"path": "templates"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "fonts"
+		},
+		{
+			"follow_symlinks": true,
+			"name": "config",
+			"path": "i/application/config"
+		},
+		{
+			"follow_symlinks": true,
+			"name": "framework",
+			"path": "i"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "vendor"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "css"
+		}
+	]
+}

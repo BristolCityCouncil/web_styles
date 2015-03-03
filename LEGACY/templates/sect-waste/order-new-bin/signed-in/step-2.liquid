@@ -1,0 +1,122 @@
+{% block page %}
+
+  {% assign page_title = 'Ordering a new wheelie bin or recycling boxes: Order summary' %}
+  {% assign signed_in = true %}
+  {% assign ribbon = 'ico-bin' %}
+
+  {% include 'header' %}
+
+  <div class="page-content">
+
+    <div class="layout layout-constrained">
+
+      <div class="grid-wrap">
+
+        <div class="grid-col desktop-grid-full-width">
+
+          <div class="content content-header">
+
+            {% assign step-header__title = 'Ordering a new wheelie bin or recycling boxes' %}
+            {% assign step-header__title__step = 'Step 2 of 3' %}
+            {% assign step-header__subtitle = 'Order summary' %}
+            {% include 'modules/step-header' %}
+
+          </div><!--/content-->
+
+          <div class="content content-main">
+
+            <div class="grid-wrap">
+
+              <div class="grid-col tablet-grid-two-thirds">
+                <div class="panel panel--bare">
+                  <h3 class="panel__title">Delivery Address</h3>
+                  <div class="panel__copy--compact">
+                    <p>Mrs Josephine Longnamerson</p>
+                    <p>Flat 3, 22 Verylongstreetname Terrace, BS21 4ND</p>
+                  </div>
+                </div>
+
+              </div><!--/grid-col-->
+
+              <div class="grid-col tablet-grid-one-third">
+
+                <div class="panel panel--minimal">
+
+                  <h4 class="panel__title panel__title--minor">Leaving your damaged bins</h4>
+                  <div class="panel__copy--small">
+                    <p>Please leave your old bins outside your property between <strong>7am and 6pm</strong> for our crew to collect.</p>
+                  </div>
+
+                </div><!--/panel-->
+
+              </div><!--/grid-col-->
+
+            </div><!--/grid-wrap-->
+
+            <div class="basket">
+
+              <div class="basket__header">
+
+                <h3 class="basket__title">Your order</h3>
+
+                <div class="basket__change">
+                  <a href="#" class="delta">Change quantities of items</a>
+                </div><!--/basket__change-->
+
+              </div><!--/basket__header-->
+
+              <div class="basket__list">
+
+                {% assign basket__item__title = 'Black wheelie bin (Standard 180L)' %}
+                {% assign basket__item__handle = 'black-wheelie-bin' %}
+                {% assign basket__item__qty = '2' %}
+                {% include 'modules/basket__item--total' %}
+
+                {% assign basket__item__title = 'Black recycling bin' %}
+                {% assign basket__item__handle = 'black-recycling-bin' %}
+                {% assign basket__item__qty = '10' %}
+                {% include 'modules/basket__item--total' %}
+
+                {% assign basket__item__title = 'Green recycling bin' %}
+                {% assign basket__item__handle = 'green-recycling-bin' %}
+                {% assign basket__item__qty = '7' %}
+                {% include 'modules/basket__item--total' %}
+
+                {% assign basket__item__title = 'Brown food waste bin' %}
+                {% assign basket__item__handle = 'brown-food-waste-bin' %}
+                {% assign basket__item__qty = '5' %}
+                {% include 'modules/basket__item--total' %}
+
+                {% assign basket__item__title = 'Black box lid' %}
+                {% assign basket__item__handle = 'black-box-lid' %}
+                {% assign basket__item__qty = '17' %}
+                {% include 'modules/basket__item--total' %}
+
+                {% assign basket__item__title = 'Green box net' %}
+                {% assign basket__item__handle = 'green-box-net' %}
+                {% assign basket__item__qty = '100' %}
+                {% include 'modules/basket__item--total' %}
+
+              </div><!--/basket__list-->
+
+
+
+              <div class="basket__actions">
+                <a href="#" class="btn btn--primary">Place order</a>
+              </div><!--/basket__actions-->
+
+            </div><!--/basket-->
+
+          </div><!--/content-->
+
+        </div><!--/grid-col-->
+
+      </div><!--/grid-wrap-->
+
+    </div><!--/layout-->
+
+  </div><!--page-content-->
+
+  {% include 'footer' %}
+
+{% endblock %}

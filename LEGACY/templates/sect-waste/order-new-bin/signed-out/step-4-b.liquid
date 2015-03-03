@@ -1,0 +1,67 @@
+
+{% block page %}
+
+  {% assign page_title = 'Ordering a new wheelie bin or recycling boxes: Thank you' %}
+  {% assign signed_in = false %}
+  {% assign ribbon = 'ico-bin' %}
+
+  {% include 'header' %}
+
+  <div class="page-content">
+
+    <div class="layout layout-constrained">
+
+      <div class="grid-wrap">
+
+        <div class="grid-col desktop-grid-full-width">
+
+          <div class="content content-header">
+
+            {% assign step-header__title = 'Ordering a new wheelie bin or recycling boxes' %}
+            {% assign step-header__title__step = 'Step 4 of 4' %}
+            {% assign step-header__subtitle = 'Thank you' %}
+            {% include 'modules/step-header' %}
+
+          </div><!--/content-->
+
+
+          <div class="content content-main">
+
+
+            <div class="panel panel--bare">
+              <div class="panel__copy">
+                <p>We have sent a confirmation email to <a href="mailto:josephine_longnamerson@emailthing.com" target="_blank"><strong>josephine_longnamerson@emailthing.com</strong></a></p>
+                <p>Your order number is <strong>#1926934</strong>  <span class="panel__small-link">(Quote this when contacting us)</span></p>
+              </div>
+            </div>
+            <div class="panel panel--minimal panel--affirm">
+              <p class="panel__title--minor">Delivery by :</p>
+              <p class="panel__title">Wednesday, 15 January <br>between 7am and 6pm</p>
+            </div>
+            <div class="panel panel--secondary">
+              <div class="grid-wrap">
+                <div class="grid-col desktop-grid-two-thirds desktop-grid-pad-right">
+                  <h2 class="panel__title">We notice you already have an account</h2>
+                  <div class="panel__copy">
+                    <p>If you sign in now, we can add this order to your account so you can check on progress.</p>
+                  </div>
+                </div>
+                <div class="grid-col desktop-grid-one-third desktop-grid-content-right">
+                  <a href="#" class="btn btn--primary">Sign in</a>
+                </div>
+            </div>
+
+
+          </div><!--/content-->
+
+        </div><!--/grid-col-->
+
+      </div><!--/grid-wrap-->
+
+    </div><!--/layout-->
+
+  </div><!--page-content-->
+
+  {% include 'footer' %}
+
+{% endblock %}

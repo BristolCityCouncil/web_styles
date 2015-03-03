@@ -1,0 +1,80 @@
+{
+	"home": {
+		"title": "Welcome",
+
+		"lead": {
+			"text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut quas, veritatis error repellat ea, similique magni maiores nostrum temporibus non ullam"
+		},
+
+		"block1": {
+			"icon": "icon--bcc--buspass",
+			"block__title": "Black mugs",
+			"block__copy": "We sell a few black mugs.",
+			"links": [
+				{ "link": "Black mug 1" },
+				{ "link": "Black mug 2" },
+				{ "link": "Black mug 3" }
+			]
+		},
+
+		"block2": {
+			"icon": "icon--bcc--feedback",
+			"block__title": "Red mugs",
+			"block__copy": "We sell a couple of red mugs.",
+			"links": [
+				{ "link": "Red mug 1" },
+				{ "link": "Red mug 2" }
+			]
+		},
+
+		"slate": {
+			"slate__title": "We do not just sell mugs by the way",
+			"slate__copy": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ex veritatis sit eos, id iure, qui."
+		}
+	},
+
+	"leadin": {
+		"h1": "We sell mugs, mugs, mugs and mugs",
+		
+		"lead": {
+			"lead__text": "You may be able to sort your problem with one of the following mugs:"
+		},
+
+		"h2__text": "Would you like to make a complaint about our mugs",
+
+		"list": [
+			{ "li": "Black mug 1", "link": true },
+			{ "li": "Black mug 2", "link": true },
+			{ "li": "Black mug 3", "link": true }
+		],
+
+		"slate-primary": {
+			"slate__title": "Sign in to make this quicker",
+			"slate__copy": "If you have a Bristol Account, sign in and we'll fill in some of the form for you. [button]"
+		},
+		
+		"label": "Sign in"
+	},
+
+	"a": {
+		"title": "Custom A"
+	},
+
+	"b": {
+		"title": "Custom B"
+	},
+
+	"summary": {
+		"title": "Summary"
+	},
+
+	"thanks": {
+		"title": "Thank you, we have received your request",
+
+		"info": {
+			"info__copy": "We'll contact you in the next three working days to let you know how long it's going to take to give you a full response."
+		}
+	}
+
+
+}

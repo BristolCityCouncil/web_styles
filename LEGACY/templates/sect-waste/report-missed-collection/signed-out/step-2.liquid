@@ -1,0 +1,153 @@
+{% block page %}
+
+  {% assign page_title = 'Report missed collection: Your recent collections' %}
+  {% assign signed_in = false %}
+  {% assign ribbon = 'ico-bin' %}
+
+  {% include 'header' %}
+
+  <div class="page-content">
+
+    <div class="layout layout-constrained">
+
+      <div class="grid-wrap">
+
+        <div class="grid-col desktop-grid-full-width">
+
+          <div class="content content-header">
+
+            {% assign step-header__title = 'Report missed collection' %}
+            {% assign step-header__title__step = 'Step 2 of 4' %}
+            {% assign step-header__subtitle = 'Your recent collections' %}
+            {% include 'modules/step-header' %}
+
+            <div class="panel panel--affirm panel--title-reverse">
+              <p class="panel__title--minor">Your selected address:</p>
+              <h2 class="panel__title">19 Redland Road, Bristol, BS6 5AA</h2>
+            </div>
+
+            <ul class="date-card-list">
+              {% assign date-card-type = '' %}
+              {% include 'modules/date-card' %}
+
+              {% assign date-card-type = '' %}
+              {% include 'modules/date-card' %}
+
+              {% assign date-card-type = 'date-card--recycling' %}
+              {% include 'modules/date-card' %}
+
+              {% assign date-card-type = '' %}
+              {% assign date-card--modifier = 'date-card--shadow' %}
+              {% include 'modules/date-card' %}
+
+              {% assign date-card-type = '' %}
+              {% assign date-card--modifier = 'date-card--shadow' %}
+              {% include 'modules/date-card' %}
+            </ul>
+
+            <p>
+              <a href="#report-recycling">Report recycling</a> | <a href="#report-general-waste">Report general waste</a>
+            </p>
+
+            <h2 id="report-recycling">
+              Report missed recycling collection
+            </h2>
+
+            <!-- panel alert -->
+            {% assign date-card__title = 'We could not collect your Recycling Collection because...' %}
+            {% assign date-card__copy = '<p>Please do not report a missed collection, our team will not return until your next collection on <strong>17th June 2014</strong></p>' %}
+            {% include 'modules/panel--alert' %}
+
+            <form class="form form--validate" id="form-order-new-bin" action="#form-order-new-bin" method="post">
+
+              <div class="basket basket--with-checks">
+
+                <div class="basket__list">
+
+                  {% assign basket__item__title = 'Black recycling box' %}
+                  {% assign basket__item__handle = 'black-recycling-bin-retina' %}
+                  {% assign basket__item__qty = '10' %}
+                  {% assign basket__item__info = '<strong>Garden bin was missed for the following reason:</strong><br/>Overflowing. You cannot report this as missed.' %}
+                  {% assign basket__item__is-checked = 'disabled' %}
+                  {% assign basket__item__is-disabled = 'basket__item__is-disabled' %}
+                  {% include 'modules/basket__item--checks' %}
+
+                  {% assign basket__item__title = 'Green recycling box' %}
+                  {% assign basket__item__handle = 'green-recycling-bin-retina' %}
+                  {% assign basket__item__qty = '7' %}
+                  {% assign basket__item__info = '<strong>Garden bin was missed for the following reason:</strong><br/>Overflowing. You cannot report this as missed.' %}
+                  {% assign basket__item__is-checked = 'disabled' %}
+                  {% assign basket__item__is-disabled = 'basket__item__is-disabled' %}
+                  {% include 'modules/basket__item--checks' %}
+                </div>
+
+                <h2 id="report-general-waste">
+                  Report missed general waste
+                </h2>
+
+                <div class="basket__list">
+                  {% assign basket__item__title = 'Black wheelie bin' %}
+                  {% assign basket__item__handle = 'black-wheelie-bin' %}
+                  {% assign basket__item__qty = '2' %}
+                  {% assign basket__item__info = '' %}
+                  {% assign basket__item__is-checked = ' ' %}
+                  {% assign basket__item__is-disabled = '' %}
+                  {% include 'modules/basket__item--checks' %}
+                </div><!--/basket__list-->
+
+                <div class="form__item form__item--boolean">
+                  <input class="form__field form__field--boolean form__field--checkbox" type="checkbox" name="" id="ff-confirm-off-street" />
+                  <!-- @TODO: UX: Should there be an explanation/link for 'off street'? -->
+                  <label class="form__label form__label--boolean" for="ff-confirm-off-street">The entire street been missed?</label>
+                </div><!--/form__item-->
+
+                <div class="panel panel--inform">
+                  <h2 class="panel__title">Reasons why bins are sometimes not collected</h2>
+                  <div class="panel__copy">
+                    <ul>
+                      <li>If they were overflowing</li>
+                      <li>If they contained an item we do not collect</li>
+                      <li>If they were not out by 7am</li>
+                      <li>If they were not visible from the road</li>
+                    </ul>
+                  </div>
+                </div><!--/panel-->
+
+                <div class="form__item form__item--boolean">
+                  <input checked class="form__field form__field--boolean form__field--checkbox" type="checkbox" name="" id="ff-confirm-off-street" />
+                  <!-- @TODO: UX: Should there be an explanation/link for 'off street'? -->
+                  <label class="form__label form__label--boolean" for="ff-confirm-off-street">I confirm my bins were left out by 7am on the day of collection.</label>
+                </div><!--/form__item-->
+
+                <div class="form__item form__item--string form__item--marginless">
+                  <label class="form__label" for="ff-textarea-2">Where can you find your bins and boxes?</label>
+                  <textarea class="form__field form__field--string form__field--textarea" name="" rows="5" placeholder="e.g. In my front garden." id="ff-textarea-2"></textarea>
+                </div><!--/form__item-->
+
+                <div class="basket__actions">
+                  <!-- @TODO: UX: Is this button text misleading? Still many steps to go through -->
+                  <button class="btn btn--primary" type="submit">Next: Check and Confirm</button>
+
+                </div><!--/basket__actions-->
+
+
+
+              </div><!--/basket-->
+
+            </form>
+
+
+
+          </div><!--/content-->
+
+        </div><!--/grid-col-->
+
+      </div><!--/grid-wrap-->
+
+    </div><!--/layout-->
+
+  </div><!--page-content-->
+
+  {% include 'footer' %}
+
+{% endblock %}

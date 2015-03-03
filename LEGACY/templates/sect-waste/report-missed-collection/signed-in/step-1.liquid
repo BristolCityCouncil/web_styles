@@ -1,0 +1,161 @@
+{% block page %}
+
+  {% assign page_title = 'Report missed collection: Collections that were missed' %}
+  {% assign signed_in = true %}
+  {% assign ribbon = 'ico-bin' %}
+
+  {% include 'header' %}
+
+  <div class="page-content">
+
+    <div class="layout layout-constrained">
+
+      <div class="grid-wrap">
+
+        <div class="grid-col desktop-grid-full-width">
+
+          <div class="content content-header">
+
+            {% assign step-header__title = 'Report missed collection' %}
+            {% assign step-header__title__step = 'Step 1 of 3' %}
+            {% assign step-header__subtitle = 'Collections that were missed' %}
+            {% include 'modules/step-header' %}
+
+            <p>Your scheduled bin collection day for <strong>21 Redland Road, Bristol, BS6 5AA</strong> was:</p>
+
+            <div class="panel panel--affirm">
+                <p class="panel__title--minor">Delivery by :</p>
+                <p class="panel__title">Wednesday, 15 January</p>
+              </div>
+
+              <h2>
+                Which bins were missed?
+              </h2>
+              <p>
+                Please wait until 5pm on the day of collection before reporting.
+              </p>
+
+              <form class="form form--validate" id="form-order-new-bin" action="#form-order-new-bin" method="post">
+
+              <div class="basket basket--with-checks">
+
+                <div class="basket__header visuallyhidden">
+
+                  <h3 class="basket__title">What bins do you need?</h3>
+
+                </div><!--/basket__header-->
+
+                <div class="basket__list">
+
+                  {% assign basket__item__title = 'Black wheelie bin' %}
+                  {% assign basket__item__handle = 'black-wheelie-bin' %}
+                  {% assign basket__item__qty = '2' %}
+                  {% assign basket__item__info = '' %}
+                  {% assign basket__item__is-checked = ' ' %}
+                  {% assign basket__item__is-disabled = '' %}
+                  {% include 'modules/basket__item--checks' %}
+
+                  {% assign basket__item__title = 'Black recycling bin' %}
+                  {% assign basket__item__handle = 'black-recycling-bin-retina' %}
+                  {% assign basket__item__qty = '10' %}
+                  {% assign basket__item__info = '' %}
+                  {% assign basket__item__is-checked = 'checked' %}
+                  {% assign basket__item__is-disabled = ' ' %}
+                  {% include 'modules/basket__item--checks' %}
+
+                  {% assign basket__item__title = 'Green recycling bin' %}
+                  {% assign basket__item__handle = 'green-recycling-bin-retina' %}
+                  {% assign basket__item__qty = '7' %}
+                  {% assign basket__item__info = '' %}
+                  {% assign basket__item__is-checked = 'checked' %}
+                  {% assign basket__item__is-disabled = '' %}
+                  {% include 'modules/basket__item--checks' %}
+
+
+                  {% assign basket__item__title = 'Brown food waste bin' %}
+                  {% assign basket__item__handle = 'brown-food-waste-bin-retina' %}
+                  {% assign basket__item__qty = '5' %}
+                  {% assign basket__item__info = '' %}
+                  {% assign basket__item__is-checked = '' %}
+                  {% assign basket__item__is-disabled = '' %}
+                  {% include 'modules/basket__item--checks' %}
+
+                  {% assign basket__item__title = 'Black box lid' %}
+                  {% assign basket__item__handle = 'black-box-lid-retina' %}
+                  {% assign basket__item__qty = '17' %}
+                  {% assign basket__item__info = '' %}
+                  {% assign basket__item__is-checked = '' %}
+                  {% assign basket__item__is-disabled = '' %}
+                  {% include 'modules/basket__item--checks' %}
+
+                  {% assign basket__item__title = 'Green box net' %}
+                  {% assign basket__item__handle = 'green-box-net-retina' %}
+                  {% assign basket__item__qty = '100' %}
+                  {% assign basket__item__info = '' %}
+                  {% assign basket__item__is-checked = '' %}
+                  {% assign basket__item__is-disabled = '' %}
+                  {% include 'modules/basket__item--checks' %}
+
+                  {% assign basket__item__title = 'Brown Caddy' %}
+                  {% assign basket__item__handle = 'brown-caddy-retina' %}
+                  {% assign basket__item__qty = '100' %}
+                  {% assign basket__item__info = '' %}
+                  {% assign basket__item__is-checked = '' %}
+                  {% assign basket__item__is-disabled = '' %}
+                  {% include 'modules/basket__item--checks' %}
+
+                </div><!--/basket__list-->
+
+                <div class="form__item form__item--boolean">
+                  <input class="form__field form__field--boolean form__field--checkbox" type="checkbox" name="" id="ff-confirm-off-street" />
+                  <!-- @TODO: UX: Should there be an explanation/link for 'off street'? -->
+                  <label class="form__label form__label--boolean" for="ff-confirm-off-street">Has the whole street been missed?</label>
+                  <br/>
+                  <input checked class="form__field form__field--boolean form__field--checkbox" type="checkbox" name="" id="ff-confirm-off-street" />
+                  <!-- @TODO: UX: Should there be an explanation/link for 'off street'? -->
+                  <label class="form__label form__label--boolean" for="ff-confirm-off-street">I confirm my bins were left out by 7am on the day of collection.</label>
+                </div><!--/form__item-->
+
+                <div class="panel panel--inform">
+                  <h2 class="panel__title">Reasons why bins are sometimes not collected</h2>
+                  <div class="panel__copy">
+                    <ul>
+                      <li>If they were overflowing</li>
+                      <li>If they contained an item we do not collect</li>
+                      <li>If they were not out by 7am</li>
+                      <li>If they were not visible from the road</li>
+                    </ul>
+                  </div>
+                </div><!--/panel-->
+
+                <div class="form__item form__item--string">
+                  <label class="form__label" for="ff-textarea-2">Where can you find your bins and boxes?</label>
+                  <textarea class="form__field form__field--string form__field--textarea" name="" rows="5" placeholder="e.g. In my front garden." id="ff-textarea-2"></textarea>
+                </div><!--/form__item-->
+
+                <div class="basket__actions">
+                  <!-- @TODO: UX: Is this button text misleading? Still many steps to go through -->
+                  <button class="btn btn--primary" type="submit">Next: Confirmation</button>
+                </div><!--/basket__actions-->
+
+
+
+              </div><!--/basket-->
+
+            </form>
+
+
+
+          </div><!--/content-->
+
+        </div><!--/grid-col-->
+
+      </div><!--/grid-wrap-->
+
+    </div><!--/layout-->
+
+  </div><!--page-content-->
+
+  {% include 'footer' %}
+
+{% endblock %}

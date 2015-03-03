@@ -1,0 +1,29 @@
+{
+  "bitwise": true,
+  "curly": true,
+  "devel": true,
+  "eqeqeq": true,
+  "forin": true,
+  "indent": 2,
+  "latedef": true,
+  "newcap": true,
+  "noarg": true,
+  "noempty": false,
+  "nonew": true,
+  "quotmark": true,
+  "undef": true,
+  "unused": false,
+  "strict": true,
+  "trailing": true,
+  "browser": true,
+  "jquery": true,
+  "maxparams": 3,
+  "maxdepth": 2,
+  "maxstatements": 4,
+  "maxcomplexity": 15,
+  "globals": {
+    "module": true,
+    "History": true,
+    "ie7": true
+  }
+}

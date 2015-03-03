@@ -1,0 +1,290 @@
+%alpha {
+	font-size: 22px;
+    line-height: 26px;
+    
+     @include respond-to(tablet, desktop) {
+        font-size: 30px;
+        line-height: 30px;
+    }
+}
+
+%beta {
+    font-size: 16px;
+    line-height: 19px;
+    
+    @include respond-to(tablet, desktop) {
+        font-size: 19px;
+        line-height: 26px;
+    }
+}
+
+// Default
+.info {
+    @include clearfix;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px;
+    position: relative;
+    border-left: 6px solid $grey-6;
+    
+    @include respond-to(tablet, desktop) {
+        border-left-width: 10px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding-left: 20px;
+    }
+    
+    .info__title {
+	    @extend %alpha;
+	    font-weight: normal;
+	    font-family: $sans-bold;
+	    display: block;
+	    margin: 0 0 10px; 
+	    max-width: 600px;
+	}
+	
+	.info__copy {
+		@extend %beta;
+		font-weight: normal;
+	    font-family: $sans;
+		display: block;
+		max-width: 600px;
+	}
+	
+	.info__copy * {
+	    margin-top: 0;
+	    margin-bottom: 0;
+	}
+	
+	/* add > to only select direct children */
+    .info__copy * ~ * {
+	    margin-top: 20px;
+	}
+    .info__copy li ~ li {
+        margin-top: 10px;
+    }
+}
+
+// Affirm
+.info--affirm {
+	border-color: $bcc-green-affirm;
+   
+    .info__title {
+    	@extend %alpha;
+    	font-weight: normal;
+    	font-family: $sans;
+        color: $green-1;
+        margin: 0;
+        
+        @include respond-to(tablet, desktop) {
+        	margin: 0 0 5px;
+        }
+    }
+    
+    .info__copy {
+        font-family: $sans-bold;
+        font-size: 16px;
+        line-height: 21px;
+        margin: 0;
+        
+        @include respond-to(tablet, desktop) {
+        	font-size: 19px;
+        	line-height: 26px;
+        	
+        }
+    }
+    
+    &.info--reverse {
+    	
+        .info__title {
+            color: $text;
+            font-size: 16px;
+        	line-height: 21px;
+            font-family: $sans-bold;
+            
+            @include respond-to(tablet, desktop) {
+                font-size: 19px;
+            }
+        }
+        
+        .info__copy {
+            color: $green-1;
+            font-family: $sans;
+            font-size: 22px;
+        	line-height: 26px;
+            
+            @include respond-to(tablet, desktop) {
+                font-size: 30px;
+                line-height: 34px;
+            }
+        }
+    }
+}
+
+    
+.warning {
+    @include clearfix;
+    width: 100%;
+    display: table;
+    padding: 0;
+    border: 0;
+    border-top: 2px solid $grey-hairline;
+    border-bottom: 2px solid $grey-hairline;
+    
+    .warning__icon {
+        @extend .icon--bcc;
+        @extend .icon--bcc--alert;
+        
+        width: 32px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 5px;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: left;
+        font-size: 48px;
+    }
+    
+    .warning__copy {
+        font-size: 16px;
+        font-weight: normal;
+        font-family: $sans;
+        line-height: 21px;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 30px 10px;
+        max-width: auto;
+        
+        @include respond-to(tablet, desktop) {
+            font-size: 19px;
+            line-height: 26px;
+        }
+    }
+}
+
+
+// Refactor
+.info--1of2 {
+    margin-bottom: 0;
+}
+
+.info--2of2 {
+   	margin-top: 0;
+   	padding-top: 0;
+}
+
+.block {
+	border-left: 6px solid $grey-6;
+	
+	border-top: 2px solid $grey-6;
+	border-right: 2px solid $grey-6;
+	border-bottom: 2px solid $grey-6;
+	margin: 0;
+	padding: 0 15px 0 70px;
+	margin-bottom: 20px;
+	position: relative;
+	
+	@include respond-to(tablet, desktop) {
+        border-left-width: 10px;
+    }
+			
+	@include respond-to(desktop) {
+		margin-bottom: 30px;
+	
+	}
+	
+	.block__title {
+		margin-top: 30px;
+	}
+	
+	.icon--bcc:before {
+		position: absolute;
+		top: 31px;
+		left: 20px;
+		font-size: 32px;
+	}
+}
+
+.slate {
+    @include clearfix;
+    background: $grey-6;
+    border: 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 25px 20px;
+    
+    @include respond-to(tablet, desktop) {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding: 30px;
+    }
+    
+    .slate__title {
+	    font-weight: normal;
+	    font-family: $sans-bold;
+	    display: block;
+	    font-size: 19px;
+	    line-height: 22px;
+	    margin-top: 0;
+	    margin-bottom: 10px;
+	    
+	    @include respond-to(tablet, desktop) {
+	        font-size: 24px;
+	        line-height: 24px;
+	    }
+	}
+	
+	.slate__copy * {
+	    margin-top: 0;
+	    margin-bottom: 0;
+	}
+	
+	.slate__copy * ~ * {
+	    margin-top: 20px;
+	}
+}
+
+.slate--white {
+    background: none;
+}
+
+.slate--outline {
+    border: 2px solid $grey-6;
+}
+
+.slate--primary {
+	background: #d5e5ff;
+}
+
+
+
+
+/* Equalities */
+.slatelayout--main,
+.slatelayout--side {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.slatelayout--main {
+	@include columns(12,12,8);
+	
+	margin-bottom: 0;
+	padding-left: 0;
+	padding-right: 20px;
+}
+
+.slatelayout--side {
+	@include columns(12,12,4);
+	
+	margin-top: 10px;
+	padding-right: 0;
+	
+	@include respond-to(desktop) {
+		margin-top: 0;
+		
+		.cta {
+			float: right;
+		}
+	}
+}

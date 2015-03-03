@@ -1,0 +1,84 @@
+<div class="portlet-body">
+    <header class="step-header">
+        <p class="step-header__title"> Renew your residents' parking permit<span class="step-header__title__seperator">:</span> <span class="step-header__title__steps"> Step 1 of 3 </span> </p>
+        <h1 class="step-header__subtitle"> Enter permit details</h1>
+    </header>
+    <p>You can renew online if there are no changes to your permit details. If you have changed your name, moved or changed your vehicle you will need to apply for a new permit.</p>
+    <p>You will need a permit number. You will find this in you permit order confirmation <em>(or on your permit)</em>
+    </p>
+    <form class="form js--validate js--enterPermitDetails">
+    <div class="panel panel--errors" id="errors">
+                                <p class="panel__title"><strong>There was a problem with the information you entered:</strong>
+                                </p>
+                                <div class="panel__copy">
+                                    <ul>
+                                        <li><a class="error__item__link" href="#field-permitNumber1">Please check that you are entering the permit number correctly</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+        
+        <fieldset class="form__item form__item--group form__item--permit-group" id="field-permitNumbers">
+            <legend class="form__item__label">Permits number (e.g. AB401)
+                <div class="form__item__label__instructions">
+                    <p>You will find this:</p>
+                    <ul>
+                        <li>in the reminder notice you received about the renewal</li>
+                        <li>in the confirmation email you received from noreply@bristol.gov.uk</li>
+                        <li>on your permit</li>
+                    </ul>
+                </div>
+            </legend>
+            <div class="form__item"  id="field-permitNumber1">
+                <label class="form__item__label hidden" for="permitNumber1">Permit number (e.g. AB401)</label>
+                <input required class="form__item__field form__item__field--string" id="permitNumber1" name="permitNumber1" type="text" />
+                <div class="form__item__message form__item__message--error" aria-hidden="true"> Not empty, valid permit 1 required </div>
+            </div>
+            <div class="form__item" id="field-permitNumber2">
+                <label class="form__item__label hidden" for="permitNumber2">Permit 2 number</label>
+                <input class="form__item__field form__item__field--string" id="permitNumber2" name="permitNumber2" type="text" />
+                <div class="form__item__message form__item__message--error" aria-hidden="true"></div>
+            </div>
+            <div class="form__item"  id="field-permitNumber3">
+                <label class="form__item__label hidden" for="permitNumber3">Permit 3 number</label>
+                <input class="form__item__field form__item__field--string" id="permitNumber3" name="permitNumber3" type="text" />
+                <div class="form__item__message form__item__message--error" aria-hidden="true"></div>
+            </div>
+        </fieldset>
+        <div id="field-postcode" class="form__item form__item--1of2 ">
+            <label class="form__item__label" for="ypcode"> Postcode where you live </label>
+            <input required class="form__item__field form__item__field--string form__item__field--small" type="text" name="ypcode" id="ypcode" value="BS6&nbsp;5AA" placeholder="e.g BS1 AAA" />
+            <button class="cta cta--small" type="submit"> Find address </button>
+            <div class="form__item__message form__item__message--error"> No results for this postcode / postcode invalid </div>
+        </div>
+        <div class="form__item form__item--2of2 ">
+            <select id="ypcode_select" name="ypcode_select" class="form__item__field form__item__field--select form__item__field--select--block">
+                <option>Please select...</option>
+                <option selected="selected">19 Redland Road, Bristol, BS6&nbsp;5AA</option>
+                <option>Lorem (testing) ipsum dolor sit amet, consectetur adipiscing elit. Nullam non justo vel lorem egestas dignissim et auctor neque.</option>
+                <option>20 Redland Road, Bristol, BS6&nbsp;5AA</option>
+            </select>
+            <div class="form__item__message form__item__message--error"> Please select an address </div>
+        </div>
+        <div class="panel panel--affirm panel--date">
+            <h2 class="panel__title">Your selected address</h2>
+            <div class="panel__copy"> 65&nbsp;Example&nbsp;Road, St&nbsp;Pauls, Bristol, BS1&nbsp;1EX </div>
+        </div>
+        <div class="cta-group">
+            <button class="cta cta--icon cta--primary cta--next" type="submit"> Next </button>
+        </div>
+    </form>
+    <div class="portlet-body"> <!-- forms --> <!-- START stepHeader --> <header class="step-header"> <p class="step-header__title"> Renew your residents' parking permit<span class="step-header__title__seperator">:</span> <span class="step-header__title__steps"> Step 1 of 3 </span> </p> <h1 class="step-header__subtitle"> Enter permit details </h1> </header> <!-- END stepHeader --> <p> You can renew online if there are no changes to your permit details. If you have changed your name, moved or changed your vehicle you will need to apply for a new permit. </p> <p> You will need a permit number. You will find this in you permit order confirmation <em>(or on your permit)</em> </p> <form class="form js--validate js--enterPermitDetails"> <fieldset class="form__item form__item--group" id="field-permitNumbers"> <legend class="form__item__label"> Permits number (e.g. AB401) <div class="form__item__label__instructions"> <p>You will find this:</p> <ul> <li> in the reminder notice you received about the renewal </li> <li> in the confirmation email you received from noreply@bristol.gov.uk </li> <li> on your permit </li> </ul> </div> </legend> <!-- 1 --> <label class="form__item__label form__item__label--group label--input" for="fname"> <!-- 1 --> <input
+                                class="form__item__field form__item__field--string" data-permit
+                                id="fname" name="fname" type="text"
+                        /> <div class="form__item__message form__item__message--error" aria-hidden="true"> Not empty, valid permit 1 required </div> </label> <label class="form__item__label form__item__label--group label--input" for="fname"> <!-- 2 --> <input
+                                class="form__item__field form__item__field--string" data-permit
+                                id="fname" name="fname" type="text"
+                        /> <div class="form__item__message form__item__message--error" aria-hidden="true"> Not empty, valid permit 2 required </div> </label> <label class="form__item__label form__item__label--group label--input" for="fname"> <!-- 3 --> <input
+                                class="form__item__field form__item__field--string" data-permit
+                                id="fname" name="fname" type="text"
+                        /> <div class="form__item__message form__item__message--error" aria-hidden="true"> Not empty, valid permit 3 required </div> </label> </fieldset> <!-- forms --> <!-- START addressLookup --> <div id="field-postcode" class="form__item form__item--1of2 "> <label class="form__item__label" for="ypcode"> Postcode where you live </label> <input
+                required class="form__item__field form__item__field--string form__item__field--small"
+                type="text" name="ypcode" id="ypcode" value="BS6&nbsp;5AA" placeholder="e.g BS1 AAA"
+        /> <button class="cta cta--small" type="submit"> Find address </button> <div class="form__item__message form__item__message--error"> No results for this postcode / postcode invalid </div> </div> <div class="form__item form__item--2of2 "> <select id="ypcode_select" name="ypcode_select" class="form__item__field form__item__field--select form__item__field--select--block"> <option >Please select...</option> <option selected="selected" >19 Redland Road, Bristol, BS6&nbsp;5AA</option> <option>Lorem (testing) ipsum dolor sit amet, consectetur adipiscing elit. Nullam non justo vel lorem egestas dignissim et auctor neque.</option> <option>20 Redland Road, Bristol, BS6&nbsp;5AA</option> </select> <div class="form__item__message form__item__message--error"> Please select an address </div> </div> <!-- END addressLookup --> <!-- forms --> <!-- START panel --> <div class="panel panel--affirm panel--date"> <h2 class="panel__title"> Your selected address </h2> <div class="panel__copy"> 65&nbsp;Example&nbsp;Road, St&nbsp;Pauls, Bristol, BS1&nbsp;1EX </div> </div> <!-- END panel --> <div class="cta-group"> <button class="cta cta--icon cta--primary cta--next" type="submit"> Next </button> </div> </form> </div> </div> </div> </div> </div> </div> </div> <div class="portlet-boundary portlet-boundary_1_WAR_kaleodesignerportlet_ portlet-static portlet-static-end portlet-borderless kaleo-designer-portlet " id="p_p_id_1_WAR_kaleodesignerportlet_" > <span id="p_1_WAR_kaleodesignerportlet"></span> </div> <form action="#" id="hrefFm" method="post" name="hrefFm"> <span></span> </form>
+</div>

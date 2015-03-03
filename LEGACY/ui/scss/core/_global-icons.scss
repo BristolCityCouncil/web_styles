@@ -1,0 +1,44 @@
+// ICONS
+
+.ico {
+  @include font-size($icon-font-size);
+}
+
+// @TODO: Consider whether this margin is safe, or needs some refactoring
+.ico--first {
+  @include rem(margin-right,9);
+}
+.ico--last {
+  @include rem(margin-left,9);
+}
+
+.ico--large {
+  @include font-size($icon-large-font-size);
+}
+
+.ico--disc {
+	:before {
+		color: #fff;
+		background-color: $bcc-green;
+		border-radius: 50%;
+	}
+}
+
+.ico-check {
+  color: $bcc-green;
+}
+
+.ico-cog,
+.ico-cancel,
+.ico-right {
+  color: $bcc-red;
+}
+
+.ico--nudge-down {
+  position: relative;
+  bottom: -2px;
+}
+
+.ico-blockquote {
+	color: $grey-light;
+}

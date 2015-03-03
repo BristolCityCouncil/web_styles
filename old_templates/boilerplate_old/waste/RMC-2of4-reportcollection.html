@@ -1,0 +1,294 @@
+<div class="content content-header">
+                  <!-- Set defaults -->
+                  <div class="step-header">
+                    <h1 class="step-header__title">Report missed collection
+                      <span class="step-header__title__steps">
+                        <span class="step-header__title__steps__seperator">:</span>Step 2 of 4</span>
+                    </h1>
+                    <h2 class="step-header__subtitle">Your recent collections</h2>
+                  </div>
+                  <div class="panel panel--affirm">
+                   <span class="panel__copy">
+                      Your selected address
+                    </span>
+                    <span class="panel__title">
+                        19 Redland Road, Bristol BS6&nbsp;5AA
+                      </span>
+                      <span>
+                        <a href="" title="">Change address</a>  
+                      </span>
+                  </div>
+                  <ul class="date-card-list">
+                    <div class="date-card ">
+                      <time datetime="2013-01-15">
+                        <span class="date-card__weekday">Wednesday</span>
+                        <span class="date-card__daymonth">5 Feb</span>
+                      </time>
+                      <span class="date-card__note">
+                        Recycling &amp; rubbish
+                      </span>
+                    </div>
+                    <div class="date-card date-card--recycling ">
+                      <time datetime="2013-01-15">
+                        <span class="date-card__weekday">Wednesday</span>
+                        <span class="date-card__daymonth">12 Feb</span>
+                      </time>
+                      <span class="date-card__note">
+                        Recycling only
+                      </span>
+                    </div>
+                    <div class="date-card  date-card--ghost">
+                      <time datetime="2013-01-15">
+                        <span class="date-card__weekday">Today</span>
+                        <span class="date-card__daymonth">17 Feb</span>
+                      </time>
+                      <span class="date-card__note">
+                        No scheduled collections
+                      </span>
+                    </div>
+                    <div class="date-card date-card--bulky date-card--shadow2">
+                      <time datetime="2013-01-15">
+                        <span class="date-card__weekday">Thursday</span>
+                        <span class="date-card__daymonth">18 Feb</span>
+                      </time>
+                      <span class="date-card__note">
+                        <a href="#" title="Bulky Waste">
+                          Bulky waste
+                        </a>
+                      </span>
+                    </div>
+                    <div class="date-card date-card--recycling date-card--shadow2 ">
+                      <time datetime="2013-01-15">
+                        <span class="date-card__weekday">Wednesday</span>
+                        <span class="date-card__daymonth">25 Jan</span>
+                      </time>
+                      <span class="date-card__note">
+                        Recycling only
+                      </span>
+                    </div>
+                  </ul>
+                  </ul>
+                 <!--  <p>
+                    <a href="#report-recycling">Report recycling</a> | <a href="#report-general-waste">Report general waste</a>
+                  </p> -->
+                  <h2 id="report-recycling">
+                    Report missed recycling collection
+                  </h2>
+
+                  <div class="panel panel--warning">
+                    <div class="panel__icon"></div>
+                    <div class="panel__copy">
+                      <p>Please do not report a missed collection, we will not
+                        return until your next collection on <strong>17th June 2014</strong>
+                      </p>
+                    </div>
+                  </div>
+                  <!--/panel-->
+                  <form class="form form--validate" id="form-order-new-bin" action="#form-order-new-bin" method="post">
+
+                    <div class="bintable clearfix">
+                      <div class="bintable-row bintable-row--nooptions">
+                        <div class="bintable-checkbox">
+                            <a href="#" class="uniform__checkbox uniform__checkbox--large basket__check">
+                              <span></span><em class="hidden"></em>
+                            </a>
+                        </div>
+                        <div class="bintable-body">
+                          <div class="bintable-column">
+                            <div class="bintable-image"> <img src="/bcc-beta-theme/images/waste/green-recycling-bin.png"/> </div>
+                            <div class="bintable-title"><h3>Green recycling bin</h3></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="bintable-row bintable-row--nooptions">
+                        <div class="bintable-checkbox">
+                            <a href="#" class="uniform__checkbox uniform__checkbox--large basket__check">
+                              <span></span><em class="hidden"></em>
+                            </a>
+                        </div>
+                        <div class="bintable-body">
+                          <div class="bintable-column">
+                            <div class="bintable-image"> <img src="/bcc-beta-theme/images/waste/brown-food-waste-bin.png"/> </div>
+                            <div class="bintable-title"><h3>Brown food waste bin</h3></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <h2 id="report-general-waste">
+                      Report missed general waste
+                    </h2>
+                      
+                    <div class="bintable clearfix">
+                      <div class="bintable-row bintable-row--nooptions">
+                        <div class="bintable-checkbox">
+                              <a href="#" class="uniform__checkbox uniform__checkbox--large basket__check">
+                                <span></span><em class="hidden"></em>
+                              </a>
+                        </div>
+                        <div class="bintable-body">
+                          <div class="bintable-column">
+                            <div class="bintable-image"> <img src="/bcc-beta-theme/images/waste/black-wheelie-bin.png"/> </div>
+                            <div class="bintable-title"><h3>Black wheelie bin</h3></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                      <!--/basket__list-->
+                      <div class="form__item form__item--boolean">
+                        <div class="uniform__checkbox uniform" id="uniform-ff-confirm-off-street"><span><input class="form__field form__field--boolean form__field--checkbox" type="checkbox" name="" id="ff-confirm-off-street"></span></div>
+                        <!-- @TODO: UX: Should there be an explanation/link for 'off street'? -->
+                        <label class="form__label form__label--boolean" for="ff-confirm-off-street">The entire street been missed?</label>
+                      </div>
+                      <!--/form__item-->
+                      <div class="panel panel--inform">
+                        <h2 class="panel__title">Reasons why bins are sometimes not collected</h2>
+                        <div class="panel__copy">
+                          <ul>
+                            <li>If they were overflowing</li>
+                            <li>If they contained an item we do not collect</li>
+                            <li>If they were not out by 7am</li>
+                            <li>If they were not visible from the road</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!--/panel-->
+                      <div class="form__item form__item--boolean">
+                        <div class="uniform__checkbox uniform" id="uniform-ff-confirm-off-street"><span class="checked"><input checked="" class="form__field form__field--boolean form__field--checkbox" type="checkbox" name="" id="ff-confirm-off-street"></span></div>
+                        <!-- @TODO: UX: Should there be an explanation/link for 'off street'? -->
+                        <label class="form__label form__label--boolean" for="ff-confirm-off-street">I confirm my bins were left out by 7am on the day of collection.</label>
+                      </div>
+                      <!--/form__item-->
+                      <div class="form__item form__item--string">
+                          <label class="form__item__label" for="ta">
+                            Where can you find your bins and boxes?
+                          </label>
+                          <textarea id="ta" name="ta" class="form__item__field form__item__field--string form__item__field--textarea" rows="5" placeholder="e.g. In my front garden."></textarea>
+                      </div>
+                      <!--/form__item-->
+                      <div class="basket__actions">
+                        <!-- @TODO: UX: Is this button text misleading? Still many steps to go through -->
+                        <button class="cta cta--icon cta--primary cta--next js--prevent-double" type="submit">Next: Check and Confirm</button>
+                      </div>
+                      <!--/basket__actions-->
+                    </div>
+                    <!--/basket-->
+                  </form>
+                </div>
+                <script>
+document.addEventListener('DOMContentLoaded', function(){
+  YUI.add('module', function(Y){
+      var c = { // config
+          bind: $.proxy, // Proxy object (fn, this)
+          s: $, // selector function (selector) + s.on method (ev, fn)
+          extend: Y.mix, // object extend function (child, parent)
+          each: $.each, // foreach function (obj, fn(key, val) )
+      };
+
+      Y.namespace("uk.gov.bristol");
+      // Stephens MicroModule Definition
+      Y.uk.gov.bristol.module = {
+          __construct: function(){ return this; },
+          events: {}, DOM: {}, render: function(){ return this; },
+          __b: function(){
+              // Bind DOM
+              c.each(this.DOM, c.bind(function(k, v){
+                  if(typeof v === 'object') return;
+                  this.DOM[k] = c.s(v);
+              }, this));
+              // Bind Events
+              c.each(this.events, c.bind(function(k, fn){
+                  if(typeof fn === "string") fn = this[fn];
+                  var arr = k.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&').match(/^(\S+)\s(.*)/).slice(1), obj,
+                      sel = arr[1].replace(/\\/g, '');
+                      obj = (sel[0]=="$")? this.DOM[sel.slice(1)] : c.s(sel) ;
+                      arr[0] = (arr[0]=='hover')?'mouseenter':arr[0];
+                  obj.on(arr[0], c.bind(fn, this ));
+              }, this));
+              return this;
+          },
+          extend: function(obj, args){
+              return (new c.extend(obj, this)).__b().__construct(args).render(args);
+          },
+      };
+
+  });
+  YUI().use(['module'], function(Y){
+                  var binbasket = Y.uk.gov.bristol.module.extend({
+                      DOM: {
+                          'toggle' : '.bintable-toggle',
+                          'title' : '.bintable-title',
+                          'checkbox' : '.bintable-checkbox',
+                          'rows' : '.bintable-row',
+                          'reason' : '.form__item__field--select--reason',
+                          'quantity' : '.form__item__field--quantity',
+                      },
+                      events: {
+                          'click $toggle' : 'toggleBasket',
+                          'click $title' : 'toggleBasket',
+                          'click $checkbox' : 'toggleBasket',
+                          'change $reason' : 'handleReason',
+                          'change $quantity' : 'handleQuantity',
+                      },
+                      toggleBasket: function(e){
+                          e.preventDefault();
+                          var $row = $(e.currentTarget).closest('.bintable-row'),
+                              $isSelected = $row.hasClass('bintable-row--selected');
+
+                          return $isSelected ? this.deselectBasket($row) : this.selectBasket($row);
+                      },
+                      handleReason: function(e){
+                          var $dropdown = $(e.currentTarget),
+                              $row = $dropdown.closest('.bintable-row'),
+                              $qdropdown = $row.find('.form__item__field--quantity');
+
+                          if($qdropdown.val() == '0') this.selectBasket($row);
+
+                          return ($dropdown.val() == "damaged") ? this.showRemoveBin($row) : this.hideRemoveBin($row) ;
+
+                      },
+                      handleQuantity: function(e){
+                          var $dropdown = $(e.currentTarget),
+                              $row = $dropdown.closest('.bintable-row');
+                          if($dropdown.val() > 0){
+                              this.selectBasket($row);
+                          }else{
+                              this.deselectBasket($row);
+                          }
+                      },
+                      deselectBasket: function($row){
+                          $row.removeClass('bintable-row--selected');
+                          $row.find('.bintable-checkbox span').removeClass('checked');
+                          $row.find('.form__item__field--quantity').val('0').trigger('change');
+                          $row.find('.form__item__field--select--reason').val('').trigger('change');
+                      },
+                      selectBasket: function($row){
+                          var $qdropdown = $row.find('.form__item__field--quantity');
+                          $row.addClass('bintable-row--selected');
+                          $row.find('.bintable-checkbox span').addClass('checked'); // Look into css
+                          if($qdropdown.val() == '0') $qdropdown.val('1').trigger('change');
+                      },
+                      showRemoveBin: function($row){
+                          $row.find('.bintable-select--oldbin').addClass('bintable-select--oldbin_active');
+                      },
+                      hideRemoveBin: function($row){
+                          $row.find('.bintable-select--oldbin').removeClass('bintable-select--oldbin_active');
+                      },
+                  });
+              });
+}, false);
+
+//  $('.bintable-title, .bintable-toggle').on('click', function(){
+//    // JUST FOR TESTING
+//    $(this).closest('.bintable-row').toggleClass('bintable-row--selected');
+//    $(this).closest('.bintable-row').find('.bintable-checkbox span').toggleClass('checked');
+//    $(this).closest('.bintable-row').find('.bintable-select--oldbin').toggleClass('bintable-select--oldbin_active');
+//  });
+//  $('.bintable-checkbox').on('click', function(e){
+//    e.preventDefault();
+//    $(this).find('span').toggleClass('checked');
+//    $(this).closest('.bintable-row').toggleClass('bintable-row--selected');
+//    $(this).closest('.bintable-row').find('.bintable-select--oldbin').toggleClass('bintable-select--oldbin_active');
+//  });
+</script>

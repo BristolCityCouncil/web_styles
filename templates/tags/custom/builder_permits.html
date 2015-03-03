@@ -1,0 +1,103 @@
+<form action="" class="form">
+<div id="parking__permit-details" class="js--permitTotal">
+			<!-- START .permit #1 -->
+			<div class="permit permit--disabled js--matchHeight">
+				<div class="permit__inner">
+					<div class="permit__intro">
+					
+						<h2>
+							First permit
+						</h2>
+						<p>
+							Someone has already bought this permit for your address.
+						</p>
+					</div>
+				</div>
+			</div>
+			<!-- END .permit #1 -->
+						
+			<!-- START .permit #2 -->
+			<div class="permit js--matchHeight">
+				<div class="permit__inner">
+					<div class="permit__intro">
+						<h2>
+							Second permit
+						</h2>
+						<p>
+							Cost depends on the tax band of your vehicles
+						</p>
+					</div>				
+					
+					<div class="reg veh veh--affirm" data-mh="level2">
+						<strong>EF03 BYW</strong> 
+						<span>
+							Class C
+						</span> 
+						<button class="cta cta--link" title="remove vehicle $reg from permit $permit">
+							Remove
+						</button>
+					</div>
+					
+					<div class="reg reg--add" data-mh="level3">
+						<label class="hidden" for="sav2">
+					    	Title
+					    </label>
+					    <select required="" class="form__item__field form__item__field--select form__item__field--select--block" name="sav2" id="sav2">
+					    	<option selected="selected">Select your vehicle</option>
+					    	<option>Mr</option>
+					    	<option>Mrs</option>
+					    	<option>Doctor</option>
+					    </select>
+					</div>
+					
+					<fieldset class="form__item form__item--group">
+					   	<legend class="form__item__label">
+					   		Choose permit duration
+					   	</legend>
+						<label for="radios1" class="form__item__label form__item__label--group label--radio">
+							<input checked="" id="radios1" class="form__item__field form__item__field--radio" name="group1" type="radio" value="FREE">1 year <strong>Free</strong>
+						</label>
+					  	<label for="radios2" class="form__item__label form__item__label--group label--radio">
+					  		<input id="radios2" class="form__item__field form__item__field--radio" name="group1" type="radio" value="200">3 months <strong>200</strong>
+					  	</label>
+					</fieldset>
+				</div>
+			</div>
+			<!-- END .permit #2 -->
+					
+			<!-- START .permit #3 -->
+			<div class="permit permit--disabled js--matchHeight">
+				<div class="permit__inner">
+					<div class="permit__intro">
+						<h2>
+							Third permit
+						</h2>
+						<p>
+							Cost depends on the tax band of your vehicles
+						</p>
+					</div>
+					
+					<div class="reg reg--add" data-mh="level2">
+						+ <button class="cta cta--link">
+			  					Add vehicle
+			  				</button>
+						<p class="reg--add__copy">
+							You can share the permit between two vehicles but only use it for one at a time.
+						</p>
+					</div>
+					
+					<div class="reg reg--add" data-mh="level3">
+						&nbsp;
+					</div>
+					
+					<div class="permit__summary">
+						<button class="cta cta--link" type="submit">
+							Recalculate cost
+						</button>
+					</div>
+				</div>
+			</div>
+			<!-- END .permit #3 -->	
+			
+		</div>
+		</form>

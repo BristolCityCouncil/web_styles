@@ -1,0 +1,31 @@
+{{> builder/header }}
+
+{{> tags/navigation/stepheader }}
+
+<form action="/builder" method="post">
+
+		{{# structure }}
+			<div class="field field--set">
+				<input class="field__input" name="dirs[{{name}}]" id="id-{{name}}" type="checkbox">
+				<label class="field__label field__label--block" for="id-{{name}}">{{#if title }} {{title}} {{else}} {{ name }} {{/if}}</label>
+				<div class="field__instructions">
+					{{#if description}}
+						<p>{{description}}</p>
+					{{/if}}
+
+					<ul>
+						<li style="font-weight:600;">URL -
+						{{path}}</li>
+						<li style="font-weight:600;">Folder - 
+						 templates/{{folder}}</li>
+					</ul>
+				</div>
+			</div>
+		{{/ structure }}
+		<hr/>
+		<button class="newcta newcta__primary js--prevent-double" type="submit">Generate Static</button>
+
+</form>
+
+
+{{> builder/footer }}

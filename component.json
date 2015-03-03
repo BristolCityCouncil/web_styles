@@ -1,0 +1,21 @@
+{
+  "name": "Your",
+  "version": "0.0.3",
+  "dependencies": {
+    "backbone-amd": "1.1.0",
+    "backbone.subroute": null,
+    "backbone.touch": null,
+    "handlebars": "1.0.0",
+    "jquery": "1.9.0",
+    "modernizr": null,
+    "requirejs": null,
+    "thorax": null,
+    "underscore-amd": "1.4.4",
+    "almond": null,
+    "momentjs": null,
+    "pace": null,
+    "zepto": null,
+    "require-handlebars-plugin": null,
+    "requirejs-plugins": "~1.0.2"
+  }
+}

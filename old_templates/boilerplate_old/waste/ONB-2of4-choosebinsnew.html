@@ -1,0 +1,369 @@
+<!--  START stepHeader -->
+<header class="step-header">
+	<p class="step-header__title">
+  		Ordering a new wheelie bin or recycling boxes<span class="step-header__title__seperator">:</span> 
+  		<span class="step-header__title__steps">
+  			Step 2 of 4
+  		</span>
+  	</p>
+	<h1 class="step-header__subtitle">
+  		Choose your bins
+	</h1>
+</header>
+<!--  END stepHeader -->
+                         
+<div class="panel panel--affirm panel--date">
+                    <span class="panel__title">Your selected address</span>
+                    <strong class="panel__copy">Flat 3, 22 Verylongstreetname Terrace, BS21 4ND</strong>
+                  </div>
+
+<form id="form-order-new-bin" class="form js-validation" action="#form-order-new-bin" method="post">
+	<div class="bintable clearfix">
+
+		<div class="bintable-row">
+			<div class="bintable-checkbox">
+				<div class="field field--large">
+					<input class="field__input" type="checkbox" checked="checked" />
+					<label class="field__label"></label>
+				</div>
+			</div>
+			<div class="bintable-body">
+				<div class="bintable-column">
+					<div class="bintable-image"> <img src="/bcc-beta-theme/images/waste/black-wheelie-bin.png"/> </div>
+					<div class="bintable-title"><h4>Black wheelie bin</h4></div>
+					<div class="bintable-description">Most homes have a standard size 180 litre bin (about 3 bin bags). You can order a smaller 140 litre bin (about 2 bin bags) if you prefer</div>
+					<div class="bintable-toggle"><span class="icon icon--bcc icon--bcc--down"></span></div>
+				</div>
+				<div class="bintable-column">
+					<div class="bintable-options">
+						<div class="bintable-select field">
+							<label calss="field__label">Size</label>
+							<div class="dropdown">
+								<select id="ff-wheeled-rubbish-bin__qtyhdn" name="esbJob.bins[0].quantity" groupid="10181">
+	                                <option selected="selected" value="0">0</option>
+	                                <option value="1">1</option>
+	                            </select>
+								<div class="dropdown__background"></div>
+							</div>
+
+
+            				<label class="form__item__label" for="ff-black-wheelie-bin__qtyhdn">
+            					Size
+            				</label>
+            				<select id="ff-wheeled-rubbish-bin__qtyhdn" name="esbJob.bins[0].quantity" groupid="10181" class="form__item__field form__item__field--select form__item__field--select--block">
+                                <option selected="selected" value="0">0</option>
+                                <option value="1">1</option>
+                            </select>
+          				</div>
+          				<div class="bintable-select">
+            				<label class="form__item__label" for="ff-black-wheelie-bin__size">
+            					Size
+            				</label>
+            				<select class="form__item__field form__item__field--quantity form__item__field--select form__item__field--select--block">
+            					<option value="0">Please select</option>
+            					<option value="180L" selected="selected">Standard bin (180L)</option>
+            					<option value="140L">Small bin (140L)</option>
+            				</select>
+          				</div>
+          				<div class="bintable-select">
+              				<label class="form__item__label" for="ff-black-wheelie-bin__reason">Reason</label>
+              				<select class="form__item__field form__item__field--select form__item__field--select--block form__item__field--select--reason form__item__field--select--validate" data-error-message="Please select a valid option" name="" id="ff-black-wheelie-bin__reason">
+                				<option value="invalid">Please select</option>
+                				<option value="lost-stolen">Lost/stolen</option>
+                				<option class="js-show-additional"  selected="selected" value="damaged">Damaged</option>
+                				<option value="new-resident">New resident</option>
+              				</select>
+            			</div>
+            			<div class="bintable-select--oldbin">
+            				<div class="bintable-checkbox--old">
+	            				<input class="form__item__field form__item__field--boolean form__item__field--checkbox" type="checkbox" name="" id="ff-black-wheelie-bin__collect-old-box">
+	            				<label class="form__item__label form__item__label--small form__item__label--boolean" for="ff-black-wheelie-bin__collect-old-box">Please take my old box</label>
+	            			</div>
+            			</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bintable-row">
+			<div class="bintable-checkbox">
+				<a href="#" class="uniform__checkbox uniform__checkbox--large basket__check">
+					<span></span><em class="hidden"></em>
+				</a>
+			</div>
+			<div class="bintable-body">
+				<div class="bintable-column">
+					<div class="bintable-image"> <img src="/bcc-beta-theme/images/waste/black-recycling-bin.png"/> </div>
+					<div class="bintable-title"><h3>Black recycling bin</h3></div>
+					<div class="bintable-toggle"><span class="icon icon--bcc icon--bcc--down"></span></div>
+				</div>
+				<div class="bintable-column">
+					<div class="bintable-options">
+						<div class="bintable-select">
+            				<label class="form__item__label" for="ff-black-wheelie-bin__size">
+            					Quantity
+            				</label>
+            				<select class="form__item__field form__item__field--quantity form__item__field--select form__item__field--select--block">
+            					<option value="0">0</option>
+            					<option value="1">1</option>
+            					<option value="2">2</option>
+            				</select>
+          				</div>
+          				<div class="bintable-select">
+              				<label class="form__item__label" for="ff-black-wheelie-bin__reason">Reason</label>
+              				<select class="form__item__field form__item__field--select form__item__field--select--block form__item__field--select--reason form__item__field--select--validate" data-error-message="Please select a valid option" name="" id="ff-black-wheelie-bin__reason">
+                				<option value="invalid">Please select</option>
+                				<option value="lost-stolen">Lost/stolen</option>
+                				<option class="js-show-additional" value="damaged">Damaged</option>
+                				<option value="new-resident">New resident</option>
+              				</select>
+            			</div>
+            			<div class="bintable-select--oldbin">
+            				<div class="bintable-checkbox--old">
+	            				<input class="form__item__field form__item__field--boolean form__item__field--checkbox" type="checkbox" name="" id="ff-black-wheelie-bin__collect-old-box">
+	            				<label class="form__item__label form__item__label--small form__item__label--boolean" for="ff-black-wheelie-bin__collect-old-box">Please take my old box</label>
+	            			</div>
+            			</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bintable-row">
+			<div class="bintable-checkbox">
+				<a href="#" class="uniform__checkbox uniform__checkbox--large basket__check">
+					<span></span><em class="hidden"></em>
+				</a>
+			</div>
+			<div class="bintable-body">
+				<div class="bintable-column">
+					<div class="bintable-image"> <img src="/bcc-beta-theme/images/waste/green-recycling-bin.png"/> </div>
+					<div class="bintable-title"><h3>Green recycling bin</h3></div>
+					<div class="bintable-toggle"><span class="icon icon--bcc icon--bcc--down"></span></div>
+				</div>
+				<div class="bintable-column">
+					<div class="bintable-options">
+						<div class="bintable-select">
+            				<label class="form__item__label" for="ff-black-wheelie-bin__size">
+            					Quantity
+            				</label>
+            				<select class="form__item__field form__item__field--quantity form__item__field--select form__item__field--select--block">
+            					<option value="0">0</option>
+            					<option value="1">1</option>
+            					<option value="2">2</option>
+            				</select>
+          				</div>
+          				<div class="bintable-select">
+              				<label class="form__item__label" for="ff-black-wheelie-bin__reason">Reason</label>
+              				<select class="form__item__field form__item__field--select form__item__field--select--block form__item__field--select--reason form__item__field--select--validate" data-error-message="Please select a valid option" name="" id="ff-black-wheelie-bin__reason">
+                				<option value="invalid">Please select</option>
+                				<option value="lost-stolen">Lost/stolen</option>
+                				<option class="js-show-additional" value="damaged">Damaged</option>
+                				<option value="new-resident">New resident</option>
+              				</select>
+            			</div>
+            			<div class="bintable-select--oldbin">
+            				<div class="bintable-checkbox--old">
+	            				<input class="form__item__field form__item__field--boolean form__item__field--checkbox" type="checkbox" name="" id="ff-black-wheelie-bin__collect-old-box">
+	            				<label class="form__item__label form__item__label--small form__item__label--boolean" for="ff-black-wheelie-bin__collect-old-box">Please take my old box</label>
+	            			</div>
+            			</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bintable-row">
+			<div class="bintable-checkbox">
+				<a href="#" class="uniform__checkbox uniform__checkbox--large basket__check">
+					<span></span><em class="hidden"></em>
+				</a>
+			</div>
+			<div class="bintable-body">
+				<div class="bintable-column">
+					<div class="bintable-image"> <img src="/bcc-beta-theme/images/waste/brown-food-waste-bin.png"/> </div>
+					<div class="bintable-title"><h3>Brown food waste bin</h3></div>
+					<div class="bintable-toggle"><span class="icon icon--bcc icon--bcc--down"></span></div>
+				</div>
+				<div class="bintable-column">
+					<div class="bintable-options">
+						<div class="bintable-select">
+            				<label class="form__item__label" for="ff-black-wheelie-bin__size">
+            					Quantity
+            				</label>
+            				<select class="form__item__field form__item__field--quantity form__item__field--select form__item__field--select--block">
+            					<option value="0">0</option>
+            					<option value="1">1</option>
+            					<option value="2">2</option>
+            				</select>
+          				</div>
+          				<div class="bintable-select">
+              				<label class="form__item__label" for="ff-black-wheelie-bin__reason">Reason</label>
+              				<select class="form__item__field form__item__field--select form__item__field--select--block form__item__field--select--reason form__item__field--select--validate" data-error-message="Please select a valid option" name="" id="ff-black-wheelie-bin__reason">
+                				<option value="invalid">Please select</option>
+                				<option value="lost-stolen">Lost/stolen</option>
+                				<option class="js-show-additional" value="damaged">Damaged</option>
+                				<option value="new-resident">New resident</option>
+              				</select>
+            			</div>
+            			<div class="bintable-select--oldbin">
+            				<div class="bintable-checkbox--old">
+	            				<input class="form__item__field form__item__field--boolean form__item__field--checkbox" type="checkbox" name="" id="ff-black-wheelie-bin__collect-old-box">
+	            				<label class="form__item__label form__item__label--small form__item__label--boolean" for="ff-black-wheelie-bin__collect-old-box">Please take my old box</label>
+	            			</div>
+            			</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bintable-row">
+			<div class="bintable-checkbox">
+				<a href="#" class="uniform__checkbox uniform__checkbox--large basket__check">
+					<span></span><em class="hidden"></em>
+				</a>
+			</div>
+			<div class="bintable-body">
+				<div class="bintable-column">
+					<div class="bintable-image"> <img src="/bcc-beta-theme/images/waste/black-box-lid.png"/> </div>
+					<div class="bintable-title"><h3>Black box lid</h3></div>
+					<div class="bintable-toggle"><span class="icon icon--bcc icon--bcc--down"></span></div>
+				</div>
+				<div class="bintable-column">
+					<div class="bintable-options">
+						<div class="bintable-select">
+            				<label class="form__item__label" for="ff-black-wheelie-bin__size">
+            					Quantity
+            				</label>
+            				<select class="form__item__field form__item__field--quantity form__item__field--select form__item__field--select--block">
+            					<option value="0">0</option>
+            					<option value="1">1</option>
+            					<option value="2">2</option>
+            				</select>
+          				</div>
+          				<div class="bintable-select">
+              				<label class="form__item__label" for="ff-black-wheelie-bin__reason">Reason</label>
+              				<select class="form__item__field form__item__field--select form__item__field--select--block form__item__field--select--reason form__item__field--select--validate" data-error-message="Please select a valid option" name="" id="ff-black-wheelie-bin__reason">
+                				<option value="invalid">Please select</option>
+                				<option value="lost-stolen">Lost/stolen</option>
+                				<option class="js-show-additional" value="damaged">Damaged</option>
+                				<option value="new-resident">New resident</option>
+              				</select>
+            			</div>
+            			<div class="bintable-select--oldbin">
+            				<div class="bintable-checkbox--old">
+	            				<input class="form__item__field form__item__field--boolean form__item__field--checkbox" type="checkbox" name="" id="ff-black-wheelie-bin__collect-old-box">
+	            				<label class="form__item__label form__item__label--small form__item__label--boolean" for="ff-black-wheelie-bin__collect-old-box">Please take my old box</label>
+	            			</div>
+            			</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bintable-row">
+			<div class="bintable-checkbox">
+				<a href="#" class="uniform__checkbox uniform__checkbox--large basket__check">
+					<span></span><em class="hidden"></em>
+				</a>
+			</div>
+			<div class="bintable-body">
+				<div class="bintable-column">
+					<div class="bintable-image"> <img src="/bcc-beta-theme/images/waste/green-box-net.png"/> </div>
+					<div class="bintable-title"><h3>Green box net</h3></div>
+					<div class="bintable-toggle"><span class="icon icon--bcc icon--bcc--down"></span></div>
+				</div>
+				<div class="bintable-column">
+					<div class="bintable-options">
+						<div class="bintable-select">
+            				<label class="form__item__label" for="ff-black-wheelie-bin__size">
+            					Quantity
+            				</label>
+            				<select class="form__item__field form__item__field--quantity form__item__field--select form__item__field--select--block">
+            					<option value="0">0</option>
+            					<option value="1">1</option>
+            					<option value="2">2</option>
+            				</select>
+          				</div>
+          				<div class="bintable-select">
+              				<label class="form__item__label" for="ff-black-wheelie-bin__reason">Reason</label>
+              				<select class="form__item__field form__item__field--select form__item__field--select--block form__item__field--select--reason form__item__field--select--validate" data-error-message="Please select a valid option" name="" id="ff-black-wheelie-bin__reason">
+                				<option value="invalid">Please select</option>
+                				<option value="lost-stolen">Lost/stolen</option>
+                				<option class="js-show-additional" value="damaged">Damaged</option>
+                				<option value="new-resident">New resident</option>
+              				</select>
+            			</div>
+            			<div class="bintable-select--oldbin">
+            				<div class="bintable-checkbox--old">
+	            				<input class="form__item__field form__item__field--boolean form__item__field--checkbox" type="checkbox" name="" id="ff-black-wheelie-bin__collect-old-box">
+	            				<label class="form__item__label form__item__label--small form__item__label--boolean" for="ff-black-wheelie-bin__collect-old-box">Please take my old box</label>
+	            			</div>
+            			</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bintable-row">
+			<div class="bintable-checkbox">
+				<a href="#" class="uniform__checkbox uniform__checkbox--large basket__check">
+					<span></span><em class="hidden"></em>
+				</a>
+			</div>
+			<div class="bintable-body">
+				<div class="bintable-column">
+					<div class="bintable-image"> <img src="/bcc-beta-theme/images/waste/brown-caddy.png"/> </div>
+					<div class="bintable-title"><h3>Brown Caddy</h3></div>
+					<div class="bintable-toggle"><span class="icon icon--bcc icon--bcc--down"></span></div>
+				</div>
+				<div class="bintable-column">
+					<div class="bintable-options">
+						<div class="bintable-select">
+            				<label class="form__item__label" for="ff-black-wheelie-bin__size">
+            					Quantity
+            				</label>
+            				<select class="form__item__field form__item__field--quantity form__item__field--select form__item__field--select--block">
+            					<option value="0">0</option>
+            					<option value="1">1</option>
+            					<option value="2">2</option>
+            				</select>
+          				</div>
+          				<div class="bintable-select">
+              				<label class="form__item__label" for="ff-black-wheelie-bin__reason">Reason</label>
+              				<select class="form__item__field form__item__field--select form__item__field--select--block form__item__field--select--reason form__item__field--select--validate" data-error-message="Please select a valid option" name="" id="ff-black-wheelie-bin__reason">
+                				<option value="invalid">Please select</option>
+                				<option value="lost-stolen">Lost/stolen</option>
+                				<option class="js-show-additional" value="damaged">Damaged</option>
+                				<option value="new-resident">New resident</option>
+              				</select>
+            			</div>
+            			<div class="bintable-select--oldbin">
+            				<div class="bintable-checkbox--old">
+	            				<input class="form__item__field form__item__field--boolean form__item__field--checkbox" type="checkbox" name="" id="ff-black-wheelie-bin__collect-old-box">
+	            				<label class="form__item__label form__item__label--small form__item__label--boolean" for="ff-black-wheelie-bin__collect-old-box">Please take my old box</label>
+	            			</div>
+            			</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		
+    	<div class="form__item form__item--string">
+      		<label class="form__item__label" for="ta">
+        		Where should we collect the old boxes from?
+        		<br>
+        		Where should we leave the new boxes or bins?
+      		</label>
+      		<textarea id="ta" name="ta" class="form__item__field form__item__field--string form__item__field--textarea" rows="5"></textarea>
+    	</div>
+    	<div class="form__item form__item--boolean"><input class="form__item__field form__item__field--boolean form__item__field--checkbox" type="checkbox" name="" id="ff-confirm-off-street"><label class="form__item__label form__item__label--boolean" for="ff-confirm-off-street">I confirm I have off street storage for the bins</label><span class="wrap">
+    	</span></div>
+    	<div class="basket__summary" style="display:none;"><h3 class="basket__summary__title">You are ordering:</h3><ul class="basket__summary__list"><li>1 x Black wheelie bin</li></ul></div>
+    	<div class="form__actions">
+	      	<a href="/boilerplate/waste/ONB_ordersummary" class="cta cta--icon cta--primary cta--next js--prevent-double" type="submit">
+	        	Order
+	        	<span class="basket__count"></span>
+	      	</a>
+	    </div>
+</form>
+
+<button class="cta cta-primary" onclick="WasteSuite.run();">Test Me!</button>
+
+</div>

@@ -1,0 +1,37 @@
+{{> chrome/header.v1}}
+
+{{# project.mugs.home}}
+
+	<h1>
+		{{title}}
+	</h1>
+
+	{{# lead }}
+		{{> tags/type/lead }}
+	{{/ lead }}
+
+
+	<div class="services">
+		
+		<div class="half">
+			{{# block1 }}
+				{{> tags/panels/block }}
+			{{/ block1 }}
+		</div>
+		
+		<div class="half">
+			{{# block2 }}
+				{{> tags/panels/block }}
+			{{/ block2 }}
+		</div>
+
+		{{# slate }}
+			{{> tags/panels/slate }}
+		{{/ slate }}
+	</div>
+
+	{{> tags/buttons/cta_link modifiers="newcta--primary" label="Get some mugs" link="/example/project/mugs/leadin"}}
+
+{{/ project.mugs.home}}
+
+{{> chrome/footer.v2}}

@@ -1,0 +1,61 @@
+<div class="portlet-body">
+    <script>
+        ga('send', 'pageview', {
+            'page': '/parking/get-permits/find-address',
+        });
+    </script>
+    <header class="step-header">
+        <p class="step-header__title">Get residents' or visitors' parking permits<span class="step-header__title__seperator">:</span><span class="step-header__title__steps">step 1 of 5</span>
+        </p>
+        <h1 class="step-header__subtitle">Find your address</h1>
+    </header>
+    <form id="parkingOrderModel" class="form js--validate" action="http://l-custpdev-app1.bcc.lan:8080/parking/get-permits?p_auth=HNdWw0nP&amp;p_p_id=bccparkingportlet_WAR_bccportalapps101BUILDSNAPSHOT&amp;p_p_lifecycle=1&amp;p_p_state=normal&amp;p_p_mode=view&amp;p_p_col_id=column-1&amp;p_p_col_count=1&amp;_bccparkingportlet_WAR_bccportalapps101BUILDSNAPSHOT_execution=e1s2" method="post">
+        <div class="form__item" id="field-postcode">
+            <label class="form__item__label" for="pcode">Postcode where you live <span class="form__item__label__instructions only-ie8">Please click the submit button to continue</span>
+            </label>
+            <input id="pcode" name="customer.address.postCode" class="form__item__field form__item__field--string form__item__field--small" required="required" type="text" value="BS1 2AT" />
+            <button class="cta cta--small" type="submit" name="_eventId_lookupAddress" onclick="ga('send', 'pageview',{'page': '/parking/get-permits/find-address-click-lookup'});">Find address</button>
+            <div class="form__item__message form__item__message--error" aria-hidden="true"> Please enter a postcode</div>
+        </div>
+        <div class="form__item js--address-lookup" id="field-address">
+            <label for="addressUprn" class="form__item__label">Select address</label>
+            <select id="addressUprn" name="customer.address.addressUprn" onChange="ga(&#39;send&#39;, &#39;pageview&#39;,{&#39;page&#39;: &#39;/parking/get-permits/address-returned&#39;});" class="form__item__field form__item__field--select form__item__field--select--block" required="required">
+                <option value="">Select your address</option>
+                <option value="000000257560">39 - 40 High Street City Centre Bristol BS1 2AT</option>
+                <option value="000000257660">41 High Street City Centre Bristol BS1 2AT</option>
+                <option value="000000103889">42 High Street City Centre Bristol BS1 2AT</option>
+                <option value="000000259701">44 High Street City Centre Bristol BS1 2AT</option>
+                <option value="000000324723">44A High Street City Centre Bristol BS1 2AT</option>
+                <option value="000000308462">Flat 1 42 High Street City Centre Bristol BS1 2AT</option>
+                <option value="000000308463">Flat 2 42 High Street City Centre Bristol BS1 2AT</option>
+                <option value="000000308464">Flat 3 42 High Street City Centre Bristol BS1 2AT</option>
+                <option value="000000308465">Flat 4 42 High Street City Centre Bristol BS1 2AT</option>
+                <option value="000000308466">Flat 5 42 High Street City Centre Bristol BS1 2AT</option>
+                <option value="000000351132">Flat 41 High Street City Centre Bristol BS1 2AT</option>
+            </select>
+            <div class="form__item__message form__item__message--error" aria-hidden="true">Please select your address</div>
+        </div>
+        <fieldset class="form__item form__item--group">
+            <legend class="form__item__label">Off-street parking and private roads</legend>
+            <label class="form__item__label form__item__label--group label--checkbox" for="ff-confirm-off-street">
+                <input id="ff-confirm-off-street" name="offStreetParking" class="form__item__field form__item__field--checkbox " type="checkbox" value="true" />
+                <input type="hidden" name="_offStreetParking" value="on" /> I have off-street parking
+                <br/><span class="form__item__label__instructions">For example a driveway, garage, front garden parking, hard standing or underground parking space.</span>
+            </label>
+            <label class="form__item__label form__item__label--group label--checkbox" for="ff-confirm-private-road">
+                <input id="ff-confirm-private-road" name="privateRoad" class="form__item__field form__item__field--checkbox " type="checkbox" value="true" />
+                <input type="hidden" name="_privateRoad" value="on" /> I live on a private road </label>
+        </fieldset>
+        <div class="form__actions">
+            <button name="_eventId_continue" type="submit" class="cta cta--icon cta--next cta--primary js--prevent-double" data-primary-submit>Next</button>
+        </div>
+    </form>
+    <div class="panel panel--feedback">
+        <h2 class="panel__title">Give feedback on this new service</h2>
+        <div class="panel__copy">
+            <p><a href="https://www.bristol.gov.uk/node/24282" target="_blank">Give feedback (opens new window)</a> and help improve this service.
+                <br/>It only takes a minute and you won't lose any details.</p>
+        </div>
+    </div>
+    <!--</div>/grid-col-->
+</div>

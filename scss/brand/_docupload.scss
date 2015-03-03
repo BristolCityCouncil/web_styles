@@ -1,0 +1,351 @@
+.invisible {
+    position: absolute;
+}
+
+.docupload{
+	margin-bottom: 30px; // 3 for the boxshadow compensate.
+	
+	@include respond-to(tablet, desktop) {
+		margin-bottom: 40px; // 3 for the boxshadow compensate.
+	}
+	.cta.cta--link {
+		@extend a;
+		padding: 0;
+		margin: 0;
+		height: auto;
+		display: inline;
+		line-height: 1;
+		text-decoration: none !important;
+		&:hover {
+			text-decoration: none !important;
+		}
+
+	}
+}
+
+	.docupload__heading {
+		margin-bottom: 0;
+		font-size: 19px;
+	}
+
+	.docupload__subheading {
+		font-size: 16px;
+		color: #676973;
+		padding-bottom: 20px;
+		display: block;
+	}
+
+	.docupload__body {
+		@include clearfix;
+		margin: 0 0 10px;
+		border-bottom: 2px solid #eaeaea;
+		
+		@include respond-to(desktop){
+			margin-bottom: 30px;
+		}
+	}
+	.docupload__body + .docupload__body {
+		margin-top: 30px;
+	}
+	.docupload.docupload--preview {
+		h4{
+			border-bottom: 2px solid #eaeaea;
+			margin-bottom: 3px;
+			padding-bottom: 5px;
+			margin-top: 0;
+		}
+
+		.docupload__file{
+			border: 0;
+			padding: 5px 0;
+			
+			.docupload__actions {
+				padding-top: 0;
+				padding-bottom: 0;
+				top: 5px;
+				
+				@include respond-to(tablet, desktop) {
+					padding-top: 8px;
+					padding-bottom: 8px;
+					top: 0;
+				}
+			}
+		}
+	}
+		
+		.docupload__error {
+			@extend strong;
+			color: #ea0000;
+		}
+		
+		.docupload__file.docupload__file--error-wrapped{
+			@extend .docupload__file--error;
+			
+			.docupload__actions{
+				padding-left: 0;
+				margin-bottom: 20px;
+				position: relative;
+			}
+		}
+		
+		.docupload__file {
+			position: relative;
+			font-size: 16px;
+			border-top: 2px solid #eaeaea;
+			padding: 12px 0;
+			
+			&.docupload__file--error {
+				color: #ea0000;
+				border-top: 0;
+			}
+			
+			&.docupload__file--error + .docupload__file.docupload__file--success{
+				margin-top: 30px;
+			}
+			
+			&.docupload__file--success  .docupload__filestatus{
+				color: #188049;
+			}
+			
+			&.docupload__file--error-wrapped{
+				@extend .docupload__file--error;
+				
+				.docupload__actions{
+					padding-left: 0;
+					margin-bottom: 20px;
+					position: relative;
+				}
+			}
+		}
+		
+		.docupload__file--uploaded {
+			padding-right: 100px;
+		}
+		
+			.docupload__filename {
+				font-size: 16px;
+				-webkit-transition: background .2s;
+				background: rgba(255,255,255,0);
+				position: relative;
+				padding: 3px 0;
+				//display: inline-block;
+				overflow: hidden;
+				-ms-word-break: break-all;
+			    word-break: break-all;
+
+
+			 /* Non standard for webkit */
+			     word-break: break-word;
+
+			    -webkit-hyphens: auto;
+			       -moz-hyphens: auto;
+			        -ms-hyphens: auto;
+			            hyphens: auto;
+
+				&:hover{
+					z-index: 10;
+					position: relative;
+					background: #FFF;
+					background: rgba(255,255,255,.8);
+				}
+
+				span { // size
+					line-height: inherit;
+					font-size: 14px;
+					color: #999;
+					padding-left: 2px;
+					&:before{ content: '('; }
+					&:after{ content: ')'; }
+				}
+
+			}
+			
+			.docupload__actions {
+				position: absolute;
+				top: 10px;
+				right: 0;
+				padding: 3px 20px;
+				padding-right: 0;
+				
+				@include respond-to(tablet, desktop) {
+					padding:10px 20px;
+					padding-right: 0;
+					top: 5px;
+				}
+				
+				/* @TODO: Use a mixin */
+				/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+				background: #FFF;
+				background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjElIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjAiLz4KICAgIDxzdG9wIG9mZnNldD0iNSUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==");
+				background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 1%, rgba(255,255,255,1) 5%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+				background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(1%,rgba(255,255,255,0)), color-stop(5%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 5%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+				background: -o-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 5%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+				background: -ms-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 5%,rgba(255,255,255,1) 100%); /* IE10+ */
+				background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 5%,rgba(255,255,255,1) 100%); /* W3C */
+				//filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-8 */
+				z-index: 9;
+
+			}
+
+			.docupload__filestatus {
+				@extend strong;
+				display: inline;
+				padding-right: 15px;
+				@media all\0 { 
+					padding: 5px 15px 5px 0;
+					background: #FFF;
+				}
+				
+				span {
+					font-size: 18px;
+					position: relative;
+					top: 2px;
+					margin: 0 5px;
+				}
+
+			}
+			
+			.docupload__fileremove {
+				float: right;
+				margin-top: 4px;
+				
+				button{
+					margin-top: 3px;
+					font-size:16px;
+					display: inline-block;
+					border-bottom: 1px solid;
+					
+					&:hover{
+						border-bottom: 1px solid;
+					}
+				}
+			}
+	
+	.docupload__error {
+		@extend strong;
+		line-height:16px;
+		margin: 20px 0;
+		font-size: 16px;
+		color: #ea0000;
+		&.docupload__error--toomuch{
+			color: #555;
+		}
+	}
+
+	.docupload__tiptype {
+		margin: 20px 0;
+		color: #676973;
+		line-height: 16px;
+		font-size: 16px;
+
+		& ~ .cta.cta-primary{
+			margin-top: 0 !important;
+		}
+	}
+
+	.cta.cta-primary{
+		//margin-top: 20px !important;
+	}
+
+	/** JS SPECIFIC **/
+	.docupload .cta.docupload__uploadbutton {
+		margin-right: 20px;
+		margin-bottom: 10px;
+		margin-top: 0;
+		width: 50%;
+		display: inline;
+		
+		@include respond-to(desktop, tablet) {
+			margin-bottom: 3px;
+			width: auto;
+			
+			&:focus{
+				margin-bottom: 2px;
+			}
+		}
+	}
+	
+	.docupload__mock {
+		position: relative;
+	}
+	
+	.docupload__mockupload {
+		width: 100%;
+		height: 32px;
+		height: 25px;
+		z-index: 8;
+		@include respond-to(tablet, desktop) {
+			height: 32px;
+		}
+		
+		&.docupload__mockupload--done{
+			background: #fff;
+			.docupload__mockupload-bar,
+			.docupload__mockupload-container {
+				height: 0;
+				top: 38px;
+				@include respond-to(tablet, desktop) {
+					top: 45px;
+				}
+			}
+		}
+		
+		.docupload__mockupload-bar{
+			width: 0%;
+			height: 10px;
+			background: #188049;
+			@include transition(height .2s, width .1s, background .2s);
+		}
+		
+		.docupload__mockupload-container {
+			@include transition(top .2s, background .2s);
+
+			position: absolute;
+			background: #c8e9d8;
+			top: 28px;
+			@include respond-to(tablet, desktop) {
+				top: 35px;
+			}
+			width: 100%;
+		}
+	}
+
+	.docupload__mockuploadlabel {
+		font-size: 16px;
+		position: absolute;
+		z-index: 9;
+		top: 0;
+		line-height: 28px;
+		@include respond-to(tablet, desktop) {
+			line-height: 35px;
+		}
+		left: 0;
+		white-space: nowrap;
+		width: 100%;
+		overflow: hidden;
+		
+		span { 
+			line-height: inherit;
+			font-size: 14px;
+			color: #999;
+			padding-left: 2px;
+			&:before{ content: '('; }
+			&:after{ content: ')'; }
+		}
+	}
+
+	.docupload__file.docupload__file--mockuploading {
+		margin: 1px 0;
+	}
+
+	.docupload__file{
+		&.docupload__file--error {
+			color: $error;
+			border-top: 2px solid #eaeaea;
+		}
+
+		&.docupload__file--error + .docupload__file.docupload__file--success{
+			margin-top: 0;
+		}
+	}

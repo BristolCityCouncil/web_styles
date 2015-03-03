@@ -1,0 +1,681 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"key",
+				"keyup"
+			],
+			[
+				"ob_f",
+				"ob_end_flush"
+			],
+			[
+				"bor",
+				"border-left"
+			],
+			[
+				"sub",
+				"sub_folder"
+			],
+			[
+				"dest",
+				"dest_folder"
+			],
+			[
+				"array_fil",
+				"array_filter"
+			],
+			[
+				"is_a",
+				"is_array"
+			],
+			[
+				"html",
+				"htmlentities"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"error_",
+				"error_reporting"
+			],
+			[
+				"Li",
+				"LightnCandy"
+			],
+			[
+				"get_ar",
+				"func_get_args"
+			],
+			[
+				"chan",
+				"changed_time"
+			],
+			[
+				"file_c",
+				"file_put_contents"
+			],
+			[
+				"array_m",
+				"array_merge"
+			],
+			[
+				"for",
+				"foreach	foreach …"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "templates/patterns/forms/index.html",
+			"settings":
+			{
+				"buffer_size": 9963,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "json/patterns/forms.json",
+			"settings":
+			{
+				"buffer_size": 1509,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/patterns/validation/index.html",
+			"settings":
+			{
+				"buffer_size": 12696,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/tags/forms/dropdown.html",
+			"settings":
+			{
+				"buffer_size": 358,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 96.0,
+		"selected_items":
+		[
+			[
+				"handle",
+				"Set Syntax: Handlebars"
+			],
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"spaces",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"handl",
+				"Set Syntax: Handlebars"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"bem",
+				"Set Syntax: BEMHTML"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"beau",
+				"HTMLBeautify"
+			],
+			[
+				"space",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"tabs",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"lint",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"must",
+				"Set Syntax: HTML with mustaches"
+			],
+			[
+				"yml",
+				"Set Syntax: YAML"
+			],
+			[
+				"mustache",
+				"Set Syntax: HTML with mustaches"
+			],
+			[
+				"isntall",
+				"Package Control: Install Package"
+			],
+			[
+				"CONV",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 583.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/Stephen/Workspaces/develop",
+		"/Users/Stephen/Workspaces/develop/json",
+		"/Users/Stephen/Workspaces/develop/json/patterns",
+		"/Users/Stephen/Workspaces/develop/templates",
+		"/Users/Stephen/Workspaces/develop/templates/patterns",
+		"/Users/Stephen/Workspaces/develop/templates/patterns/forms",
+		"/Users/Stephen/Workspaces/develop/templates/patterns/panels",
+		"/Users/Stephen/Workspaces/develop/templates/patterns/validation",
+		"/Users/Stephen/Workspaces/develop/templates/tags",
+		"/Users/Stephen/Workspaces/develop/templates/tags/forms",
+		"/Users/Stephen/Workspaces/develop/templates/tags/navigation",
+		"/Users/Stephen/Workspaces/develop/bcc-beta-theme/js",
+		"/Users/Stephen/Workspaces/develop/bcc-beta-theme/js/services",
+		"/Users/Stephen/Workspaces/develop/bcc-beta-theme/js/services/testcases"
+	],
+	"file_history":
+	[
+		"/Users/Stephen/Workspaces/develop/templates/tags/forms/dropdown.html",
+		"/Users/Stephen/Workspaces/develop/templates/tags/forms/conditional.html",
+		"/Users/Stephen/Workspaces/develop/templates/tags/forms/textarea.html",
+		"/Users/Stephen/Workspaces/develop/templates/tags/forms/fieldset.html",
+		"/Users/Stephen/Workspaces/develop/templates/tags/forms/conditional_top.html",
+		"/Users/Stephen/Workspaces/develop/templates/tags/forms/conditional_bottom.html",
+		"/Users/Stephen/Workspaces/develop/templates/tags/forms/guidance_top.html",
+		"/Users/Stephen/Workspaces/develop/templates/tags/forms/input.html",
+		"/Users/Stephen/Workspaces/develop/templates/tags/forms/status.html",
+		"/Users/Stephen/Workspaces/develop/templates/tags/forms/label_top.html",
+		"/Users/Stephen/Workspaces/develop/templates/tags/forms/label_bottom.html",
+		"/Users/Stephen/Workspaces/develop/templates/tags/forms/checkbox.html",
+		"/Users/Stephen/Workspaces/develop/templates/tags/forms/label.html",
+		"/Users/Stephen/Workspaces/develop/templates/tags/forms/guidance.html",
+		"/Users/Stephen/Workspaces/develop/templates/tags/forms/guidence_bottom.html",
+		"/Users/Stephen/Workspaces/develop/templates/tags/forms/guidence.html",
+		"/Users/Stephen/Workspaces/develop/templates/tags/forms/instructions.html",
+		"/Users/Stephen/Workspaces/develop/templates/tags/forms/guidence_top.html",
+		"/Users/Stephen/Workspaces/develop/templates/tags/forms/instructions_top.html",
+		"/Users/Stephen/Workspaces/develop/templates/tags/forms/instructions_bottom.html",
+		"/Users/Stephen/Workspaces/develop/templates/patterns/validation/index.html",
+		"/Users/Stephen/Workspaces/develop/bcc-beta-theme/js/common/widgets/breakpoints.js",
+		"/Users/Stephen/Workspaces/develop/bcc-beta-theme/js/services/init.js",
+		"/Users/Stephen/Workspaces/develop/Gruntfile.js",
+		"/Users/Stephen/Workspaces/develop/bcc-beta-theme/js/services/config.js",
+		"/Users/Stephen/Workspaces/develop/bcc-beta-theme/js/services/testcases/waste.test.js",
+		"/Users/Stephen/Workspaces/develop/bcc-beta-theme/js/common/init.js",
+		"/Users/Stephen/Workspaces/develop/bcc-beta-theme/js/common/modules/openValidation.module.js",
+		"/Users/Stephen/Workspaces/develop/templates/patterns/forms/index.html",
+		"/Users/Stephen/Workspaces/develop/scss/common.scss",
+		"/Users/Stephen/Workspaces/develop/bcc-beta-theme/js/brand/modules/addresslookup.module.js",
+		"/Users/Stephen/Workspaces/develop/templates/emails/bcc/you_created_an_account.html",
+		"/Users/Stephen/Workspaces/develop/templates/emails/bcc/thanks.html",
+		"/Users/Stephen/Workspaces/develop/templates/patterns-custom/oldpanels/panel.html",
+		"/Users/Stephen/Workspaces/develop/templates/patterns-custom/oldpanels/index.html",
+		"/Users/Stephen/Workspaces/develop/templates/tags/oldpanels/panel.html",
+		"/Users/Stephen/Workspaces/develop/templates/emails/bcc/reset_password.html",
+		"/Users/Stephen/Workspaces/develop/i/application/Controller/Emails.php",
+		"/Users/Stephen/Workspaces/develop/templates/emails/index.html",
+		"/Users/Stephen/Workspaces/develop/templates/chrome/email-header.html",
+		"/Users/Stephen/Workspaces/develop/templates/emails/bcc/change_of_email.html",
+		"/Users/Stephen/Workspaces/develop/templates/emails/bcc/confirm_your_email.html",
+		"/Users/Stephen/Workspaces/develop/templates/emails/bcc/order_new_bin.html",
+		"/Users/Stephen/Workspaces/develop/templates/emails/bcc/password_has_been_reset.html",
+		"/Users/Stephen/Workspaces/develop/index.php",
+		"/Users/Stephen/Workspaces/develop/i/application/Domain/Builder.php",
+		"/Users/Stephen/Workspaces/develop/i/application/Controller/Builder.php",
+		"/Users/Stephen/Workspaces/develop/i/application/Controller/Cli.php",
+		"/Users/Stephen/Workspaces/develop/tusk",
+		"/Users/Stephen/Workspaces/develop/i/application/config/router.php",
+		"/Users/Stephen/Workspaces/develop/i/application/Controller/FilesystemBase.php",
+		"/Users/Stephen/Workspaces/develop/i/application/Controller/Example.php",
+		"/Users/Stephen/Workspaces/develop/i/application/Controller/ExampleEmails.php",
+		"/Users/Stephen/Workspaces/develop/templates/chrome/footer.html",
+		"/Users/Stephen/Workspaces/develop/templates/chrome/codehinter.html",
+		"/Users/Stephen/Workspaces/develop/scss/chrome/_main.scss",
+		"/Users/Stephen/Workspaces/develop/.gitignore",
+		"/Users/Stephen/Workspaces/develop/templates/patterns/forms/input.html",
+		"/Users/Stephen/Workspaces/develop/old_templates/boilerplate_old/nwo/buttons.html",
+		"/Users/Stephen/Workspaces/develop/bcc-beta-theme/css/aui.css",
+		"/Users/Stephen/Workspaces/develop/json/patterns/forms.json",
+		"/Users/Stephen/Workspaces/develop/templates/tags/panels/info.html",
+		"/Users/Stephen/Workspaces/develop/i/system/core/handleview.php",
+		"/Users/Stephen/Workspaces/develop/ace-builds/demo/static-highlighter.html",
+		"/Users/Stephen/Workspaces/develop/vendor/xamin/handlebars.php/src/Handlebars/BaseString.php",
+		"/Users/Stephen/Workspaces/develop/vendor/xamin/handlebars.php/src/Handlebars/Helper/BindAttrHelper.php",
+		"/Users/Stephen/Workspaces/develop/templates/branding.html",
+		"/Users/Stephen/Workspaces/develop/i/system/core/factories/controller.factory.php",
+		"/Users/Stephen/Workspaces/develop/vendor/mustache/mustache/CONTRIBUTING.md",
+		"/Users/Stephen/Workspaces/develop/bcc-beta-theme/js/common/config.js",
+		"/Users/Stephen/Workspaces/develop/json/boilerplate_old/comaplints_old.json",
+		"/Users/Stephen/Workspaces/develop/templates/tags/components/docs.html",
+		"/Users/Stephen/Workspaces/develop/templates/builder/header.html",
+		"/Users/Stephen/Workspaces/develop/scss/common/_bootstrap.scss",
+		"/Users/Stephen/Workspaces/develop/bcc-beta-theme/css/aui.slim.css",
+		"/Users/Stephen/Workspaces/develop/templates/chrome/header.html",
+		"/Users/Stephen/Workspaces/develop/templates/documentation/_installation/index.html",
+		"/Users/Stephen/Workspaces/develop/templates/documentation/index.html",
+		"/Users/Stephen/Workspaces/develop/templates/chrome/home-header.html",
+		"/Users/Stephen/Workspaces/develop/dest/README.md",
+		"/Users/Stephen/Workspaces/develop/templates/documentation/extending_javascript/index.html",
+		"/Users/Stephen/Workspaces/develop/i/application/Controller/Documentation.php",
+		"/Users/Stephen/Workspaces/develop/templates/documentation/creating_pages/index.html",
+		"/Users/Stephen/Workspaces/develop/templates/documentation/creating_tags/index.html",
+		"/Users/Stephen/Workspaces/develop/templates/documentation/extending_css/index.html",
+		"/Users/Stephen/Workspaces/develop/templates/documentation/exporting_javascript/index.html",
+		"/Users/Stephen/Workspaces/develop/templates/documentation/exporting_css/index.html",
+		"/Users/Stephen/Workspaces/develop/templates/documentation/2_-_Making_pages/index.html",
+		"/Users/Stephen/Workspaces/develop/templates/builder/index.html",
+		"/Users/Stephen/Workspaces/develop/templates/patterns/index.html",
+		"/Users/Stephen/Workspaces/develop/templates/patterns-custom/index.html",
+		"/Users/Stephen/Workspaces/develop/templates/chrome/custom-header.html",
+		"/Users/Stephen/Workspaces/develop/templates/chrome/header.v2.html",
+		"/Users/Stephen/Workspaces/develop/scss/custom.scss",
+		"/Users/Stephen/Workspaces/develop/css/common.min.css",
+		"/Users/Stephen/Workspaces/develop/bcc-beta-theme/js/main.min.js",
+		"/Users/Stephen/Workspaces/develop/Gruntfile.dist.js",
+		"/Users/Stephen/Workspaces/develop/i/application/Controller/CustomPages.php",
+		"/Users/Stephen/Workspaces/develop/dest/patterns/navigation.html",
+		"/Users/Stephen/Workspaces/develop/css/common.css",
+		"/Users/Stephen/Workspaces/develop/i/application/Controller/ExampleProject.php",
+		"/Users/Stephen/Workspaces/develop/i/application/Controller/Boilerplate.php",
+		"/Users/Stephen/Workspaces/develop/templates/builder/success.html",
+		"/Users/Stephen/Workspaces/develop/templates/builder/footer.html",
+		"/Users/Stephen/Workspaces/develop/i/application/Controller/Home.php",
+		"/Users/Stephen/Workspaces/develop/i/application/Controller/Pattern.php",
+		"/Users/Stephen/Workspaces/develop/dest/patterns/buttons/index.html",
+		"/Users/Stephen/Workspaces/develop/dest/patterns/buttons/button/index.html",
+		"/Users/Stephen/Workspaces/develop/i/application/config/database.php",
+		"/Users/Stephen/Workspaces/develop/dest/patterns/index.html",
+		"/Users/Stephen/Workspaces/develop/i/application/Controller/CustomPatterns.php",
+		"/Users/Stephen/Workspaces/develop/i/application/Controller/Ajax.php",
+		"/Users/Stephen/Workspaces/develop/i/application/Controller/Controller_Boilerplateold.php",
+		"/Users/Stephen/Workspaces/develop/old_templates/archive/patterns/handlebars.html",
+		"/Users/Stephen/Workspaces/develop/ace-builds/src/worker-php.js",
+		"/Users/Stephen/Workspaces/develop/ace-builds/src/worker-html.js",
+		"/Users/Stephen/Workspaces/develop/ace-builds/src/mode-scss.js",
+		"/Users/Stephen/Workspaces/develop/ace-builds/src/mode-assembly_x86.js",
+		"/Users/Stephen/Workspaces/develop/ace-builds/demo/emmet.html",
+		"/Users/Stephen/Workspaces/develop/i/application/cache/json/Array.json",
+		"/Users/Stephen/Workspaces/develop/json/pages/layouts.json",
+		"/Users/Stephen/Workspaces/develop/json/patterns/buttons.json",
+		"/Users/Stephen/Workspaces/develop/json/patterns/navigation.json",
+		"/Users/Stephen/Workspaces/develop/json/example/mugs.json",
+		"/Users/Stephen/Workspaces/develop/json/project/mugs.json",
+		"/Users/Stephen/Workspaces/develop/i/application/cache/json/example.json",
+		"/Users/Stephen/Workspaces/develop/json/tags/buttons.json",
+		"/Users/Stephen/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"<option value=\"",
+			"guidance",
+			"guidence",
+			"button",
+			"console",
+			"dri2",
+			"ri2",
+			"afirstRadio",
+			"secondRadio",
+			"firstRadio",
+			"testcheck",
+			"test",
+			"btest",
+			"fi2",
+			"fi1",
+			"d1",
+			"f1",
+			"keyup",
+			"block",
+			"field",
+			"drop--",
+			"drop",
+			"strong",
+			"panel",
+			"dropdown",
+			"patterns",
+			"href",
+			"<br/>",
+			"echo",
+			"dir",
+			"mkdir",
+			"border-top",
+			"245",
+			"bcc-header",
+			"builds/s",
+			"src",
+			"Pattern",
+			"patterns",
+			"emails",
+			"',",
+			"'bcc-beta-theme/",
+			"ss/build",
+			"STATIC/assets",
+			".aui ",
+			"concat",
+			"pack",
+			"pre",
+			"runController",
+			"dt",
+			"saveStat",
+			"$h",
+			"folder",
+			"return",
+			"prettyPage",
+			"path",
+			"exit",
+			"json/cache",
+			"print",
+			" info__",
+			"info__",
+			"[]",
+			"title",
+			"primary_button",
+			"tags.",
+			"boiler",
+			"boil",
+			"patternlibrary",
+			"$options",
+			"$options['json'];",
+			"dropdown"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "templates/patterns/forms/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9963,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4032,
+								4055
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Handlebars/Handlebars.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2596.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "json/patterns/forms.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1509,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								132,
+								132
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 231.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "templates/patterns/validation/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 12696,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12696,
+								12696
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 5340.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "templates/tags/forms/dropdown.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 358,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								156,
+								156
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "Static Development Environment.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"handle",
+				"framework/system/core/handleview.php"
+			],
+			[
+				"base",
+				"framework/application/Controller/FilesystemBase.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/Documents/Candi.sublime-project"
+			],
+			[
+				"n",
+				"~/Documents/Nginx.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 296.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

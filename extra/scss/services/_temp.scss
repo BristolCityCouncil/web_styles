@@ -1,0 +1,156 @@
+p:not([class]),
+ul:not([class]) {
+	max-width: 640px;
+}
+
+.portlet-column-content.empty{
+	display: none !important;
+}
+
+#main-content {
+    outline: none;
+}
+
+.text--confirmation {
+	color: $bcc-green-affirm;
+	font-size: 20px;
+	line-height: 23px;
+
+	@include respond-to(tablet, desktop) {
+		font-size: 30px;
+		line-height: 30px;
+		margin-bottom: 20px;
+	}
+}
+
+.total {
+	margin-top: 30px;
+}
+
+.portlet-body {
+	> :last-child,
+	.form > :last-child {
+		margin-bottom: 0;
+	}
+	
+}
+
+p + h2,
+p + h3,
+p + h4 {
+	margin-top: 40px;
+} 
+
+
+// Liferay UI Modifications
+.portlet-topper .portlet-title {
+    display: none;
+}
+
+.dockbar-split .dockbar .navbar-inner .nav li.dropdown.open > .dropdown-toggle,
+.dockbar-split .dockbar .navbar-inner .nav > li > a {
+    background-color: $bcc-red;
+}
+
+.navbar-inner {
+    display: block;
+
+    @include respond-to(desktop) {
+        display: block;
+    }
+}
+
+/*
+
+// Debugging new grid sytem
+.bcc_2col1col {
+    .row-fluid {
+		
+		.grid-primary {
+			@include columns(12, 12, 8);
+			
+			margin-bottom: 40px;
+			padding: 0;
+			
+			@include respond-to(desktop) {
+            	padding-right: 60px;
+        	}
+		}
+		
+		.grid-secondary {
+			@include columns(12, 12, 4);
+			
+			padding: 0;
+		}
+	}
+}
+
+.bcc_2col1col_alt {
+    .row-fluid {
+		.grid-primary {
+			@include columns(12, 12, 4);
+			@include push(0, 0, 8);
+			
+			padding: 0;
+		}
+		
+		.grid-secondary {
+			@include columns(12, 12, 8);
+			@include pull(0, 0, 4);
+			
+			padding: 0;
+			
+			@include respond-to(desktop) {
+            	padding-right: 60px;
+        	}
+		}
+	}
+}
+
+.bcc_3and1then4alt {
+    .row-fluid {
+		.grid4 {
+			@include columns(12, 12, 4);
+			@include push(0, 0, 8);
+			
+			padding: 0;
+		}
+		
+		.grid8 {
+			@include columns(12, 12, 8);
+			@include pull(0, 0, 4);
+			
+			padding: 0;
+			
+			@include respond-to(desktop) {
+            	padding-right: 40px;
+        	}
+		}
+	}
+}
+
+.bcc_1and3alt {
+    .row-fluid {
+		.grid4 {
+			@include columns(12, 12, 4);
+			@include pull(0, 0, 8);
+			
+			padding: 0;
+		}
+		
+		.grid8 {
+			@include columns(12, 12, 8);
+			
+			
+			@include push(0, 0, 4);
+			padding: 0;
+			
+			@include respond-to(desktop) {
+            	padding-left: 40px;
+        	}
+		}
+	} 
+}
+
+*/
+

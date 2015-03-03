@@ -1,0 +1,83 @@
+{% block page %}
+
+  {% assign page_title = 'Report missed collection: Check and confirm' %}
+  {% assign signed_in = false %}
+  {% assign ribbon = 'ico-bin' %}
+
+  {% include 'header' %}
+
+  <div class="page-content">
+
+    <div class="layout layout-constrained">
+
+      <div class="grid-wrap">
+
+        <div class="grid-col desktop-grid-full-width">
+
+          <div class="content content-header">
+
+            {% assign step-header__title = 'Report missed collection' %}
+            {% assign step-header__title__step = 'Step 3 of 4' %}
+            {% assign step-header__subtitle = 'Check and confirm' %}
+            {% include 'modules/step-header' %}
+
+
+            <div class="panel panel--bare">
+             <h3 class="panel__title">Re-collection Address</h3>
+             <div class="panel__copy--compact">
+               <p>Flat 3, 22 Verylongstreetname Terrace, BS21 4ND</p>
+             </div>
+           </div>
+
+            <!-- @TODO: Remove checkboxes -->
+              <form class="form form--validate" id="form-order-new-bin" action="#form-order-new-bin" method="post">
+
+              <div class="basket">
+
+                <div class="basket__header">
+                  <p class="basket__title level"><strong>On Weds 13th November, we missed collections for:</strong> <a class="text-right basket__change" href="#">Change bin selection</a></p>
+
+                </div><!--/basket__header-->
+
+                <div class="basket__list">
+
+                  {% assign basket__item__title = 'Black recycling bin' %}
+                  {% assign basket__item__handle = 'black-recycling-bin-retina' %}
+                  {% include 'modules/basket__item' %}
+
+                  {% assign basket__item__title = 'Green recycling bin' %}
+                  {% assign basket__item__handle = 'green-recycling-bin-retina' %}
+                  {% include 'modules/basket__item' %}
+
+                </div><!--/basket__list-->
+
+                <form id="form" class="form js-validation" action="#form" method="post">
+                  <div class="form__item form__item--string">
+                    <label class="form__label" for="email">Email account <span class="form__label__asterix">*</span></label>
+                    <input class="form__field form__field--string" type="email" name="" placeholder="" id="email" pattern="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" data-error-message="Please enter a valid email" />
+                    <span class="form__note">Lorem ipsum dolor sit amet, consectetur adipisicing elit</span>
+                  </div><!--/form__item-->
+                </form>
+
+                <div class="basket__actions">
+                  <!-- @TODO: UX: Is this button text misleading? Still many steps to go through -->
+                  <button class="btn btn--primary" type="submit">Report these collections</button>
+                </div><!--/basket__actions-->
+
+              </div><!--/basket-->
+
+            </form>
+
+          </div><!--/content-->
+
+        </div><!--/grid-col-->
+
+      </div><!--/grid-wrap-->
+
+    </div><!--/layout-->
+
+  </div><!--page-content-->
+
+  {% include 'footer' %}
+
+{% endblock %}

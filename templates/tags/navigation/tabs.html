@@ -1,0 +1,14 @@
+<div class="tabs js--tabs">
+	<ul class="tabs__list">
+		{{# items }}
+		<li><a href="#tab-{{ id }}">{{ title }}</a></li>
+		{{/ items }}
+	</ul>	
+	{{# items }}
+	<div class="tabs__tab" id="tab-{{ id }}">
+		<p>
+			{{ copy }}
+		</p>
+	</div>
+	{{/ items }}
+</div>

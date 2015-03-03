@@ -1,0 +1,22 @@
+<div class="pattern" id="panels-additional">
+
+	{{# tags.panels.additional }}
+
+		{{> tags/components/title}}
+		
+		<div class="pattern__block">
+			{{> tags/panels/additional }}
+		</div>
+		
+		{{> tags/components/docs }}
+
+		<div class="wr__code">
+			<pre><code class="language-markup">&lt;div class="additional"&gt;
+    &lt;button class="btn btn-link" type="submit"&gt;
+		+ {{ additional__text }}
+	&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+		</div>
+
+  	{{/ tags.panels.additional }}
+</div>

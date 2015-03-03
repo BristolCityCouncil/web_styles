@@ -1,0 +1,105 @@
+{
+	"light": {
+		"pattern": "Light",
+		"light__text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+		"notes": {
+			"usage": [
+				"This style can be used to override an existing style. It's used for input field sub-labels. It should not be used within the main flow of copy unless specified."
+			]
+		}
+	},
+
+	"lead": {
+		"pattern": "Lead",
+		"lead__text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+		"notes": {
+			"usage": [
+				"Appears after H1 as a brief overview of the page or section"
+			]
+		}
+	},
+	
+	"micro": {
+		"pattern": "Micro",
+		"micro__text": "Image credit: Lorem span dolor sit amet.",
+		"notes": {
+			"usage": [
+				"This is used mostly within narrow columns. panels or as supportive text for buttons or other input fields. It should not be used for paragraphs of copy."
+			]
+		}
+	},
+
+
+	"h1": {
+		"pattern": "h1",
+		"h1__text": "Lorem span dolor sit amet elit nullum vitae.",
+		"notes": {
+			
+		}
+	},
+
+	"h2": {
+		"pattern": "h2",
+		"h2__text": "Lorem span dolor sit amet elit nullum vitae.",
+		"notes": {
+			
+		}
+	},
+
+	"h3": {
+		"pattern": "h3",
+		"h3__text": "Lorem span dolor sit amet elit nullum vitae.",
+		"notes": {
+			
+		}
+	},
+
+	"h4": {
+		"pattern": "h4",
+		"h4__text": "Lorem span dolor sit amet elit nullum vitae.",
+		"notes": {
+			
+		}
+	},
+
+	"strong": {
+		"pattern": "strong",
+		"strong__text": "Lorem span dolor sit amet elit nullum vitae.",
+		"notes": {
+			
+		}
+	},
+
+	"em": {
+		"pattern": "Em",
+		"em__text": "Lorem span dolor sit amet elit nullum vitae.",
+		"notes": {
+			
+		}
+	},
+
+	"ul": {
+		"pattern": "UL",
+		"list": [
+			{ "li": "Lorem ipsum dolor sit amet, consectetur adipisicing elit." },
+			{ "li": "Sint atque magni quam delectus ea provident similique." },
+			{ "li": "Quasi odit debitis, natus rem reiciendis, eum harum." }
+		],
+		"notes": {
+			
+		}
+	},
+
+	"ol": {
+		"pattern": "OL",
+		"list": [
+			{ "li": "Lorem ipsum dolor sit amet, consectetur adipisicing elit." },
+			{ "li": "Sint atque magni quam delectus ea provident similique." },
+			{ "li": "Quasi odit debitis, natus rem reiciendis, eum harum." }
+		],
+		"notes": {
+			
+		}
+	}
+
+}

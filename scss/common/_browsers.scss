@@ -1,0 +1,107 @@
+// Firefox
+.ie8 .only-ie8 {
+	display: block !important;
+	visibility: visible;
+	
+	&.instructions {
+		font-size: 16px;
+		font-family: "Thesans-Semi-Light","Helvetica Neue",Arial,sans-serif;
+		font-weight: normal;
+	}
+}
+
+.only-ie8 {
+	display: none !important;
+	visibility: hidden;
+}
+
+.firefox {
+	
+	.docupload {
+		input[type="file"]{
+			width: 100%;
+		}
+	}
+	
+	.field .dropdown {
+		overflow: hidden;
+		
+		select {
+			width: 110%;
+			width: calc(100% + 17px);
+			width: -moz-calc(100% + 17px);
+		}
+	}
+}
+
+// Internet Explorer
+.ie8 {
+	.field {
+		.field__label:before, 
+		.field__label:after {
+			display: none !important;
+		}
+	
+		input[type="checkbox"] + .field__label,
+		input[type="radio"] + .field__label {
+			padding-left: 30px;
+			
+			&:before {
+				display: none !important;
+			}
+			
+			&:after {
+				display: none !important;
+			}
+		}
+		
+		.field__label + input[type="checkbox"],
+		.field__label + input[type="radio"] {
+			margin-top: 20px;
+		}
+		
+		.dropdown {
+			overflow: hidden !important;
+			
+			select{
+				width: 110% !important;
+				height: 32px;
+				width: calc(100% + 17px);
+				width: -moz-calc(100% + 17px);
+			}
+		}
+		
+		input[type="checkbox"],
+		input[type="radio"] {
+			display: inline-block !important;
+			position: absolute !important;
+			visibility: visible !important;
+			margin: 0 !important;
+			height: 20px !important;
+			width: 20px !important;
+			
+			&:focus {
+				outline: inherit;
+		    	outline-width: 1px;
+			}
+		}
+	}
+
+	.homepage__panel .icon--bcc {
+		display: none !important;
+	}
+
+	.infostack.infostack--media .infostack__annotation {
+		width: 100%;
+		display: block;
+		position: relative;
+		margin-left: 20px;
+		padding-left: 0;
+	}
+}
+
+.ie {
+ 	select {
+		padding: 10px;
+	}
+}

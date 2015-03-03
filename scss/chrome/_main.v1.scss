@@ -1,0 +1,360 @@
+@import "compass";
+@import "mixins";
+
+$font-regular: "Thesans-Semi-Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial, sans-serif;
+$font-bold: "Thesans-Bold", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial, sans-serif;
+$font-select: "Thesans-Semi-Light-Select", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial, sans-serif;
+
+
+html {
+  font-family: $font-regular;
+  overflow-x: hidden;
+  border-top: 3px solid #BC0031;
+}
+
+.wr {
+  background: #fff;
+}
+
+.wr__page-content {
+  position: relative;
+  margin-left: 0;
+  @include rem(padding,100 30 30 30);
+  @extend %cf;
+  @media screen and (min-width: 1000px) {
+    @include rem(margin-left,245);
+  }
+}
+
+.wr__page-content--simple {
+  @media screen and (min-width: 1000px) {
+    margin-left:0;
+  }
+}
+
+.wr__header {
+  @include rem(width,245);
+  position: relative;
+}
+
+.wr__logo,
+.wr__nav {
+  @include single-transition(left,0.3s);
+  z-index: 100;
+  @include rem(left,-245);
+  position: fixed;
+  @include rem(width,245);
+  @media screen and (min-width: 1000px) {
+    left: 0;
+  }
+  .visible-header & {
+    left: 0;
+  }
+}
+
+
+
+.wr__logo {
+  border-top: 3px solid #bc0031;
+  top: 0;
+  @include rem(height,150);
+  background: #EAEAEA;
+  text-align: center;
+  img {
+    position: relative;
+    top: 50%;
+    @include translateY(-50%);
+    .lt-ie9 & {
+      top: 20px;
+      @include translateY(0);
+    }
+  }
+}
+
+.wr__nav {
+  @include rem(top,150);
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  box-sizing: content-box;
+  bottom: 0;
+  background: #2E3137;
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    margin: 0;
+  }
+  li:before {
+    display: none;
+  }
+  a {
+    border-bottom: 1px solid #383838;
+    @include rem(padding,12 20);
+    @include font-size(18);
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    &:hover {
+      color: #90B4EE;
+    }
+  }
+}
+
+.wr__notes {
+  @media screen and (min-width: 800px) {
+    width: 50%;
+    float: left;
+  }
+}
+.wr__notes__inner {
+  @include rem(padding, 12);
+  background: #ececec;
+  margin-bottom: 1px;
+  p {
+    @include font-size(14);
+  }
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.wr__title {
+  @include font-size(16);
+  font-family: $font-bold;
+  @include rem(margin-bottom,5);
+}
+
+.pattern {
+  @extend %cf;
+  @include rem(padding,0 0 20 0);
+  @include rem(margin,10 0 90 0);
+}
+
+.pattern__title {
+  font-family: Georgia, serif;
+  @include rem(font-size,20);
+  font-family: $font-bold;
+  @include rem(margin-bottom,10);
+}
+
+.wr__example__title {
+  text-transform: uppercase;
+  @include rem(font-size,14);
+  font-family: $font-bold;
+  color: #bc0031;
+}
+
+.wr__example {
+  @include rem(margin-bottom,20);
+}
+
+.wr__mobnav {
+  @include rem(height,60);
+  background: #2E3137;
+  @extend %cf;
+  @include single-transition(left,0.3s);
+  position: relative;
+  left: 0;
+  @media screen and (min-width: 1000px) {
+    display: none;
+  }
+  .visible-header & {
+    @include rem(left,245);
+  }
+}
+
+.mini-logo {
+  @include rem(height,45);
+  @include rem(width,45);
+  @include rem(right,15);
+  @include rem(top,7);
+  position: absolute;
+}
+
+.nav-launch {
+  background: url('../images/menu-icon.png') no-repeat 0 0;
+  position: absolute;
+  @include rem(top,15);
+  @include rem(left,15);
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+
+}
+.wr__dropdown {
+  left: auto;
+  float: right;
+  font-family: $font-select;
+  position: absolute;
+  @include rem(top, 30);
+  @include rem(right,30);
+  p {
+    display: block;
+    text-align: right;
+    @include rem(margin-bottom, 8);
+  }
+  text-align: left;
+  @include rem(max-width, 260);
+  width: 100%;
+  .lt-ie9 & {
+    @include rem(width,260);
+  }
+}
+
+/**
+ * prism.js Coy theme for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/tshedor/workshop-wp-theme (Example: http://workshop.kansan.com/category/sessions/basics or http://workshop.timshedor.com/category/sessions/basics);
+ * @author Tim  Shedor
+ */
+
+.wr__code {
+  @media screen and (min-width: 800px) {
+    width: 48%;
+    float: left;
+    margin-left: 2%;
+  }
+
+  margin: 0 0 .5em 0;
+}
+
+.wr__code__text {
+  font-family: $font-bold;
+  margin: 20px 0 5px 0;
+}
+
+ pre[class*="language-"],
+ .lt-ie9 pre {
+  position:relative;
+  margin: 0;
+  margin-bottom: 10px;
+  border: 1px solid #ececec;
+  border-left: 3px solid #BC0031;
+
+  overflow:visible;
+  max-height:30em;
+  @media screen and (max-width:800px) {
+    margin-top: 20px;
+  }
+}
+
+code[class*="language"],
+.lt-ie9 code {
+  background-color: #F5F2F0;
+  font-size: 12px;
+  overflow: auto;
+  position: relative;
+  max-height:29em;
+  display:block;
+  padding: 1em;
+  width: auto;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  color: #222;
+  line-height: 1.5;
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  direction: ltr;
+  text-align: left;
+}
+
+.token {
+  white-space: nowrap;
+}
+
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #7D8B99;
+}
+
+.token.punctuation {
+  color: #5F6364;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.function-name,
+.token.constant,
+.token.symbol {
+  color: #c92c2c;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.function,
+.token.builtin {
+  color: #2f9c0a;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.token.variable {
+  color: #a67f59;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword,
+.token.class-name {
+  color: #1990b8;
+}
+
+.token.regex,
+.token.important {
+  color: #e90;
+}
+.language-css .token.string,
+.style .token.string {
+  color: #a67f59;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.token.important {
+  font-weight: normal;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.namespace {
+  opacity: .7;
+}
+
+/* Plugin styles */
+.token.tab:not(:empty):before,
+.token.cr:before,
+.token.lf:before {
+  color: #e0d7d1;
+}
+
+//*PATTERN SPECIFIC STYLES*//
+
+.page-banner,
+.page-header {
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  border-left: 1px solid #f2f2f2;
+  border-right: 1px solid #f2f2f2;
+}
+
+.page-banner {
+  @media screen and (min-width: 769px) {
+    margin-bottom: 130px;
+  }
+}
+
+.page-footer {
+  background: #2E3137;
+}

@@ -1,0 +1,179 @@
+.bcc-footer {
+    background: $footer-bg;
+    padding: 0 10px;
+    
+    &.bcc-footer--withlogo {
+        @include respond-to(desktop) {
+            .bcc-footer__menu--right {
+                padding-right: 90px;
+            }
+        }
+        
+        .bcc-footer__inner {
+            background-image: url("../images/logo/new-logo-bcc-56.png");
+            background-position: bottom right;
+            background-repeat: no-repeat;
+            margin-bottom: 20px;
+
+            @include respond-to(desktop) {
+                background-position: center right;
+                background-image: url("../images/logo/new-logo-bcc-72.png");
+                margin-bottom: 0;
+            }
+        }    
+    }
+}
+
+.bcc-footer__inner {
+    @include clearfix;
+    max-width: 960px;
+    padding: 10px 20px;    
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    border-top: 8px solid $bcc-red;
+    
+    @include respond-to(desktop) {
+        padding: 40px 0;
+    }
+    
+    a {
+        color: $white;
+        font-size: 14px;
+        text-decoration: none;
+
+        @include respond-to(desktop) {
+            font-size: 16px;
+        }
+    }
+    
+    ul {
+        list-style: none;
+        margin-left: 0;
+        margin-bottom: 20px;
+        
+        @include respond-to(desktop) {
+            li {
+                display: inline;
+            }
+        }
+    }
+}
+
+.bcc-footer__menu {
+    float: left;
+    margin: 0%;
+    width: 100%;
+    
+    @include respond-to(tablet, desktop) {
+        width: 100%;
+        
+        &.bcc-footer__menu--left,
+        &.bcc-footer__menu--right, {
+            width: 50%;
+        }
+    }
+    
+    @include respond-to(desktop) {
+        ul {
+            @include clearfix;
+            
+            li {
+                float:left;
+                padding-right: 20px;
+                line-height: 14px;
+            }
+            
+            li ~ li {
+                padding-left: 20px;
+                border-left: 1px solid #FFF;
+            }
+            
+        }
+    
+        &.bcc-footer__menu--right {
+            ul {
+                @include clearfix;
+                
+                li {
+                    float: right;
+                    padding-right: 0;
+                    padding-left: 20px;
+                }
+                
+                li ~ li {
+                    padding-right: 20px;
+                    border-left: none;
+                    border-right: 1px solid #FFF;
+                }
+            }
+        }
+    }
+}
+
+#footer {
+    background: $footer-bg;
+
+    a {
+        color: $white;
+        font-size: 14px;
+        text-decoration: none;
+
+        @include respond-to(desktop) {
+            font-size: 16px;
+        }
+        
+        &:focus {
+            @extend %common-accessibility;
+        }
+    }
+
+    .layer {
+        border-top: 8px solid $bcc-red;
+
+        .legal-nav {
+            margin: 20px 0 0;
+
+            @include respond-to(desktop) {
+                padding-bottom: 0;
+                border-bottom: 0;
+                margin: 0;
+            }
+
+            ul {
+                background-image: url("../images/logo/logo-bcc-56.png");
+                background-position: bottom right;
+                background-repeat: no-repeat;
+                margin-left: 0;
+                margin-bottom: 20px;
+
+                @include respond-to(desktop) {
+                    padding: 45px 0;
+                    background-position: center right;
+                    background-image: url("../images/logo/logo-bcc-72.png");
+                    margin-bottom: 0;
+                }
+
+                li {
+                    list-style-type: none;
+                    margin: 4px 0;
+
+                    @include respond-to(desktop) {
+                        @include inline-block;
+                        
+                        margin: 0;
+                        line-height: 1.2;
+                        margin-right: 10px;
+                        border-left: 1px solid $grey-2;
+                        padding-left: 10px;
+                    }
+
+                    &:first-child {
+                        border: 0;
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,124 @@
+.icon--bcc {
+    font-family: 'bcc';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+.icon--bcc--menu:before {
+	content: "\e617";
+}
+.icon--bcc--search:before {
+	content: "\e618";
+}
+
+.icon--bcc--buspass:before {
+	content: "\e611";
+}
+
+.icon--bcc--counciltax:before {
+	content: "\e612";
+}
+
+.icon--bcc--menu:before {
+    content: "\e617";
+}
+.icon--bcc--search:before {
+    content: "\e618";
+}
+.icon--bcc--buspass:before {
+    content: "\e611";
+}
+.icon--bcc--counciltax:before {
+    content: "\e612";
+}
+.icon--bcc--feedback:before {
+    content: "\e613";
+}
+.icon--bcc--foi:before {
+    content: "\e614";
+}
+.icon--bcc--parking:before {
+    content: "\e615";
+}
+.icon--bcc--registerbirth:before {
+    content: "\e616";
+}
+.icon--bcc--cross:before {
+    content: "\e610";
+}
+.icon--bcc--verified:before {
+    font-family: 'bcc'; // Bugfix
+    content: "\e60e";
+}
+.icon--bcc--download:before {
+    content: "\e60f";
+}
+.icon--bcc--user-add:before {
+    content: "\e600";
+}
+.icon--bcc--bin:before {
+    content: "\e606";
+}
+.icon--bcc--alert:before {
+    content: "\e601";
+}
+.icon--bcc--user:before {
+    content: "\e607";
+}
+.icon--bcc--account:before {
+    content: "\e60b";
+}
+.icon--bcc--pdf:before {
+    content: "\e60a";
+}
+.icon--bcc--up:before {
+    content: "\e609";
+}
+.icon--bcc--left:before {
+    content: "\e608";
+}
+.icon--bcc--down:before {
+    content: "\e60c";
+}
+.icon--bcc--right:before {
+    content: "\e605";
+}
+.icon--bcc--cancel:before {
+    content: "\e602";
+}
+.icon--bcc--tick:before {
+    content: "\e603";
+}
+.icon--bcc--blockquote:before {
+    content: "\e60d";
+}
+.icon--bcc--cog:before {
+    content: "\e604";
+}
+
+.icon {
+    font-size: 24px;
+}
+
+.icon--first {
+    margin-right: 9px;
+}
+
+.icon--last {
+    margin-left: 9px;
+}
+
+.icon--large {
+    font-size: 32px;
+}
+
+// IE 7-8 Loading fix see Bug #CPDP-2761
+.iefixicons:before {
+    content: '' !important;
+}

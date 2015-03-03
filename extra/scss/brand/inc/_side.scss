@@ -1,0 +1,18 @@
+//.span4,
+.side {
+	:first-child {
+		margin-top: 0;
+	}
+	
+    p,
+    ol,
+    ul {
+        font-size: 14px;
+        line-height: 19px;
+        
+        @include respond-to(tablet, desktop) {
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+}

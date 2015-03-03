@@ -1,0 +1,362 @@
+<form class="form js--validate">
+    <header class="step-header">
+        <h1 class="step-header__title">
+        Apply for an older persons's buss pass
+        <span class="step-header__title__steps">
+        <span class="step-header__title__steps__seperator">:</span>
+        Step 1 of 3
+        </span>
+        </h1>
+        <h2 class="step-header__subtitle">
+        Your details
+        </h2>
+    </header>
+    <p>Please enter your date of birth to check if you are old enough to apply for a buss pass.</p>
+    <div class="form__item form__item--dateofbirth js--validate-dob">
+        <label class="form__item__label" for="dob_day">
+            Date of birth
+        </label>
+        <select required aria-required="true" name="dob_day" id="dob_day" class="form__item__field form__item__field--select form__item__field--select--inline">
+            <option value="invalid">DD</option>
+            <option>01</option>
+            <option>02</option>
+            <option>03</option>
+            <option>04</option>
+            <option>05</option>
+            <option>06</option>
+            <option>07</option>
+            <option>08</option>
+            <option>09</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>
+            <option>17</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+            <option>21</option>
+            <option>22</option>
+            <option>23</option>
+            <option>24</option>
+            <option>25</option>
+            <option>26</option>
+            <option>27</option>
+            <option>28</option>
+            <option>29</option>
+            <option>30</option>
+            <option>31</option>
+        </select>
+        <select required aria-required="true" name="dob_day" id="dob_day" class="form__item__field form__item__field--select form__item__field--select--inline">
+            <option value="invalid">Month</option>
+            <option value="01">January</option>
+            <option value="02">February</option>
+            <option value="03">March</option>
+            <option value="04">April</option>
+            <option value="05">May</option>
+            <option value="06">June</option>
+            <option value="07">July</option>
+            <option value="08">August</option>
+            <option value="09">September</option>
+            <option value="10">October</option>
+            <option value="11">Movember</option>
+            <option value="12">December</option>
+        </select>
+        <select required aria-required="true" name="dob_day" id="dob_day" class="form__item__field form__item__field--select form__item__field--select--inline">
+            <option value="invalid">YYYY</option>
+            {{#years}}
+                <option>{{.}}</option>
+            {{/years}}
+        </select>
+        <button class="cta cta--inline">Submit</button>
+
+        <div class="form__item__message form__item__message--error" aria-hidden="true">
+            Please enter a valid date
+        </div>
+    </div>
+
+   <div class="field clearfix">
+        
+        <label class="field__label field__label--block" for="dob_day">
+            Date of birth
+        </label>
+        <div class="dropdown" style="
+    width: 23%;  margin: 0 1%;  float: left;
+    margin-top: 10px;
+">
+            <select required="" aria-required="true" name="dob_day" id="dob_day">
+            <option value="invalid">DD</option>
+            <option>01</option>
+            <option>02</option>
+            <option>03</option>
+            <option>04</option>
+            <option>05</option>
+            <option>06</option>
+            <option>07</option>
+            <option>08</option>
+            <option>09</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>
+            <option>17</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+            <option>21</option>
+            <option>22</option>
+            <option>23</option>
+            <option>24</option>
+            <option>25</option>
+            <option>26</option>
+            <option>27</option>
+            <option>28</option>
+            <option>29</option>
+            <option>30</option>
+            <option>31</option></select>
+            <div class="dropdown__background"></div>
+        </div>
+        <div class="dropdown" style="
+    width: 23%;  margin: 0 1%;  margin-top: 10px;
+    float: left;
+">
+            <select required="" aria-required="true" name="dob_day" id="dob_day">
+            <option value="invalid">Month</option>
+            <option value="01">January</option>
+            <option value="02">February</option>
+            <option value="03">March</option>
+            <option value="04">April</option>
+            <option value="05">May</option>
+            <option value="06">June</option>
+            <option value="07">July</option>
+            <option value="08">August</option>
+            <option value="09">September</option>
+            <option value="10">October</option>
+            <option value="11">Movember</option>
+            <option value="12">December</option></select>
+            <div class="dropdown__background"></div>
+        </div>
+        <div class="dropdown" style="
+    width: 23%;  margin: 0 1%;  float: left;
+    margin-top: 10px;
+">
+            <select required="" aria-required="true" name="dob_day" id="dob_day">
+                <option value="invalid">YYYY</option>
+                    <option>1960</option>
+                    <option>1959</option>
+                    <option>1958</option>
+                    <option>1957</option>
+                    <option>1956</option>
+                    <option>1955</option>
+                    <option>1954</option>
+                    <option>1953</option>
+                    <option>1952</option>
+                    <option>1951</option>
+                    <option>1950</option>
+                    <option>1949</option>
+                    <option>1948</option>
+                    <option>1947</option>
+                    <option>1946</option>
+                    <option>1945</option>
+                    <option>1944</option>
+                    <option>1943</option>
+                    <option>1942</option>
+                    <option>1941</option>
+                    <option>1940</option>
+                    <option>1939</option>
+                    <option>1938</option>
+                    <option>1937</option>
+                    <option>1936</option>
+                    <option>1935</option>
+                    <option>1934</option>
+                    <option>1933</option>
+                    <option>1932</option>
+                    <option>1931</option>
+                    <option>1930</option>
+                    <option>1929</option>
+                    <option>1928</option>
+                    <option>1927</option>
+                    <option>1926</option>
+                    <option>1925</option>
+                    <option>1924</option>
+                    <option>1923</option>
+                    <option>1922</option>
+                    <option>1921</option>
+                    <option>1920</option>
+                    <option>1919</option>
+                    <option>1918</option>
+                    <option>1917</option>
+                    <option>1916</option>
+                    <option>1915</option>
+                    <option>1914</option>
+                    <option>1913</option>
+                    <option>1912</option>
+                    <option>1911</option>
+                    <option>1910</option>
+                    <option>1909</option>
+                    <option>1908</option>
+                    <option>1907</option>
+                    <option>1906</option>
+                    <option>1905</option>
+                    <option>1904</option>
+                    <option>1903</option>
+                    <option>1902</option>
+                    <option>1901</option>
+            </select>
+            <div class="dropdown__background"></div>
+        </div>
+
+        <button class="cta cta--inline" style="
+    width: 23%;  margin: 0 1%;  float: left;
+    /* margin: 0; */
+    margin-top: 10px;
+    text-align: center;
+">Submit</button>
+
+        <div class="field__message" aria-hidden="true">
+            Please enter a valid date
+        </div>
+    </div>
+</form>
+
+
+
+
+<br/><br/><br/><br/><br/><br/><br/><br/>
+<div class="slab">
+    <div class="row-fluid">
+        <div class="span8">
+            <h3 class="slab__title">
+                Make your next visit easier &amp; quicker
+            </h3>
+            <p>
+                Just fill in <strong>2 more pieces of information</strong> about yourself to create an account that will remember all your details next time you come back.
+            </p>
+        </div>
+        <div class="span4">
+            <button type="button" class="cta cta--icon cta--primary pull-right">
+                Create account
+            </button>
+        </div>
+    </div>
+</div>
+<br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+<form class="form js--validate">
+    <header class="step-header">
+        <h1 class="step-header__title">
+        Apply for an older persons's buss pass
+        <span class="step-header__title__steps">
+        <span class="step-header__title__steps__seperator">:</span>
+        Step 1 of 3
+        </span>
+        </h1>
+        <h2 class="step-header__subtitle">
+        Your details
+        </h2>
+    </header>
+    <p>Please enter your date of birth to check if you are old enough to apply for a buss pass.</p>
+    <div class="panel panel--affirm panel--date">
+        <span class="panel__title">Date of birth</span>
+        <strong class="panel__copy">4th of February, 1993</strong>
+        <a href="#">Change date of birth</a>
+    </div>
+    <p>You are old enough to apply for a free bus pass, please complete the short form and we will send it out to you.</p>
+    {{> components/addresslookup}}
+</form>
+
+<br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+<form class="form js--validate">
+    <header class="step-header">
+        <h1 class="step-header__title">
+        Apply for an older persons's buss pass
+        <span class="step-header__title__steps">
+        <span class="step-header__title__steps__seperator">:</span>
+        Step 1 of 3
+        </span>
+        </h1>
+        <h2 class="step-header__subtitle">
+        Your details
+        </h2>
+    </header>
+    <p>Please enter your date of birth to check if you are old enough to apply for a buss pass.</p>
+    <div class="form__item form__item--dateofbirth js--validate-dob">
+        <label class="form__item__label" for="dob_day">
+            Date of birth
+        </label>
+        <select required aria-required="true" name="dob_day" id="dob_day" class="form__item__field form__item__field--select form__item__field--select--inline">
+            <option value="invalid">Please select...</option>
+            <option>01</option>
+            <option>02</option>
+            <option>03</option>
+            <option  selected="selected">04</option>
+            <option>05</option>
+            <option>06</option>
+            <option>07</option>
+            <option>08</option>
+            <option>09</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>
+            <option>17</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+            <option>21</option>
+            <option>22</option>
+            <option>23</option>
+            <option>24</option>
+            <option>25</option>
+            <option>26</option>
+            <option>27</option>
+            <option>28</option>
+            <option>29</option>
+            <option>30</option>
+            <option>31</option>
+        </select>
+        <select required aria-required="true" name="dob_day" id="dob_day" class="form__item__field form__item__field--select form__item__field--select--inline">
+            <option value="invalid">Please select...</option>
+            <option value="01">January</option>
+            <option value="02" selected="selected">February</option>
+            <option value="03">March</option>
+            <option value="04">April</option>
+            <option value="05">May</option>
+            <option value="06">June</option>
+            <option value="07">July</option>
+            <option value="08">August</option>
+            <option value="09">September</option>
+            <option value="10">October</option>
+            <option value="11">Movember</option>
+            <option value="12">December</option>
+        </select>
+        <select required aria-required="true" name="dob_day" id="dob_day" class="form__item__field form__item__field--select form__item__field--select--inline">
+            <option value="invalid">Please select...</option>
+            {{#years}}
+                <option>{{.}}</option>
+            {{/years}}
+        </select>
+        <button class="cta cta--inline">Check</button>
+        <div class="form__item__message form__item__message--error" aria-hidden="true">
+            Please enter a valid date
+        </div>
+    </div>
+    <div class="panel">
+        <span class="panel__title">Sorry, you are not yet old enough to apply.</span>
+        <strong class="panel__copy">You will be able to apply on the 21st of January, 2055.</strong>
+    </div>
+    <!-- ALTERNATE DESIGN -->
+    <!-- <p>Sorry, you are not yet old enough to apply. You will be able to apply on the 21st of January, 2055. </p> -->
+</form>

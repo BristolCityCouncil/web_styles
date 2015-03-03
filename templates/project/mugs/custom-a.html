@@ -1,0 +1,40 @@
+{{> chrome/header.v1}}
+
+{{# project.mugs.a}}
+
+	<h1>
+		{{title}}
+	</h1>
+
+{{/ project.mugs.a}}
+
+
+
+	{{> tags/forms/field_header}}
+        {{> tags/forms/label label="What is your first name" id="i001"}}
+        {{> tags/forms/input id="i001"}}
+    {{> tags/forms/field_footer }}
+
+    {{> tags/forms/field_header}}
+        {{> tags/forms/label label="What is your last name" id="i002"}}
+        {{> tags/forms/input id="i002"}}
+    {{> tags/forms/field_footer }}
+
+    {{> tags/forms/field_header}}
+        {{> tags/forms/label 
+            id="i004"
+            label="Your email" 
+            instructions="We normally send our response by email"}}
+        {{> tags/forms/input id="i004"}}
+
+        {{> tags/forms/conditional_top }}
+            {{> tags/forms/checkbox id="c001"}}
+            {{> tags/forms/label label="I accept the terms" id="c001"}}
+        {{> tags/forms/conditional_bottom }}
+    {{> tags/forms/field_footer }}
+	<Br/><Br/>
+
+    {{> tags/buttons/cta_link modifiers="newcta--primary" label="next" link="/example/project/mugs/custom-b"}}
+
+
+{{> chrome/footer.v2}}

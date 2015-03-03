@@ -1,0 +1,122 @@
+{{> chrome/header}}
+<div class="portlet-body">
+   <!--START Portlet -->
+   <!--START Portlet -->
+   <!--START Portlet -->
+   <header class="step-header">
+      <p class="step-header__title">Get residents' or visitors' parking permits<span class="step-header__title__seperator">:</span>
+         <span class="step-header__title__steps">step 3 of 5</span>
+      </p>
+      <h1 class="step-header__subtitle">Check permit details</h1>
+   </header>
+   <div class="row-fluid">
+      <div class="span8">
+         <p>
+            <!--?xml version="1.0" standalone="yes"?-->
+         </p>
+         <ul>
+            <li>You can choose to pay for your residents’ permit every three months instead of paying the one year cost now.</li>
+            <li>If you choose three months, we will send you a permit that lasts for three months. We will send you an email before the permit is due to expire. When you renew it, we will send you a new permit.</li>
+         </ul>
+         <p></p>
+         <p>
+            &lt;
+            <a href="http://devportal.bristol.gov.uk:8080/web/guest/parking/get-permits?p_auth=7hgLbKVG&amp;p_p_id=bccparkingportlet_WAR_bccportalapps101BUILDSNAPSHOT&amp;p_p_lifecycle=1&amp;p_p_state=normal&amp;p_p_mode=view&amp;p_p_col_id=column-1&amp;p_p_col_count=1&amp;_bccparkingportlet_WAR_bccportalapps101BUILDSNAPSHOT_execution=e1s7&amp;_eventId=update&amp;position=1" title="Change or update vehicles">Change or update vehicles</a>
+         </p>
+         <p></p>
+      </div>
+   </div>
+   <form id="parkingOrderModel" class="form js--validate" action="http://devportal.bristol.gov.uk:8080/web/guest/parking/get-permits?p_auth=7hgLbKVG&amp;p_p_id=bccparkingportlet_WAR_bccportalapps101BUILDSNAPSHOT&amp;p_p_lifecycle=1&amp;p_p_state=normal&amp;p_p_mode=view&amp;p_p_col_id=column-1&amp;p_p_col_count=1&amp;_bccparkingportlet_WAR_bccportalapps101BUILDSNAPSHOT_execution=e1s7" method="post" novalidate="novalidate">
+      <div class="row-fluid">
+         <div class="span12">
+            <div class="row-fluid" id="parking__permit-details">
+               <div class="permit permit--additional js--equalise-height span4" id="field-permit1" style="height: 396px;">
+                  <div class="permit__meta js--equalise-height" style="height: 84px;">
+                     <h2 class="permit__meta__title">
+                        First
+                        permit
+                     </h2>
+                     <p class="permit__meta__intro">Someone has already purchased this permit for your address.</p>
+                  </div>
+               </div>
+               <div class="permit  js--equalise-height span4" id="field-permit2" style="height: 396px;">
+                  <div class="permit__meta js--equalise-height" style="height: 84px;">
+                     <h2 class="permit__meta__title">
+                        Second
+                        permit
+                     </h2>
+                  </div>
+                  <div class="permit__item permit__item--affirm js--equalise-height" style="height: 82px;">
+                     <strong>aa1aaa</strong>
+                     <span>Tax band &nbsp;
+                     A
+                     </span>
+                  </div>
+                  <fieldset class="form__item form__item--group">
+                     <legend class="form__item__label">
+                        Permit payment period
+                     </legend>
+                     <label for="1yearPermit1" class="form__item__label form__item__label--group">
+                        <span class="wrap">
+                        </span>
+                        <div class="uniform__radio uniform" id="uniform-1yearPermit1"><span class="checked"><input id="1yearPermit1" name="residentsPermits.permits[1].permitDuration" class="form__item__field form__item__field--radio" type="radio" value="12M" checked="checked"></span>
+                        </div>
+                        <span class="wrap">
+                        1 year </span><strong>£96</strong><span class="wrap">									
+                        </span>
+                     </label>
+                     <label for="3monthPermit1" class="form__item__label form__item__label--group">
+                        <span class="wrap">
+                        </span>
+                        <div class="uniform__radio uniform" id="uniform-3monthPermit1"><span><input id="3monthPermit1" name="residentsPermits.permits[1].permitDuration" class="form__item__field form__item__field--radio" type="radio" value="3M"></span>
+                        </div>
+                        <span class="wrap">
+                        3 month </span><strong>£24</strong><span class="wrap">
+                        </span>
+                     </label>
+                  </fieldset>
+               </div>
+            </div>
+
+            <div class="cta-group">
+               <button name="_eventId_addVisitorPermits" type="submit" class="cta cta--icon cta--primary cta--next cta-group__firstly js--prevent-double">Add visitors' permits</button>
+               <div class="form__submit_message">The next step may take a few seconds -
+                  <br>please submit once and wait
+               </div>
+               <br>
+               <span class="cta-group__secondly"> or  
+               <button name="_eventId_continue" type="submit" class="cta cta--link"><strong>view order summary</strong></button>
+               </span>
+            </div>
+ 
+   
+   
+
+
+	     <div class="panel panel--feedback">
+	        <h2 class="panel__title">Give feedback on this new service</h2>
+	        <div class="panel__copy">
+	           <p><a href="https://www.bristol.gov.uk/node/24282" target="_blank">Give feedback (opens new window)</a> and help improve this service.
+	              <br>It only takes a minute and you won't lose your permit details.
+	           </p>
+	        </div>
+	     </div>
+	     </div>
+      </div>
+     </form>
+
+
+
+   <script>
+      ga('send', 'pageview', {
+          'page': '/web/guest/parking/get-permits/permit-details',
+      
+      });
+   </script>
+   <!--</div>
+      /grid-col-->
+   <!--END Portlet -->
+   <!--END Portlet -->
+   <!--END Portlet -->
+</div>
+{{> chrome/footer}}

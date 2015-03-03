@@ -1,0 +1,516 @@
+// Oppa BEM Style
+// VARIABLES
+
+// Layout
+$bintable-image-width: 						50px;
+$bintable-image-container-padding: 			10px;
+$bintable-image-container-width:  			$bintable-image-width + ($bintable-image-container-padding*2);
+$bintable-toggle-width:						30px;
+$bintable-toggle-height:					65px;
+
+$bintable-checkbox-width:					30px; // CONST
+$bintable-checkbox-container-width: 		70px;
+$bintable-checkbox-padding: 				($bintable-checkbox-container-width - $bintable-checkbox-width)/2;
+
+$bintable-totalrow-width:					100px;
+$bintable-totalrow-lineheight:				22px;
+
+// Tablet
+$bintable-checkbox-width--tablet: 			$bintable-checkbox-width;
+$bintable-image-width--tablet: 				60px;
+$bintable-image-container-padding--tablet: 	20px;
+$bintable-image-container-width--tablet: 	$bintable-image-width--tablet + ($bintable-image-container-padding--tablet*2);
+
+// Desktop
+$bintable-checkbox-width--desktop: 			$bintable-checkbox-width--tablet;
+$bintable-image-width--desktop: 			$bintable-image-width--tablet;
+$bintable-image-container-padding--desktop: $bintable-image-container-padding--tablet;
+$bintable-image-container-width--desktop: 	$bintable-image-width--desktop + ($bintable-image-container-padding--desktop*2);
+
+// Random Typography
+$bintable-description-fontsize: 14px;
+$bintable-description-lineheight: 20px;
+
+
+// Spacing!
+$bintable-title-topspacing : 15px; // because, thats why
+$bintable-description-spacing : 20px;
+$bintable-description-spacing--tablet: 0;
+$bintable-description-spacing--desktop: $bintable-description-spacing--tablet;
+
+// Color scheme
+$bintable-background:						#f1f1f1;
+$bintable-border:							#ccc;	
+$bintable-checkbox-background:				#eaeaea;
+$bintable-rule: 							#ccc;
+
+// Selected green styles
+$bintable-background--selected:				#ddefe6;
+$bintable-border--selected:				 	#91c4a9;
+$bintable-background-boxshadow--selected:	#cae1d6;
+$bintable-checkbox-background--selected:	#c8e9d8;
+$bintable-checkbox-boxshadow--selected:		#badbca;
+
+.bintable{
+	@include gridZero (full);
+	@extend .clearfix;
+	
+	background: $bintable-background;
+	border-bottom: 5px solid $bintable-border;
+	margin: 40px -20px;
+	
+	@include respond-to(tablet, desktop){
+		margin: 40px 0;
+	}
+}
+
+.bintable-row {
+	@include columnsZero (full);
+	-webkit-transition: background .3s;
+	-moz-transition: background .3s;
+	position: relative;
+	border-top: 2px solid $bintable-border;
+}
+
+	.bintable-row.bintable-row--nocheckbox {
+		.bintable-body{
+			padding-left: 0;
+		}
+	}
+	
+	.bintable-row.bintable-row--total {
+		padding-right: $bintable-totalrow-width;
+	}
+	
+	.bintable-row.bintable-row--nooptions {
+		.bintable-column{
+			@include columnsZero(full, full, full, full);
+		}
+		
+		.bintable-description{
+			@include respond-to(tablet) {
+				border-bottom: 0;
+			}
+		}
+	}
+	
+	.bintable-row--selected{
+		background: $bintable-background--selected;
+		border-top: 2px solid $bintable-border--selected;
+		box-shadow: inset 0 5px 0 0 $bintable-background-boxshadow--selected;
+		
+		.bintable-description{
+			border-color: $bintable-border--selected;
+		}
+		
+		&:last-child{
+			box-shadow: 0 5px 0 0 $bintable-border--selected, inset 0 5px 0 0 $bintable-background-boxshadow--selected;
+			
+			@include respond-to(tablet, desktop){
+				box-shadow:  0 5px 0 0 $bintable-border--selected;
+			}
+		}
+		
+		.bintable-checkbox{
+			box-shadow: inset 0 5px 0 0 $bintable-checkbox-boxshadow--selected;
+			background: $bintable-checkbox-background--selected;
+			
+			@include respond-to(tablet, desktop) {
+				box-shadow: none;
+			}
+		}
+		
+		& + .bintable-row {
+			border-top: 2px solid $bintable-border--selected;
+		}
+		
+		@include respond-to(tablet, desktop) {
+			box-shadow: none;
+		}
+	}
+	
+.bintable-rowheader{
+	width: 100%;
+	position: relative;
+	background: $white;
+	font-size: 14px;
+}
+
+.bintable-body-header{
+	background: $white;
+	padding: 0 0 10px;
+	padding-left: $bintable-image-container-padding;
+	
+	@include respond-to(tablet){
+		padding-left: $bintable-image-container-padding--tablet;
+	}
+	
+	@include respond-to(desktop){
+		padding-left: $bintable-image-container-padding--desktop;
+	}
+}
+
+.bintable-total-header{
+	position: absolute;
+	padding: 10px 0;
+	padding-right: 20px;
+	top: 0;
+	right: 0;
+	background: $white;
+	width: $bintable-totalrow-width;
+	text-align: right;
+}
+
+.bintable-body{
+	// width 100% with margin left fixed = {1}
+	padding-left: 0;// NO-JS
+	min-height: $bintable-checkbox-container-width;
+	
+	@include respond-to(tablet){
+		min-height: $bintable-image-container-width--tablet;
+	}
+	
+	@include respond-to(desktop){
+		min-height: $bintable-image-container-width--desktop;
+	}
+	
+	@include gridZero (full);
+	@include respond-to(tablet) {
+		padding-right: 20px;
+	}		
+	
+	@include respond-to(desktop) {
+		@include gridZero(half, half);
+		padding-right: 20px;
+	}
+}
+
+	.bintable-column{
+		@include columnsZero(full, full, full, half);
+	}
+	
+.bintable-totalrow{
+	position: absolute;
+	right: 0;
+	height: 100%;
+	top: 0;
+	width: $bintable-totalrow-width;
+	border-left: 2px solid $bintable-border;
+}
+
+.bintable-totalrow-inner{
+	position: relative;
+	right: 0;
+	width: 100%;
+	text-align: right;
+	padding-right: 20px;
+	top: 50%;
+	line-height: $bintable-totalrow-lineheight;
+	margin-top: -($bintable-totalrow-lineheight/2);
+}
+
+.bintable-checkbox{
+	// position absolute width matching {1}
+	position: absolute;
+	display: none; //NO-JS
+	-webkit-transition: background .3s;
+	-moz-transition: background .3s;
+	width: $bintable-checkbox-container-width;
+	height: 100%;
+	min-height: $bintable-checkbox-width;
+	background: $bintable-checkbox-background;
+	
+	.uniform__checkbox--large{
+		width: $bintable-checkbox-width;
+		height: $bintable-checkbox-width;
+		margin: $bintable-checkbox-padding;
+	}
+	
+	.field{
+		padding: 0 20px;
+	}
+	
+	div.field{
+		margin-top: 20px;
+	}
+}
+
+.bintable-title {
+	// Mobile: margin left {2}
+	// Tab: margin left {3}
+	// Desk: Width: 50% + Tab
+	padding-top: $bintable-title-topspacing;
+	margin-left: $bintable-image-container-width; // {2}
+	min-height: $bintable-image-container-width; // {2}
+	padding-right: $bintable-toggle-width;
+	
+	h4{
+		margin: 12px 0 0;
+		font-size: 19px;
+		line-height: 1em;
+	}
+	
+	@include respond-to(tablet) {
+		padding-right: 0;
+		margin-left: $bintable-image-container-width--tablet; // {3}
+		min-height: 0;
+		
+		h4{
+			margin: 10px 0;
+		}
+	}
+	
+	@include respond-to(desktop) {
+		padding-right: 0;
+		margin-left: $bintable-image-container-width--desktop; // {3}
+		min-height: 0;
+		
+		h4{
+			margin: 10px 0;
+			font-size: 18px;
+		}
+	}
+}
+
+.bintable-title h3 {
+	margin: 12px 0 0;
+	font-size: 19px;
+	line-height: 1em;
+	@include respond-to(tablet, desktop){
+
+	}
+}
+
+.bintable-image {
+	// Mobile: display absolute, width {2}
+	// Tab: display absolute, width {3}
+	width: $bintable-image-container-width; // {2}
+	height: $bintable-image-container-width; // {2}
+	position: absolute;
+	padding: $bintable-image-container-padding;
+	
+	img{
+		width: $bintable-image-width;
+	}
+	
+	@include respond-to(tablet) {
+		width: $bintable-image-container-width--tablet; // {2}
+		height: $bintable-image-container-width--tablet; // {2}
+		padding: $bintable-image-container-padding--tablet;
+		position: absolute;
+		
+		img{
+			width: $bintable-image-width--tablet;
+		}
+	}
+	
+	@include respond-to(desktop) {
+		width: $bintable-image-container-width--desktop; // {2}
+		height: $bintable-image-container-width--desktop; // {2}
+		padding: $bintable-image-container-padding--desktop;
+		position: absolute;
+		
+		img{
+			width: $bintable-image-width--desktop;
+		}
+	}
+}
+
+.bintable-description {
+	display: block; // NOJS
+	padding-left:$bintable-description-spacing;
+	padding-bottom: 17px; // 20px - lineheight
+	font-size: $bintable-description-fontsize;
+	line-height: $bintable-description-lineheight;
+	
+	@include respond-to(tablet) {
+		border-bottom: 1px solid $bintable-rule;
+		padding-left: $bintable-description-spacing--tablet;
+		margin-left: $bintable-image-container-width--tablet; // {3}
+		//display: block;
+		font-size: ($bintable-description-fontsize+2);
+		line-height: ($bintable-description-lineheight+2);
+	}
+	
+	@include respond-to(desktop) {
+		padding-left: $bintable-description-spacing--desktop;
+		margin-left: $bintable-image-container-width--desktop; // {3}
+		//display: block;
+		font-size: ($bintable-description-fontsize+2);
+		line-height: ($bintable-description-lineheight+2);
+		border-bottom: 0;
+	}
+}
+
+.bintable-row--selected .bintable-toggle span {
+	-webkit-transform: rotate(-180deg);
+	-moz-transform: rotate(-180deg);
+	-ms-transform: rotate(-180deg);
+	-o-transform: rotate(-180deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=6);
+}
+
+.bintable-toggle {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	display: none; // No-JS
+	width: $bintable-toggle-width;
+	height: $bintable-toggle-height;
+	
+	@include respond-to(tablet, desktop) {
+		display: none;
+		visibility: hidden;
+	}
+	
+	.icon{
+		display: block;
+		text-align: center;
+		font-size: 18px;
+		-webkit-transition: transform .3s;
+		-moz-transition: transform .3s;
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+	}
+	
+	margin-top: -(18px-($bintable-toggle-height/2));
+}
+
+.bintable-options{
+	@include columnsZero(full);
+	
+	display: block;// NO-JS
+	padding-left: $bintable-description-spacing;
+	padding-right: $bintable-description-spacing;
+	padding-bottom: 30px;
+
+	@include respond-to(tablet) {
+		display: block;
+		padding-bottom: 0;
+		padding-left: ($bintable-image-container-width--tablet + $bintable-description-spacing--tablet); //{3}
+		padding-right: $bintable-description-spacing--tablet;
+	}
+	
+	@include respond-to(desktop) {
+		display: block;
+		padding-left: 0;
+		padding-right: 0;
+		padding-bottom: 0;
+	}
+}
+
+.bintable-select,
+.bintable-select--oldbin {
+	@include columnsZero(full, full, half, half);
+	@include respond-to(desktop) {
+		padding: 10px;
+	}
+	
+	@include respond-to(tablet) {
+		padding: 10px;
+	}
+	
+	padding-bottom: 10px;
+	
+	.form__item__label{
+		font-family: "Thesans-Bold", "Helvetica Neue", Arial, sans-serif;
+		font-weight: normal;
+		overflow: hidden;
+		min-height: 22px;
+		border: 0;
+		font-size: 16px;
+		margin-bottom: 10px;
+		margin-top: 4px;
+	}
+}
+
+.bintable-select--oldbin {
+	@include offset(reset, reset, half, half);
+	visibility: visible;
+	height: auto;
+	position: relative;		
+	
+	.form__item__field{
+		position: absolute;
+	}
+	
+	.form__item__label{
+		font-family: inherit;
+		padding-left: 30px;
+	}
+	
+	.uniform__checkbox{
+		margin-top: 12px;
+		margin-left: 1px;
+	}
+	
+	@include respond-to(tablet, desktop) {
+		//height:10px; // JS
+		height: auto; // NO-JS
+	}
+}
+
+.js {
+	.bintable-body {
+		padding-left: $bintable-checkbox-container-width;
+	}
+	
+	.bintable-checkbox {
+		display: block;
+	}
+	
+	.bintable-select--oldbin {
+		visibility: hidden;
+		height: 0;
+		position: absolute;
+		
+		@include respond-to(tablet, desktop) {
+			height:10px; // JS
+			position: relative;
+			
+			.uniform__checkbox{
+				margin-top: 10px;
+				margin-left: 12px;
+			}
+			
+			.form__item__label{
+				padding-left: 35px;
+			}
+		}
+		
+		&.bintable-select--oldbin_active{
+			padding: 8px;
+			visibility: visible;
+			height: auto;
+			position: relative;
+		}
+	}
+	
+	.bintable-toggle {
+		display: block;
+	}
+	
+	.bintable-options, 
+	.bintable-description {
+		display: none;
+		
+		@include respond-to(tablet, desktop) {
+			display: block;
+		}
+	}
+	
+	.bintable-row--selected {
+		.bintable-options, 
+		.bintable-description {
+			display: block;
+		}
+	}
+}
+
+h2.subh {
+	margin: 30px 0;
+}
+ 

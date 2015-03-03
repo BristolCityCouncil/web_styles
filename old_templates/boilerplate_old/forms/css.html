@@ -1,0 +1,472 @@
+<section class="pl">
+	<h1 class="pl__title">
+		<a href="/boilerplate" class="icon icon-bookmark icon--large"></a>
+		Forms
+	</h1>
+	
+	<!-- START <input> -->
+	<h3>
+		Inputs <small>.field input</small>
+	</h3>
+	<div class="bs-docs-example">
+
+		<!--  -->
+		<div class="field">
+			<label class="field__label field__label--block" for="textfield">
+				What is your first name
+				<div class="field__instructions">
+					We normally send our response by email
+				</div>
+			</label>
+			<input class="field__input" type="text" name="textOptionsName" id="textfield" />
+			<div   class="field__message field__message--error">This is the most generic error</div>
+		</div>
+		
+		<!--  -->
+		<div class="field">
+			<label class="field__label field__label--block" for="fname">
+				Extras 
+				<span class="field__option">(Optional)</span> 
+				<strong class="field__status"> 
+					<span class="icon icon--bcc icon--bcc--verified"></span> Confirmed 
+				</strong> 
+				<div class="field__instructions">
+					<p>
+						Please be specific and include information such as:
+					</p>
+					<ul>
+						<li>Dates, Times and locations</li>
+						<li>References to specific documents</li>
+						<li>Specific things you are unhappy about</li>
+						<li>Your council tax number</li>
+					</ul>
+				</div>
+			</label>
+			<div class="guideline">
+				<strong>
+					"Total amount spent on road maintenance in 2013" 
+					<span class="guideline__status guideline__status--affirmed">
+						<span class="icon icon--bcc icon--bcc--tick guideline__status__icon"></span> Good
+					</span>
+				</strong>
+				<br />
+				<strong>
+					"All information about roads" 
+					<span class="guideline__status guideline__status--rejected">
+						<span class="icon icon--bcc icon--bcc--cross guideline__status__icon"></span> Too general
+					</span>
+				</strong>
+			</div>
+			<input class="field__input" type="text" name="textOptionsName" id="textfield" />
+			<div   class="field__message field__message--error">This is the most generic error</div>
+		</div>
+		
+		<!--  -->
+		<div class="field">
+			<label class="field__label field__label--block" for="textfield">
+				Their email
+				<div class="field__instructions">
+					We normally send our response by email
+				</div>
+			</label>
+			<input class="field__input" type="text" name="textOptionsName" id="textfield" />
+			
+			<input class="field__input" type="checkbox" name="" id="check1" />
+			<label class="field__label field__label--block" for="check1">I accept the terms</label>
+			
+			<div   class="field__message field__message--error">This is the most generic error</div>
+		</div>
+		<!--  
+		<div class="field">
+			<input class="field__input" type="checkbox" name="checkOptionsTOC" id="check2" />			
+			<label class="field__label field__label--block" for="check2">I accept the terms</label>					
+			<div   class="field__message field__message--error">This is the most generic error</div>
+		</div>
+		-->
+
+	</div>
+	<pre class="prettyprint linenums">&lt;div class="tbc"&gt;
+   ...
+&lt;/div&gt;</pre>
+	<!-- END <input> -->
+	
+	
+	
+	<!-- START <select> -->
+	<h3>
+		Various selects <small>.field select</small>
+	</h3>
+	<div class="bs-docs-example">
+	
+		<!-- Erros are the dropdown! -->
+	
+		<div class="field js--address-lookup address-lookup--isActive">
+			<label class="field__label" for="drop">Inline</label>
+			<div class="dropdown">
+				<select id="addressUprn" name="customer.address.addressUprn" required="required">
+                    <option value="">Select your address</option>
+                    <option value="000000257560">39 - 40 High Street City Centre Bristol BS1 2AT</option>
+                    <option value="000000257660">41 High Street City Centre Bristol BS1 2AT</option>
+                    <option value="000000103889">42 High Street City Centre Bristol BS1 2AT</option>
+                    <option value="000000259701">44 High Street City Centre Bristol BS1 2AT</option>
+                    <option value="000000324723">44A High Street City Centre Bristol BS1 2AT</option>
+                    <option value="000000308462">Flat 1 42 High Street City Centre Bristol BS1 2AT</option>
+                    <option value="000000308463">Flat 2 42 High Street City Centre Bristol BS1 2AT</option>
+                    <option value="000000308464">Flat 3 42 High Street City Centre Bristol BS1 2AT</option>
+                    <option value="000000308465">Flat 4 42 High Street City Centre Bristol BS1 2AT</option>
+                    <option value="000000308466">Flat 5 42 High Street City Centre Bristol BS1 2AT</option>
+                    <option value="000000351132">Flat 41 High Street City Centre Bristol BS1 2AT</option>
+                </select>
+				<div class="dropdown__background"></div>
+			</div>
+			<div class="field__message--error">This is an error</div>
+		</div>
+		
+		<div class="field">
+			<label class="field__label field__label--block" for="drop">Block</label>
+			<div sf-drop>
+				<select id="drop">
+					<option value="def" selected="selected">Please select...</option>
+					<option value="mr">Mr</option>
+					<option value="mrs">Mrs</option>
+					<option value="doc">Doctor</option>
+				</select>
+				<div class="error">This is why this failed. And because its a label its accessible</div>
+			</div>
+		</div>
+		
+		<div class="field">
+			<label class="field__label field__label--block" for="drop">Address lookup</label>
+			<div sf-drop>
+				<select id="drop">
+					<option value="" selected="selected">Select your address</option>
+					<option value="000000106069">2 Baldwin Street  Bristol  BS1 1SA</option>
+					<option value="000000353708">3 Baldwin Street  Bristol  BS1 1SA</option>
+					<option value="000000299768">4 Baldwin Street  Bristol  BS1 1SA</option>
+					<option value="000000317825">6 Baldwin Street  Bristol  BS1 1SA</option>
+					<option value="000000106070">8-10 Baldwin Street  Bristol  BS1 1SA</option>
+					<option value="000000106067">12 Baldwin Street  Bristol  BS1 1SA</option>
+					<option value="000000346380">Basement Floor  Alliance House  Baldwin Street  Bristol  BS1 1SA</option>
+					<option value="000000324639">First Floor  Alliance House  Baldwin Street  Bristol  BS1 1SA</option>
+					<option value="000000324640">Second Floor  Alliance House  Baldwin Street  Bristol  BS1 1SA</option>
+					<option value="000000324641">Third Floor  Alliance House  Baldwin Street  Bristol  BS1 1SA</option>
+				</select>
+				<!-- 
+				<button class="cta cta--small" type="submit">
+					Lookup address
+				</button> -->
+				
+				<div class="error">This is why this failed. And because its a label its accessible</div>
+			</div>
+		</div>
+	
+	</div>
+	<pre class="prettyprint linenums">&lt;div class="tbc"&gt;
+   ...
+&lt;/div&gt;</pre>
+	<!-- END <select> -->
+	
+	
+	<!-- START <textarea> -->
+	<h3>
+		Various textareas <small>.field textarea</small>
+	</h3>
+	<div class="bs-docs-example">
+	
+		<div class="field">
+			<label class="field__label field__label--block" for="tdd">
+				Description 
+				<span class="field__instructions">
+					200 words max.
+				</span>
+			</label> 
+			<textarea class="field__input" name="tdd" rows="5" placeholder="e.g. example" id="tdd"></textarea>
+		</div>
+	
+	</div>
+	<pre class="prettyprint linenums">&lt;div class="tbc"&gt;
+   ...
+&lt;/div&gt;</pre>
+	<!-- END <textarea> -->
+	
+	<!-- START <textarea> -->
+	<h3>
+		Various checkboxes <small>.field textarea</small>
+	</h3>
+	<div class="bs-docs-example">
+	
+		<fieldset class="field field--set" sf-check>
+			<legend class="field__label field__label--block">
+				Choose One
+			</legend>
+			<input class="field__input" type="checkbox" name="testing" id="testcheck"/>
+			<label class="field__label field__label--block" for="testcheck">
+				Apple
+			</label>
+			<input class="field__input" type="checkbox" value="carrot" name="testing" id="testcheck2"/>
+			<label class="field__label field__label--block" for="testcheck2">
+				Carrot
+				<span class="field__instructions">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies venenatis ex, dignissim.
+				</span>
+			</label>
+			<input class="field__input" type="checkbox" name="testing" id="testcheck3"/>
+			<label class="field__label field__label--block" for="testcheck3">
+				Mango
+			</label>
+		</fieldset>
+	
+	</div>
+	<pre class="prettyprint linenums">&lt;div class="tbc"&gt;
+   ...
+&lt;/div&gt;</pre>
+	<!-- END <textarea> -->
+	
+	<!-- START <textarea> -->
+	<h3>
+		Various radios <small>.field textarea</small>
+	</h3>
+	<div class="bs-docs-example">
+	
+		<fieldset class="field field--set" required>
+			<legend class="field__label field__label--block">
+				Do you accept the terms and conditions
+			</legend>
+		
+			<input class="field__input" type="radio" name="radioOptions" id="firstRadio" data-validate-expect="yes" />
+			<label class="field__label" value="yes" for="firstRadio">Yes</label>
+		
+			<input class="field__input" type="radio" value="no" name="radioOptions" id="secondRadio" />
+			<label class="field__label" for="secondRadio">No</label>
+		</fieldset>
+	
+		<fieldset class="field field--set" sf-radio>
+			<legend class="field__label field__label--block">
+				Choose One
+			</legend>
+			<input class="field__input" name="one" type="radio" id="myCheck" checked="checked"/>
+			<label class="field__label field__label--block" for="myCheck">This is my Radio</label>
+		
+			<input class="field__input" name="one" type="radio" id="myCheck1" />
+			<label class="field__label field__label--block" for="myCheck1">
+				This is my Radio
+				<span class="field__instructions">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultricies venenatis ex, dignissim.
+				</span>
+			</label>
+		
+			<input class="field__input" name="sevn" type="radio" id="myCheck6" data-error />
+			<label class="field__label field__label--block" for="myCheck6">This is my Radio</label>
+		
+			<input class="field__input" name="sevn" type="radio" id="myCheck9" data-error checked="checked" />
+			<label class="field__label field__label--block" for="myCheck9">This is my Radio</label>
+		
+			<input class="field__input" name="sevn" type="radio" id="myCheck2" disabled="disabled" />
+			<label class="field__label field__label--block" for="myCheck2">This is my Radio</label>
+		</fieldset>
+	
+	</div>
+	<pre class="prettyprint linenums">&lt;div class="tbc"&gt;
+   ...
+&lt;/div&gt;</pre>
+	<!-- END <textarea> -->
+	
+	
+	<!-- START Password Combo -->
+	<h3>
+		Password combo <small>[combo]</small>
+	</h3>
+	<div class="bs-docs-example">
+	
+		<div class="field" data-validate-password>
+		
+			<label class="field__label field__label--block" for="pwdf">Please choose a password</label> 					<!-- .field__legend -->
+			
+			<input class="field__input" type="password" name="passOptionsName" id="pwdf"/>				<!-- .field__input[type="password"] -->
+			<input class="field__input" type="password" name="passcrmOptionsName" />						<!-- .field__input[type="password"] -->
+	
+			<div   class="field__message field__message--error">This is the most generic error</div>								<!-- .field__message --> <!-- NOT ADDED WITH JS -->
+
+		</div>
+	
+	</div>
+	<pre class="prettyprint linenums">&lt;div class="tbc"&gt;
+   ...
+&lt;/div&gt;</pre>
+	<!-- END Password Combo -->
+	
+	
+	
+	
+
+
+
+
+
+
+<form class="form-a">
+
+	<fieldset class="field" data-validate-expect="yes">
+
+		<legend class="field__legend">Do you accept the terms and conditions</legend>				<!-- .field__legend -->
+	
+		<input  class="field__input" value="yes" type="radio" name="radioOptionsTOC" id="radiofieldyes" /> 		<!-- .field__input[type="radio"] -->
+		<label  class="field__label" for="radiofieldyes">Yes</label>									<!-- .field__input[type="radio"] + .field__label field__label--block -->
+
+		<input  class="field__input" value="no" type="radio" name="radioOptionsTOC" id="radiofieldno" />		<!-- .field__input[type="radio"] -->
+		<label  class="field__label" for="radiofieldno">No</label>									<!-- .field__input[type="radio"] + .field__label field__label--block -->
+
+		<div    class="field__message field__message--error">This is the most generic error</div>							<!-- .field__message --> <!-- NOT ADDED WITH JS -->
+
+	</fieldset>
+	<br/><hr/><br/>
+	<div class="field" data-validate-postcode>
+		
+		<label class="field__label field__label--block" for="postcode">Enter your postcode</label>						<!-- .field__legend -->
+		
+		<input class="field__input field__input--toupper" required type="text" name="postcode" id="postcode" />
+		<div   class="field__message field__message--error">This is the most generic error</div>								<!-- .fieldset__error --> <!-- NOT ADDED WITH JS -->
+								<!-- .field__message --> <!-- NOT ADDED WITH JS -->
+
+	</div>
+	<div class="field" data-validate-expect="on">
+		
+		<div    class="field__legend">Do you accept to the terms and conditions</div>						<!-- .field__legend -->
+		
+		<input class="field__input" type="checkbox" name="checkOptionsTOC" id="checkfield" />			<!-- .field__input[type="checkbox"] -->
+		<label class="field__label field__label--block" for="checkfield">I accept the terms</label>						<!-- .field__input[type="checkbox"] + .field__label field__label--block -->
+		
+		<div   class="field__message field__message--error">This is the most generic error</div>								<!-- .field__message --> <!-- NOT ADDED WITH JS -->
+
+	</div>
+	<br/><hr/><br/>
+	<div class="field">
+		
+		<label class="field__label field__label--block" for="textfield">What is your first name</label>						<!-- .field__label field__label--block -->
+		<input class="field__input" type="text" name="textOptionsName" id="textfield" />				<!-- .field__input[type="text"] -->
+		<label class="field__label field__label--block" for="textfield">What is your first name</label>						<!-- .field__label field__label--block -->
+		<input class="field__input" type="text" name="textOptionsName" id="textfield" />
+		<div   class="field__message field__message--error">This is the most generic error</div>								<!-- .fieldset__error --> <!-- NOT ADDED WITH JS -->
+
+	</div>
+	<br/><hr/><br/>
+	<fieldset class="field" data-validate-password>
+		
+		<label class="field__label field__label--block" for="pwdf">Please choose a password</label> 					<!-- .field__legend -->
+		
+		<input class="field__input" required type="password" name="passOptionsName" id="pwdf"/>				<!-- .field__input[type="password"] -->
+		<input class="field__input" required type="password" name="passcrmOptionsName" />						<!-- .field__input[type="password"] -->
+
+		<div   class="field__message field__message--error">This is the most generic error</div>								<!-- .field__message --> <!-- NOT ADDED WITH JS -->
+
+	</fieldset>
+	<br/><hr/><br/>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<fieldset class="toc" sf-radio required>
+	<h4>Do you accept the terms and conditions</h4>
+
+	<input type="radio" name="radioOptions" id="firstRadio" />
+	<label for="firstRadio">Yes</label>
+
+	<input type="radio" value="no" name="radioOptions" id="secondRadio" />
+	<label for="secondRadio">No</label>
+</fieldset>
+
+<br/><br/>
+
+<div sf-check required data-error="You must choose a delicious fruit!">
+	<h4>Choose One</h4>
+	<input type="checkbox" name="testing" id="testcheck"/>
+	<label for="testcheck">Apple</label>
+	<input type="checkbox" value="carrot" name="testing" id="testcheck2"/>
+	<label for="testcheck2">Carrot</label>
+	<input type="checkbox" name="testing" id="testcheck3"/>
+	<label for="testcheck3">Mango</label>
+</div>
+
+
+
+
+
+<br/><br/><br/><br/><br/>
+
+
+
+
+
+<div sf-radio>
+	<input name="one" type="radio" id="myCheck" checked="checked"/>
+	<label for="myCheck">This is my Radio</label>
+
+	<input name="one" type="radio" id="myCheck1" />
+	<label for="myCheck1">This is my Radio</label>
+
+	<input name="sevn" type="radio" id="myCheck6" data-error />
+	<label for="myCheck6">This is my Radio</label>
+
+	<input name="sevn" type="radio" id="myCheck9" data-error checked="checked" />
+	<label for="myCheck9">This is my Radio</label>
+
+	<input name="sevn" type="radio" id="myCheck2" disabled="disabled" />
+	<label for="myCheck2">This is my Radio</label>
+
+</div>
+<hr/>
+<div sf-check>
+	<input name="two" type="checkbox" id="myCheck3" checked="checked" />
+	<label for="myCheck3">This is my Checkbox</label>
+
+	<input name="three" type="checkbox" id="myCheck4" />
+	<label for="myCheck4">This is my Checkbox</label>
+
+	<input name="four" type="checkbox" id="myCheck7" data-error />
+	<label for="myCheck7">This is my Checkbox</label>
+
+	<input name="five" type="checkbox" id="myCheck8" data-error checked="checked" />
+	<label for="myCheck8">This is my Checkbox</label>
+
+	<input name="six" type="checkbox" id="myCheck5" disabled="disabled" />
+	<label for="myCheck5">This is my Checkbox</label>
+
+</div>
+<hr/>
+<div sf-drop>
+	<select id="drop">
+		<option value="one">one</option>
+		<option value="two">two</option>
+		<option value="three">three</option>
+	</select>
+	<div class="error">Choose something</div>
+</div>
+
+<label for="drop">This is my Label</label>
+<div sf-drop>
+	<select id="drop" data-error>
+		<option value="one" selected="selected">one</option>
+		<option value="two">two</option>
+		<option value="three">three</option>
+	</select>
+	<div class="error">This is why this failed. And because its a label its accessible</div>
+</div>

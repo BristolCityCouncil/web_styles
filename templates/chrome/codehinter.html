@@ -1,0 +1,44 @@
+<!-- load ace -->
+    <!-- ace-mode="ace/mode/css" ace-theme="ace/theme/chrome" ace-gutter="true" -->
+    <script src="/ace-builds/src/ace.js"></script>
+    <!-- load ace static_highlight extension -->
+    <script src="/ace-builds/src/ext-static_highlight.js"></script>
+    <script>
+        var source = function($el){ return $("<div/>").text(
+                $el.html()
+            ).html();
+        };
+
+        $(".wr__code pre").each(function(){
+            $(this).addClass('language-markup');
+            $(this).html(
+                source(
+                    $(this).closest('.pattern')
+                        .find('.wr__example').next()
+                )
+            );
+        });
+
+        var highlight = ace.require("ace/ext/static_highlight")
+        var dom = ace.require("ace/lib/dom")
+        function qsa(sel) {
+            return Array.apply(null, document.querySelectorAll(sel));
+        }
+
+        qsa(".language-markup").forEach(function (codeEl) {
+            highlight(codeEl, {
+                mode: "ace/mode/html",
+                theme: "ace/theme/github",
+                startLineNumber: 0,
+                showGutter: false,
+                trim: true
+            }, function (highlighted) {
+                
+            });
+        });
+    </script>
+    <style type="text/css">
+        pre[class*="language-"], .lt-ie9 pre {
+            overflow: auto;
+        }
+    </style>

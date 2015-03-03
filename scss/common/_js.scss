@@ -1,0 +1,74 @@
+// Javascript Enabled
+.js {
+	.form .form__item {
+		.form__item__label {
+			&.label--checkbox.form__item__label--group,
+			&.label--radio.form__item__label--group {
+				padding-left: 28px;
+			}
+			
+			&.form__item__label--group {
+				span.extra {
+					margin-left: 0;
+				}
+			}
+		}
+
+		.form__item--group--large {
+			.form__item__label {
+				&.form__item__label--group {
+					padding-left: 42px;
+					line-height: 30px;
+				}
+			}
+		}
+	}
+	
+	.form__actions, 
+	.cta-group{
+
+		// This is causing many problems to buttons
+		//display:inline;
+		
+		.form__submit_message{
+			display: none;
+			visibility: hidden;
+		}
+
+		&.form__actions--disabled .form__submit_message,
+		&.cta-group--disabled .form__submit_message{
+			display: block;
+			visibility: visible;
+
+		}
+	}
+	
+	.js--show {
+		display: block;
+		visibility: visible;
+	}
+	
+	.js--show-inline {
+		display: inline;
+		visibility: visible;
+	}
+	
+	.js--show-inline-block{
+		display: inline-block;
+		visibility: visible;
+	}
+	
+	.js--hide {
+		display: none;
+	}
+	
+	
+
+}
+
+.js--show,
+.js--show-inline,
+.js--show-inline-block{
+    display: none;
+    visibility: hidden;
+}

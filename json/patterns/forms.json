@@ -1,0 +1,69 @@
+{
+	"basicfield": {
+		"notes": {
+			"developer": [
+				"This is a developer note"
+			],
+			"usage": [
+				"This is a usage note"
+			]
+		}
+	},
+
+	"dropdown": {
+		"options": [{
+			"value": "one",
+			"label": "one"
+		},
+		{
+			"value": "two",
+			"label": "two"
+		},
+		{
+			"value": "three",
+			"label": "three"
+		}]
+	},
+	"address": {
+		"options": [{
+			"value": "000000106069",
+			"label": "2 Baldwin Street Bristol BS1 1SA"
+		},
+        {
+        	"value": "000000353708",
+        	"label": "3 Baldwin Street Bristol BS1 1SA"
+        },
+        {
+        	"value": "000000299768",
+        	"label": "4 Baldwin Street Bristol BS1 1SA"
+        },
+        {
+        	"value": "000000317825",
+        	"label": "6 Baldwin Street Bristol BS1 1SA"
+        },
+        {
+        	"value": "000000106070",
+        	"label": "8-10 Baldwin Street Bristol BS1 1SA"
+        },
+        {
+        	"value": "000000106067",
+        	"label": "12 Baldwin Street Bristol BS1 1SA"
+        },
+        {
+        	"value": "000000346380",
+        	"label": "Basement Floor Alliance House Baldwin Street Bristol BS1 1SA"
+        },
+        {
+        	"value": "000000324639",
+        	"label": "First Floor Alliance House Baldwin Street Bristol BS1 1SA"
+        },
+        {
+        	"value": "000000324640",
+        	"label": "Second Floor Alliance House Baldwin Street Bristol BS1 1SA"
+        },
+        {
+        	"value": "000000324641",
+        	"label": "Third Floor Alliance House Baldwin Street Bristol BS1 1SA"
+        }]
+	}
+}
